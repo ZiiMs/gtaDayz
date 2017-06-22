@@ -1,6 +1,4 @@
-// This is a comment
-// uncomment the line below if you want to write a filterscript
-//#define FILTERSCRIPT
+
 
 #include <a_samp>
 #include <a_mysql>
@@ -26,7 +24,7 @@ native WP_Hash(buffer[], len, const str[]);
 main()
 {
 	print("\n|----------------------------------|");
-	print("| Samp Dayz by ZiiM               |");
+	print("|  Samp Dayz by ZiiM               |");
 	print("|----------------------------------|\n");
 }
 
