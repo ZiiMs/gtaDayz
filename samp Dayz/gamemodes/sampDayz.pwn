@@ -9,6 +9,16 @@
 #include <easyDialog>
 #include <foreach>
 #include <sscanf2>
+#include <YSI\y_colours>
+#include <GarageBlock>
+
+#define mysql_host "127.0.0.1"
+#define mysql_user "AlexT"
+#define mysql_password "AlexT"
+#define mysql_database "LSR"
+
+new
+    MySQLCon;
 
 public OnFilterScriptExit()
 {
@@ -27,6 +37,19 @@ public OnGameModeInit()
 	// Don't use these lines if it's a filterscript
 	SetGameModeText("GTA:Dayz 0.0.1");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
+	MySQLCon = mysql_connect(mysql_host, mysql_user, mysql_database, mysql_password);
+	if(mysql_errno(MySQLCon) != 0) print("Could not connect to database!");
+	if(mysql_errno(MySQLCon) == 0) print("Successfully connected to MySQL database.");
+	mysql_log(LOG_ERROR | LOG_WARNING, LOG_TYPE_HTML);
+	BlockGarages(true, GARAGE_TYPE_ALL, "DISABLED");
+	BlockGarages(true, GARAGE_TYPE_MODSHOP, "DISABLED");
+	BlockGarages(true, GARAGE_TYPE_BOMB, "DISABLED");	
+	BlockGarages(true, GARAGE_TYPE_PAINT, "DISABLED");
+	ManualVehicleEngineAndLights();
+	EnableStuntBonusForAll(0);
+    DisableInteriorEnterExits();
+    ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
+    SendRconCommand("hostname  GTA:Dayz by ZiiM");
 	return 1;
 }
 
@@ -37,9 +60,8 @@ public OnGameModeExit()
 
 public OnPlayerRequestClass(playerid, classid)
 {
-	SetPlayerPos(playerid, 1958.3783, 1343.1572, 15.3746);
-	SetPlayerCameraPos(playerid, 1958.3783, 1343.1572, 15.3746);
-	SetPlayerCameraLookAt(playerid, 1958.3783, 1343.1572, 15.3746);
+    SetPlayerColor(playerid, X11_BLACK);
+    TogglePlayerSpectating(playerid, true);
 	return 1;
 }
 
