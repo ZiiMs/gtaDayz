@@ -3,6 +3,12 @@
 //#define FILTERSCRIPT
 
 #include <a_samp>
+#include <a_mysql>
+#include <streamer>
+#include <Pawn.CMD>
+#include <easyDialog>
+#include <foreach>
+#include <sscanf2>
 
 public OnFilterScriptExit()
 {
@@ -70,16 +76,6 @@ public OnVehicleDeath(vehicleid, killerid)
 public OnPlayerText(playerid, text[])
 {
 	return 1;
-}
-
-public OnPlayerCommandText(playerid, cmdtext[])
-{
-	if (strcmp("/mycommand", cmdtext, true, 10) == 0)
-	{
-		// Do something here
-		return 1;
-	}
-	return 0;
 }
 
 public OnPlayerEnterVehicle(playerid, vehicleid, ispassenger)
