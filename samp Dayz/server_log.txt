@@ -1,0 +1,64 @@
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:15:20] filterscripts = ""  (string)
+[23:15:20] 
+[23:15:20] Server Plugins
+[23:15:20] --------------
+[23:15:20]  Loading plugin: crashdetect
+[23:15:20]   CrashDetect v4.18.1 is OK.
+[23:15:20]   Loaded.
+[23:15:20]  Loading plugin: mysql
+[23:15:20]  >> plugin.mysql: R39-4 successfully loaded.
+[23:15:20]   Loaded.
+[23:15:20]  Loading plugin: sscanf
+[23:15:20] 
+
+[23:15:20]  ===============================
+
+[23:15:20]       sscanf plugin loaded.     
+
+[23:15:20]          Version:  2.8.2        
+
+[23:15:20]    (c) 2012 Alex "Y_Less" Cole  
+
+[23:15:20]  ===============================
+
+[23:15:20]   Loaded.
+[23:15:20]  Loading plugin: streamer
+[23:15:20] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[23:15:20]   Loaded.
+[23:15:20]  Loading plugin: Whirlpool
+[23:15:20]  
+[23:15:20]  ==================
+[23:15:20]  
+[23:15:20]   Whirlpool loaded
+[23:15:20]  
+[23:15:20]  ==================
+[23:15:20]  
+[23:15:20]   Loaded.
+[23:15:20]  Loading plugin: pawncmd
+[23:15:20] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[23:15:20]   Loaded.
+[23:15:20]  Loaded 6 plugins.
+
+[23:15:20] 
+[23:15:20] Filterscripts
+[23:15:20] ---------------
+[23:15:20]   Loaded 0 filterscripts.
+
+[23:15:20] 
+|----------------------------------|
+[23:15:20] | Samp Dayz by ZiiM               |
+[23:15:20] |----------------------------------|
+
+[23:15:20] Number of vehicle models: 0

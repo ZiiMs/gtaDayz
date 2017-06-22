@@ -1,0 +1,14 @@
+{
+  "activeDir": "",
+  "includesDir": "",
+  "ouputDir": "",
+  "reportGenCheck": false,
+  "reportGenDir": "",
+  "debugLevel": 3.0,
+  "optiLevel": 1.0,
+  "tabSize": 4.0,
+  "skipLines": 0.0,
+  "parentheses": true,
+  "semicolon": true,
+  "customArgs": ""
+}
