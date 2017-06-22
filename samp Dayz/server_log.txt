@@ -938,3 +938,80 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [00:39:51] [connection] incoming connection: 127.0.0.1:58759 id: 0
 [00:39:51] [join] ZiiM has joined the server (0:127.0.0.1)
 [01:22:37] [part] ZiiM has left the server (0:2)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:20:50] 
+[04:20:50] Server Plugins
+[04:20:50] --------------
+[04:20:50]  Loading plugin: crashdetect
+[04:20:50]   CrashDetect v4.18.1 is OK.
+[04:20:50]   Loaded.
+[04:20:50]  Loading plugin: mysql
+[04:20:50]  >> plugin.mysql: R39-4 successfully loaded.
+[04:20:50]   Loaded.
+[04:20:50]  Loading plugin: sscanf
+[04:20:50] 
+
+[04:20:50]  ===============================
+
+[04:20:50]       sscanf plugin loaded.     
+
+[04:20:50]          Version:  2.8.2        
+
+[04:20:50]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:20:50]  ===============================
+
+[04:20:50]   Loaded.
+[04:20:50]  Loading plugin: streamer
+[04:20:50] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:20:50]   Loaded.
+[04:20:50]  Loading plugin: Whirlpool
+[04:20:50]  
+[04:20:50]  ==================
+[04:20:50]  
+[04:20:50]   Whirlpool loaded
+[04:20:50]  
+[04:20:50]  ==================
+[04:20:50]  
+[04:20:50]   Loaded.
+[04:20:50]  Loading plugin: pawncmd
+[04:20:50] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:20:50]   Loaded.
+[04:20:50]  Loaded 6 plugins.
+
+[04:20:50] 
+[04:20:50] Filterscripts
+[04:20:50] ---------------
+[04:20:50]   Loaded 0 filterscripts.
+
+[04:20:50]  
+[04:20:50]  
+[04:20:50]  
+[04:20:50]  ======================================= 
+[04:20:50]  |                                     | 
+[04:20:50]  |        YSI version 3.09.0684        | 
+[04:20:50]  |        By Alex "Y_Less" Cole        | 
+[04:20:50]  |                                     | 
+[04:20:50]  ======================================= 
+[04:20:50]  
+[04:20:50] Successfully connected to MySQL database.
+[04:20:50] 
+|----------------------------------|
+[04:20:50] | Samp Dayz by ZiiM               |
+[04:20:50] |----------------------------------|
+
+[04:20:50] Number of vehicle models: 0
+[04:21:58] [connection] 127.0.0.1:59956 requests connection cookie.
+[04:21:59] [connection] incoming connection: 127.0.0.1:59956 id: 0
+[04:21:59] [join] ZiiM has joined the server (0:127.0.0.1)

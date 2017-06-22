@@ -225,6 +225,14 @@ public OnPlayerConnect(playerid)
 	return 1;
 }
 
+public OnPlayerCommandPerformed(playerid, cmd[], params[], result, flags)
+{
+    if(result == -1) {
+        SendClientMessage(playerid, X11_GREY72, "This command does not exist. Use /help.");
+    }
+    return 1;
+}
+
 public OnPlayerDisconnect(playerid, reason)
 {
 	return 1;
