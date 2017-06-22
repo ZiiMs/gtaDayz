@@ -15,6 +15,8 @@
 #define mysql_password "AlexT"
 #define mysql_database "GTADayz"
 
+#define MAX_ADMIN_LEVEL 9
+
 new
     MySQLCon,
     LoginAttempt[MAX_PLAYERS];
@@ -67,7 +69,7 @@ public OnPlayerRequestClass(playerid, classid)
 	}
 	new query[500], pName[64];
 	GetPlayerName(playerid, pName, sizeof(pName));
-	mysql_format(MySQLCon, query, sizeof(query), "SELECT * FROM `accounts` WHERE `username` = '%e' LIMIT 1", pName);
+	mysql_format(MySQLCon, query, sizeof(query), "SELECT id, username FROM `accounts` WHERE `username` = '%e' LIMIT 1", pName);
 	mysql_tquery(MySQLCon, query, "OnAccountCheck", "i", playerid);
 	return 1;
 }
@@ -136,6 +138,39 @@ public OnPlayerRegister(playerid)
     return;
 }
 
+CMD:makeadmin(playerid, params[])
+{
+    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    {
+        if(IsLoggedIn(playerid))
+        {
+            new targetid, level, msg[128];
+            if(sscanf(params, "ud", targetid, level)) return SendClientMessage(playerid, X11_GREY_85, "/makeadmin [playerid] [level]");
+            if(level < MAX_ADMIN_LEVEL && level > 0)
+            {
+                SetPVarInt(playerid, "AdminLevel", level);
+                format(msg, sizeof(msg), "You have promoted %s to level %d admin.", PlayerName(targetid), level);
+                SendClientMessage(playerid, X11_GREEN4, msg);
+                format(msg, sizeof(msg), "%s just promoted you to level %d admin.", PlayerName(playerid), level);
+                SendClientMessage(targetid, X11_GREEN4, msg);
+                return 1;
+            }
+            else if(level == 0)
+            {
+                SetPVarInt(playerid, "AdminLevel", 0);
+                format(msg, sizeof(msg), "You have removed %s from the admin team.", PlayerName(targetid));
+                SendClientMessage(playerid, X11_GREEN4, msg);
+                format(msg, sizeof(msg), "%s just removed you from the admin team.", PlayerName(playerid));
+                SendClientMessage(targetid, X11_GREEN4, msg);
+                return 1;
+            }
+            else return SendClientMessage(playerid, X11_RED4, "Invalid admin level");
+        }
+        else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
 Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
 {
     if(!response) return Kick(playerid);
@@ -176,31 +211,33 @@ public OnPlayerLogin(playerid)
 	new rows,fields;
 	cache_get_data(rows,fields);
 	new id_string[32], skin;
-	cache_get_row(0, 4, id_string);
+	cache_get_row(0, 3, id_string);
 	SetPVarInt(playerid, "AdminLevel",strval(id_string));
 	
-	cache_get_row(0,5,id_string);
+	cache_get_row(0,4,id_string);
 	skin = strval(id_string);
 	SetPVarInt(playerid, "Skin", skin);
 	
 	new Float:X,Float:Y,Float:Z,Float:angle;
-	cache_get_row(0,6,id_string);
+	cache_get_row(0,5,id_string);
 	X = floatstr(id_string);
 	SetPVarFloat(playerid, "X", X);
 	
-	cache_get_row(0,7,id_string);
+	cache_get_row(0,6,id_string);
 	Y = floatstr(id_string);
 	SetPVarFloat(playerid, "Y", Y);
 	
-	cache_get_row(0,8,id_string);
+	cache_get_row(0,7,id_string);
 	Z = floatstr(id_string);
 	SetPVarFloat(playerid, "Z", Z);
 	
-	cache_get_row(0,9,id_string);
+	cache_get_row(0,8,id_string);
 	angle = floatstr(id_string);
 	SetPVarFloat(playerid, "FacingAngle", angle);
 	
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
+    SetPVarInt(playerid, "IsLoggedIn", 1);
+    printf("X: %f | Y: %f | Z: %f", X,Y,Z);
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return;
@@ -211,6 +248,19 @@ stock PlayerName(playerid)
     new pName[64];
     GetPlayerName(playerid, pName, sizeof(pName));
     return pName;
+}
+
+stock IsLoggedIn(playerid)
+{
+    new loggedin = GetPVarInt(playerid, "IsLoggedIn");
+    if(loggedin == 1)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
 stock PasswordHash(value[])
