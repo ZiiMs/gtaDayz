@@ -16,6 +16,8 @@
 #define mysql_database "GTADayz"
 
 #define MAX_ADMIN_LEVEL 9
+#define ADMINOVERRIDE_PASS "eec8eb13fb975d56389a08be866cb37bd2445b46"
+#define MAX_ADMIN_OVERRIDE_ATTEMPTS 3
 
 new
     MySQLCon,
@@ -47,7 +49,7 @@ public OnGameModeInit()
 	EnableStuntBonusForAll(0);
     DisableInteriorEnterExits();
     ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
-    SendRconCommand("hostname  GTA:Dayz by ZiiM");
+    SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sa-dayz.com]");
 	return 1;
 }
 
@@ -86,7 +88,7 @@ public OnAccountCheck(playerid)
         cache_get_row(0,2, field_int);
         SetPVarString(playerid, "Pass", field_int);
         GetPlayerName(playerid, pName, sizeof(pName));
-        format(string, sizeof(string), "{21f3de}_______________________________\n\n{ffffff}Welcome to Los Santos Realism\n        'A place for everyone.'\n\n\tAccount: %s\n\tEnter Password:\n{21f3de}_______________________________",pName);
+        format(string, sizeof(string), "{21f3de}_______________________________\n\n    {ffffff}Welcome to San Andreas DayZ\n        'A place for everyone.'\n\n\tAccount: %s\n\tEnter Password:\n{21f3de}_______________________________",pName);
         Dialog_Show(playerid, DIALOG_LOGIN,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Login",string,"Login","Exit");
     } 
     else
@@ -133,9 +135,114 @@ public OnPlayerRegister(playerid)
 {
     SetPVarInt(playerid, "AccountID", cache_insert_id());
     SetSpawnInfo(playerid, 0, 24, 1536.61, -1691.2, 13.3, 78.0541, 0, 0, 0, 0, 0, 0);
+    SetPVarInt(playerid, "IsLoggedIn", 1);
+    SetPlayerColor(playerid, X11_WHITE);
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return;
+}
+
+CMD:setskin(playerid, params[])
+{
+    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    {
+        if(IsLoggedIn(playerid))
+        {
+            new targetid, skin, msg[128];
+            if(sscanf(params, "ud", targetid, skin)) return SendClientMessage(playerid, X11_GREY_85, "/setskin [playerid] [skin]");
+            if(IsLoggedIn(targetid))
+            {
+                if(IsValidSkin(skin, playerid))
+                {
+                    SetPVarInt(targetid, "Skin", skin);
+                    SetPlayerSkin(targetid, skin);
+                    format(msg, sizeof(msg), "You have set %s skin to %d.", PlayerName(targetid), skin);
+                    SendClientMessage(playerid, X11_GREEN4, msg);
+                    format(msg, sizeof(msg), "%s just set your skin to %d.", PlayerName(playerid), skin);
+                    SendClientMessage(targetid, X11_GREEN4, msg);
+                    TogglePlayerControllable(targetid, true);
+                    return 1;
+                }
+                else return SendClientMessage(playerid, X11_RED4, "Invalid skin");
+            }
+        }
+        else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }
+    return -1;
+}
+
+CMD:freeze(playerid, params[])
+{
+	if(GetPVarInt(playerid, "AdminLevel") >= 1)
+	{
+	    new giveplayerid, string[129];
+	    if(sscanf(params, "u", giveplayerid)) return SendClientMessage(playerid, X11_GREY85,"/freeze [playerid]");
+	    
+	    if(IsLoggedIn(giveplayerid)) {
+	        if(IsPlayerFrozen(giveplayerid)) {
+	            TogglePlayerControllableEx(giveplayerid, 1);
+	            format(string, sizeof(string), "You have unfrozen %s(%d).", PlayerName(giveplayerid), giveplayerid);
+	            SendClientMessage(playerid, X11_RED, string);
+	            return 1;
+			}
+			else {
+			    TogglePlayerControllableEx(giveplayerid, 0);
+	            format(string, sizeof(string), "You have frozen %s(%d).", PlayerName(giveplayerid), giveplayerid);
+	            SendClientMessage(playerid, X11_RED, string);
+	            return 1;
+			}
+		}
+		else return SendClientMessage(playerid, X11_WHITE, "Invalid player ID!");
+	}
+	else return SendClientMessage(playerid, X11_WHITE, "You aren't an admin, or aren't on-duty.");
+}
+
+stock TogglePlayerControllableEx(playerid, controllable) {
+	if(playerid == INVALID_PLAYER_ID) return INVALID_PLAYER_ID;
+	if(controllable == 0) {
+	    TogglePlayerControllable(playerid, 0);
+		SetPVarInt(playerid, "Frozen", 1);
+		return 1;
+	}
+	
+	else {
+	    TogglePlayerControllable(playerid, 1);
+	    SetPVarInt(playerid, "Frozen",0);
+		return 1;
+	}
+	
+}
+
+stock IsPlayerFrozen(playerid) {
+	if(GetPVarInt(playerid, "Frozen") == 1) {
+	    return 1;
+	}
+	
+	return 0;
+}
+
+stock IsValidSkin(skin, playerid=INVALID_PLAYER_ID)
+{
+	switch(skin)
+	{
+	    case 0: return false;// This skin is forbidden since certain animations like cuffed don't apply.
+	    case 1..73: return true;
+	    case 74: return false; // This skin is invalid/missing. Using this sets skin to CJ skin(skin ID 0).
+		case 75..299: return 1; // A valid skin has been passed. Note ID 74 returns 0, - so this won't get called.
+		case 300..312:
+		{
+		    if(playerid != INVALID_PLAYER_ID)
+		    {
+		        new string[40];
+		        GetPlayerVersion(playerid, string, sizeof(string));
+		        
+		        if(strfind(string, "0.3.7-RC3", true) == 0 || strfind(string, "0.3.7-RC4", true) == 0) return 1;
+		        else return 0;
+			}
+		}
+		default: return 0; // Anything else is invalid, so nothing gets returned.
+	}
+	return -1;
 }
 
 CMD:makeadmin(playerid, params[])
@@ -146,7 +253,7 @@ CMD:makeadmin(playerid, params[])
         {
             new targetid, level, msg[128];
             if(sscanf(params, "ud", targetid, level)) return SendClientMessage(playerid, X11_GREY_85, "/makeadmin [playerid] [level]");
-            if(level < MAX_ADMIN_LEVEL && level > 0)
+            if(level <= MAX_ADMIN_LEVEL && level > 0)
             {
                 SetPVarInt(targetid, "AdminLevel", level);
                 format(msg, sizeof(msg), "You have promoted %s to level %d admin.", PlayerName(targetid), level);
@@ -172,11 +279,11 @@ CMD:makeadmin(playerid, params[])
 }
 
 CMD:adminoverride(playerid, params[]) {
-	new msg[128];
+//	new msg[128];
 	new pass[64];
 	if(!sscanf(params,"s[64]", pass)) {
 		if(!strcmp(pass, ADMINOVERRIDE_PASS)) {
-			SetPVarInt(playerid, "AdminLevel", 10);
+			SetPVarInt(playerid, "AdminLevel", MAX_ADMIN_LEVEL);
 			/*format(msg,sizeof(msg),"%s(%s) has used Admin Override!",GetPlayerNameEx(playerid, ENameType_RPName_NoMask),GetPlayerNameEx(playerid,ENameType_AccountName));
 			SendAdminMessage(X11_RED,msg);*/
 			SendClientMessage(playerid, X11_WHITE, "Accepted!");
@@ -187,7 +294,7 @@ CMD:adminoverride(playerid, params[]) {
 			if(numoverrides >= MAX_ADMIN_OVERRIDE_ATTEMPTS) {
 				/*format(msg, sizeof(msg), "%s[%d] has been banned for failing Admin Override too many times",GetPlayerNameEx(playerid, ENameType_RPName_NoMask), playerid, pass);
 				SendAdminMessage(X11_RED,msg);*/			
-				BanPlayer(playerid, -1,"Exceeded maximum Admin Override attempts");
+				//BanPlayer(playerid, -1,"Exceeded maximum Admin Override attempts");
 				return 0;
 			}
 			SetPVarInt(playerid, "FailedAdminOverrides", ++numoverrides);
@@ -264,9 +371,10 @@ public OnPlayerLogin(playerid)
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
     printf("X: %f | Y: %f | Z: %f", X,Y,Z);
+    SetPlayerColor(playerid, X11_WHITE);
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
-    return;
+    return 1;
 }
 
 stock PlayerName(playerid)
