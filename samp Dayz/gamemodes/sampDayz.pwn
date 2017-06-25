@@ -59,11 +59,11 @@ public OnGameModeExit()
 }
 
 public OnQueryError( errorid, error[], callback[], query[], connectionHandle ) {
-		new msg[256];
-		format(msg,sizeof(msg),"Query: %s",query);
-		printf(msg);
-		format(msg,sizeof(msg),"SQL ERROR: %d %s",errorid, error);
-		printf(msg);
+	new msg[256];
+	format(msg,sizeof(msg),"Query: %s",query);
+	printf(msg);
+	format(msg,sizeof(msg),"SQL ERROR: %d %s",errorid, error);
+	printf(msg);
 	return 0;
 }
 
