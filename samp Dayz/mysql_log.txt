@@ -1,0 +1,3 @@
+[18:48:23] [ERROR] CMySQLConnection::Connect - (error #1049) Unknown database 'gtadayz'
+[12:57:24] [ERROR] CMySQLConnection::Connect - (error #1049) Unknown database 'gtadayz'
+[13:16:54] [ERROR] CMySQLConnection::Connect - (error #1049) Unknown database 'gtadayz'

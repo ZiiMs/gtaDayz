@@ -35,7 +35,7 @@ main()
 public OnGameModeInit()
 {
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("GTA:Dayz 0.0.1");
+	SetGameModeText("SA-DayZ 0.0.1");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
 	MySQLCon = mysql_connect(mysql_host, mysql_user, mysql_database, mysql_password);
 	if(mysql_errno(MySQLCon) != 0) print("Could not connect to database!");
@@ -56,6 +56,15 @@ public OnGameModeInit()
 public OnGameModeExit()
 {
 	return 1;
+}
+
+public OnQueryError( errorid, error[], callback[], query[], connectionHandle ) {
+		new msg[256];
+		format(msg,sizeof(msg),"Query: %s",query);
+		printf(msg);
+		format(msg,sizeof(msg),"SQL ERROR: %d %s",errorid, error);
+		printf(msg);
+	return 0;
 }
 
 public OnPlayerRequestClass(playerid, classid)
@@ -88,12 +97,12 @@ public OnAccountCheck(playerid)
         cache_get_row(0,2, field_int);
         SetPVarString(playerid, "Pass", field_int);
         GetPlayerName(playerid, pName, sizeof(pName));
-        format(string, sizeof(string), "{21f3de}_______________________________\n\n    {ffffff}Welcome to San Andreas DayZ\n        'A place for everyone.'\n\n\tAccount: %s\n\tEnter Password:\n{21f3de}_______________________________",pName);
+        format(string, sizeof(string), "{D1D1D1}Welcome back to San Andreas DayZ\n           'A place for everyone.'\n\n        Survivor: {FFFFFF}%s\n        {D1D1D1}Enter your password below",pName);
         Dialog_Show(playerid, DIALOG_LOGIN,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Login",string,"Login","Exit");
     } 
     else
     {
-        format(string, sizeof(string), "{21f3de}_______________________________\n\n{ffffff}Welcome to Los Santos Realism\n        'A place for everyone.'\n\n\tAccount: %s\n\tRegister Password:\n{21f3de}_______________________________",PlayerName(playerid));
+        format(string, sizeof(string), "{D1D1D1}Welcome to San Andreas DayZ\n        'A place for everyone.'\n\n  Survivor: {FFFFFF}%s\n  {D1D1D1}Enter your password below",PlayerName(playerid));
 		Dialog_Show(playerid,DIALOG_REGISTER,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Register",string,"Register","Exit");
     }   
     return 1;
@@ -107,7 +116,7 @@ Dialog:DIALOG_REGISTER(playerid, response, listitem, inputtext[])
 	{
 		new string[128];
 		SendClientMessage(playerid, X11_AQUAMARINE3, "Your password must be 6 to 129 characters long!");
-		format(string, sizeof(string), "{21f3de}_______________________________\n\n{ffffff}Welcome to Los Santos Realism\n        'A place for everyone.'\n\n\tAccount: %s\n\tRegister Password:\n{21f3de}_______________________________",PlayerName(playerid));
+		format(string, sizeof(string), "{D1D1D1}Welcome to San Andreas DayZ\n        'A place for everyone.'\n\n  Survivor: {FFFFFF}%s\n  {D1D1D1}Enter your password below",PlayerName(playerid));
 		Dialog_Show(playerid,DIALOG_REGISTER,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Register",string,"Register","Cancel");
 		return 1;
 	} else {
@@ -117,17 +126,6 @@ Dialog:DIALOG_REGISTER(playerid, response, listitem, inputtext[])
 		mysql_tquery(MySQLCon, query, "OnPlayerRegister", "i", playerid);
 	}
 	return 1;
-}
-
-public OnQueryError( errorid, error[], callback[], query[], connectionHandle ) {
-    new msg[256];
-    format(msg,sizeof(msg),"Query: %s",query);
-    printf(msg);
-    //SendAdminMessage(X11_RED, msg);
-    format(msg,sizeof(msg),"SQL ERROR: %d %s",errorid, error);
-    printf(msg);
-    //SendAdminMessage(X11_RED, msg);
-	return 0;
 }
 
 forward OnPlayerRegister(playerid);
