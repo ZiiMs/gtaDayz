@@ -183,7 +183,7 @@ public Loot_Load()
 	cache_get_data(rows,fields);
 	for (new i = 0; i < rows; i ++) if (i < MAX_LOOTSPAWN)
 	{
-		lootid = random(25);
+		lootid = random(1000);
 		LootData[i][lootExists] = true;
 		LootData[i][lootItemID] = lootid;
 		LootData[i][lootItem] = LootItemName(lootid);
@@ -197,6 +197,9 @@ public Loot_Load()
 
 		if(IsValidDynamic3DTextLabel(LootData[i][lootText]))
 			DestroyDynamic3DTextLabel(LootData[i][lootText]);
+
+		if(IsValidDynamicObject(LootData[i][lootModel]))
+			DestroyDynamicObject(LootData[i][lootModel]);
 		format(msg, sizeof(msg), "Loot here: %s(%d)\n Press 'N' to pick it up.", LootData[i][lootItem], LootData[i][lootItemID]);
 		LootData[i][lootText] = CreateDynamic3DTextLabel(msg, X11_AQUAMARINE3, LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.5, 15.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 0);
 		LootData[i][lootModel] = CreateDynamicObject(LootData[i][lootModelID], LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-1, 0, 0, 0);
@@ -461,10 +464,23 @@ Dialog:DIALOG_REGISTER(playerid, response, listitem, inputtext[])
 forward OnPlayerRegister(playerid);
 public OnPlayerRegister(playerid)
 {
+	new msg[64];
     SetPVarInt(playerid, "AccountID", cache_insert_id());
     SetSpawnInfo(playerid, 0, 12, 1536.61, -1691.2, 13.3, 78.0541, 0, 0, 0, 0, 0, 0);
+
     SetPVarInt(playerid, "IsLoggedIn", 1);
+    SetPVarInt(playerid, "Blood", 12000);
+    SetPVarInt(playerid, "AdminLevel", 0);
+    SetPVarInt(playerid, "Skin", 12);
     SetPlayerColor(playerid, X11_WHITE);
+
+	format(msg, sizeof(msg), "Blood: %d", GetPVarInt(playerid, "Blood"));
+
+	if(IsValidDynamic3DTextLabel(bloodtext[playerid]))
+		DestroyDynamic3DTextLabel(bloodtext[playerid]);
+
+	bloodtext[playerid] = CreateDynamic3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, playerid, INVALID_VEHICLE_ID, 1);
+
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return;
@@ -853,6 +869,7 @@ CMD:near(playerid, params[])
     			SendClientMessage(playerid, X11_GREY43, msg);
     			return 1;
     		}
+    		else return SendClientMessage(playerid, X11_RED, "You are not near anything");
     	}
     	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
     }   
@@ -1024,6 +1041,10 @@ public OnPlayerLogin(playerid)
 	
 	cache_get_row(0,4,id_string);
 	skin = strval(id_string);
+	if(skin == 0)
+	{
+		skin = 12;
+	}
 	SetPVarInt(playerid, "Skin", skin);
 	
 	new Float:X,Float:Y,Float:Z,Float:angle;
@@ -1225,6 +1246,7 @@ public OnPlayerSpawn(playerid)
 
 public OnPlayerDeath(playerid, killerid, reason)
 {
+
 	return 1;
 }
 
@@ -1368,6 +1390,14 @@ public OnRconLoginAttempt(ip[], password[], success)
 
 public OnPlayerUpdate(playerid)
 {
+	foreach(new i: Player)
+	{
+		if(GetPVarInt(i, "Blood") <= 0)
+		{
+			SetPlayerHealth(i, -100.00);
+			SetPVarInt(i, "Blood", 12000);
+		}
+	}
 	return 1;
 }
 
