@@ -10345,3 +10345,199 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [02:43:52] |----------------------------------|
 
 [02:43:52] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:53:28] 
+[04:53:28] Server Plugins
+[04:53:28] --------------
+[04:53:28]  Loading plugin: crashdetect
+[04:53:28]   CrashDetect v4.18.1 is OK.
+[04:53:28]   Loaded.
+[04:53:28]  Loading plugin: mysql
+[04:53:28]  >> plugin.mysql: R39-4 successfully loaded.
+[04:53:28]   Loaded.
+[04:53:28]  Loading plugin: sscanf
+[04:53:28] 
+
+[04:53:28]  ===============================
+
+[04:53:28]       sscanf plugin loaded.     
+
+[04:53:28]          Version:  2.8.2        
+
+[04:53:28]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:53:28]  ===============================
+
+[04:53:28]   Loaded.
+[04:53:28]  Loading plugin: streamer
+[04:53:28] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:53:28]   Loaded.
+[04:53:28]  Loading plugin: Whirlpool
+[04:53:28]  
+[04:53:28]  ==================
+[04:53:28]  
+[04:53:28]   Whirlpool loaded
+[04:53:28]  
+[04:53:28]  ==================
+[04:53:28]  
+[04:53:28]   Loaded.
+[04:53:28]  Loading plugin: pawncmd
+[04:53:28] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:53:28]   Loaded.
+[04:53:28]  Loaded 6 plugins.
+
+[04:53:28] 
+[04:53:28] Filterscripts
+[04:53:28] ---------------
+[04:53:28]   Loaded 0 filterscripts.
+
+[04:53:28]  
+[04:53:28]  
+[04:53:28]  
+[04:53:28]  ======================================= 
+[04:53:28]  |                                     | 
+[04:53:28]  |        YSI version 3.09.0684        | 
+[04:53:28]  |        By Alex "Y_Less" Cole        | 
+[04:53:28]  |                                     | 
+[04:53:28]  ======================================= 
+[04:53:28]  
+[04:53:28] Successfully connected to MySQL database.
+[04:53:28] 
+|----------------------------------|
+[04:53:28] |  Samp Dayz by ZiiM               |
+[04:53:28] |----------------------------------|
+
+[04:53:28] Number of vehicle models: 0
+[04:54:14] [connection] 127.0.0.1:49753 requests connection cookie.
+[04:54:15] [connection] incoming connection: 127.0.0.1:49753 id: 0
+[04:54:15] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:54:20] Login1
+[04:54:20] X: 1539.770019 | Y: -1665.790039 | Z: 13.649000
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:56:03] 
+[04:56:03] Server Plugins
+[04:56:03] --------------
+[04:56:03]  Loading plugin: crashdetect
+[04:56:03]   CrashDetect v4.18.1 is OK.
+[04:56:03]   Loaded.
+[04:56:03]  Loading plugin: mysql
+[04:56:03]  >> plugin.mysql: R39-4 successfully loaded.
+[04:56:03]   Loaded.
+[04:56:03]  Loading plugin: sscanf
+[04:56:03] 
+
+[04:56:03]  ===============================
+
+[04:56:03]       sscanf plugin loaded.     
+
+[04:56:03]          Version:  2.8.2        
+
+[04:56:03]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:56:03]  ===============================
+
+[04:56:03]   Loaded.
+[04:56:03]  Loading plugin: streamer
+[04:56:03] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:56:03]   Loaded.
+[04:56:03]  Loading plugin: Whirlpool
+[04:56:03]  
+[04:56:03]  ==================
+[04:56:03]  
+[04:56:03]   Whirlpool loaded
+[04:56:03]  
+[04:56:03]  ==================
+[04:56:03]  
+[04:56:03]   Loaded.
+[04:56:03]  Loading plugin: pawncmd
+[04:56:03] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:56:03]   Loaded.
+[04:56:03]  Loaded 6 plugins.
+
+[04:56:03] 
+[04:56:03] Filterscripts
+[04:56:03] ---------------
+[04:56:03]   Loaded 0 filterscripts.
+
+[04:56:03]  
+[04:56:03]  
+[04:56:03]  
+[04:56:03]  ======================================= 
+[04:56:03]  |                                     | 
+[04:56:03]  |        YSI version 3.09.0684        | 
+[04:56:03]  |        By Alex "Y_Less" Cole        | 
+[04:56:03]  |                                     | 
+[04:56:03]  ======================================= 
+[04:56:03]  
+[04:56:03] Successfully connected to MySQL database.
+[04:56:03] 
+|----------------------------------|
+[04:56:03] |  Samp Dayz by ZiiM               |
+[04:56:03] |----------------------------------|
+
+[04:56:03] Number of vehicle models: 0
+[04:56:08] [connection] 127.0.0.1:60800 requests connection cookie.
+[04:56:09] [connection] incoming connection: 127.0.0.1:60800 id: 0
+[04:56:09] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:56:13] Login1
+[04:56:13] X: 1539.770019 | Y: -1665.790039 | Z: 13.649000
+[05:03:14] [connection] 101.185.20.244:61456 requests connection cookie.
+[05:03:15] [connection] incoming connection: 101.185.20.244:61456 id: 1
+[05:03:16] [join] ryz0o has joined the server (1:101.185.20.244)
+[05:03:56] TotalBlood: 4800 || WeaponID: 0
+[05:04:01] TotalBlood: 4800 || WeaponID: 0
+[05:04:02] TotalBlood: 4800 || WeaponID: 0
+[05:04:03] TotalBlood: 4800 || WeaponID: 0
+[05:04:04] TotalBlood: 4800 || WeaponID: 0
+[05:04:05] TotalBlood: 4800 || WeaponID: 0
+[05:04:05] TotalBlood: 4800 || WeaponID: 0
+[05:04:25] TotalBlood: 0 || WeaponID: 0
+[05:04:34] TotalBlood: 4800 || WeaponID: 0
+[05:04:35] TotalBlood: 4800 || WeaponID: 0
+[05:04:35] TotalBlood: 4800 || WeaponID: 0
+[05:04:36] TotalBlood: 4800 || WeaponID: 0
+[05:04:37] TotalBlood: 4800 || WeaponID: 0
+[05:04:56] TotalBlood: 4300 || WeaponID: 24
+[05:04:57] TotalBlood: 3800 || WeaponID: 24
+[05:04:58] TotalBlood: 3300 || WeaponID: 24
+[05:04:59] TotalBlood: 2800 || WeaponID: 24
+[05:05:00] TotalBlood: 2300 || WeaponID: 24
+[05:05:01] TotalBlood: 1800 || WeaponID: 24
+[05:05:01] TotalBlood: 1300 || WeaponID: 24
+[05:05:03] TotalBlood: 800 || WeaponID: 24
+[05:05:04] TotalBlood: 300 || WeaponID: 24
+[05:05:05] TotalBlood: -200 || WeaponID: 24
+[05:05:31] TotalBlood: 11500 || WeaponID: 24
+[05:05:33] TotalBlood: 11000 || WeaponID: 24
+[05:05:35] TotalBlood: 10500 || WeaponID: 24
+[05:05:36] TotalBlood: 10000 || WeaponID: 24
+[05:05:38] TotalBlood: 6000 || WeaponID: 34
+[05:05:40] TotalBlood: 0 || WeaponID: 34
+[05:05:57] TotalBlood: 12000 || WeaponID: 0
+[05:06:11] TotalBlood: 10000 || WeaponID: 0
+[05:06:28] Check Blood: 12000
+[05:06:28] [part] ryz0o has left the server (1:1)
+[05:10:52] Check Blood: 10000
+[05:10:52] [part] ZiiM has left the server (0:1)

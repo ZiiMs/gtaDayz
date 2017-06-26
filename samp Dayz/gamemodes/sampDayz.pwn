@@ -183,7 +183,7 @@ public Loot_Load()
 	cache_get_data(rows,fields);
 	for (new i = 0; i < rows; i ++) if (i < MAX_LOOTSPAWN)
 	{
-		lootid = random(1000);
+		lootid = random(25);
 		LootData[i][lootExists] = true;
 		LootData[i][lootItemID] = lootid;
 		LootData[i][lootItem] = LootItemName(lootid);
@@ -343,38 +343,41 @@ LootItemModelID(lootnumber)
 		case 451..500: {
 			return 358;
 		}
-		case 551..600: {
+		case 501..550: {
 			return 3016;
 		}
-		case 601..650: {
+		case 551..600: {
 			return 357;
 		}
-		case 651..700: {
+		case 601..650: {
 			return 342;
 		}
-		case 701..725: {
+		case 651..700: {
 			return 2814;
 		}
-		case 726..750: {
+		case 701..725: {
 			return 19917;
 		}
-		case 751..775: {
+		case 726..750: {
 			return 1098;
 		}
-		case 776..780: {
+		case 751..775: {
 			return 19921;
 		}
-		case 781..810: {
+		case 776..780: {
 			return 1654;
 		}
-		case 811..870: {
+		case 781..810: {
 			return 2673;
 		}
-		case 871..990: {
+		case 811..870: {
 			return 2866;
 		}
+		case 871..990: {
+			return 1275;
+		}
 		case 991..1000: {
-			return 359;
+			return 359;///25
 		}
 	}
 	return 0;
@@ -1049,6 +1052,10 @@ public OnPlayerLogin(playerid)
     SetPlayerColor(playerid, X11_WHITE);
 
 	format(msg, sizeof(msg), "Blood: %d", GetPVarInt(playerid, "Blood"));
+
+	if(IsValidDynamic3DTextLabel(bloodtext[playerid]))
+		DestroyDynamic3DTextLabel(bloodtext[playerid]);
+
 	bloodtext[playerid] = CreateDynamic3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, playerid, INVALID_VEHICLE_ID, 1);
 
     TogglePlayerSpectating(playerid, false);
@@ -1172,7 +1179,7 @@ public OnPlayerCommandPerformed(playerid, cmd[], params[], result, flags)
 public OnPlayerDisconnect(playerid, reason)
 {
 	SetPVarInt(playerid, "IsLoggedIn", 0);
-	Delete3DTextLabel(bloodtext[playerid]);
+	DestroyDynamic3DTextLabel(bloodtext[playerid]);
 	new reasonstr[32], msg[256];
 	switch(reason) {
 		case 0: {
