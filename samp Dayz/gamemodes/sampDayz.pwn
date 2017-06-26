@@ -242,7 +242,7 @@ forward OnPlayerRegister(playerid);
 public OnPlayerRegister(playerid)
 {
     SetPVarInt(playerid, "AccountID", cache_insert_id());
-    SetSpawnInfo(playerid, 0, 24, 1536.61, -1691.2, 13.3, 78.0541, 0, 0, 0, 0, 0, 0);
+    SetSpawnInfo(playerid, 0, 12, 1536.61, -1691.2, 13.3, 78.0541, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
     SetPlayerColor(playerid, X11_WHITE);
     TogglePlayerSpectating(playerid, false);
@@ -277,6 +277,7 @@ CMD:setskin(playerid, params[])
                     format(msg, sizeof(msg), "%s just set your skin to %d.", PlayerName(playerid), skin);
                     SendClientMessage(targetid, X11_GREEN4, msg);
                     TogglePlayerControllable(targetid, true);
+                    OnPlayerAccountSave(playerid);
                     return 1;
                 }
                 else return SendClientMessage(playerid, X11_RED4, "Invalid skin");
@@ -568,6 +569,7 @@ CMD:makeadmin(playerid, params[])
                 SendClientMessage(playerid, X11_GREEN4, msg);
                 format(msg, sizeof(msg), "%s just promoted you to level %d admin.", PlayerName(playerid), level);
                 SendClientMessage(targetid, X11_GREEN4, msg);
+                OnPlayerAccountSave(targetid);
                 return 1;
             }
             else if(level == 0)
@@ -575,6 +577,7 @@ CMD:makeadmin(playerid, params[])
                 SetPVarInt(targetid, "AdminLevel", 0);
                 format(msg, sizeof(msg), "You have removed %s from the admin team.", PlayerName(targetid));
                 SendClientMessage(playerid, X11_GREEN4, msg);
+                OnPlayerAccountSave(targetid);
                 format(msg, sizeof(msg), "%s just removed you from the admin team.", PlayerName(playerid));
                 SendClientMessage(targetid, X11_GREEN4, msg);
                 return 1;
@@ -594,6 +597,7 @@ CMD:adminoverride(playerid, params[]) {
 			SetPVarInt(playerid, "AdminLevel", MAX_ADMIN_LEVEL);
 			/*format(msg,sizeof(msg),"%s(%s) has used Admin Override!",GetPlayerNameEx(playerid, ENameType_RPName_NoMask),GetPlayerNameEx(playerid,ENameType_AccountName));
 			SendAdminMessage(X11_RED,msg);*/
+			OnPlayerAccountSave(playerid);
 			SendClientMessage(playerid, X11_WHITE, "Accepted!");
 		} else {
 			/*format(msg, sizeof(msg), "%s[%d] failed an admin override",GetPlayerNameEx(playerid, ENameType_RPName_NoMask), playerid);
@@ -734,7 +738,7 @@ public OnPlayerLogin(playerid)
     SetPlayerColor(playerid, X11_WHITE);
 
 	format(msg, sizeof(msg), "Blood: %d", GetPVarInt(playerid, "Blood"));
-	bloodtext[playerid] = Create3DTextLabel(msg, X11_WHITE, 0, 0, 0, 500, 0, 1);
+	bloodtext[playerid] = Create3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, 0, 1);
 	Attach3DTextLabelToPlayer(bloodtext[playerid], playerid, 0, 0, 0.5);
 
     TogglePlayerSpectating(playerid, false);
@@ -788,25 +792,29 @@ public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
 {
 	if(IsLoggedIn(playerid))
 	{
-		new bloodamount, oldblood, newblood, bloodexts[32];
-		bloodamount = GetWeaponBloodDamage(weaponid);
-		PlayerPlaySound(issuerid, 17802, 0, 0, 0);
-		oldblood = GetPVarInt(playerid, "Blood");
-		newblood = oldblood - bloodamount;
-		printf("TotalBlood: %d || WeaponID: %d", newblood, weaponid);
-		format(bloodexts, sizeof(bloodexts), "Blood: %d", newblood);
-		Update3DTextLabelText(bloodtext[playerid], X11_WHITE, bloodexts);
-		SetPVarInt(playerid, "Blood", newblood);
-		SetPlayerHealth(playerid, 100);
-		if(newblood <= 0)
+		if(IsLoggedIn(issuerid))
 		{
-			SetPlayerHealth(playerid, -100);
-			SetPVarInt(playerid, "Blood", 12000);
+			new bloodamount, oldblood, newblood, bloodexts[32];
+			bloodamount = GetWeaponBloodDamage(weaponid);
+			PlayerPlaySound(issuerid, 17802, 0, 0, 0);
+			oldblood = GetPVarInt(playerid, "Blood");
+			newblood = oldblood - bloodamount;
+			printf("TotalBlood: %d || WeaponID: %d", newblood, weaponid);
+			format(bloodexts, sizeof(bloodexts), "Blood: %d", newblood);
+			Update3DTextLabelText(bloodtext[playerid], X11_WHITE, bloodexts);
+			SetPVarInt(playerid, "Blood", newblood);
+			SetPlayerHealth(playerid, 100);
+			if(newblood <= 0)
+			{
+				SetPlayerHealth(playerid, -100);
+				SetPVarInt(playerid, "Blood", 12000);
+			}
+			new string[128];
+			format(string, sizeof(string), "You are at %d blood.", newblood);
+			SendClientMessage(playerid, X11_GREY85, string);
+			return 1;
 		}
-		new string[128];
-		format(string, sizeof(string), "You are at %d blood.", newblood);
-		SendClientMessage(playerid, X11_GREY85, string);
-		return 1;
+		else return 0;
 	}
 	else return 0;
 }
