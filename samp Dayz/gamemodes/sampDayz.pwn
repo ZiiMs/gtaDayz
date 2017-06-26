@@ -19,6 +19,7 @@
 #define ADMINOVERRIDE_PASS "eec8eb13fb975d56389a08be866cb37bd2445b46"
 #define MAX_ADMIN_OVERRIDE_ATTEMPTS 3
 #define MAX_HACK_WARNS 2
+#define MAX_LOOTSPAWN 2000
 
 #define INFINITE_AMMO 22767
 
@@ -133,6 +134,17 @@ new GunName[48][] = {
 	"Fake Pistol"
 };
 
+enum lootData {
+	lootExists,
+	lootItem[32],
+	lootItemID,
+	lootModelID,
+	lootModel,
+	Float:lootPos[3],
+	Text3D:lootText
+};
+new LootData[MAX_LOOTSPAWN][lootData];
+
 native WP_Hash(buffer[], len, const str[]);
 
 main()
@@ -153,14 +165,222 @@ public OnGameModeInit()
 	mysql_log(LOG_ERROR | LOG_WARNING, LOG_TYPE_HTML);
 	BlockGarages(true, GARAGE_TYPE_ALL, "DISABLED");
 	BlockGarages(true, GARAGE_TYPE_MODSHOP, "DISABLED");
-	BlockGarages(true, GARAGE_TYPE_BOMB, "DISABLED");	
+	BlockGarages(true, GARAGE_TYPE_BOMB, "DISABLED");
 	BlockGarages(true, GARAGE_TYPE_PAINT, "DISABLED");
+	mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
 	ManualVehicleEngineAndLights();
 	EnableStuntBonusForAll(0);
     DisableInteriorEnterExits();
     ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
     SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sa-dayz.com]");
 	return 1;
+}
+forward Loot_Load();
+public Loot_Load()
+{
+	new rows, fields, msg[128], lootid;
+	cache_get_data(rows,fields);
+	for (new i = 0; i < rows; i ++) if (i < MAX_LOOTSPAWN)
+	{
+		lootid = random(25);
+		LootData[i][lootExists] = true;
+		LootData[i][lootItemID] = lootid;
+		LootData[i][lootItem] = LootItemName(lootid);
+		LootData[i][lootModelID] = LootItemModelID(lootid);
+
+
+		LootData[i][lootPos][0] = cache_get_field_content_float(i, "X");
+		LootData[i][lootPos][1] = cache_get_field_content_float(i, "Y");
+		LootData[i][lootPos][2] = cache_get_field_content_float(i, "Z");
+
+		if(IsValidDynamic3DTextLabel(LootData[i][lootText]))
+			DestroyDynamic3DTextLabel(LootData[i][lootText]);
+		format(msg, sizeof(msg), "Loot here: %s(%d)\n Press 'N' to pick it up.", LootData[i][lootItem], LootData[i][lootItemID]);
+		LootData[i][lootText] = CreateDynamic3DTextLabel(msg, X11_AQUAMARINE3, LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.5, 15.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, true);
+		LootData[i][lootModel] = CreateDynamicObject(LootData[i][lootModelID], LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.75, 0, 0, 0);
+// CreateDynamicObject(modelid, Float:x, Float:y, Float:z, Float:rx, Float:ry, Float:rz, worldid = -1, interiorid = -1, playerid = -1, Float:streamdistance = STREAMER_OBJECT_SD, Float:drawdistance = STREAMER_OBJECT_DD, STREAMER_TAG_AREA areaid = STREAMER_TAG_AREA -1)
+		// CreateDynamic3DTextLabel(const text[], color, Float:x, Float:y, Float:z, Float:drawdistance, attachedplayer = INVALID_PLAYER_ID, attachedvehicle = INVALID_VEHICLE_ID, testlos = 0, worldid = -1, interiorid = -1, playerid = -1, Float:streamdistance = STREAMER_3D_TEXT_LABEL_SD, STREAMER_TAG_AREA areaid = STREAMER_TAG_AREA -1)
+	}
+	return 1;
+}
+
+LootItemName(lootnumber)
+{
+	new lootname[32];
+	switch(lootnumber)
+	{
+		case -1: {
+			format(lootname, sizeof(lootname), "Empty");
+		}
+		case 0: {
+			format(lootname, sizeof(lootname), "Water Bottle");
+		}
+		case 1: {
+			format(lootname, sizeof(lootname), "Heat Pack");
+		}
+		case 2: {
+			format(lootname, sizeof(lootname), "Medkit");
+		}
+		case 3: {
+			format(lootname, sizeof(lootname), "Morphine");
+		}
+		case 4: {
+			format(lootname, sizeof(lootname), "M4");
+		}
+		case 5: {
+			format(lootname, sizeof(lootname), "Pistol");
+		}
+		case 6: {
+			format(lootname, sizeof(lootname), "Pistol Ammo");
+		}
+		case 7: {
+			format(lootname, sizeof(lootname), "Ak47");
+		}
+		case 8: {
+			format(lootname, sizeof(lootname), "Ghillie Suit");
+		}
+		case 9: {
+			format(lootname, sizeof(lootname), "Army Clothes");
+		}
+		case 10: {
+			format(lootname, sizeof(lootname), "Assault Ammo");
+		}
+		case 11: {
+			format(lootname, sizeof(lootname), "MP5");
+		}
+		case 12: {
+			format(lootname, sizeof(lootname), "Submachine Gun Ammo");
+		}
+		case 13: {
+			format(lootname, sizeof(lootname), "Sniper Rifle");
+		}
+		case 14: {
+			format(lootname, sizeof(lootname), "Sniper Ammo");
+		}
+		case 15: {
+			format(lootname, sizeof(lootname), "Country Rifle");
+		}
+		case 16: {
+			format(lootname, sizeof(lootname), "Grenade");
+		}
+		case 17: {
+			format(lootname, sizeof(lootname), "Pizza");
+		}
+		case 18: {
+			format(lootname, sizeof(lootname), "Engine");
+		}
+		case 19: {
+			format(lootname, sizeof(lootname), "Tire");
+		}
+		case 20: {
+			format(lootname, sizeof(lootname), "Toolbox");
+		}
+		case 21: {
+			format(lootname, sizeof(lootname), "C4");
+		}
+		case 22: {
+			format(lootname, sizeof(lootname), "Coka-cola");
+		}
+		case 23: {
+			format(lootname, sizeof(lootname), "Canned Tuna");
+		}
+		case 24: {
+			format(lootname, sizeof(lootname), "Civilian Skin");
+		}
+		case 25: {
+			format(lootname, sizeof(lootname), "RPG-45");
+		}
+	}
+	return (lootname);
+}
+
+LootItemModelID(lootnumber)
+{
+	switch(lootnumber)
+	{
+		case -1: {
+			return 0;
+		}
+		case 0: {
+			return 1484;
+		}
+		case 1: {
+			return 19573;
+		}
+		case 2: {
+			return 1580;
+		}
+		case 3: {
+			return 1580;
+		}
+		case 4: {
+			return 356;
+		}
+		case 5: {
+			return 346;
+		}
+		case 6: {
+			return 3016;
+		}
+		case 7: {
+			return 355;
+		}
+		case 8: {
+			return 1275;
+		}
+		case 9: {
+			return 19106;
+		}
+		case 10: {
+			return 3016;
+		}
+		case 11: {
+			return 353;
+		}
+		case 12: {
+			return 3016;
+		}
+		case 13: {
+			return 358;
+		}
+		case 14: {
+			return 3016;
+		}
+		case 15: {
+			return 357;
+		}
+		case 16: {
+			return 342;
+		}
+		case 17: {
+			return 2814;
+		}
+		case 18: {
+			return 19917;
+		}
+		case 19: {
+			return 1098;
+		}
+		case 20: {
+			return 19921;
+		}
+		case 21: {
+			return 1654;
+		}
+		case 22: {
+			return 2673;
+		}
+		case 23: {
+			return 2866;
+		}
+		case 24: {
+			return 1275;
+		}
+		case 25: {
+			return 359;
+		}
+	}
+	return 0;
 }
 
 public OnGameModeExit()
@@ -554,6 +774,40 @@ stock IsValidSkin(skin, playerid=INVALID_PLAYER_ID)
 	return -1;
 }
 
+CMD:setlootspawn(playerid, params[])
+{
+    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+    		new Float:X, Float:Y, Float:Z, query[512];
+    		GetPlayerPos(playerid, X, Y, Z);
+    		//GetPlayerPos(playerid, Float:x, Float:y, Float:z)
+    		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `lootspawns` (`X`, `Y`, `Z`) VALUES ('%f', '%f', '%f')", X, Y, Z);
+    		mysql_tquery(MySQLCon, query, "", "");
+    		SendClientMessage(playerid, X11_YELLOW, "You just added a spawn point to the mysql table.");
+    		return 1;
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
+CMD:respawnloot(playerid, params[])
+{
+    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+			mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
+			SendClientMessageToAll(X11_RED, "Respawning all loot. Server may lag.");
+    		return 1;
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
 CMD:makeadmin(playerid, params[])
 {
     if(GetPVarInt(playerid, "AdminLevel") >= 1)
@@ -738,8 +992,7 @@ public OnPlayerLogin(playerid)
     SetPlayerColor(playerid, X11_WHITE);
 
 	format(msg, sizeof(msg), "Blood: %d", GetPVarInt(playerid, "Blood"));
-	bloodtext[playerid] = Create3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, 0, 1);
-	Attach3DTextLabelToPlayer(bloodtext[playerid], playerid, 0, 0, 0.5);
+	bloodtext[playerid] = CreateDynamic3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, playerid, INVALID_VEHICLE_ID, 1);
 
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);

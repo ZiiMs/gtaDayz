@@ -34,6 +34,15 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
+-- Dumping structure for table GTADayz.lootspawns
+DROP TABLE IF EXISTS `lootspawns`;
+CREATE TABLE IF NOT EXISTS `lootspawns` (
+  `X` float DEFAULT NULL,
+  `Y` float DEFAULT NULL,
+  `Z` float DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
