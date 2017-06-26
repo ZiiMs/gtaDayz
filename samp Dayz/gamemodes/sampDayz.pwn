@@ -136,6 +136,7 @@ new GunName[48][] = {
 
 enum lootData {
 	lootExists,
+	lootID,
 	lootItem[32],
 	lootItemID,
 	lootModelID,
@@ -182,12 +183,13 @@ public Loot_Load()
 	cache_get_data(rows,fields);
 	for (new i = 0; i < rows; i ++) if (i < MAX_LOOTSPAWN)
 	{
-		lootid = random(25);
+		lootid = random(1000);
 		LootData[i][lootExists] = true;
 		LootData[i][lootItemID] = lootid;
 		LootData[i][lootItem] = LootItemName(lootid);
 		LootData[i][lootModelID] = LootItemModelID(lootid);
 
+		LootData[i][lootID] = cache_get_field_content_int(i, "id");
 
 		LootData[i][lootPos][0] = cache_get_field_content_float(i, "X");
 		LootData[i][lootPos][1] = cache_get_field_content_float(i, "Y");
@@ -196,10 +198,8 @@ public Loot_Load()
 		if(IsValidDynamic3DTextLabel(LootData[i][lootText]))
 			DestroyDynamic3DTextLabel(LootData[i][lootText]);
 		format(msg, sizeof(msg), "Loot here: %s(%d)\n Press 'N' to pick it up.", LootData[i][lootItem], LootData[i][lootItemID]);
-		LootData[i][lootText] = CreateDynamic3DTextLabel(msg, X11_AQUAMARINE3, LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.5, 15.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, true);
-		LootData[i][lootModel] = CreateDynamicObject(LootData[i][lootModelID], LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.75, 0, 0, 0);
-// CreateDynamicObject(modelid, Float:x, Float:y, Float:z, Float:rx, Float:ry, Float:rz, worldid = -1, interiorid = -1, playerid = -1, Float:streamdistance = STREAMER_OBJECT_SD, Float:drawdistance = STREAMER_OBJECT_DD, STREAMER_TAG_AREA areaid = STREAMER_TAG_AREA -1)
-		// CreateDynamic3DTextLabel(const text[], color, Float:x, Float:y, Float:z, Float:drawdistance, attachedplayer = INVALID_PLAYER_ID, attachedvehicle = INVALID_VEHICLE_ID, testlos = 0, worldid = -1, interiorid = -1, playerid = -1, Float:streamdistance = STREAMER_3D_TEXT_LABEL_SD, STREAMER_TAG_AREA areaid = STREAMER_TAG_AREA -1)
+		LootData[i][lootText] = CreateDynamic3DTextLabel(msg, X11_AQUAMARINE3, LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.5, 15.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 0);
+		LootData[i][lootModel] = CreateDynamicObject(LootData[i][lootModelID], LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-1, 0, 0, 0);
 	}
 	return 1;
 }
@@ -212,82 +212,82 @@ LootItemName(lootnumber)
 		case -1: {
 			format(lootname, sizeof(lootname), "Empty");
 		}
-		case 0: {
+		case 0..100: {
 			format(lootname, sizeof(lootname), "Water Bottle");
 		}
-		case 1: {
+		case 101..120: {
 			format(lootname, sizeof(lootname), "Heat Pack");
 		}
-		case 2: {
+		case 121..150: {
 			format(lootname, sizeof(lootname), "Medkit");
 		}
-		case 3: {
+		case 151..175: {
 			format(lootname, sizeof(lootname), "Morphine");
 		}
-		case 4: {
+		case 176..185: {
 			format(lootname, sizeof(lootname), "M4");
 		}
-		case 5: {
+		case 186..200: {
 			format(lootname, sizeof(lootname), "Pistol");
 		}
-		case 6: {
+		case 201..220: {
 			format(lootname, sizeof(lootname), "Pistol Ammo");
 		}
-		case 7: {
+		case 221..230: {
 			format(lootname, sizeof(lootname), "Ak47");
 		}
-		case 8: {
+		case 231..250: {
 			format(lootname, sizeof(lootname), "Ghillie Suit");
 		}
-		case 9: {
+		case 251..300: {
 			format(lootname, sizeof(lootname), "Army Clothes");
 		}
-		case 10: {
+		case 301..320: {
 			format(lootname, sizeof(lootname), "Assault Ammo");
 		}
-		case 11: {
+		case 321..400: {
 			format(lootname, sizeof(lootname), "MP5");
 		}
-		case 12: {
+		case 401..450: {
 			format(lootname, sizeof(lootname), "Submachine Gun Ammo");
 		}
-		case 13: {
+		case 451..500: {
 			format(lootname, sizeof(lootname), "Sniper Rifle");
 		}
-		case 14: {
+		case 501..550: {
 			format(lootname, sizeof(lootname), "Sniper Ammo");
 		}
-		case 15: {
+		case 551..600: {
 			format(lootname, sizeof(lootname), "Country Rifle");
 		}
-		case 16: {
+		case 601..650: {
 			format(lootname, sizeof(lootname), "Grenade");
 		}
-		case 17: {
+		case 651..700: {
 			format(lootname, sizeof(lootname), "Pizza");
 		}
-		case 18: {
+		case 701..725: {
 			format(lootname, sizeof(lootname), "Engine");
 		}
-		case 19: {
+		case 726..750: {
 			format(lootname, sizeof(lootname), "Tire");
 		}
-		case 20: {
+		case 751..775: {
 			format(lootname, sizeof(lootname), "Toolbox");
 		}
-		case 21: {
+		case 776..780: {
 			format(lootname, sizeof(lootname), "C4");
 		}
-		case 22: {
+		case 781..810: {
 			format(lootname, sizeof(lootname), "Coka-cola");
 		}
-		case 23: {
+		case 811..870: {
 			format(lootname, sizeof(lootname), "Canned Tuna");
 		}
-		case 24: {
+		case 871..990: {
 			format(lootname, sizeof(lootname), "Civilian Skin");
 		}
-		case 25: {
+		case 991..1000: {
 			format(lootname, sizeof(lootname), "RPG-45");
 		}
 	}
@@ -301,82 +301,79 @@ LootItemModelID(lootnumber)
 		case -1: {
 			return 0;
 		}
-		case 0: {
+		case 0..100: {
 			return 1484;
 		}
-		case 1: {
+		case 101..120: {
 			return 19573;
 		}
-		case 2: {
+		case 121..150: {
 			return 1580;
 		}
-		case 3: {
+		case 151..175: {
 			return 1580;
 		}
-		case 4: {
+		case 176..185: {
 			return 356;
 		}
-		case 5: {
+		case 186..200: {
 			return 346;
 		}
-		case 6: {
+		case 201..220: {
 			return 3016;
 		}
-		case 7: {
+		case 221..230: {
 			return 355;
 		}
-		case 8: {
+		case 231..250: {
 			return 1275;
 		}
-		case 9: {
+		case 251..300: {
 			return 19106;
 		}
-		case 10: {
+		case 301..320: {
 			return 3016;
 		}
-		case 11: {
+		case 321..400: {
 			return 353;
 		}
-		case 12: {
+		case 401..450: {
 			return 3016;
 		}
-		case 13: {
+		case 451..500: {
 			return 358;
 		}
-		case 14: {
+		case 551..600: {
 			return 3016;
 		}
-		case 15: {
+		case 601..650: {
 			return 357;
 		}
-		case 16: {
+		case 651..700: {
 			return 342;
 		}
-		case 17: {
+		case 701..725: {
 			return 2814;
 		}
-		case 18: {
+		case 726..750: {
 			return 19917;
 		}
-		case 19: {
+		case 751..775: {
 			return 1098;
 		}
-		case 20: {
+		case 776..780: {
 			return 19921;
 		}
-		case 21: {
+		case 781..810: {
 			return 1654;
 		}
-		case 22: {
+		case 811..870: {
 			return 2673;
 		}
-		case 23: {
+		case 871..990: {
 			return 2866;
 		}
-		case 24: {
-			return 1275;
-		}
-		case 25: {
+		case 991..1000: {
 			return 359;
 		}
 	}
@@ -806,6 +803,66 @@ CMD:respawnloot(playerid, params[])
     	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
     }   
     return -1;
+}
+
+CMD:deletelootspawn(playerid, params[])
+{
+    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+    		new spawnid, msg[128], query[512];
+    		if(sscanf(params, "d", spawnid)) return SendClientMessage(playerid, X11_GREY_85, "/deletelootspawn [lootspawnid]");
+    		if(spawnid <= MAX_LOOTSPAWN && LootData[spawnid][lootExists])
+    		{
+    			mysql_format(MySQLCon, query, sizeof(query), "DELETE FROM `lootspawns` WHERE `id` = '%d'", LootData[spawnid][lootID]);
+    			mysql_tquery(MySQLCon, query, "", "");
+
+    			DestroyDynamicObject(LootData[spawnid][lootModel]);
+    			DestroyDynamic3DTextLabel(LootData[spawnid][lootText]);
+    			format(msg, sizeof(msg), "You have delete loot spawn ID: %d(SQLID: %d).", spawnid, LootData[spawnid][lootID]);
+    			SendClientMessage(playerid, X11_YELLOW, msg);
+
+    			LootData[spawnid][lootExists] = false;
+    			LootData[spawnid][lootID] = -1;
+    			return 1;
+    		}
+    		else return SendClientMessage(playerid, X11_RED_4, "Invalid loot spawn ID.");
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
+CMD:near(playerid, params[])
+{
+	
+	if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+    		new id = -1;
+
+    		if((id = Loot_Nearest(playerid)) != -1)
+    		{
+    			new msg[128];
+    			format(msg, sizeof(msg), "You are standing near loot spawn ID: %d.", id);
+    			SendClientMessage(playerid, X11_GREY43, msg);
+    			return 1;
+    		}
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
+Loot_Nearest(playerid)
+{
+	for (new i = 0; i != MAX_LOOTSPAWN; i++) if (LootData[i][lootExists] && IsPlayerInRangeOfPoint(playerid, 1.5, LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]))
+	{
+		return i;
+	}
+	return -1;
 }
 
 CMD:makeadmin(playerid, params[])

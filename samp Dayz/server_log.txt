@@ -10006,3 +10006,342 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [22:30:34] X: 1542.680053 | Y: -1667.520019 | Z: 13.654999
 [22:32:19] Check Blood: 4800
 [22:32:19] [part] ZiiM has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:35:00] 
+[23:35:00] Server Plugins
+[23:35:00] --------------
+[23:35:00]  Loading plugin: crashdetect
+[23:35:00]   CrashDetect v4.18.1 is OK.
+[23:35:00]   Loaded.
+[23:35:00]  Loading plugin: mysql
+[23:35:00]  >> plugin.mysql: R39-4 successfully loaded.
+[23:35:00]   Loaded.
+[23:35:00]  Loading plugin: sscanf
+[23:35:00] 
+
+[23:35:00]  ===============================
+
+[23:35:00]       sscanf plugin loaded.     
+
+[23:35:00]          Version:  2.8.2        
+
+[23:35:00]    (c) 2012 Alex "Y_Less" Cole  
+
+[23:35:00]  ===============================
+
+[23:35:00]   Loaded.
+[23:35:00]  Loading plugin: streamer
+[23:35:00] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[23:35:00]   Loaded.
+[23:35:00]  Loading plugin: Whirlpool
+[23:35:00]  
+[23:35:00]  ==================
+[23:35:00]  
+[23:35:00]   Whirlpool loaded
+[23:35:00]  
+[23:35:00]  ==================
+[23:35:00]  
+[23:35:00]   Loaded.
+[23:35:00]  Loading plugin: pawncmd
+[23:35:00] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[23:35:00]   Loaded.
+[23:35:00]  Loaded 6 plugins.
+
+[23:35:00] 
+[23:35:00] Filterscripts
+[23:35:00] ---------------
+[23:35:00]   Loaded 0 filterscripts.
+
+[23:35:00]  
+[23:35:00]  
+[23:35:00]  
+[23:35:00]  ======================================= 
+[23:35:01]  |                                     | 
+[23:35:01]  |        YSI version 3.09.0684        | 
+[23:35:01]  |        By Alex "Y_Less" Cole        | 
+[23:35:01]  |                                     | 
+[23:35:01]  ======================================= 
+[23:35:01]  
+[23:35:01] Successfully connected to MySQL database.
+[23:35:01] 
+|----------------------------------|
+[23:35:01] |  Samp Dayz by ZiiM               |
+[23:35:01] |----------------------------------|
+
+[23:35:01] Number of vehicle models: 0
+[23:35:49] [connection] 127.0.0.1:62811 requests connection cookie.
+[23:35:50] [connection] incoming connection: 127.0.0.1:62811 id: 0
+[23:35:50] [join] ZiiM has joined the server (0:127.0.0.1)
+[23:35:54] Login1
+[23:35:54] X: 1470.939941 | Y: -1616.310058 | Z: 14.138999
+[23:36:09] Check Blood: 4800
+[23:36:24] Check Blood: 4800
+[23:36:36] Query: DELETE FROM `houses` WHERE `id` = '1'
+[23:36:36] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:36:46] Query: DELETE FROM `houses` WHERE `id` = '-1'
+[23:36:46] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:36:48] Query: DELETE FROM `houses` WHERE `id` = '-1'
+[23:36:48] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:37:25] Query: DELETE FROM `houses` WHERE `id` = '2'
+[23:37:25] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:38:08] 
+[23:38:08] Server Plugins
+[23:38:08] --------------
+[23:38:08]  Loading plugin: crashdetect
+[23:38:08]   CrashDetect v4.18.1 is OK.
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: mysql
+[23:38:08]  >> plugin.mysql: R39-4 successfully loaded.
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: sscanf
+[23:38:08] 
+
+[23:38:08]  ===============================
+
+[23:38:08]       sscanf plugin loaded.     
+
+[23:38:08]          Version:  2.8.2        
+
+[23:38:08]    (c) 2012 Alex "Y_Less" Cole  
+
+[23:38:08]  ===============================
+
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: streamer
+[23:38:08] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: Whirlpool
+[23:38:08]  
+[23:38:08]  ==================
+[23:38:08]  
+[23:38:08]   Whirlpool loaded
+[23:38:08]  
+[23:38:08]  ==================
+[23:38:08]  
+[23:38:08]   Loaded.
+[23:38:08]  Loading plugin: pawncmd
+[23:38:08] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[23:38:08]   Loaded.
+[23:38:08]  Loaded 6 plugins.
+
+[23:38:08] 
+[23:38:08] Filterscripts
+[23:38:08] ---------------
+[23:38:08]   Loaded 0 filterscripts.
+
+[23:38:08]  
+[23:38:08]  
+[23:38:08]  
+[23:38:08]  ======================================= 
+[23:38:08]  |                                     | 
+[23:38:08]  |        YSI version 3.09.0684        | 
+[23:38:08]  |        By Alex "Y_Less" Cole        | 
+[23:38:08]  |                                     | 
+[23:38:08]  ======================================= 
+[23:38:08]  
+[23:38:08] Successfully connected to MySQL database.
+[23:38:08] 
+|----------------------------------|
+[23:38:08] |  Samp Dayz by ZiiM               |
+[23:38:08] |----------------------------------|
+
+[23:38:08] Number of vehicle models: 0
+[23:38:15] [connection] 127.0.0.1:64392 requests connection cookie.
+[23:38:16] [connection] incoming connection: 127.0.0.1:64392 id: 0
+[23:38:17] [join] ZiiM has joined the server (0:127.0.0.1)
+[23:38:19] Login1
+[23:38:19] X: 1470.180053 | Y: -1613.550048 | Z: 14.138999
+[23:38:22] Query: DELETE FROM `houses` WHERE `id` = '2'
+[23:38:22] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:38:28] [debug] Run time error 4: "Array index out of bounds"
+[23:38:28] [debug]  Attempted to read/write array element at negative index -1
+[23:38:28] [debug] AMX backtrace:
+[23:38:28] [debug] #0 00022fdc in public pc_cmd_deletelootspawn (0, 697764) from sampDayz.amx
+[23:38:36] Query: DELETE FROM `houses` WHERE `id` = '1'
+[23:38:36] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:38:51] Query: DELETE FROM `houses` WHERE `id` = '3'
+[23:38:51] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:38:53] Query: DELETE FROM `houses` WHERE `id` = '4'
+[23:38:53] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:38:53] Query: DELETE FROM `houses` WHERE `id` = '5'
+[23:38:53] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+[23:38:54] Query: DELETE FROM `houses` WHERE `id` = '6'
+[23:38:54] SQL ERROR: 1146 Table 'gtadayz.houses' doesn't exist
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[23:39:37] 
+[23:39:37] Server Plugins
+[23:39:37] --------------
+[23:39:37]  Loading plugin: crashdetect
+[23:39:37]   CrashDetect v4.18.1 is OK.
+[23:39:37]   Loaded.
+[23:39:37]  Loading plugin: mysql
+[23:39:37]  >> plugin.mysql: R39-4 successfully loaded.
+[23:39:37]   Loaded.
+[23:39:37]  Loading plugin: sscanf
+[23:39:37] 
+
+[23:39:37]  ===============================
+
+[23:39:37]       sscanf plugin loaded.     
+
+[23:39:37]          Version:  2.8.2        
+
+[23:39:37]    (c) 2012 Alex "Y_Less" Cole  
+
+[23:39:37]  ===============================
+
+[23:39:37]   Loaded.
+[23:39:37]  Loading plugin: streamer
+[23:39:37] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[23:39:37]   Loaded.
+[23:39:37]  Loading plugin: Whirlpool
+[23:39:37]  
+[23:39:37]  ==================
+[23:39:37]  
+[23:39:37]   Whirlpool loaded
+[23:39:37]  
+[23:39:37]  ==================
+[23:39:37]  
+[23:39:37]   Loaded.
+[23:39:37]  Loading plugin: pawncmd
+[23:39:37] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[23:39:37]   Loaded.
+[23:39:37]  Loaded 6 plugins.
+
+[23:39:37] 
+[23:39:37] Filterscripts
+[23:39:37] ---------------
+[23:39:37]   Loaded 0 filterscripts.
+
+[23:39:37]  
+[23:39:37]  
+[23:39:37]  
+[23:39:37]  ======================================= 
+[23:39:37]  |                                     | 
+[23:39:37]  |        YSI version 3.09.0684        | 
+[23:39:37]  |        By Alex "Y_Less" Cole        | 
+[23:39:37]  |                                     | 
+[23:39:37]  ======================================= 
+[23:39:37]  
+[23:39:37] Successfully connected to MySQL database.
+[23:39:37] 
+|----------------------------------|
+[23:39:37] |  Samp Dayz by ZiiM               |
+[23:39:37] |----------------------------------|
+
+[23:39:37] Number of vehicle models: 0
+[23:39:40] [connection] 127.0.0.1:63480 requests connection cookie.
+[23:39:41] [connection] incoming connection: 127.0.0.1:63480 id: 0
+[23:39:41] [join] ZiiM has joined the server (0:127.0.0.1)
+[23:39:48] Login1
+[23:39:48] X: 1470.180053 | Y: -1613.550048 | Z: 14.138999
+[23:42:08] Check Blood: 4800
+[23:42:08] [part] ZiiM has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:43:52] 
+[02:43:52] Server Plugins
+[02:43:52] --------------
+[02:43:52]  Loading plugin: crashdetect
+[02:43:52]   CrashDetect v4.18.1 is OK.
+[02:43:52]   Loaded.
+[02:43:52]  Loading plugin: mysql
+[02:43:52]  >> plugin.mysql: R39-4 successfully loaded.
+[02:43:52]   Loaded.
+[02:43:52]  Loading plugin: sscanf
+[02:43:52] 
+
+[02:43:52]  ===============================
+
+[02:43:52]       sscanf plugin loaded.     
+
+[02:43:52]          Version:  2.8.2        
+
+[02:43:52]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:43:52]  ===============================
+
+[02:43:52]   Loaded.
+[02:43:52]  Loading plugin: streamer
+[02:43:52] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[02:43:52]   Loaded.
+[02:43:52]  Loading plugin: Whirlpool
+[02:43:52]  
+[02:43:52]  ==================
+[02:43:52]  
+[02:43:52]   Whirlpool loaded
+[02:43:52]  
+[02:43:52]  ==================
+[02:43:52]  
+[02:43:52]   Loaded.
+[02:43:52]  Loading plugin: pawncmd
+[02:43:52] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[02:43:52]   Loaded.
+[02:43:52]  Loaded 6 plugins.
+
+[02:43:52] 
+[02:43:52] Filterscripts
+[02:43:52] ---------------
+[02:43:52]   Loaded 0 filterscripts.
+
+[02:43:52]  
+[02:43:52]  
+[02:43:52]  
+[02:43:52]  ======================================= 
+[02:43:52]  |                                     | 
+[02:43:52]  |        YSI version 3.09.0684        | 
+[02:43:52]  |        By Alex "Y_Less" Cole        | 
+[02:43:52]  |                                     | 
+[02:43:52]  ======================================= 
+[02:43:52]  
+[02:43:52] Successfully connected to MySQL database.
+[02:43:52] 
+|----------------------------------|
+[02:43:52] |  Samp Dayz by ZiiM               |
+[02:43:52] |----------------------------------|
+
+[02:43:52] Number of vehicle models: 0
