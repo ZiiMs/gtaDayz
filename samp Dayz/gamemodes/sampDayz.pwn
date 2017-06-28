@@ -20,6 +20,7 @@
 #define MAX_ADMIN_OVERRIDE_ATTEMPTS 3
 #define MAX_HACK_WARNS 2
 #define MAX_LOOTSPAWN 2000
+#define MAX_INVENTORY (120)
 
 #define INFINITE_AMMO 22767
 
@@ -146,6 +147,17 @@ enum lootData {
 };
 new LootData[MAX_LOOTSPAWN][lootData];
 
+enum inventoryData {
+	invExists,
+	invID,
+	invItem[32],
+	invItemID,
+	invModel,
+	invSlots,
+	invQuantity
+};
+new InventoryData[MAX_PLAYERS][MAX_INVENTORY][inventoryData];
+
 native WP_Hash(buffer[], len, const str[]);
 
 main()
@@ -186,7 +198,7 @@ public Loot_Load()
 		lootid = random(1000);
 		LootData[i][lootExists] = true;
 		LootData[i][lootItemID] = lootid;
-		LootData[i][lootItem] = LootItemName(lootid);
+		format(LootData[i][lootItem], 32, LootItemName(lootid));
 		LootData[i][lootModelID] = LootItemModelID(lootid);
 
 		LootData[i][lootID] = cache_get_field_content_int(i, "id");
@@ -295,6 +307,201 @@ LootItemName(lootnumber)
 		}
 	}
 	return (lootname);
+}
+
+stock Inventory_Clear(playerid)
+{
+	static
+	    string[64];
+
+	for (new i = 0; i < MAX_INVENTORY; i ++)
+	{
+	    if (InventoryData[playerid][i][invExists])
+	    {
+	        InventoryData[playerid][i][invExists] = 0;
+	        InventoryData[playerid][i][invModel] = 0;
+	        InventoryData[playerid][i][invQuantity] = 0;
+		}
+	}
+	format(string, sizeof(string), "DELETE FROM `inventory` WHERE `ID` = '%d'", GetPVarInt(playerid, "AccountID"));
+	return mysql_function_query(MySQLCon, string, false, "", "");
+}
+
+stock Inventory_Set(playerid, item[], model, amount)
+{
+	new itemid = Inventory_GetItemID(playerid, item);
+
+	if (itemid == -1 && amount > 0)
+		Inventory_Add(playerid, item, model, amount);
+
+	else if (amount > 0 && itemid != -1)
+	    Inventory_SetQuantity(playerid, item, amount);
+
+	else if (amount < 1 && itemid != -1)
+	    Inventory_Remove(playerid, item, -1);
+
+	return 1;
+}
+
+stock Inventory_GetItemID(playerid, item[])
+{
+	for (new i = 0; i < MAX_INVENTORY; i ++)
+	{
+	    if (!InventoryData[playerid][i][invExists])
+	        continue;
+
+		if (!strcmp(InventoryData[playerid][i][invItem], item)) return i;
+	}
+	return -1;
+}
+
+stock Inventory_GetFreeID(playerid)
+{
+	if (Inventory_Items(playerid) >= GetPVarInt(playerid, "MaxSlots"))
+		return -1;
+
+	for (new i = 0; i < MAX_INVENTORY; i ++)
+	{
+	    if (!InventoryData[playerid][i][invExists])
+	        return i;
+	}
+	return -1;
+}
+
+stock Inventory_Items(playerid)
+{
+    new count;
+
+    for (new i = 0; i != MAX_INVENTORY; i ++) if (InventoryData[playerid][i][invExists]) {
+        count++;
+	}
+	return count;
+}
+
+stock Inventory_Count(playerid, item[])
+{
+	new itemid = Inventory_GetItemID(playerid, item);
+
+	if (itemid != -1)
+	    return InventoryData[playerid][itemid][invQuantity];
+
+	return 0;
+}
+
+stock Inventory_HasItem(playerid, item[])
+{
+	return (Inventory_GetItemID(playerid, item) != -1);
+}
+
+stock Inventory_SetQuantity(playerid, item[], quantity)
+{
+	new
+	    itemid = Inventory_GetItemID(playerid, item),
+	    string[128];
+
+	if (itemid != -1)
+	{
+	    format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, PlayerData[playerid][pID], InventoryData[playerid][itemid][invID]);
+	    mysql_function_query(g_iHandle, string, false, "", "");
+
+	    InventoryData[playerid][itemid][invQuantity] = quantity;
+	}
+	return 1;
+}
+
+stock Inventory_Add(playerid, item[], itemids, model, quantity)
+{
+	//new item[32];
+	//item = LootData[lootid][lootItem];
+	new string[256];
+
+	for(new itemid = 0; itemid < GetPVarInt(playerid, "MaxSlots"); itemid++)
+	{
+		if(InventoryData[playerid][itemid][invExists])
+		{
+			if (!strcmp(item, InventoryData[playerid][itemid][invItem]))
+			{
+				printf("Item1: %s || Item2: %s", item, InventoryData[playerid][itemid][invItem]);
+			    format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = `invQuantity` + %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, GetPVarInt(playerid, "AccountID"), InventoryData[playerid][itemid][invID]);
+			    mysql_function_query(MySQLCon, string, false, "", "");
+
+			    InventoryData[playerid][itemid][invQuantity] += quantity;
+			    return itemid;
+			}
+		}
+		else if(!InventoryData[playerid][itemid][invExists])
+		{
+	        InventoryData[playerid][itemid][invExists] = true;
+	        InventoryData[playerid][itemid][invItemID] = itemids;
+	        InventoryData[playerid][itemid][invModel] = model;
+	        InventoryData[playerid][itemid][invQuantity] = quantity;
+	        printf("Item: %s || Amount: %d", item, quantity);
+	        //InventoryData[playerid][itemid][invItem] = item;
+	        format(InventoryData[playerid][itemid][invItem], 32, item);
+			format(string, sizeof(string), "INSERT INTO `inventory` (`ID`, `invItem`, `invItemID`, `invModel`, `invQuantity`) VALUES('%d', '%s', '%d', '%d', '%d')", GetPVarInt(playerid, "AccountID"), item, itemids, model, quantity);
+			mysql_function_query(MySQLCon, string, false, "OnInventoryAdd", "dd", playerid, itemid);
+	        return itemid;
+		}
+	}
+	return -1;
+}
+
+forward OpenInventory(playerid);
+public OpenInventory(playerid)
+{
+    if (!IsLoggedIn(playerid))
+	    return 0;
+
+	new
+	    string[512],
+	    diatitle[64],
+	    string2[128];
+
+    for (new i = 0; i < GetPVarInt(playerid, "MaxSlots"); i ++)
+	{
+ 		if (InventoryData[playerid][i][invExists]) {
+ 			format(string2, sizeof(string2), "Item: %s Amount: %d\n", InventoryData[playerid][i][invItem], InventoryData[playerid][i][invQuantity]);
+ 			strcat(string, string2);
+		}
+		else {
+			strcat(string, "Empty Slot\n");
+		}
+	}
+	format(diatitle, sizeof(diatitle), "%s inventory | Total slots: %d | Slots used: %d", PlayerName(playerid), GetPVarInt(playerid, "MaxSlots"), Inventory_Items(playerid));
+	// return ShowModelSelectionMenu(playerid, "Inventory", MODEL_SELECTION_INVENTORY, items, sizeof(items), 0.0, 0.0, 0.0, 1.0, -1, true, amounts);
+	return Dialog_Show(playerid, DIALOG_INVENTORY ,DIALOG_STYLE_TABLIST, diatitle, string, "Select", "Close");
+}
+
+
+stock Inventory_Remove(playerid, item[], quantity = 1)
+{
+	new
+		itemid = Inventory_GetItemID(playerid, item),
+		string[128];
+
+	if (itemid != -1)
+	{
+	    if (InventoryData[playerid][itemid][invQuantity] > 0)
+	    {
+	        InventoryData[playerid][itemid][invQuantity] -= quantity;
+		}
+		if (quantity == -1 || InventoryData[playerid][itemid][invQuantity] < 1)
+		{
+		    InventoryData[playerid][itemid][invExists] = false;
+		    InventoryData[playerid][itemid][invModel] = 0;
+		    InventoryData[playerid][itemid][invQuantity] = 0;
+
+		    format(string, sizeof(string), "DELETE FROM `inventory` WHERE `ID` = '%d' AND `invID` = '%d'", PlayerData[playerid][pID], InventoryData[playerid][itemid][invID]);
+	        mysql_function_query(g_iHandle, string, false, "", "");
+		}
+		else if (quantity != -1 && InventoryData[playerid][itemid][invQuantity] > 0)
+		{
+			format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = `invQuantity` - %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, PlayerData[playerid][pID], InventoryData[playerid][itemid][invID]);
+            mysql_function_query(g_iHandle, string, false, "", "");
+		}
+		return 1;
+	}
+	return 0;
 }
 
 LootItemModelID(lootnumber)
@@ -413,7 +620,7 @@ public OnPlayerRequestClass(playerid, classid)
 	}
 	new query[500], pName[64];
 	GetPlayerName(playerid, pName, sizeof(pName));
-	mysql_format(MySQLCon, query, sizeof(query), "SELECT id, username FROM `accounts` WHERE `username` = '%e' LIMIT 1", pName);
+	mysql_format(MySQLCon, query, sizeof(query), "SELECT id, pass FROM `accounts` WHERE `username` = '%e' LIMIT 1", pName);
 	mysql_tquery(MySQLCon, query, "OnAccountCheck", "i", playerid);
 	return 1;
 }
@@ -424,11 +631,12 @@ public OnAccountCheck(playerid)
     cache_get_data(rows, fields, MySQLCon);
     if(rows)
     {
-        new field_int[128], pName[64];
+        new field_int[140], pName[64];
         cache_get_row(0,0, field_int);
         SetPVarInt(playerid, "AccountID", strval(field_int));
-        cache_get_row(0,2, field_int);
+        cache_get_row(0,1, field_int);
         SetPVarString(playerid, "Pass", field_int);
+        printf("PassReg: %s | Passstrvaled: %s ", field_int, strval(field_int));
         GetPlayerName(playerid, pName, sizeof(pName));
         format(string, sizeof(string), "{D1D1D1}Welcome back to San Andreas DayZ\n           'A place for everyone.'\n\n        Survivor: {FFFFFF}%s\n        {D1D1D1}Enter your password below",pName);
         Dialog_Show(playerid, DIALOG_LOGIN,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Login",string,"Login","Exit");
@@ -453,7 +661,7 @@ Dialog:DIALOG_REGISTER(playerid, response, listitem, inputtext[])
 		Dialog_Show(playerid,DIALOG_REGISTER,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Register",string,"Register","Cancel");
 		return 1;
 	} else {
-		SetPVarString(playerid, "Password",inputtext);
+		SetPVarString(playerid, "Pass",inputtext);
 		SetPVarString(playerid, "AccountName", PlayerName(playerid));
 		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `accounts` (`username`, `pass`) VALUES ('%e', '%s')", PlayerName(playerid), PasswordHash(inputtext));
 		mysql_tquery(MySQLCon, query, "OnPlayerRegister", "i", playerid);
@@ -470,6 +678,7 @@ public OnPlayerRegister(playerid)
 
     SetPVarInt(playerid, "IsLoggedIn", 1);
     SetPVarInt(playerid, "Blood", 12000);
+    SetPVarInt(playerid, "MaxSlots", 12);
     SetPVarInt(playerid, "AdminLevel", 0);
     SetPVarInt(playerid, "Skin", 12);
     SetPlayerColor(playerid, X11_WHITE);
@@ -491,6 +700,12 @@ CMD:blood(playerid, params[])
 	new msg[128];
 	format(msg, sizeof(msg), "You are at %d blood.", GetPVarInt(playerid, "Blood"));
 	SendClientMessage(playerid, X11_RED, msg);
+	return 1;
+}
+
+CMD:inventory(playerid, params[])
+{
+	OpenInventory(playerid);
 	return 1;
 }
 
@@ -834,23 +1049,34 @@ CMD:deletelootspawn(playerid, params[])
     		if(sscanf(params, "d", spawnid)) return SendClientMessage(playerid, X11_GREY_85, "/deletelootspawn [lootspawnid]");
     		if(spawnid <= MAX_LOOTSPAWN && LootData[spawnid][lootExists])
     		{
+    			Loot_Delete(spawnid);
     			mysql_format(MySQLCon, query, sizeof(query), "DELETE FROM `lootspawns` WHERE `id` = '%d'", LootData[spawnid][lootID]);
-    			mysql_tquery(MySQLCon, query, "", "");
+				mysql_tquery(MySQLCon, query, "", "");
 
-    			DestroyDynamicObject(LootData[spawnid][lootModel]);
-    			DestroyDynamic3DTextLabel(LootData[spawnid][lootText]);
     			format(msg, sizeof(msg), "You have delete loot spawn ID: %d(SQLID: %d).", spawnid, LootData[spawnid][lootID]);
-    			SendClientMessage(playerid, X11_YELLOW, msg);
-
-    			LootData[spawnid][lootExists] = false;
-    			LootData[spawnid][lootID] = -1;
-    			return 1;
+				SendClientMessage(playerid, X11_YELLOW, msg);
+				return 1;
     		}
     		else return SendClientMessage(playerid, X11_RED_4, "Invalid loot spawn ID.");
     	}
     	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
     }   
     return -1;
+}
+
+Loot_Delete(spawnid)
+{
+	if(spawnid <= MAX_LOOTSPAWN && LootData[spawnid][lootExists])
+	{	
+		
+		DestroyDynamicObject(LootData[spawnid][lootModel]);
+		DestroyDynamic3DTextLabel(LootData[spawnid][lootText]);
+
+		LootData[spawnid][lootExists] = false;
+		LootData[spawnid][lootID] = -1;
+		return 1;
+	}
+	return -1;
 }
 
 CMD:near(playerid, params[])
@@ -1000,15 +1226,17 @@ Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
 {
     if(!response) return Kick(playerid);
 	new pass[128], query[1024];
-	GetPVarString(playerid, "Password", pass, sizeof(pass));
+	GetPVarString(playerid, "Pass", pass, sizeof(pass));
 	if(!strcmp(PasswordHash(inputtext), pass, false))
 	{
+		printf("Password %s | InputedPassword: %s", pass, PasswordHash(inputtext));
 	    print("Login1");
 		mysql_format(MySQLCon, query, sizeof(query), "SELECT * FROM `accounts` WHERE `username` = '%e' LIMIT 1", PlayerName(playerid));
 		mysql_tquery(MySQLCon, query, "OnPlayerLogin", "i", playerid);
 		return 1;
 	} else {
 		LoginAttempt[playerid]++; new string[256];
+		printf("Password %s | InputedPassword: %s", pass, PasswordHash(inputtext));
 		if(LoginAttempt[playerid] == 1)
 		{
 			format(string, sizeof(string), "{21f3de}_______________________________\n\n{ffffff}Welcome to Los Santos Realism\n        'A place for everyone.'\n\n\tAccount: %s\n\tEnter Password:\n{21f3de}_______________________________",PlayerName(playerid));
@@ -1066,6 +1294,9 @@ public OnPlayerLogin(playerid)
 
 	cache_get_row(0,9,id_string);
 	SetPVarInt(playerid, "Blood", strval(id_string));
+
+	cache_get_row(0,10,id_string);
+	SetPVarInt(playerid, "MaxSlots", strval(id_string));
 	
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
@@ -1179,7 +1410,7 @@ stock IsLoggedIn(playerid)
 
 stock PasswordHash(value[])
 {
-	new buffer[129];
+	new buffer[130];
     WP_Hash(buffer,sizeof(buffer),value);
     return buffer;
 }
@@ -1246,7 +1477,7 @@ public OnPlayerSpawn(playerid)
 
 public OnPlayerDeath(playerid, killerid, reason)
 {
-
+	Inventory_Clear(playerid);
 	return 1;
 }
 
@@ -1380,6 +1611,30 @@ public OnPlayerInteriorChange(playerid, newinteriorid, oldinteriorid)
 
 public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 {
+	if(newkeys & KEY_NO)
+	{
+		if(IsLoggedIn(playerid))
+		{
+			if(Loot_Nearest(playerid) == -1) return 1;
+			new
+				id = Loot_Nearest(playerid),
+				string[128];
+			format(string, sizeof(string), "You are attempting to pick up item from loot spawn %d (Name: %s).", id, LootData[id][lootItem]);
+			Inventory_Add(playerid, LootData[id][lootItem], LootData[id][lootItemID], LootData[id][lootModel], 1);
+			Loot_Delete(id);
+			SendClientMessage(playerid, X11_RED, string);
+			return 1;
+		}
+		return 1;
+	}
+	else if(newkeys & KEY_YES)
+	{
+		if(IsLoggedIn(playerid))
+		{
+			OpenInventory(playerid);
+		}
+		return 1;
+	}
 	return 1;
 }
 

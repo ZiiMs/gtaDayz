@@ -30,16 +30,24 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `Z` float NOT NULL DEFAULT '13.3',
   `FacingAngle` float NOT NULL DEFAULT '78.0541',
   `Blood` int(11) NOT NULL DEFAULT '12000',
+  `MaxSlots` int(11) NOT NULL DEFAULT '12',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
 
--- Dumping data for table GTADayz.accounts: ~2 rows (approximately)
-/*!40000 ALTER TABLE `accounts` DISABLE KEYS */;
-REPLACE INTO `accounts` (`id`, `Username`, `Pass`, `Adminlevel`, `Skin`, `X`, `Y`, `Z`, `FacingAngle`, `Blood`) VALUES
-	(4, 'ZiiM', '1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A', 9, 194, 1539.77, -1665.79, 13.649, 313.889, 4800),
-	(5, 'Alex_T', '1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A', 0, 12, 1534.23, -1615.37, 13.483, 190.115, 4800);
-/*!40000 ALTER TABLE `accounts` ENABLE KEYS */;
+-- Data exporting was unselected.
+-- Dumping structure for table GTADayz.inventory
+DROP TABLE IF EXISTS `inventory`;
+CREATE TABLE IF NOT EXISTS `inventory` (
+  `ID` int(12) DEFAULT '0',
+  `invID` int(12) NOT NULL AUTO_INCREMENT,
+  `invItem` varchar(32) NOT NULL,
+  `invItemID` int(11) NOT NULL,
+  `invModel` int(12) NOT NULL DEFAULT '0',
+  `invQuantity` int(12) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`invID`)
+) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=latin1;
 
+-- Data exporting was unselected.
 -- Dumping structure for table GTADayz.lootspawns
 DROP TABLE IF EXISTS `lootspawns`;
 CREATE TABLE IF NOT EXISTS `lootspawns` (
@@ -48,15 +56,9 @@ CREATE TABLE IF NOT EXISTS `lootspawns` (
   `Y` float DEFAULT NULL,
   `Z` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- Dumping data for table GTADayz.lootspawns: ~6 rows (approximately)
-/*!40000 ALTER TABLE `lootspawns` DISABLE KEYS */;
-REPLACE INTO `lootspawns` (`id`, `X`, `Y`, `Z`) VALUES
-	(1, 1471.03, -1613.1, 14.039),
-	(7, 1535.86, -1671.43, 13.383);
-/*!40000 ALTER TABLE `lootspawns` ENABLE KEYS */;
-
+-- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
 /*!40014 SET FOREIGN_KEY_CHECKS=IF(@OLD_FOREIGN_KEY_CHECKS IS NULL, 1, @OLD_FOREIGN_KEY_CHECKS) */;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
