@@ -14260,3 +14260,708 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [23:34:51] Item: Pizza || Amount: 1
 [23:38:35] Check Blood: 12000
 [23:38:35] [part] ZiiM has left the server (0:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:45:57] 
+[01:45:57] Server Plugins
+[01:45:57] --------------
+[01:45:57]  Loading plugin: crashdetect
+[01:45:57]   CrashDetect v4.18.1 is OK.
+[01:45:57]   Loaded.
+[01:45:57]  Loading plugin: mysql
+[01:45:57]  >> plugin.mysql: R39-4 successfully loaded.
+[01:45:57]   Loaded.
+[01:45:57]  Loading plugin: sscanf
+[01:45:57] 
+
+[01:45:57]  ===============================
+
+[01:45:57]       sscanf plugin loaded.     
+
+[01:45:57]          Version:  2.8.2        
+
+[01:45:57]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:45:57]  ===============================
+
+[01:45:57]   Loaded.
+[01:45:57]  Loading plugin: streamer
+[01:45:57] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[01:45:57]   Loaded.
+[01:45:57]  Loading plugin: Whirlpool
+[01:45:57]  
+[01:45:57]  ==================
+[01:45:57]  
+[01:45:57]   Whirlpool loaded
+[01:45:57]  
+[01:45:57]  ==================
+[01:45:57]  
+[01:45:57]   Loaded.
+[01:45:57]  Loading plugin: pawncmd
+[01:45:57] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[01:45:57]   Loaded.
+[01:45:57]  Loaded 6 plugins.
+
+[01:45:57] 
+[01:45:57] Filterscripts
+[01:45:57] ---------------
+[01:45:57]   Loaded 0 filterscripts.
+
+[01:45:57]  
+[01:45:57]  
+[01:45:57]  
+[01:45:57]  ======================================= 
+[01:45:57]  |                                     | 
+[01:45:57]  |        YSI version 3.09.0684        | 
+[01:45:57]  |        By Alex "Y_Less" Cole        | 
+[01:45:57]  |                                     | 
+[01:45:57]  ======================================= 
+[01:45:57]  
+[01:45:57] Successfully connected to MySQL database.
+[01:45:57] 
+|----------------------------------|
+[01:45:57] |  Samp Dayz by ZiiM               |
+[01:45:57] |----------------------------------|
+
+[01:45:57] Number of vehicle models: 0
+[01:46:26] [connection] 127.0.0.1:62919 requests connection cookie.
+[01:46:27] [connection] incoming connection: 127.0.0.1:62919 id: 0
+[01:46:27] [join] ZiiM has joined the server (0:127.0.0.1)
+[01:46:27] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[01:46:31] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[01:46:31] Login1
+[01:46:31] X: 1461.430053 | Y: -1672.459960 | Z: 14.147000
+[01:46:45] Item: Army Clothes || Amount: 1
+[01:46:45] Item: Toolbox || Amount: 1
+[01:46:46] Item: Country Rifle || Amount: 1
+[01:46:55] Item: MP5 || Amount: 1
+[01:46:56] Item1: MP5 || Item2: MP5
+[01:47:27] Check Blood: 12000
+[01:47:27] [part] ZiiM has left the server (0:1)
+[01:47:27] [connection] incoming connection: 127.0.0.1:51780 id: 0
+[01:47:37] [connection] incoming connection: 127.0.0.1:51786 id: 0
+[01:47:37] [join] ZiiM has joined the server (0:127.0.0.1)
+[01:47:37] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[01:47:53] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[01:47:53] Login1
+[01:47:53] X: 1521.430053 | Y: -1685.949951 | Z: 13.647000
+[01:48:12] Check Blood: 12000
+[01:48:17] Item: Heat Pack || Amount: 1
+[01:48:20] Item: Submachine Gun Ammo || Amount: 1
+[01:48:21] Item1: MP5 || Item2: MP5
+[01:48:31] Item: Tire || Amount: 1
+[01:48:32] Item1: MP5 || Item2: MP5
+[01:48:44] Item: Water Bottle || Amount: 1
+[01:48:45] Item1: Country Rifle || Item2: Country Rifle
+[01:48:47] Item: Sniper Ammo || Amount: 1
+[01:48:47] Item: Canned Tuna || Amount: 1
+[01:48:48] Item: Coka-cola || Amount: 1
+[01:48:53] Item1: Tire || Item2: Tire
+[01:48:54] Item1: MP5 || Item2: MP5
+[01:48:56] Item1: Tire || Item2: Tire
+[01:48:57] Item: Civilian Skin || Amount: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:51:44] 
+[01:51:44] Server Plugins
+[01:51:44] --------------
+[01:51:44]  Loading plugin: crashdetect
+[01:51:44]   CrashDetect v4.18.1 is OK.
+[01:51:44]   Loaded.
+[01:51:44]  Loading plugin: mysql
+[01:51:44]  >> plugin.mysql: R39-4 successfully loaded.
+[01:51:44]   Loaded.
+[01:51:44]  Loading plugin: sscanf
+[01:51:44] 
+
+[01:51:44]  ===============================
+
+[01:51:44]       sscanf plugin loaded.     
+
+[01:51:44]          Version:  2.8.2        
+
+[01:51:44]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:51:44]  ===============================
+
+[01:51:44]   Loaded.
+[01:51:44]  Loading plugin: streamer
+[01:51:44] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[01:51:44]   Loaded.
+[01:51:44]  Loading plugin: Whirlpool
+[01:51:44]  
+[01:51:44]  ==================
+[01:51:44]  
+[01:51:44]   Whirlpool loaded
+[01:51:44]  
+[01:51:44]  ==================
+[01:51:44]  
+[01:51:44]   Loaded.
+[01:51:44]  Loading plugin: pawncmd
+[01:51:44] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[01:51:44]   Loaded.
+[01:51:44]  Loaded 6 plugins.
+
+[01:51:44] 
+[01:51:44] Filterscripts
+[01:51:44] ---------------
+[01:51:44]   Loaded 0 filterscripts.
+
+[01:51:44]  
+[01:51:44]  
+[01:51:44]  
+[01:51:44]  ======================================= 
+[01:51:44]  |                                     | 
+[01:51:44]  |        YSI version 3.09.0684        | 
+[01:51:44]  |        By Alex "Y_Less" Cole        | 
+[01:51:44]  |                                     | 
+[01:51:44]  ======================================= 
+[01:51:44]  
+[01:51:44] Successfully connected to MySQL database.
+[01:51:44] 
+|----------------------------------|
+[01:51:44] |  Samp Dayz by ZiiM               |
+[01:51:44] |----------------------------------|
+
+[01:51:44] Number of vehicle models: 0
+[01:51:50] [connection] 127.0.0.1:63980 requests connection cookie.
+[01:51:51] [connection] incoming connection: 127.0.0.1:63980 id: 0
+[01:51:51] [join] ZiiM has joined the server (0:127.0.0.1)
+[01:51:51] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[01:51:53] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[01:51:53] Login1
+[01:51:53] X: 1524.939941 | Y: -1678.849975 | Z: 13.482999
+[01:51:59] Item1: MP5 || Item2: MP5
+[01:52:00] Item1: Army Clothes || Item2: Army Clothes
+[01:52:02] Item1: Canned Tuna || Item2: Canned Tuna
+[01:52:04] Item1: Toolbox || Item2: Toolbox
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[01:56:24] 
+[01:56:24] Server Plugins
+[01:56:24] --------------
+[01:56:24]  Loading plugin: crashdetect
+[01:56:24]   CrashDetect v4.18.1 is OK.
+[01:56:24]   Loaded.
+[01:56:24]  Loading plugin: mysql
+[01:56:24]  >> plugin.mysql: R39-4 successfully loaded.
+[01:56:24]   Loaded.
+[01:56:24]  Loading plugin: sscanf
+[01:56:24] 
+
+[01:56:24]  ===============================
+
+[01:56:24]       sscanf plugin loaded.     
+
+[01:56:24]          Version:  2.8.2        
+
+[01:56:24]    (c) 2012 Alex "Y_Less" Cole  
+
+[01:56:24]  ===============================
+
+[01:56:24]   Loaded.
+[01:56:24]  Loading plugin: streamer
+[01:56:24] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[01:56:24]   Loaded.
+[01:56:24]  Loading plugin: Whirlpool
+[01:56:24]  
+[01:56:24]  ==================
+[01:56:24]  
+[01:56:24]   Whirlpool loaded
+[01:56:24]  
+[01:56:24]  ==================
+[01:56:24]  
+[01:56:24]   Loaded.
+[01:56:24]  Loading plugin: pawncmd
+[01:56:24] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[01:56:24]   Loaded.
+[01:56:24]  Loaded 6 plugins.
+
+[01:56:24] 
+[01:56:24] Filterscripts
+[01:56:24] ---------------
+[01:56:24]   Loaded 0 filterscripts.
+
+[01:56:24]  
+[01:56:24]  
+[01:56:24]  
+[01:56:24]  ======================================= 
+[01:56:24]  |                                     | 
+[01:56:24]  |        YSI version 3.09.0684        | 
+[01:56:24]  |        By Alex "Y_Less" Cole        | 
+[01:56:24]  |                                     | 
+[01:56:24]  ======================================= 
+[01:56:24]  
+[01:56:24] Successfully connected to MySQL database.
+[01:56:24] 
+|----------------------------------|
+[01:56:24] |  Samp Dayz by ZiiM               |
+[01:56:24] |----------------------------------|
+
+[01:56:24] Number of vehicle models: 0
+[01:56:27] [connection] 127.0.0.1:54342 requests connection cookie.
+[01:56:28] [connection] incoming connection: 127.0.0.1:54342 id: 0
+[01:56:28] [join] ZiiM has joined the server (0:127.0.0.1)
+[01:56:28] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[01:56:30] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[01:56:30] Login1
+[01:56:30] X: 1524.939941 | Y: -1678.849975 | Z: 13.482999
+[01:56:52] Item1: Heat Pack || Item2: Heat Pack
+[01:56:54] Item1: Canned Tuna || Item2: Canned Tuna
+[01:59:49] Item: Medkit || Amount: 1
+[01:59:50] Item: Grenade || Amount: 1
+[01:59:52] Item1: Grenade || Item2: Grenade
+[02:00:21] Item: Canned Tuna || Amount: 1
+[02:00:22] Item: Water Bottle || Amount: 1
+[02:00:23] Item: Sniper Rifle || Amount: 1
+[02:00:24] Item: Sniper Ammo || Amount: 1
+[02:00:26] Item: MP5 || Amount: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:06:29] 
+[02:06:29] Server Plugins
+[02:06:29] --------------
+[02:06:29]  Loading plugin: crashdetect
+[02:06:29]   CrashDetect v4.18.1 is OK.
+[02:06:29]   Loaded.
+[02:06:29]  Loading plugin: mysql
+[02:06:29]  >> plugin.mysql: R39-4 successfully loaded.
+[02:06:29]   Loaded.
+[02:06:29]  Loading plugin: sscanf
+[02:06:29] 
+
+[02:06:29]  ===============================
+
+[02:06:29]       sscanf plugin loaded.     
+
+[02:06:29]          Version:  2.8.2        
+
+[02:06:29]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:06:29]  ===============================
+
+[02:06:29]   Loaded.
+[02:06:29]  Loading plugin: streamer
+[02:06:29] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[02:06:29]   Loaded.
+[02:06:29]  Loading plugin: Whirlpool
+[02:06:29]  
+[02:06:29]  ==================
+[02:06:29]  
+[02:06:29]   Whirlpool loaded
+[02:06:29]  
+[02:06:29]  ==================
+[02:06:29]  
+[02:06:29]   Loaded.
+[02:06:29]  Loading plugin: pawncmd
+[02:06:29] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[02:06:29]   Loaded.
+[02:06:29]  Loaded 6 plugins.
+
+[02:06:29] 
+[02:06:29] Filterscripts
+[02:06:29] ---------------
+[02:06:29]   Loaded 0 filterscripts.
+
+[02:06:29]  
+[02:06:29]  
+[02:06:29]  
+[02:06:29]  ======================================= 
+[02:06:29]  |                                     | 
+[02:06:29]  |        YSI version 3.09.0684        | 
+[02:06:29]  |        By Alex "Y_Less" Cole        | 
+[02:06:29]  |                                     | 
+[02:06:29]  ======================================= 
+[02:06:29]  
+[02:06:29] Successfully connected to MySQL database.
+[02:06:29] 
+|----------------------------------|
+[02:06:29] |  Samp Dayz by ZiiM               |
+[02:06:29] |----------------------------------|
+
+[02:06:29] Number of vehicle models: 0
+[02:06:32] [connection] 127.0.0.1:57084 requests connection cookie.
+[02:06:33] [connection] incoming connection: 127.0.0.1:57084 id: 0
+[02:06:33] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:06:33] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[02:06:35] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[02:06:35] Login1
+[02:06:35] X: 1524.939941 | Y: -1678.849975 | Z: 13.482999
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:06:55] 
+[02:06:55] Server Plugins
+[02:06:55] --------------
+[02:06:55]  Loading plugin: crashdetect
+[02:06:55]   CrashDetect v4.18.1 is OK.
+[02:06:55]   Loaded.
+[02:06:55]  Loading plugin: mysql
+[02:06:55]  >> plugin.mysql: R39-4 successfully loaded.
+[02:06:55]   Loaded.
+[02:06:55]  Loading plugin: sscanf
+[02:06:55] 
+
+[02:06:55]  ===============================
+
+[02:06:55]       sscanf plugin loaded.     
+
+[02:06:55]          Version:  2.8.2        
+
+[02:06:55]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:06:55]  ===============================
+
+[02:06:55]   Loaded.
+[02:06:55]  Loading plugin: streamer
+[02:06:55] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[02:06:55]   Loaded.
+[02:06:55]  Loading plugin: Whirlpool
+[02:06:55]  
+[02:06:55]  ==================
+[02:06:55]  
+[02:06:55]   Whirlpool loaded
+[02:06:55]  
+[02:06:55]  ==================
+[02:06:55]  
+[02:06:55]   Loaded.
+[02:06:55]  Loading plugin: pawncmd
+[02:06:55] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[02:06:55]   Loaded.
+[02:06:55]  Loaded 6 plugins.
+
+[02:06:55] 
+[02:06:55] Filterscripts
+[02:06:55] ---------------
+[02:06:55]   Loaded 0 filterscripts.
+
+[02:06:55]  
+[02:06:55]  
+[02:06:55]  
+[02:06:55]  ======================================= 
+[02:06:55]  |                                     | 
+[02:06:55]  |        YSI version 3.09.0684        | 
+[02:06:55]  |        By Alex "Y_Less" Cole        | 
+[02:06:55]  |                                     | 
+[02:06:55]  ======================================= 
+[02:06:55]  
+[02:06:55] Successfully connected to MySQL database.
+[02:06:55] 
+|----------------------------------|
+[02:06:55] |  Samp Dayz by ZiiM               |
+[02:06:55] |----------------------------------|
+
+[02:06:55] Number of vehicle models: 0
+[02:06:58] [connection] 127.0.0.1:57099 requests connection cookie.
+[02:06:59] [connection] incoming connection: 127.0.0.1:57099 id: 0
+[02:06:59] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:06:59] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[02:07:01] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[02:07:01] Login1
+[02:07:01] X: 1524.939941 | Y: -1678.849975 | Z: 13.482999
+[02:07:08] Item: Alice Pack || Amount: 1
+[02:07:18] Check Blood: 12000
+[02:07:18] [part] ZiiM has left the server (0:1)
+[02:07:18] [connection] incoming connection: 127.0.0.1:57112 id: 0
+[02:07:28] [connection] incoming connection: 127.0.0.1:57118 id: 0
+Console input: cache_get_row(0,10,id_string);
+[02:07:37] [connection] incoming connection: 127.0.0.1:57122 id: 0
+[02:07:37] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:07:37] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[02:07:39] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[02:07:39] Login1
+[02:07:39] X: 1533.040039 | Y: -1672.359985 | Z: 13.482999
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:09:37] 
+[02:09:37] Server Plugins
+[02:09:37] --------------
+[02:09:37]  Loading plugin: crashdetect
+[02:09:37]   CrashDetect v4.18.1 is OK.
+[02:09:37]   Loaded.
+[02:09:37]  Loading plugin: mysql
+[02:09:37]  >> plugin.mysql: R39-4 successfully loaded.
+[02:09:37]   Loaded.
+[02:09:37]  Loading plugin: sscanf
+[02:09:37] 
+
+[02:09:37]  ===============================
+
+[02:09:37]       sscanf plugin loaded.     
+
+[02:09:37]          Version:  2.8.2        
+
+[02:09:37]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:09:37]  ===============================
+
+[02:09:37]   Loaded.
+[02:09:37]  Loading plugin: streamer
+[02:09:37] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[02:09:37]   Loaded.
+[02:09:37]  Loading plugin: Whirlpool
+[02:09:37]  
+[02:09:37]  ==================
+[02:09:37]  
+[02:09:37]   Whirlpool loaded
+[02:09:37]  
+[02:09:37]  ==================
+[02:09:37]  
+[02:09:37]   Loaded.
+[02:09:37]  Loading plugin: pawncmd
+[02:09:37] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[02:09:37]   Loaded.
+[02:09:37]  Loaded 6 plugins.
+
+[02:09:37] 
+[02:09:37] Filterscripts
+[02:09:37] ---------------
+[02:09:37]   Loaded 0 filterscripts.
+
+[02:09:38]  
+[02:09:38]  
+[02:09:38]  
+[02:09:38]  ======================================= 
+[02:09:38]  |                                     | 
+[02:09:38]  |        YSI version 3.09.0684        | 
+[02:09:38]  |        By Alex "Y_Less" Cole        | 
+[02:09:38]  |                                     | 
+[02:09:38]  ======================================= 
+[02:09:38]  
+[02:09:38] Successfully connected to MySQL database.
+[02:09:38] 
+|----------------------------------|
+[02:09:38] |  Samp Dayz by ZiiM               |
+[02:09:38] |----------------------------------|
+
+[02:09:38] Number of vehicle models: 0
+[02:09:42] [connection] 127.0.0.1:59185 requests connection cookie.
+[02:09:43] [connection] incoming connection: 127.0.0.1:59185 id: 0
+[02:09:43] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:09:43] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[02:09:45] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[02:09:45] Login1
+[02:09:45] X: 1533.040039 | Y: -1672.359985 | Z: 13.482999
+[02:09:53] Check Blood: 12000
+[02:09:53] [part] ZiiM has left the server (0:1)
+[02:09:53] [connection] incoming connection: 127.0.0.1:59193 id: 0
+[02:09:57] [connection] incoming connection: 127.0.0.1:59196 id: 0
+[02:09:57] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:09:57] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[02:09:59] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[02:09:59] Login1
+[02:09:59] X: 1532.260009 | Y: -1672.569946 | Z: 13.482999
+[02:10:13] Item1: Alice Pack || Item2: Alice Pack
+[02:10:16] Check Blood: 12000
+[02:10:16] [part] ZiiM has left the server (0:1)
+[02:10:16] [connection] incoming connection: 127.0.0.1:59208 id: 0
+[02:10:26] [connection] incoming connection: 127.0.0.1:55674 id: 0
+[02:10:26] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:10:26] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:10:41] 
+[02:10:41] Server Plugins
+[02:10:41] --------------
+[02:10:41]  Loading plugin: crashdetect
+[02:10:41]   CrashDetect v4.18.1 is OK.
+[02:10:41]   Loaded.
+[02:10:41]  Loading plugin: mysql
+[02:10:41]  >> plugin.mysql: R39-4 successfully loaded.
+[02:10:41]   Loaded.
+[02:10:41]  Loading plugin: sscanf
+[02:10:41] 
+
+[02:10:41]  ===============================
+
+[02:10:41]       sscanf plugin loaded.     
+
+[02:10:41]          Version:  2.8.2        
+
+[02:10:41]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:10:41]  ===============================
+
+[02:10:41]   Loaded.
+[02:10:41]  Loading plugin: streamer
+[02:10:41] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[02:10:41]   Loaded.
+[02:10:41]  Loading plugin: Whirlpool
+[02:10:41]  
+[02:10:41]  ==================
+[02:10:41]  
+[02:10:41]   Whirlpool loaded
+[02:10:41]  
+[02:10:41]  ==================
+[02:10:41]  
+[02:10:41]   Loaded.
+[02:10:41]  Loading plugin: pawncmd
+[02:10:41] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[02:10:41]   Loaded.
+[02:10:41]  Loaded 6 plugins.
+
+[02:10:41] 
+[02:10:41] Filterscripts
+[02:10:41] ---------------
+[02:10:41]   Loaded 0 filterscripts.
+
+[02:10:41] [Pawn.CMD] Plugin::AmxLoad: .inc-file version does not equal the plugin's version
+[02:10:41] [debug] Run time error 22: "AMX not initialized (or doubly initialized)"
+[02:10:41] [debug] Run time error 22: "AMX not initialized (or doubly initialized)"
+[02:10:41] Script[gamemodes/sampDayz.amx]: Run time error 22: "AMX not initialized (or doubly initialized)"
+[02:10:41] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[02:10:44] 
+[02:10:44] Server Plugins
+[02:10:44] --------------
+[02:10:44]  Loading plugin: crashdetect
+[02:10:44]   CrashDetect v4.18.1 is OK.
+[02:10:44]   Loaded.
+[02:10:44]  Loading plugin: mysql
+[02:10:44]  >> plugin.mysql: R39-4 successfully loaded.
+[02:10:44]   Loaded.
+[02:10:44]  Loading plugin: sscanf
+[02:10:44] 
+
+[02:10:44]  ===============================
+
+[02:10:44]       sscanf plugin loaded.     
+
+[02:10:44]          Version:  2.8.2        
+
+[02:10:44]    (c) 2012 Alex "Y_Less" Cole  
+
+[02:10:44]  ===============================
+
+[02:10:44]   Loaded.
+[02:10:44]  Loading plugin: streamer
+[02:10:44] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[02:10:44]   Loaded.
+[02:10:44]  Loading plugin: Whirlpool
+[02:10:44]  
+[02:10:44]  ==================
+[02:10:44]  
+[02:10:44]   Whirlpool loaded
+[02:10:44]  
+[02:10:44]  ==================
+[02:10:44]  
+[02:10:44]   Loaded.
+[02:10:44]  Loading plugin: pawncmd
+[02:10:44] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[02:10:44]   Loaded.
+[02:10:44]  Loaded 6 plugins.
+
+[02:10:44] 
+[02:10:44] Filterscripts
+[02:10:44] ---------------
+[02:10:44]   Loaded 0 filterscripts.
+
+[02:10:44]  
+[02:10:44]  
+[02:10:44]  
+[02:10:44]  ======================================= 
+[02:10:44]  |                                     | 
+[02:10:44]  |        YSI version 3.09.0684        | 
+[02:10:44]  |        By Alex "Y_Less" Cole        | 
+[02:10:44]  |                                     | 
+[02:10:44]  ======================================= 
+[02:10:44]  
+[02:10:44] Successfully connected to MySQL database.
+[02:10:44] 
+|----------------------------------|
+[02:10:44] |  Samp Dayz by ZiiM               |
+[02:10:44] |----------------------------------|
+
+[02:10:44] Number of vehicle models: 0
+[02:10:50] [connection] 127.0.0.1:55688 requests connection cookie.
+[02:10:51] [connection] incoming connection: 127.0.0.1:55688 id: 0
+[02:10:52] [join] ZiiM has joined the server (0:127.0.0.1)
+[02:10:52] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[02:10:53] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[02:10:53] Login1
+[02:10:53] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[02:11:31] Item: Alice Pack || Amount: 1
+[02:12:30] Item1: Alice Pack || Item2: Alice Pack
+[02:12:32] Item: Tire || Amount: 1
+[02:12:33] Item: Engine || Amount: 1
+[02:12:34] Item1: Sniper Rifle || Item2: Sniper Rifle

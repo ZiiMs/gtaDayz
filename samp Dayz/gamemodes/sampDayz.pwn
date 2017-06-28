@@ -195,7 +195,7 @@ public Loot_Load()
 	cache_get_data(rows,fields);
 	for (new i = 0; i < rows; i ++) if (i < MAX_LOOTSPAWN)
 	{
-		lootid = random(1000);
+		lootid = random(1200);
 		LootData[i][lootExists] = true;
 		LootData[i][lootItemID] = lootid;
 		format(LootData[i][lootItem], 32, LootItemName(lootid));
@@ -304,6 +304,9 @@ LootItemName(lootnumber)
 		}
 		case 991..1000: {
 			format(lootname, sizeof(lootname), "RPG-45");
+		}
+		case 1001..1200: {
+			format(lootname, sizeof(lootname), "Alice Pack");
 		}
 	}
 	return (lootname);
@@ -431,6 +434,12 @@ stock Inventory_Add(playerid, item[], itemids, model, quantity)
 		}
 		else if(!InventoryData[playerid][itemid][invExists])
 		{
+			if(itemids >= 1001 && itemids <= 1200 && GetPVarInt(playerid, "Backpack") < 1)
+			{
+				SetPVarInt(playerid, "Backpack", 1);
+				SetPVarInt(playerid, "MaxSlots", 24);
+				return 1;
+			}
 	        InventoryData[playerid][itemid][invExists] = true;
 	        InventoryData[playerid][itemid][invItemID] = itemids;
 	        InventoryData[playerid][itemid][invModel] = model;
@@ -457,19 +466,21 @@ public OpenInventory(playerid)
 	    diatitle[64],
 	    string2[128];
 
+	format(string, sizeof(string), "Item\tAmount\n");
     for (new i = 0; i < GetPVarInt(playerid, "MaxSlots"); i ++)
 	{
  		if (InventoryData[playerid][i][invExists]) {
- 			format(string2, sizeof(string2), "Item: %s Amount: %d\n", InventoryData[playerid][i][invItem], InventoryData[playerid][i][invQuantity]);
+ 			format(string2, sizeof(string2), "%s\t%d\n", InventoryData[playerid][i][invItem], InventoryData[playerid][i][invQuantity]);
  			strcat(string, string2);
 		}
 		else {
 			strcat(string, "Empty Slot\n");
 		}
 	}
-	format(diatitle, sizeof(diatitle), "%s inventory | Total slots: %d | Slots used: %d", PlayerName(playerid), GetPVarInt(playerid, "MaxSlots"), Inventory_Items(playerid));
-	// return ShowModelSelectionMenu(playerid, "Inventory", MODEL_SELECTION_INVENTORY, items, sizeof(items), 0.0, 0.0, 0.0, 1.0, -1, true, amounts);
-	return Dialog_Show(playerid, DIALOG_INVENTORY ,DIALOG_STYLE_TABLIST, diatitle, string, "Select", "Close");
+	format(diatitle, sizeof(diatitle), "%s's inventory | Total slots: %d | Slots used: %d", PlayerName(playerid), GetPVarInt(playerid, "MaxSlots"), Inventory_Items(playerid));
+	// 
+	// strcat("Item\tAmount\n", string);
+	return Dialog_Show(playerid, DIALOG_INVENTORY ,DIALOG_STYLE_TABLIST_HEADERS, diatitle, string, "Select", "Close");
 }
 
 
@@ -588,6 +599,9 @@ LootItemModelID(lootnumber)
 		}
 		case 991..1000: {
 			return 359;///25
+		}
+		case 1001..1200: {
+			return 19559;
 		}
 	}
 	return 0;
@@ -1233,6 +1247,8 @@ Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
 	    print("Login1");
 		mysql_format(MySQLCon, query, sizeof(query), "SELECT * FROM `accounts` WHERE `username` = '%e' LIMIT 1", PlayerName(playerid));
 		mysql_tquery(MySQLCon, query, "OnPlayerLogin", "i", playerid);
+		mysql_format(MySQLCon, query, sizeof(query), "SELECT * FROM `inventory` WHERE `ID` = '%d'", GetPVarInt(playerid, "AccountID"));
+		mysql_tquery(MySQLCon, query, "OnLoadInventory", "i", playerid);
 		return 1;
 	} else {
 		LoginAttempt[playerid]++; new string[256];
@@ -1297,6 +1313,9 @@ public OnPlayerLogin(playerid)
 
 	cache_get_row(0,10,id_string);
 	SetPVarInt(playerid, "MaxSlots", strval(id_string));
+
+	cache_get_row(0,11,id_string);
+	SetPVarInt(playerid, "Backpack", strval(id_string));
 	
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
@@ -1313,6 +1332,26 @@ public OnPlayerLogin(playerid)
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return 1;
+}
+
+forward OnLoadInventory(playerid);
+public OnLoadInventory(playerid)
+{
+	new name[32], rows, fields;
+
+	cache_get_data(rows, fields, MySQLCon);
+
+	for (new i = 0; i < rows && i < MAX_INVENTORY; i ++) {
+		InventoryData[playerid][i][invExists] = true;
+	    InventoryData[playerid][i][invID] = cache_get_field_content_int(i, "invID");
+	    InventoryData[playerid][i][invItemID] = cache_get_field_content_int(i, "invItemID");
+	    InventoryData[playerid][i][invModel] = cache_get_field_content_int(i, "invModel");
+        InventoryData[playerid][i][invQuantity] = cache_get_field_content_int(i, "invQuantity");
+
+        cache_get_field_content(i, "invItem", name, MySQLCon);
+        format(InventoryData[playerid][i][invItem], 32, name);
+	}
+	return 1;
 }
 
 forward GetWeaponBloodDamage(weaponid);
@@ -1457,7 +1496,7 @@ public OnPlayerAccountSave(playerid)
 	GetPlayerPos(playerid, X, Y, Z);
 	GetPlayerFacingAngle(playerid, FacingAngle);
 	printf("Check Blood: %d", GetPVarInt(playerid, "Blood"));
-	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d' WHERE `id` = '%d'",
+	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d', MaxSlots = '%d', Backpack = '%d' WHERE `id` = '%d'",
 		GetPVarInt(playerid, "AdminLevel"), 
 		GetPVarInt(playerid, "Skin"),
 		X,
@@ -1465,6 +1504,8 @@ public OnPlayerAccountSave(playerid)
 		Z+0.1,
 		FacingAngle,
 		GetPVarInt(playerid, "Blood"),
+		GetPVarInt(playerid, "MaxSlots"),
+		GetPVarInt(playerid, "Backpack"),
 		GetPVarInt(playerid, "AccountID"));
 	mysql_tquery(MySQLCon, query, "", "");
 	return 1;
@@ -1478,6 +1519,8 @@ public OnPlayerSpawn(playerid)
 public OnPlayerDeath(playerid, killerid, reason)
 {
 	Inventory_Clear(playerid);
+	SetPVarInt(playerid, "Backpack", 0);
+	SetPVarInt(playerid, "MaxSlots", 12);
 	return 1;
 }
 
@@ -1620,7 +1663,11 @@ public OnPlayerKeyStateChange(playerid, newkeys, oldkeys)
 				id = Loot_Nearest(playerid),
 				string[128];
 			format(string, sizeof(string), "You are attempting to pick up item from loot spawn %d (Name: %s).", id, LootData[id][lootItem]);
-			Inventory_Add(playerid, LootData[id][lootItem], LootData[id][lootItemID], LootData[id][lootModel], 1);
+			new id2 = Inventory_Add(playerid, LootData[id][lootItem], LootData[id][lootItemID], LootData[id][lootModel], 1);
+
+			if(id2 == -1) 
+				return SendClientMessage(playerid, X11_GREY85, "You do not have any inventory slots left.");
+
 			Loot_Delete(id);
 			SendClientMessage(playerid, X11_RED, string);
 			return 1;
