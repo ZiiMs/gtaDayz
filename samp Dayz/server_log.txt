@@ -17139,3 +17139,6568 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [04:43:06] Item: Pizza || Amount: 1
 [04:43:07] Listitem: 3 || Listitem Name: Pizza
 [04:43:17] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:07:09] 
+[17:07:09] Server Plugins
+[17:07:09] --------------
+[17:07:09]  Loading plugin: crashdetect
+[17:07:09]   CrashDetect v4.18.1 is OK.
+[17:07:09]   Loaded.
+[17:07:09]  Loading plugin: mysql
+[17:07:09]  >> plugin.mysql: R39-4 successfully loaded.
+[17:07:09]   Loaded.
+[17:07:09]  Loading plugin: sscanf
+[17:07:09] 
+
+[17:07:09]  ===============================
+
+[17:07:09]       sscanf plugin loaded.     
+
+[17:07:09]          Version:  2.8.2        
+
+[17:07:09]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:07:09]  ===============================
+
+[17:07:09]   Loaded.
+[17:07:09]  Loading plugin: streamer
+[17:07:09] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:07:09]   Loaded.
+[17:07:09]  Loading plugin: Whirlpool
+[17:07:09]  
+[17:07:09]  ==================
+[17:07:09]  
+[17:07:09]   Whirlpool loaded
+[17:07:09]  
+[17:07:09]  ==================
+[17:07:09]  
+[17:07:09]   Loaded.
+[17:07:09]  Loading plugin: pawncmd
+[17:07:09] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:07:09]   Loaded.
+[17:07:09]  Loaded 6 plugins.
+
+[17:07:09] 
+[17:07:09] Filterscripts
+[17:07:09] ---------------
+[17:07:09]   Loaded 0 filterscripts.
+
+[17:07:09]  
+[17:07:09]  
+[17:07:09]  
+[17:07:09]  ======================================= 
+[17:07:09]  |                                     | 
+[17:07:09]  |        YSI version 3.09.0684        | 
+[17:07:09]  |        By Alex "Y_Less" Cole        | 
+[17:07:09]  |                                     | 
+[17:07:09]  ======================================= 
+[17:07:09]  
+[17:07:09] Successfully connected to MySQL database.
+[17:07:09] 
+|----------------------------------|
+[17:07:09] |  Samp Dayz by ZiiM               |
+[17:07:09] |----------------------------------|
+
+[17:07:09] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:13:13] 
+[17:13:13] Server Plugins
+[17:13:13] --------------
+[17:13:13]  Loading plugin: crashdetect
+[17:13:13]   CrashDetect v4.18.1 is OK.
+[17:13:13]   Loaded.
+[17:13:13]  Loading plugin: mysql
+[17:13:13]  >> plugin.mysql: R39-4 successfully loaded.
+[17:13:13]   Loaded.
+[17:13:13]  Loading plugin: sscanf
+[17:13:13] 
+
+[17:13:13]  ===============================
+
+[17:13:13]       sscanf plugin loaded.     
+
+[17:13:13]          Version:  2.8.2        
+
+[17:13:13]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:13:13]  ===============================
+
+[17:13:13]   Loaded.
+[17:13:13]  Loading plugin: streamer
+[17:13:13] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:13:13]   Loaded.
+[17:13:13]  Loading plugin: Whirlpool
+[17:13:13]  
+[17:13:13]  ==================
+[17:13:13]  
+[17:13:13]   Whirlpool loaded
+[17:13:13]  
+[17:13:13]  ==================
+[17:13:13]  
+[17:13:13]   Loaded.
+[17:13:13]  Loading plugin: sampp_server
+[17:13:13] [SA-MP+] Loaded
+[17:13:13]   Loaded.
+[17:13:13]  Loading plugin: pawncmd
+[17:13:13] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:13:13]   Loaded.
+[17:13:13]  Loaded 7 plugins.
+
+[17:13:13] 
+[17:13:13] Filterscripts
+[17:13:13] ---------------
+[17:13:13]   Loaded 0 filterscripts.
+
+[17:13:13]  
+[17:13:13]  
+[17:13:13]  
+[17:13:13]  ======================================= 
+[17:13:13]  |                                     | 
+[17:13:13]  |        YSI version 3.09.0684        | 
+[17:13:13]  |        By Alex "Y_Less" Cole        | 
+[17:13:13]  |                                     | 
+[17:13:13]  ======================================= 
+[17:13:13]  
+[17:13:13] Successfully connected to MySQL database.
+[17:13:13] 
+|----------------------------------|
+[17:13:13] |  Samp Dayz by ZiiM               |
+[17:13:13] |----------------------------------|
+
+[17:13:13] Number of vehicle models: 0
+[17:14:21] [connection] 127.0.0.1:50833 requests connection cookie.
+[17:14:22] [connection] incoming connection: 127.0.0.1:50833 id: 0
+[17:14:23] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:14:23] [SA-MP+] Player connecting, has the SA-MP+ plugin: 0
+[17:14:23] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:14:25] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:14:25] Login1
+[17:14:25] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[17:16:36] Listitem: 3 || Listitem Name: Pizza
+[17:16:46] Listitem: 3 || Listitem Name: Pizza
+[17:17:15] Listitem: 2 || Listitem Name: Ak47
+[17:17:17] Listitem: 1 || Listitem Name: Sniper Rifle
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:17:53] 
+[17:17:53] Server Plugins
+[17:17:53] --------------
+[17:17:53]  Loading plugin: crashdetect
+[17:17:53]   CrashDetect v4.18.1 is OK.
+[17:17:53]   Loaded.
+[17:17:53]  Loading plugin: mysql
+[17:17:53]  >> plugin.mysql: R39-4 successfully loaded.
+[17:17:53]   Loaded.
+[17:17:53]  Loading plugin: sscanf
+[17:17:53] 
+
+[17:17:53]  ===============================
+
+[17:17:53]       sscanf plugin loaded.     
+
+[17:17:53]          Version:  2.8.2        
+
+[17:17:53]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:17:53]  ===============================
+
+[17:17:53]   Loaded.
+[17:17:53]  Loading plugin: streamer
+[17:17:53] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:17:53]   Loaded.
+[17:17:53]  Loading plugin: Whirlpool
+[17:17:53]  
+[17:17:53]  ==================
+[17:17:53]  
+[17:17:53]   Whirlpool loaded
+[17:17:53]  
+[17:17:53]  ==================
+[17:17:53]  
+[17:17:53]   Loaded.
+[17:17:53]  Loading plugin: sampp_server
+[17:17:53]   Failed.
+[17:17:53]  Loading plugin: pawncmd
+[17:17:53] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:17:53]   Loaded.
+[17:17:53]  Loaded 6 plugins.
+
+[17:17:53] I couldn't load any gamemode scripts. Please verify your server.cfg
+[17:17:53] It needs a gamemode0 line at the very least.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:18:28] 
+[17:18:28] Server Plugins
+[17:18:28] --------------
+[17:18:28]  Loading plugin: crashdetect
+[17:18:28]   CrashDetect v4.18.1 is OK.
+[17:18:28]   Loaded.
+[17:18:28]  Loading plugin: mysql
+[17:18:28]  >> plugin.mysql: R39-4 successfully loaded.
+[17:18:28]   Loaded.
+[17:18:28]  Loading plugin: sscanf
+[17:18:28] 
+
+[17:18:28]  ===============================
+
+[17:18:28]       sscanf plugin loaded.     
+
+[17:18:28]          Version:  2.8.2        
+
+[17:18:28]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:18:28]  ===============================
+
+[17:18:28]   Loaded.
+[17:18:28]  Loading plugin: streamer
+[17:18:28] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:18:28]   Loaded.
+[17:18:28]  Loading plugin: Whirlpool
+[17:18:28]  
+[17:18:28]  ==================
+[17:18:28]  
+[17:18:28]   Whirlpool loaded
+[17:18:28]  
+[17:18:28]  ==================
+[17:18:28]  
+[17:18:28]   Loaded.
+[17:18:28]  Loading plugin: sampp_server
+[17:18:28]   Failed.
+[17:18:28]  Loading plugin: pawncmd
+[17:18:28] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:18:28]   Loaded.
+[17:18:28]  Loaded 6 plugins.
+
+[17:18:28] 
+[17:18:28] Filterscripts
+[17:18:28] ---------------
+[17:18:28]   Loaded 0 filterscripts.
+
+[17:18:28]  
+[17:18:28]  
+[17:18:28]  
+[17:18:28]  ======================================= 
+[17:18:28]  |                                     | 
+[17:18:28]  |        YSI version 3.09.0684        | 
+[17:18:28]  |        By Alex "Y_Less" Cole        | 
+[17:18:28]  |                                     | 
+[17:18:28]  ======================================= 
+[17:18:28]  
+[17:18:28] Successfully connected to MySQL database.
+[17:18:28] 
+|----------------------------------|
+[17:18:28] |  Samp Dayz by ZiiM               |
+[17:18:28] |----------------------------------|
+
+[17:18:28] Number of vehicle models: 0
+[17:19:38] [connection] 127.0.0.1:62408 requests connection cookie.
+[17:19:39] [connection] incoming connection: 127.0.0.1:62408 id: 0
+[17:19:39] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:19:39] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:19:42] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:19:42] Login1
+[17:19:42] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[17:19:52] Item: Submachine Gun Ammo || Amount: 1
+[17:19:54] Listitem: 4 || Listitem Name: Submachine Gun Ammo
+[17:19:58] Item1: Pizza || Item2: Pizza
+[17:20:00] Listitem: 3 || Listitem Name: Pizza
+[17:20:53] Listitem: 13 || Listitem Name: 
+[17:33:01] --- Server Shutting Down.
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:33:03] 
+[17:33:03] Server Plugins
+[17:33:03] --------------
+[17:33:03]  Loading plugin: crashdetect
+[17:33:03]   CrashDetect v4.18.1 is OK.
+[17:33:03]   Loaded.
+[17:33:03]  Loading plugin: mysql
+[17:33:03]  >> plugin.mysql: R39-4 successfully loaded.
+[17:33:03]   Loaded.
+[17:33:03]  Loading plugin: sscanf
+[17:33:03] 
+
+[17:33:03]  ===============================
+
+[17:33:03]       sscanf plugin loaded.     
+
+[17:33:03]          Version:  2.8.2        
+
+[17:33:03]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:33:03]  ===============================
+
+[17:33:03]   Loaded.
+[17:33:03]  Loading plugin: streamer
+[17:33:03] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:33:03]   Loaded.
+[17:33:03]  Loading plugin: Whirlpool
+[17:33:03]  
+[17:33:03]  ==================
+[17:33:03]  
+[17:33:03]   Whirlpool loaded
+[17:33:03]  
+[17:33:03]  ==================
+[17:33:03]  
+[17:33:03]   Loaded.
+[17:33:03]  Loading plugin: sampp_server
+[17:33:03]   Failed.
+[17:33:03]  Loading plugin: pawncmd
+[17:33:03] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:33:03]   Loaded.
+[17:33:03]  Loaded 6 plugins.
+
+[17:33:03] 
+[17:33:03] Filterscripts
+[17:33:03] ---------------
+[17:33:03]   Loaded 0 filterscripts.
+
+[17:33:03]  
+[17:33:03]  
+[17:33:03]  
+[17:33:03]  ======================================= 
+[17:33:03]  |                                     | 
+[17:33:03]  |        YSI version 3.09.0684        | 
+[17:33:03]  |        By Alex "Y_Less" Cole        | 
+[17:33:03]  |                                     | 
+[17:33:03]  ======================================= 
+[17:33:03]  
+[17:33:03] Successfully connected to MySQL database.
+[17:33:03] 
+|----------------------------------|
+[17:33:03] |  Samp Dayz by ZiiM               |
+[17:33:03] |----------------------------------|
+
+[17:33:03] Number of vehicle models: 0
+[17:33:06] [connection] 127.0.0.1:63007 requests connection cookie.
+[17:33:07] [connection] incoming connection: 127.0.0.1:63007 id: 0
+[17:33:07] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:33:07] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:33:09] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:33:09] Login1
+[17:33:09] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:52:45] 
+[17:52:45] Server Plugins
+[17:52:45] --------------
+[17:52:45]  Loading plugin: crashdetect
+[17:52:45]   CrashDetect v4.18.1 is OK.
+[17:52:45]   Loaded.
+[17:52:45]  Loading plugin: mysql
+[17:52:45]  >> plugin.mysql: R39-4 successfully loaded.
+[17:52:45]   Loaded.
+[17:52:45]  Loading plugin: sscanf
+[17:52:45] 
+
+[17:52:45]  ===============================
+
+[17:52:45]       sscanf plugin loaded.     
+
+[17:52:45]          Version:  2.8.2        
+
+[17:52:45]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:52:45]  ===============================
+
+[17:52:45]   Loaded.
+[17:52:45]  Loading plugin: streamer
+[17:52:45] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:52:45]   Loaded.
+[17:52:45]  Loading plugin: Whirlpool
+[17:52:45]  
+[17:52:45]  ==================
+[17:52:45]  
+[17:52:45]   Whirlpool loaded
+[17:52:45]  
+[17:52:45]  ==================
+[17:52:45]  
+[17:52:45]   Loaded.
+[17:52:45]  Loading plugin: sampp_server
+[17:52:45]   Failed.
+[17:52:45]  Loading plugin: pawncmd
+[17:52:45] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:52:45]   Loaded.
+[17:52:45]  Loaded 6 plugins.
+
+[17:52:45] 
+[17:52:45] Filterscripts
+[17:52:45] ---------------
+[17:52:45]   Loaded 0 filterscripts.
+
+[17:52:45]  
+[17:52:45]  
+[17:52:45]  
+[17:52:45]  ======================================= 
+[17:52:45]  |                                     | 
+[17:52:45]  |        YSI version 3.09.0684        | 
+[17:52:45]  |        By Alex "Y_Less" Cole        | 
+[17:52:45]  |                                     | 
+[17:52:45]  ======================================= 
+[17:52:45]  
+[17:52:45] Successfully connected to MySQL database.
+[17:52:45] 
+|----------------------------------|
+[17:52:45] |  Samp Dayz by ZiiM               |
+[17:52:45] |----------------------------------|
+
+[17:52:45] Number of vehicle models: 0
+[17:52:49] [connection] 127.0.0.1:59329 requests connection cookie.
+[17:52:50] [connection] incoming connection: 127.0.0.1:59329 id: 0
+[17:52:50] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:52:50] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:52:52] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:52:52] Login1
+[17:52:52] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:56:03] 
+[17:56:03] Server Plugins
+[17:56:03] --------------
+[17:56:03]  Loading plugin: crashdetect
+[17:56:03]   CrashDetect v4.18.1 is OK.
+[17:56:03]   Loaded.
+[17:56:03]  Loading plugin: mysql
+[17:56:03]  >> plugin.mysql: R39-4 successfully loaded.
+[17:56:03]   Loaded.
+[17:56:03]  Loading plugin: sscanf
+[17:56:03] 
+
+[17:56:03]  ===============================
+
+[17:56:03]       sscanf plugin loaded.     
+
+[17:56:03]          Version:  2.8.2        
+
+[17:56:03]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:56:03]  ===============================
+
+[17:56:03]   Loaded.
+[17:56:03]  Loading plugin: streamer
+[17:56:03] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:56:03]   Loaded.
+[17:56:03]  Loading plugin: Whirlpool
+[17:56:03]  
+[17:56:03]  ==================
+[17:56:03]  
+[17:56:03]   Whirlpool loaded
+[17:56:03]  
+[17:56:03]  ==================
+[17:56:03]  
+[17:56:03]   Loaded.
+[17:56:03]  Loading plugin: sampp_server
+[17:56:03]   Failed.
+[17:56:03]  Loading plugin: pawncmd
+[17:56:03] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:56:03]   Loaded.
+[17:56:03]  Loaded 6 plugins.
+
+[17:56:03] 
+[17:56:03] Filterscripts
+[17:56:03] ---------------
+[17:56:03]   Loaded 0 filterscripts.
+
+[17:56:03]  
+[17:56:03]  
+[17:56:03]  
+[17:56:03]  ======================================= 
+[17:56:03]  |                                     | 
+[17:56:03]  |        YSI version 3.09.0684        | 
+[17:56:03]  |        By Alex "Y_Less" Cole        | 
+[17:56:03]  |                                     | 
+[17:56:03]  ======================================= 
+[17:56:03]  
+[17:56:03] Successfully connected to MySQL database.
+[17:56:03] 
+|----------------------------------|
+[17:56:03] |  Samp Dayz by ZiiM               |
+[17:56:03] |----------------------------------|
+
+[17:56:03] Number of vehicle models: 0
+[17:56:06] [connection] 127.0.0.1:55540 requests connection cookie.
+[17:56:07] [connection] incoming connection: 127.0.0.1:55540 id: 0
+[17:56:07] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:56:07] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:56:08] PlayCheck running
+[17:56:09] PlayCheck running
+[17:56:10] PlayCheck running
+[17:56:11] PlayCheck running
+[17:56:12] PlayCheck running
+[17:56:13] PlayCheck running
+[17:56:15] PlayCheck running
+[17:56:16] PlayCheck running
+[17:56:17] PlayCheck running
+[17:56:18] PlayCheck running
+[17:56:19] PlayCheck running
+[17:56:20] PlayCheck running
+[17:56:21] PlayCheck running
+[17:56:22] PlayCheck running
+[17:56:23] PlayCheck running
+[17:56:24] PlayCheck running
+[17:56:26] PlayCheck running
+[17:56:27] PlayCheck running
+[17:56:28] PlayCheck running
+[17:56:29] PlayCheck running
+[17:56:30] PlayCheck running
+[17:56:31] PlayCheck running
+[17:56:32] PlayCheck running
+[17:56:33] PlayCheck running
+[17:56:34] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:56:34] Login1
+[17:56:34] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[17:56:34] PlayCheck running
+[17:56:35] PlayCheck running
+[17:56:37] PlayCheck running
+[17:56:38] PlayCheck running
+[17:56:39] PlayCheck running
+[17:56:40] PlayCheck running
+[17:56:41] PlayCheck running
+[17:56:42] PlayCheck running
+[17:56:43] PlayCheck running
+[17:56:44] PlayCheck running
+[17:56:45] PlayCheck running
+[17:56:46] PlayCheck running
+[17:56:48] PlayCheck running
+[17:56:49] PlayCheck running
+[17:56:50] PlayCheck running
+[17:56:51] PlayCheck running
+[17:56:52] PlayCheck running
+[17:56:53] PlayCheck running
+[17:56:54] PlayCheck running
+[17:56:55] PlayCheck running
+[17:56:56] PlayCheck running
+[17:56:57] PlayCheck running
+[17:56:58] PlayCheck running
+[17:57:00] PlayCheck running
+[17:57:01] PlayCheck running
+[17:57:02] PlayCheck running
+[17:57:03] PlayCheck running
+[17:57:04] PlayCheck running
+[17:57:05] PlayCheck running
+[17:57:06] PlayCheck running
+[17:57:07] PlayCheck running
+[17:57:08] PlayCheck running
+[17:57:09] PlayCheck running
+[17:57:11] PlayCheck running
+[17:57:12] PlayCheck running
+[17:57:13] PlayCheck running
+[17:57:14] PlayCheck running
+[17:57:15] PlayCheck running
+[17:57:16] PlayCheck running
+[17:57:17] PlayCheck running
+[17:57:18] PlayCheck running
+[17:57:19] PlayCheck running
+[17:57:20] PlayCheck running
+[17:57:22] PlayCheck running
+[17:57:23] PlayCheck running
+[17:57:24] PlayCheck running
+[17:57:25] PlayCheck running
+[17:57:26] PlayCheck running
+[17:57:27] PlayCheck running
+[17:57:28] PlayCheck running
+[17:57:29] PlayCheck running
+[17:57:30] PlayCheck running
+[17:57:31] PlayCheck running
+[17:57:33] PlayCheck running
+[17:57:34] PlayCheck running
+[17:57:35] PlayCheck running
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:57:38] 
+[17:57:38] Server Plugins
+[17:57:38] --------------
+[17:57:38]  Loading plugin: crashdetect
+[17:57:38]   CrashDetect v4.18.1 is OK.
+[17:57:38]   Loaded.
+[17:57:38]  Loading plugin: mysql
+[17:57:38]  >> plugin.mysql: R39-4 successfully loaded.
+[17:57:38]   Loaded.
+[17:57:38]  Loading plugin: sscanf
+[17:57:38] 
+
+[17:57:38]  ===============================
+
+[17:57:38]       sscanf plugin loaded.     
+
+[17:57:38]          Version:  2.8.2        
+
+[17:57:38]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:57:38]  ===============================
+
+[17:57:38]   Loaded.
+[17:57:38]  Loading plugin: streamer
+[17:57:38] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:57:38]   Loaded.
+[17:57:38]  Loading plugin: Whirlpool
+[17:57:38]  
+[17:57:38]  ==================
+[17:57:38]  
+[17:57:38]   Whirlpool loaded
+[17:57:38]  
+[17:57:38]  ==================
+[17:57:38]  
+[17:57:38]   Loaded.
+[17:57:38]  Loading plugin: sampp_server
+[17:57:38]   Failed.
+[17:57:38]  Loading plugin: pawncmd
+[17:57:38] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:57:38]   Loaded.
+[17:57:38]  Loaded 6 plugins.
+
+[17:57:38] 
+[17:57:38] Filterscripts
+[17:57:38] ---------------
+[17:57:38]   Loaded 0 filterscripts.
+
+[17:57:38]  
+[17:57:38]  
+[17:57:38]  
+[17:57:38]  ======================================= 
+[17:57:38]  |                                     | 
+[17:57:38]  |        YSI version 3.09.0684        | 
+[17:57:38]  |        By Alex "Y_Less" Cole        | 
+[17:57:38]  |                                     | 
+[17:57:38]  ======================================= 
+[17:57:38]  
+[17:57:38] Successfully connected to MySQL database.
+[17:57:38] 
+|----------------------------------|
+[17:57:38] |  Samp Dayz by ZiiM               |
+[17:57:38] |----------------------------------|
+
+[17:57:38] Number of vehicle models: 0
+[17:57:40] [connection] 127.0.0.1:56192 requests connection cookie.
+[17:57:41] [connection] incoming connection: 127.0.0.1:56192 id: 0
+[17:57:42] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:57:42] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:57:43] PlayCheck running
+[17:57:43] Hungertime2: 0
+[17:57:44] PlayCheck running
+[17:57:44] Hungertime2: 0
+[17:57:45] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:57:45] Login1
+[17:57:45] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[17:57:45] PlayCheck running
+[17:57:45] Hungertime2: 1
+[17:57:46] PlayCheck running
+[17:57:46] Hungertime2: 1
+[17:57:47] PlayCheck running
+[17:57:47] Hungertime2: 1
+[17:57:48] PlayCheck running
+[17:57:48] Hungertime2: 1
+[17:57:49] PlayCheck running
+[17:57:49] Hungertime2: 1
+[17:57:51] PlayCheck running
+[17:57:51] Hungertime2: 1
+[17:57:52] PlayCheck running
+[17:57:52] Hungertime2: 1
+[17:57:53] PlayCheck running
+[17:57:53] Hungertime2: 1
+[17:57:54] PlayCheck running
+[17:57:54] Hungertime2: 1
+[17:57:55] PlayCheck running
+[17:57:55] Hungertime2: 1
+[17:57:56] PlayCheck running
+[17:57:56] Hungertime2: 1
+[17:57:57] PlayCheck running
+[17:57:57] Hungertime2: 1
+[17:57:58] PlayCheck running
+[17:57:58] Hungertime2: 1
+[17:57:59] PlayCheck running
+[17:57:59] Hungertime2: 1
+[17:58:00] PlayCheck running
+[17:58:00] Hungertime2: 1
+[17:58:02] PlayCheck running
+[17:58:02] Hungertime2: 1
+[17:58:03] PlayCheck running
+[17:58:03] Hungertime2: 1
+[17:58:04] PlayCheck running
+[17:58:04] Hungertime2: 1
+[17:58:05] PlayCheck running
+[17:58:05] Hungertime2: 1
+[17:58:06] PlayCheck running
+[17:58:06] Hungertime2: 1
+[17:58:07] PlayCheck running
+[17:58:07] Hungertime2: 1
+[17:58:08] PlayCheck running
+[17:58:08] Hungertime2: 1
+[17:58:09] PlayCheck running
+[17:58:09] Hungertime2: 1
+[17:58:10] PlayCheck running
+[17:58:10] Hungertime2: 1
+[17:58:11] PlayCheck running
+[17:58:11] Hungertime2: 1
+[17:58:12] PlayCheck running
+[17:58:12] Hungertime2: 1
+[17:58:14] PlayCheck running
+[17:58:14] Hungertime2: 1
+[17:58:15] PlayCheck running
+[17:58:15] Hungertime2: 1
+[17:58:16] PlayCheck running
+[17:58:16] Hungertime2: 1
+[17:58:17] PlayCheck running
+[17:58:17] Hungertime2: 1
+[17:58:18] PlayCheck running
+[17:58:18] Hungertime2: 1
+[17:58:19] PlayCheck running
+[17:58:19] Hungertime2: 1
+[17:58:20] PlayCheck running
+[17:58:20] Hungertime2: 1
+[17:58:21] PlayCheck running
+[17:58:21] Hungertime2: 1
+[17:58:22] PlayCheck running
+[17:58:22] Hungertime2: 1
+[17:58:23] PlayCheck running
+[17:58:23] Hungertime2: 1
+[17:58:25] PlayCheck running
+[17:58:25] Hungertime2: 1
+[17:58:26] PlayCheck running
+[17:58:26] Hungertime2: 1
+[17:58:27] PlayCheck running
+[17:58:27] Hungertime2: 1
+[17:58:28] PlayCheck running
+[17:58:28] Hungertime2: 1
+[17:58:29] PlayCheck running
+[17:58:29] Hungertime2: 1
+[17:58:30] PlayCheck running
+[17:58:30] Hungertime2: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[17:58:34] 
+[17:58:34] Server Plugins
+[17:58:34] --------------
+[17:58:34]  Loading plugin: crashdetect
+[17:58:34]   CrashDetect v4.18.1 is OK.
+[17:58:34]   Loaded.
+[17:58:34]  Loading plugin: mysql
+[17:58:34]  >> plugin.mysql: R39-4 successfully loaded.
+[17:58:34]   Loaded.
+[17:58:34]  Loading plugin: sscanf
+[17:58:34] 
+
+[17:58:34]  ===============================
+
+[17:58:34]       sscanf plugin loaded.     
+
+[17:58:34]          Version:  2.8.2        
+
+[17:58:34]    (c) 2012 Alex "Y_Less" Cole  
+
+[17:58:34]  ===============================
+
+[17:58:34]   Loaded.
+[17:58:34]  Loading plugin: streamer
+[17:58:34] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[17:58:34]   Loaded.
+[17:58:34]  Loading plugin: Whirlpool
+[17:58:34]  
+[17:58:34]  ==================
+[17:58:34]  
+[17:58:34]   Whirlpool loaded
+[17:58:34]  
+[17:58:34]  ==================
+[17:58:34]  
+[17:58:34]   Loaded.
+[17:58:34]  Loading plugin: sampp_server
+[17:58:34]   Failed.
+[17:58:34]  Loading plugin: pawncmd
+[17:58:34] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[17:58:34]   Loaded.
+[17:58:34]  Loaded 6 plugins.
+
+[17:58:35] 
+[17:58:35] Filterscripts
+[17:58:35] ---------------
+[17:58:35]   Loaded 0 filterscripts.
+
+[17:58:35]  
+[17:58:35]  
+[17:58:35]  
+[17:58:35]  ======================================= 
+[17:58:35]  |                                     | 
+[17:58:35]  |        YSI version 3.09.0684        | 
+[17:58:35]  |        By Alex "Y_Less" Cole        | 
+[17:58:35]  |                                     | 
+[17:58:35]  ======================================= 
+[17:58:35]  
+[17:58:35] Successfully connected to MySQL database.
+[17:58:35] 
+|----------------------------------|
+[17:58:35] |  Samp Dayz by ZiiM               |
+[17:58:35] |----------------------------------|
+
+[17:58:35] Number of vehicle models: 0
+[17:58:37] [connection] 127.0.0.1:50515 requests connection cookie.
+[17:58:38] [connection] incoming connection: 127.0.0.1:50515 id: 0
+[17:58:39] [join] ZiiM has joined the server (0:127.0.0.1)
+[17:58:39] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[17:58:40] PlayCheck running
+[17:58:40] Hungertime2: 1
+[17:58:41] PlayCheck running
+[17:58:41] Hungertime2: 2
+[17:58:42] PlayCheck running
+[17:58:42] Hungertime2: 3
+[17:58:43] PlayCheck running
+[17:58:43] Hungertime2: 4
+[17:58:44] PlayCheck running
+[17:58:44] Hungertime2: 5
+[17:58:45] PlayCheck running
+[17:58:45] Hungertime2: 6
+[17:58:46] PlayCheck running
+[17:58:46] Hungertime2: 7
+[17:58:47] PlayCheck running
+[17:58:47] Hungertime2: 8
+[17:58:49] PlayCheck running
+[17:58:49] Hungertime2: 9
+[17:58:50] PlayCheck running
+[17:58:50] Hungertime2: 10
+[17:58:51] PlayCheck running
+[17:58:51] Hungertime2: 11
+[17:58:51] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[17:58:51] Login1
+[17:58:51] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[17:58:52] PlayCheck running
+[17:58:52] Hungertime2: 13
+[17:58:53] PlayCheck running
+[17:58:53] Hungertime2: 15
+[17:58:54] PlayCheck running
+[17:58:54] Hungertime2: 17
+[17:58:55] PlayCheck running
+[17:58:55] Hungertime2: 19
+[17:58:56] PlayCheck running
+[17:58:56] Hungertime2: 21
+[17:58:57] PlayCheck running
+[17:58:57] Hungertime2: 23
+[17:58:58] PlayCheck running
+[17:58:58] Hungertime2: 25
+[17:59:00] PlayCheck running
+[17:59:00] Hungertime2: 27
+[17:59:01] PlayCheck running
+[17:59:01] Hungertime2: 29
+[17:59:02] PlayCheck running
+[17:59:02] Hungertime2: 31
+[17:59:03] PlayCheck running
+[17:59:03] Hungertime2: 33
+[17:59:04] PlayCheck running
+[17:59:04] Hungertime2: 35
+[17:59:05] PlayCheck running
+[17:59:05] Hungertime2: 37
+[17:59:06] PlayCheck running
+[17:59:06] Hungertime2: 39
+[17:59:07] PlayCheck running
+[17:59:07] Hungertime2: 41
+[17:59:08] PlayCheck running
+[17:59:08] Hungertime2: 43
+[17:59:09] PlayCheck running
+[17:59:09] Hungertime2: 45
+[17:59:11] PlayCheck running
+[17:59:11] Hungertime2: 47
+[17:59:12] PlayCheck running
+[17:59:12] Hungertime2: 49
+[17:59:13] PlayCheck running
+[17:59:13] Hungertime2: 51
+[17:59:14] PlayCheck running
+[17:59:14] Hungertime2: 53
+[17:59:15] PlayCheck running
+[17:59:15] Hungertime2: 55
+[17:59:16] PlayCheck running
+[17:59:16] Hungertime2: 57
+[17:59:17] PlayCheck running
+[17:59:17] Hungertime2: 59
+[17:59:18] PlayCheck running
+[17:59:18] Hungertime2: 61
+[17:59:19] PlayCheck running
+[17:59:19] Hungertime2: 63
+[17:59:20] PlayCheck running
+[17:59:20] Hungertime2: 65
+[17:59:22] PlayCheck running
+[17:59:22] Hungertime2: 67
+[17:59:23] PlayCheck running
+[17:59:23] Hungertime2: 69
+[17:59:24] PlayCheck running
+[17:59:24] Hungertime2: 71
+[17:59:25] PlayCheck running
+[17:59:25] Hungertime2: 73
+[17:59:26] PlayCheck running
+[17:59:26] Hungertime2: 75
+[17:59:27] PlayCheck running
+[17:59:27] Hungertime2: 77
+[17:59:28] PlayCheck running
+[17:59:28] Hungertime2: 79
+[17:59:29] PlayCheck running
+[17:59:29] Hungertime2: 81
+[17:59:30] PlayCheck running
+[17:59:30] Hungertime2: 83
+[17:59:31] PlayCheck running
+[17:59:31] Hungertime2: 85
+[17:59:33] PlayCheck running
+[17:59:33] Hungertime2: 87
+[17:59:34] PlayCheck running
+[17:59:34] Hungertime2: 89
+[17:59:35] PlayCheck running
+[17:59:35] Hungertime2: 91
+[17:59:36] PlayCheck running
+[17:59:36] Hungertime2: 93
+[17:59:37] PlayCheck running
+[17:59:37] Hungertime2: 95
+[17:59:38] PlayCheck running
+[17:59:38] Hungertime2: 97
+[17:59:39] PlayCheck running
+[17:59:39] Hungertime2: 99
+[17:59:40] PlayCheck running
+[17:59:40] Hungertime2: 101
+[17:59:41] PlayCheck running
+[17:59:41] Hungertime2: 103
+[17:59:42] PlayCheck running
+[17:59:42] Hungertime2: 105
+[17:59:44] PlayCheck running
+[17:59:44] Hungertime2: 107
+[17:59:45] PlayCheck running
+[17:59:45] Hungertime2: 109
+[17:59:46] PlayCheck running
+[17:59:46] Hungertime2: 111
+[17:59:47] PlayCheck running
+[17:59:47] Hungertime2: 113
+[17:59:48] PlayCheck running
+[17:59:48] Hungertime2: 115
+[17:59:49] PlayCheck running
+[17:59:49] Hungertime2: 117
+[17:59:50] PlayCheck running
+[17:59:50] Hungertime2: 119
+[17:59:51] PlayCheck running
+[17:59:51] Hungertime2: 121
+[17:59:52] PlayCheck running
+[17:59:52] Hungertime2: 123
+[17:59:53] PlayCheck running
+[17:59:53] Hungertime2: 125
+[17:59:55] PlayCheck running
+[17:59:55] Hungertime2: 127
+[17:59:56] PlayCheck running
+[17:59:56] Hungertime2: 129
+[17:59:57] PlayCheck running
+[17:59:57] Hungertime2: 131
+[17:59:58] PlayCheck running
+[17:59:58] Hungertime2: 133
+[17:59:59] PlayCheck running
+[17:59:59] Hungertime2: 135
+[18:00:00] PlayCheck running
+[18:00:00] Hungertime2: 137
+[18:00:01] PlayCheck running
+[18:00:01] Hungertime2: 139
+[18:00:02] PlayCheck running
+[18:00:02] Hungertime2: 141
+[18:00:03] PlayCheck running
+[18:00:03] Hungertime2: 143
+[18:00:04] PlayCheck running
+[18:00:04] Hungertime2: 145
+[18:00:06] PlayCheck running
+[18:00:06] Hungertime2: 147
+[18:00:07] PlayCheck running
+[18:00:07] Hungertime2: 149
+[18:00:08] PlayCheck running
+[18:00:08] Hungertime2: 151
+[18:00:09] PlayCheck running
+[18:00:09] Hungertime2: 153
+[18:00:10] PlayCheck running
+[18:00:10] Hungertime2: 155
+[18:00:11] PlayCheck running
+[18:00:11] Hungertime2: 157
+[18:00:12] PlayCheck running
+[18:00:12] Hungertime2: 159
+[18:00:13] PlayCheck running
+[18:00:13] Hungertime2: 161
+[18:00:14] PlayCheck running
+[18:00:14] Hungertime2: 163
+[18:00:15] PlayCheck running
+[18:00:15] Hungertime2: 165
+[18:00:17] PlayCheck running
+[18:00:17] Hungertime2: 167
+[18:00:18] PlayCheck running
+[18:00:18] Hungertime2: 169
+[18:00:19] PlayCheck running
+[18:00:19] Hungertime2: 171
+[18:00:20] PlayCheck running
+[18:00:20] Hungertime2: 173
+[18:00:21] PlayCheck running
+[18:00:21] Hungertime2: 175
+[18:00:22] PlayCheck running
+[18:00:22] Hungertime2: 177
+[18:00:23] PlayCheck running
+[18:00:23] Hungertime2: 179
+[18:00:24] PlayCheck running
+[18:00:24] Hungertime2: 181
+[18:00:25] PlayCheck running
+[18:00:25] Hungertime2: 183
+[18:00:26] PlayCheck running
+[18:00:26] Hungertime2: 185
+[18:00:27] PlayCheck running
+[18:00:27] Hungertime2: 187
+[18:00:29] PlayCheck running
+[18:00:29] Hungertime2: 189
+[18:00:30] PlayCheck running
+[18:00:30] Hungertime2: 191
+[18:00:31] PlayCheck running
+[18:00:31] Hungertime2: 193
+[18:00:32] PlayCheck running
+[18:00:32] Hungertime2: 195
+[18:00:33] PlayCheck running
+[18:00:33] Hungertime2: 197
+[18:00:34] PlayCheck running
+[18:00:34] Hungertime2: 199
+[18:00:35] PlayCheck running
+[18:00:35] Hungertime2: 201
+[18:00:36] PlayCheck running
+[18:00:36] Hungertime2: 203
+[18:00:37] PlayCheck running
+[18:00:37] Hungertime2: 205
+[18:00:38] PlayCheck running
+[18:00:38] Hungertime2: 207
+[18:00:40] PlayCheck running
+[18:00:40] Hungertime2: 209
+[18:00:41] PlayCheck running
+[18:00:41] Hungertime2: 211
+[18:00:42] PlayCheck running
+[18:00:42] Hungertime2: 213
+[18:00:43] PlayCheck running
+[18:00:43] Hungertime2: 215
+[18:00:44] PlayCheck running
+[18:00:44] Hungertime2: 217
+[18:00:45] PlayCheck running
+[18:00:45] Hungertime2: 219
+[18:00:46] PlayCheck running
+[18:00:46] Hungertime2: 221
+[18:00:47] PlayCheck running
+[18:00:47] Hungertime2: 223
+[18:00:48] PlayCheck running
+[18:00:48] Hungertime2: 225
+[18:00:49] PlayCheck running
+[18:00:49] Hungertime2: 227
+[18:00:51] PlayCheck running
+[18:00:51] Hungertime2: 229
+[18:00:52] PlayCheck running
+[18:00:52] Hungertime2: 231
+[18:00:53] PlayCheck running
+[18:00:53] Hungertime2: 233
+[18:00:54] PlayCheck running
+[18:00:54] Hungertime2: 235
+[18:00:55] PlayCheck running
+[18:00:55] Hungertime2: 237
+[18:00:56] PlayCheck running
+[18:00:56] Hungertime2: 239
+[18:00:57] PlayCheck running
+[18:00:57] Hungertime2: 241
+[18:00:58] PlayCheck running
+[18:00:58] Hungertime2: 243
+[18:00:59] PlayCheck running
+[18:00:59] Hungertime2: 245
+[18:01:00] PlayCheck running
+[18:01:00] Hungertime2: 247
+[18:01:02] PlayCheck running
+[18:01:02] Hungertime2: 249
+[18:01:03] PlayCheck running
+[18:01:03] Hungertime2: 251
+[18:01:04] PlayCheck running
+[18:01:04] Hungertime2: 253
+[18:01:05] PlayCheck running
+[18:01:05] Hungertime2: 255
+[18:01:06] PlayCheck running
+[18:01:06] Hungertime2: 257
+[18:01:07] PlayCheck running
+[18:01:07] Hungertime2: 259
+[18:01:08] PlayCheck running
+[18:01:08] Hungertime2: 261
+[18:01:09] PlayCheck running
+[18:01:09] Hungertime2: 263
+[18:01:10] PlayCheck running
+[18:01:10] Hungertime2: 265
+[18:01:11] PlayCheck running
+[18:01:11] Hungertime2: 267
+[18:01:13] PlayCheck running
+[18:01:13] Hungertime2: 269
+[18:01:14] PlayCheck running
+[18:01:14] Hungertime2: 271
+[18:01:15] PlayCheck running
+[18:01:15] Hungertime2: 273
+[18:01:16] PlayCheck running
+[18:01:16] Hungertime2: 275
+[18:01:17] PlayCheck running
+[18:01:17] Hungertime2: 277
+[18:01:18] PlayCheck running
+[18:01:18] Hungertime2: 279
+[18:01:19] PlayCheck running
+[18:01:19] Hungertime2: 281
+[18:01:20] PlayCheck running
+[18:01:20] Hungertime2: 283
+[18:01:21] PlayCheck running
+[18:01:21] Hungertime2: 285
+[18:01:22] PlayCheck running
+[18:01:22] Hungertime2: 287
+[18:01:24] PlayCheck running
+[18:01:24] Hungertime2: 289
+[18:01:25] PlayCheck running
+[18:01:25] Hungertime2: 291
+[18:01:26] PlayCheck running
+[18:01:26] Hungertime2: 293
+[18:01:27] PlayCheck running
+[18:01:27] Hungertime2: 295
+[18:01:28] PlayCheck running
+[18:01:28] Hungertime2: 297
+[18:01:29] PlayCheck running
+[18:01:29] Hungertime2: 299
+[18:01:30] PlayCheck running
+[18:01:30] Hunger Time: 301
+[18:01:30] Hungertime2: 0
+[18:01:31] PlayCheck running
+[18:01:31] Hungertime2: 2
+[18:01:32] PlayCheck running
+[18:01:32] Hungertime2: 4
+[18:01:33] PlayCheck running
+[18:01:33] Hungertime2: 6
+[18:01:35] PlayCheck running
+[18:01:35] Hungertime2: 8
+[18:01:36] PlayCheck running
+[18:01:36] Hungertime2: 10
+[18:01:37] PlayCheck running
+[18:01:37] Hungertime2: 12
+[18:01:38] PlayCheck running
+[18:01:38] Hungertime2: 14
+[18:01:39] PlayCheck running
+[18:01:39] Hungertime2: 16
+[18:01:40] PlayCheck running
+[18:01:40] Hungertime2: 18
+[18:01:41] PlayCheck running
+[18:01:41] Hungertime2: 20
+[18:01:42] PlayCheck running
+[18:01:42] Hungertime2: 22
+[18:01:43] PlayCheck running
+[18:01:43] Hungertime2: 24
+[18:01:44] PlayCheck running
+[18:01:44] Hungertime2: 26
+[18:01:46] PlayCheck running
+[18:01:46] Hungertime2: 28
+[18:01:47] PlayCheck running
+[18:01:47] Hungertime2: 30
+[18:01:48] PlayCheck running
+[18:01:48] Hungertime2: 32
+[18:01:49] PlayCheck running
+[18:01:49] Hungertime2: 34
+[18:01:50] PlayCheck running
+[18:01:50] Hungertime2: 36
+[18:01:51] PlayCheck running
+[18:01:51] Hungertime2: 38
+[18:01:52] PlayCheck running
+[18:01:52] Hungertime2: 40
+[18:01:53] PlayCheck running
+[18:01:53] Hungertime2: 42
+[18:01:54] PlayCheck running
+[18:01:54] Hungertime2: 44
+[18:01:55] PlayCheck running
+[18:01:55] Hungertime2: 46
+[18:01:56] PlayCheck running
+[18:01:56] Hungertime2: 48
+[18:01:58] PlayCheck running
+[18:01:58] Hungertime2: 50
+[18:01:59] PlayCheck running
+[18:01:59] Hungertime2: 52
+[18:02:00] PlayCheck running
+[18:02:00] Hungertime2: 54
+[18:02:01] PlayCheck running
+[18:02:01] Hungertime2: 56
+[18:02:02] PlayCheck running
+[18:02:02] Hungertime2: 58
+[18:02:03] PlayCheck running
+[18:02:03] Hungertime2: 60
+[18:02:04] PlayCheck running
+[18:02:04] Hungertime2: 62
+[18:02:05] PlayCheck running
+[18:02:05] Hungertime2: 64
+[18:02:06] PlayCheck running
+[18:02:06] Hungertime2: 66
+[18:02:07] PlayCheck running
+[18:02:07] Hungertime2: 68
+[18:02:09] PlayCheck running
+[18:02:09] Hungertime2: 70
+[18:02:10] PlayCheck running
+[18:02:10] Hungertime2: 72
+[18:02:11] PlayCheck running
+[18:02:11] Hungertime2: 74
+[18:02:12] PlayCheck running
+[18:02:12] Hungertime2: 76
+[18:02:13] PlayCheck running
+[18:02:13] Hungertime2: 78
+[18:02:14] PlayCheck running
+[18:02:14] Hungertime2: 80
+[18:02:15] PlayCheck running
+[18:02:15] Hungertime2: 82
+[18:02:16] PlayCheck running
+[18:02:16] Hungertime2: 84
+[18:02:17] PlayCheck running
+[18:02:17] Hungertime2: 86
+[18:02:18] PlayCheck running
+[18:02:18] Hungertime2: 88
+[18:02:20] PlayCheck running
+[18:02:20] Hungertime2: 90
+[18:02:21] PlayCheck running
+[18:02:21] Hungertime2: 92
+[18:02:22] PlayCheck running
+[18:02:22] Hungertime2: 94
+[18:02:23] PlayCheck running
+[18:02:23] Hungertime2: 96
+[18:02:24] PlayCheck running
+[18:02:24] Hungertime2: 98
+[18:02:25] PlayCheck running
+[18:02:25] Hungertime2: 100
+[18:02:26] PlayCheck running
+[18:02:26] Hungertime2: 102
+[18:02:27] PlayCheck running
+[18:02:27] Hungertime2: 104
+[18:02:28] PlayCheck running
+[18:02:28] Hungertime2: 106
+[18:02:29] PlayCheck running
+[18:02:29] Hungertime2: 108
+[18:02:31] PlayCheck running
+[18:02:31] Hungertime2: 110
+[18:02:32] PlayCheck running
+[18:02:32] Hungertime2: 112
+[18:02:33] PlayCheck running
+[18:02:33] Hungertime2: 114
+[18:02:34] PlayCheck running
+[18:02:34] Hungertime2: 116
+[18:02:35] PlayCheck running
+[18:02:35] Hungertime2: 118
+[18:02:36] PlayCheck running
+[18:02:36] Hungertime2: 120
+[18:02:37] PlayCheck running
+[18:02:37] Hungertime2: 122
+[18:02:38] PlayCheck running
+[18:02:38] Hungertime2: 124
+[18:02:39] PlayCheck running
+[18:02:39] Hungertime2: 126
+[18:02:40] PlayCheck running
+[18:02:40] Hungertime2: 128
+[18:02:42] PlayCheck running
+[18:02:42] Hungertime2: 130
+[18:02:43] PlayCheck running
+[18:02:43] Hungertime2: 132
+[18:02:44] PlayCheck running
+[18:02:44] Hungertime2: 134
+[18:02:45] PlayCheck running
+[18:02:45] Hungertime2: 136
+[18:02:46] PlayCheck running
+[18:02:46] Hungertime2: 138
+[18:02:47] PlayCheck running
+[18:02:47] Hungertime2: 140
+[18:02:48] PlayCheck running
+[18:02:48] Hungertime2: 142
+[18:02:49] PlayCheck running
+[18:02:49] Hungertime2: 144
+[18:02:50] PlayCheck running
+[18:02:50] Hungertime2: 146
+[18:02:51] PlayCheck running
+[18:02:51] Hungertime2: 148
+[18:02:52] PlayCheck running
+[18:02:52] Hungertime2: 150
+[18:02:54] PlayCheck running
+[18:02:54] Hungertime2: 152
+[18:02:55] PlayCheck running
+[18:02:55] Hungertime2: 154
+[18:02:56] PlayCheck running
+[18:02:56] Hungertime2: 156
+[18:02:57] PlayCheck running
+[18:02:57] Hungertime2: 158
+[18:02:58] PlayCheck running
+[18:02:58] Hungertime2: 160
+[18:02:59] PlayCheck running
+[18:02:59] Hungertime2: 162
+[18:03:00] PlayCheck running
+[18:03:00] Hungertime2: 164
+[18:03:01] PlayCheck running
+[18:03:01] Hungertime2: 166
+[18:03:02] PlayCheck running
+[18:03:02] Hungertime2: 168
+[18:03:03] PlayCheck running
+[18:03:03] Hungertime2: 170
+[18:03:05] PlayCheck running
+[18:03:05] Hungertime2: 172
+[18:03:06] PlayCheck running
+[18:03:06] Hungertime2: 174
+[18:03:07] PlayCheck running
+[18:03:07] Hungertime2: 176
+[18:03:08] PlayCheck running
+[18:03:08] Hungertime2: 178
+[18:03:09] PlayCheck running
+[18:03:09] Hungertime2: 180
+[18:03:10] PlayCheck running
+[18:03:10] Hungertime2: 182
+[18:03:11] PlayCheck running
+[18:03:11] Hungertime2: 184
+[18:03:12] PlayCheck running
+[18:03:12] Hungertime2: 186
+[18:03:13] PlayCheck running
+[18:03:13] Hungertime2: 188
+[18:03:14] PlayCheck running
+[18:03:14] Hungertime2: 190
+[18:03:16] PlayCheck running
+[18:03:16] Hungertime2: 192
+[18:03:17] PlayCheck running
+[18:03:17] Hungertime2: 194
+[18:03:18] PlayCheck running
+[18:03:18] Hungertime2: 196
+[18:03:19] PlayCheck running
+[18:03:19] Hungertime2: 198
+[18:03:20] PlayCheck running
+[18:03:20] Hungertime2: 200
+[18:03:21] PlayCheck running
+[18:03:21] Hungertime2: 202
+[18:03:22] PlayCheck running
+[18:03:22] Hungertime2: 204
+[18:03:23] PlayCheck running
+[18:03:23] Hungertime2: 206
+[18:03:24] PlayCheck running
+[18:03:24] Hungertime2: 208
+[18:03:25] PlayCheck running
+[18:03:25] Hungertime2: 210
+[18:03:27] PlayCheck running
+[18:03:27] Hungertime2: 212
+[18:03:28] PlayCheck running
+[18:03:28] Hungertime2: 214
+[18:03:29] PlayCheck running
+[18:03:29] Hungertime2: 216
+[18:03:30] PlayCheck running
+[18:03:30] Hungertime2: 218
+[18:03:31] PlayCheck running
+[18:03:31] Hungertime2: 220
+[18:03:32] PlayCheck running
+[18:03:32] Hungertime2: 222
+[18:03:33] PlayCheck running
+[18:03:33] Hungertime2: 224
+[18:03:34] PlayCheck running
+[18:03:34] Hungertime2: 226
+[18:03:35] PlayCheck running
+[18:03:35] Hungertime2: 228
+[18:03:36] PlayCheck running
+[18:03:36] Hungertime2: 230
+[18:03:38] PlayCheck running
+[18:03:38] Hungertime2: 232
+[18:03:39] PlayCheck running
+[18:03:39] Hungertime2: 234
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:03:40] 
+[18:03:40] Server Plugins
+[18:03:40] --------------
+[18:03:40]  Loading plugin: crashdetect
+[18:03:40]   CrashDetect v4.18.1 is OK.
+[18:03:40]   Loaded.
+[18:03:40]  Loading plugin: mysql
+[18:03:40]  >> plugin.mysql: R39-4 successfully loaded.
+[18:03:40]   Loaded.
+[18:03:40]  Loading plugin: sscanf
+[18:03:40] 
+
+[18:03:40]  ===============================
+
+[18:03:40]       sscanf plugin loaded.     
+
+[18:03:40]          Version:  2.8.2        
+
+[18:03:40]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:03:40]  ===============================
+
+[18:03:40]   Loaded.
+[18:03:40]  Loading plugin: streamer
+[18:03:40] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:03:40]   Loaded.
+[18:03:40]  Loading plugin: Whirlpool
+[18:03:40]  
+[18:03:40]  ==================
+[18:03:40]  
+[18:03:40]   Whirlpool loaded
+[18:03:40]  
+[18:03:40]  ==================
+[18:03:40]  
+[18:03:40]   Loaded.
+[18:03:40]  Loading plugin: sampp_server
+[18:03:40]   Failed.
+[18:03:40]  Loading plugin: pawncmd
+[18:03:40] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:03:40]   Loaded.
+[18:03:40]  Loaded 6 plugins.
+
+[18:03:40] 
+[18:03:40] Filterscripts
+[18:03:40] ---------------
+[18:03:40]   Loaded 0 filterscripts.
+
+[18:03:40]  
+[18:03:40]  
+[18:03:40]  
+[18:03:40]  ======================================= 
+[18:03:40]  |                                     | 
+[18:03:40]  |        YSI version 3.09.0684        | 
+[18:03:40]  |        By Alex "Y_Less" Cole        | 
+[18:03:40]  |                                     | 
+[18:03:40]  ======================================= 
+[18:03:40]  
+[18:03:40] Successfully connected to MySQL database.
+[18:03:40] 
+|----------------------------------|
+[18:03:40] |  Samp Dayz by ZiiM               |
+[18:03:40] |----------------------------------|
+
+[18:03:40] Number of vehicle models: 0
+[18:03:45] [connection] 127.0.0.1:59787 requests connection cookie.
+[18:03:47] [connection] incoming connection: 127.0.0.1:59787 id: 0
+[18:03:47] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:03:47] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:03:48] PlayCheck running
+[18:03:48] Hungertime2: 0
+[18:03:49] PlayCheck running
+[18:03:49] Hungertime2: 0
+[18:03:50] PlayCheck running
+[18:03:50] Hungertime2: 0
+[18:03:51] PlayCheck running
+[18:03:51] Hungertime2: 0
+[18:03:52] PlayCheck running
+[18:03:52] Hungertime2: 0
+[18:03:53] PlayCheck running
+[18:03:53] Hungertime2: 0
+[18:03:54] PlayCheck running
+[18:03:54] Hungertime2: 0
+[18:03:55] PlayCheck running
+[18:03:55] Hungertime2: 0
+[18:03:57] PlayCheck running
+[18:03:57] Hungertime2: 0
+[18:03:58] PlayCheck running
+[18:03:58] Hungertime2: 0
+[18:03:59] PlayCheck running
+[18:03:59] Hungertime2: 0
+[18:04:00] PlayCheck running
+[18:04:00] Hungertime2: 0
+[18:04:01] PlayCheck running
+[18:04:01] Hungertime2: 0
+[18:04:02] PlayCheck running
+[18:04:02] Hungertime2: 0
+[18:04:03] PlayCheck running
+[18:04:03] Hungertime2: 0
+[18:04:04] PlayCheck running
+[18:04:04] Hungertime2: 0
+[18:04:05] PlayCheck running
+[18:04:05] Hungertime2: 0
+[18:04:06] PlayCheck running
+[18:04:06] Hungertime2: 0
+[18:04:08] PlayCheck running
+[18:04:08] Hungertime2: 0
+[18:04:09] PlayCheck running
+[18:04:09] Hungertime2: 0
+[18:04:10] PlayCheck running
+[18:04:10] Hungertime2: 0
+[18:04:11] PlayCheck running
+[18:04:11] Hungertime2: 0
+[18:04:12] PlayCheck running
+[18:04:12] Hungertime2: 0
+[18:04:13] PlayCheck running
+[18:04:13] Hungertime2: 0
+[18:04:14] PlayCheck running
+[18:04:14] Hungertime2: 0
+[18:04:15] PlayCheck running
+[18:04:15] Hungertime2: 0
+[18:04:16] PlayCheck running
+[18:04:16] Hungertime2: 0
+[18:04:17] PlayCheck running
+[18:04:17] Hungertime2: 0
+[18:04:19] PlayCheck running
+[18:04:19] Hungertime2: 0
+[18:04:20] PlayCheck running
+[18:04:20] Hungertime2: 0
+[18:04:21] PlayCheck running
+[18:04:21] Hungertime2: 0
+[18:04:22] PlayCheck running
+[18:04:22] Hungertime2: 0
+[18:04:23] PlayCheck running
+[18:04:23] Hungertime2: 0
+[18:04:24] PlayCheck running
+[18:04:24] Hungertime2: 0
+[18:04:25] PlayCheck running
+[18:04:25] Hungertime2: 0
+[18:04:26] PlayCheck running
+[18:04:26] Hungertime2: 0
+[18:04:27] PlayCheck running
+[18:04:27] Hungertime2: 0
+[18:04:28] PlayCheck running
+[18:04:28] Hungertime2: 0
+[18:04:30] PlayCheck running
+[18:04:30] Hungertime2: 0
+[18:04:31] PlayCheck running
+[18:04:31] Hungertime2: 0
+[18:04:32] PlayCheck running
+[18:04:32] Hungertime2: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:04:54] 
+[18:04:54] Server Plugins
+[18:04:54] --------------
+[18:04:54]  Loading plugin: crashdetect
+[18:04:54]   CrashDetect v4.18.1 is OK.
+[18:04:54]   Loaded.
+[18:04:54]  Loading plugin: mysql
+[18:04:54]  >> plugin.mysql: R39-4 successfully loaded.
+[18:04:54]   Loaded.
+[18:04:54]  Loading plugin: sscanf
+[18:04:54] 
+
+[18:04:54]  ===============================
+
+[18:04:54]       sscanf plugin loaded.     
+
+[18:04:54]          Version:  2.8.2        
+
+[18:04:54]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:04:54]  ===============================
+
+[18:04:54]   Loaded.
+[18:04:54]  Loading plugin: streamer
+[18:04:54] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:04:54]   Loaded.
+[18:04:54]  Loading plugin: Whirlpool
+[18:04:54]  
+[18:04:54]  ==================
+[18:04:54]  
+[18:04:54]   Whirlpool loaded
+[18:04:54]  
+[18:04:54]  ==================
+[18:04:54]  
+[18:04:54]   Loaded.
+[18:04:54]  Loading plugin: sampp_server
+[18:04:54]   Failed.
+[18:04:54]  Loading plugin: pawncmd
+[18:04:54] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:04:54]   Loaded.
+[18:04:54]  Loaded 6 plugins.
+
+[18:04:54] 
+[18:04:54] Filterscripts
+[18:04:54] ---------------
+[18:04:54]   Loaded 0 filterscripts.
+
+[18:04:54]  
+[18:04:54]  
+[18:04:54]  
+[18:04:54]  ======================================= 
+[18:04:54]  |                                     | 
+[18:04:54]  |        YSI version 3.09.0684        | 
+[18:04:54]  |        By Alex "Y_Less" Cole        | 
+[18:04:54]  |                                     | 
+[18:04:54]  ======================================= 
+[18:04:54]  
+[18:04:55] Successfully connected to MySQL database.
+[18:04:55] 
+|----------------------------------|
+[18:04:55] |  Samp Dayz by ZiiM               |
+[18:04:55] |----------------------------------|
+
+[18:04:55] Number of vehicle models: 0
+[18:04:55] [connection] 127.0.0.1:53318 requests connection cookie.
+[18:04:56] [connection] incoming connection: 127.0.0.1:53318 id: 0
+[18:04:56] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:04:56] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:04:57] PlayCheck running
+[18:04:57] Hungertime2: 0
+[18:04:58] PlayCheck running
+[18:04:58] Hungertime2: 0
+[18:04:59] PlayCheck running
+[18:04:59] Hungertime2: 0
+[18:05:01] PlayCheck running
+[18:05:01] Hungertime2: 0
+[18:05:02] PlayCheck running
+[18:05:02] Hungertime2: 0
+[18:05:02] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[18:05:02] Login1
+[18:05:02] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[18:05:03] PlayCheck running
+[18:05:03] Hungertime2: 1
+[18:05:04] PlayCheck running
+[18:05:04] Hungertime2: 2
+[18:05:05] PlayCheck running
+[18:05:05] Hungertime2: 3
+[18:05:06] PlayCheck running
+[18:05:06] Hungertime2: 4
+[18:05:07] PlayCheck running
+[18:05:07] Hunger Time: 5
+[18:05:07] Hungertime2: 0
+[18:05:08] PlayCheck running
+[18:05:08] Hungertime2: 1
+[18:05:09] PlayCheck running
+[18:05:09] Hungertime2: 2
+[18:05:10] PlayCheck running
+[18:05:10] Hungertime2: 3
+[18:05:12] PlayCheck running
+[18:05:12] Hungertime2: 4
+[18:05:13] PlayCheck running
+[18:05:13] Hunger Time: 5
+[18:05:13] Hungertime2: 0
+[18:05:14] PlayCheck running
+[18:05:14] Hungertime2: 1
+[18:05:15] PlayCheck running
+[18:05:15] Hungertime2: 2
+[18:05:16] PlayCheck running
+[18:05:16] Hungertime2: 3
+[18:05:17] PlayCheck running
+[18:05:17] Hungertime2: 4
+[18:05:18] PlayCheck running
+[18:05:18] Hunger Time: 5
+[18:05:18] Hungertime2: 0
+[18:05:19] PlayCheck running
+[18:05:19] Hungertime2: 1
+[18:05:20] PlayCheck running
+[18:05:20] Hungertime2: 2
+[18:05:21] PlayCheck running
+[18:05:21] Hungertime2: 3
+[18:05:22] PlayCheck running
+[18:05:22] Hungertime2: 4
+[18:05:24] PlayCheck running
+[18:05:24] Hunger Time: 5
+[18:05:24] Hungertime2: 0
+[18:05:25] PlayCheck running
+[18:05:25] Hungertime2: 1
+[18:05:26] PlayCheck running
+[18:05:26] Hungertime2: 2
+[18:05:27] PlayCheck running
+[18:05:27] Hungertime2: 3
+[18:05:28] PlayCheck running
+[18:05:28] Hungertime2: 4
+[18:05:29] PlayCheck running
+[18:05:29] Hunger Time: 5
+[18:05:29] Hungertime2: 0
+[18:05:30] PlayCheck running
+[18:05:30] Hungertime2: 1
+[18:05:31] PlayCheck running
+[18:05:31] Hungertime2: 2
+[18:05:32] PlayCheck running
+[18:05:32] Hungertime2: 3
+[18:05:33] PlayCheck running
+[18:05:33] Hungertime2: 4
+[18:05:35] PlayCheck running
+[18:05:35] Hunger Time: 5
+[18:05:35] Hungertime2: 0
+[18:05:36] PlayCheck running
+[18:05:36] Hungertime2: 1
+[18:05:37] PlayCheck running
+[18:05:37] Hungertime2: 2
+[18:05:38] PlayCheck running
+[18:05:38] Hungertime2: 3
+[18:05:39] PlayCheck running
+[18:05:39] Hungertime2: 4
+[18:05:40] PlayCheck running
+[18:05:40] Hunger Time: 5
+[18:05:40] Hungertime2: 0
+[18:05:41] PlayCheck running
+[18:05:41] Hungertime2: 1
+[18:05:42] PlayCheck running
+[18:05:42] Hungertime2: 2
+[18:05:43] PlayCheck running
+[18:05:43] Hungertime2: 3
+[18:05:44] PlayCheck running
+[18:05:44] Hungertime2: 4
+[18:05:46] PlayCheck running
+[18:05:46] Hunger Time: 5
+[18:05:46] Hungertime2: 0
+[18:05:47] PlayCheck running
+[18:05:47] Hungertime2: 1
+[18:05:48] PlayCheck running
+[18:05:48] Hungertime2: 2
+[18:05:49] PlayCheck running
+[18:05:49] Hungertime2: 3
+[18:05:50] PlayCheck running
+[18:05:50] Hungertime2: 4
+[18:05:51] PlayCheck running
+[18:05:51] Hunger Time: 5
+[18:05:51] Hungertime2: 0
+[18:05:52] PlayCheck running
+[18:05:52] Hungertime2: 1
+[18:05:53] PlayCheck running
+[18:05:53] Hungertime2: 2
+[18:05:54] PlayCheck running
+[18:05:54] Hungertime2: 3
+[18:05:55] PlayCheck running
+[18:05:55] Hungertime2: 4
+[18:05:57] PlayCheck running
+[18:05:57] Hunger Time: 5
+[18:05:57] Hungertime2: 0
+[18:05:58] PlayCheck running
+[18:05:58] Hungertime2: 1
+[18:05:59] PlayCheck running
+[18:05:59] Hungertime2: 2
+[18:06:00] PlayCheck running
+[18:06:00] Hungertime2: 3
+[18:06:01] PlayCheck running
+[18:06:01] Hungertime2: 4
+[18:06:02] PlayCheck running
+[18:06:02] Hunger Time: 5
+[18:06:02] Hungertime2: 0
+[18:06:03] PlayCheck running
+[18:06:03] Hungertime2: 1
+[18:06:04] PlayCheck running
+[18:06:04] Hungertime2: 2
+[18:06:05] PlayCheck running
+[18:06:05] Hungertime2: 3
+[18:06:06] PlayCheck running
+[18:06:06] Hungertime2: 4
+[18:06:08] PlayCheck running
+[18:06:08] Hunger Time: 5
+[18:06:08] Hungertime2: 0
+[18:06:09] PlayCheck running
+[18:06:09] Hungertime2: 1
+[18:06:10] PlayCheck running
+[18:06:10] Hungertime2: 2
+[18:06:11] PlayCheck running
+[18:06:11] Hungertime2: 3
+[18:06:12] PlayCheck running
+[18:06:12] Hungertime2: 4
+[18:06:13] PlayCheck running
+[18:06:13] Hunger Time: 5
+[18:06:13] Hungertime2: 0
+[18:06:14] PlayCheck running
+[18:06:14] Hungertime2: 1
+[18:06:15] PlayCheck running
+[18:06:15] Hungertime2: 2
+[18:06:16] PlayCheck running
+[18:06:16] Hungertime2: 3
+[18:06:17] PlayCheck running
+[18:06:17] Hungertime2: 4
+[18:06:18] PlayCheck running
+[18:06:18] Hunger Time: 5
+[18:06:18] Hungertime2: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:06:20] 
+[18:06:20] Server Plugins
+[18:06:20] --------------
+[18:06:20]  Loading plugin: crashdetect
+[18:06:20]   CrashDetect v4.18.1 is OK.
+[18:06:20]   Loaded.
+[18:06:20]  Loading plugin: mysql
+[18:06:20]  >> plugin.mysql: R39-4 successfully loaded.
+[18:06:20]   Loaded.
+[18:06:20]  Loading plugin: sscanf
+[18:06:20] 
+
+[18:06:20]  ===============================
+
+[18:06:20]       sscanf plugin loaded.     
+
+[18:06:20]          Version:  2.8.2        
+
+[18:06:20]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:06:20]  ===============================
+
+[18:06:20]   Loaded.
+[18:06:20]  Loading plugin: streamer
+[18:06:20] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:06:20]   Loaded.
+[18:06:20]  Loading plugin: Whirlpool
+[18:06:20]  
+[18:06:20]  ==================
+[18:06:20]  
+[18:06:20]   Whirlpool loaded
+[18:06:20]  
+[18:06:20]  ==================
+[18:06:20]  
+[18:06:20]   Loaded.
+[18:06:20]  Loading plugin: sampp_server
+[18:06:20]   Failed.
+[18:06:20]  Loading plugin: pawncmd
+[18:06:20] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:06:20]   Loaded.
+[18:06:20]  Loaded 6 plugins.
+
+[18:06:20] 
+[18:06:20] Filterscripts
+[18:06:20] ---------------
+[18:06:20]   Loaded 0 filterscripts.
+
+[18:06:20]  
+[18:06:20]  
+[18:06:20]  
+[18:06:20]  ======================================= 
+[18:06:20]  |                                     | 
+[18:06:20]  |        YSI version 3.09.0684        | 
+[18:06:20]  |        By Alex "Y_Less" Cole        | 
+[18:06:20]  |                                     | 
+[18:06:20]  ======================================= 
+[18:06:20]  
+[18:06:20] Successfully connected to MySQL database.
+[18:06:20] 
+|----------------------------------|
+[18:06:20] |  Samp Dayz by ZiiM               |
+[18:06:20] |----------------------------------|
+
+[18:06:20] Number of vehicle models: 0
+[18:06:32] [connection] 127.0.0.1:49603 requests connection cookie.
+[18:06:33] [connection] incoming connection: 127.0.0.1:49603 id: 0
+[18:06:33] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:06:33] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:06:34] PlayCheck running
+[18:06:34] Hungertime2: 0
+[18:06:35] PlayCheck running
+[18:06:35] Hungertime2: 0
+[18:06:36] PlayCheck running
+[18:06:36] Hungertime2: 0
+[18:06:37] PlayCheck running
+[18:06:37] Hungertime2: 0
+[18:06:38] PlayCheck running
+[18:06:38] Hungertime2: 0
+[18:06:40] PlayCheck running
+[18:06:40] Hungertime2: 0
+[18:06:41] PlayCheck running
+[18:06:41] Hungertime2: 0
+[18:06:42] PlayCheck running
+[18:06:42] Hungertime2: 0
+[18:06:42] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[18:06:42] Login1
+[18:06:42] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[18:06:43] PlayCheck running
+[18:06:43] Hungertime2: 1
+[18:06:44] PlayCheck running
+[18:06:44] Hungertime2: 2
+[18:06:45] PlayCheck running
+[18:06:45] Hungertime2: 3
+[18:06:46] PlayCheck running
+[18:06:46] Hungertime2: 4
+[18:06:47] PlayCheck running
+[18:06:47] Hungertime2: 5
+[18:06:48] PlayCheck running
+[18:06:48] Hungertime2: 6
+[18:06:49] PlayCheck running
+[18:06:49] Hungertime2: 7
+[18:06:51] PlayCheck running
+[18:06:51] Hungertime2: 8
+[18:06:52] PlayCheck running
+[18:06:52] Hungertime2: 9
+[18:06:53] PlayCheck running
+[18:06:53] Hungertime2: 10
+[18:06:54] PlayCheck running
+[18:06:54] Hungertime2: 11
+[18:06:55] PlayCheck running
+[18:06:55] Hungertime2: 12
+[18:06:56] PlayCheck running
+[18:06:56] Hungertime2: 13
+[18:06:57] Item1: Pizza || Item2: Pizza
+[18:06:57] PlayCheck running
+[18:06:57] Hungertime2: 14
+[18:06:58] PlayCheck running
+[18:06:58] Hungertime2: 15
+[18:06:59] Listitem: 3 || Listitem Name: Pizza
+[18:06:59] PlayCheck running
+[18:06:59] Hungertime2: 16
+[18:07:00] PlayCheck running
+[18:07:00] Hungertime2: 17
+[18:07:02] PlayCheck running
+[18:07:02] Hungertime2: 18
+[18:07:03] PlayCheck running
+[18:07:03] Hungertime2: 19
+[18:07:04] PlayCheck running
+[18:07:04] Hungertime2: 20
+[18:07:05] PlayCheck running
+[18:07:05] Hungertime2: 21
+[18:07:06] PlayCheck running
+[18:07:06] Hungertime2: 22
+[18:07:07] PlayCheck running
+[18:07:07] Hungertime2: 23
+[18:07:08] PlayCheck running
+[18:07:08] Hungertime2: 24
+[18:07:09] PlayCheck running
+[18:07:09] Hungertime2: 25
+[18:07:10] PlayCheck running
+[18:07:10] Hungertime2: 26
+[18:07:11] PlayCheck running
+[18:07:11] Hungertime2: 27
+[18:07:13] PlayCheck running
+[18:07:13] Hungertime2: 28
+[18:07:14] PlayCheck running
+[18:07:14] Hungertime2: 29
+[18:07:15] PlayCheck running
+[18:07:15] Hungertime2: 30
+[18:07:16] PlayCheck running
+[18:07:16] Hungertime2: 31
+[18:07:17] PlayCheck running
+[18:07:17] Hungertime2: 32
+[18:07:18] PlayCheck running
+[18:07:18] Hungertime2: 33
+[18:07:19] PlayCheck running
+[18:07:19] Hungertime2: 34
+[18:07:20] PlayCheck running
+[18:07:20] Hungertime2: 35
+[18:07:21] PlayCheck running
+[18:07:21] Hungertime2: 36
+[18:07:22] PlayCheck running
+[18:07:22] Hungertime2: 37
+[18:07:24] PlayCheck running
+[18:07:24] Hungertime2: 38
+[18:07:25] PlayCheck running
+[18:07:25] Hungertime2: 39
+[18:07:26] PlayCheck running
+[18:07:26] Hungertime2: 40
+[18:07:27] PlayCheck running
+[18:07:27] Hungertime2: 41
+[18:07:28] PlayCheck running
+[18:07:28] Hungertime2: 42
+[18:07:29] PlayCheck running
+[18:07:29] Hungertime2: 43
+[18:07:30] PlayCheck running
+[18:07:30] Hungertime2: 44
+[18:07:31] PlayCheck running
+[18:07:31] Hungertime2: 45
+[18:07:32] PlayCheck running
+[18:07:32] Hungertime2: 46
+[18:07:33] PlayCheck running
+[18:07:33] Hungertime2: 47
+[18:07:35] PlayCheck running
+[18:07:35] Hungertime2: 48
+[18:07:36] PlayCheck running
+[18:07:36] Hungertime2: 49
+[18:07:37] PlayCheck running
+[18:07:37] Hungertime2: 50
+[18:07:38] PlayCheck running
+[18:07:38] Hungertime2: 51
+[18:07:39] PlayCheck running
+[18:07:39] Hungertime2: 52
+[18:07:40] PlayCheck running
+[18:07:40] Hungertime2: 53
+[18:07:41] PlayCheck running
+[18:07:41] Hungertime2: 54
+[18:07:42] PlayCheck running
+[18:07:42] Hungertime2: 55
+[18:07:43] PlayCheck running
+[18:07:43] Hungertime2: 56
+[18:07:44] PlayCheck running
+[18:07:44] Hungertime2: 57
+[18:07:45] PlayCheck running
+[18:07:45] Hungertime2: 58
+[18:07:47] PlayCheck running
+[18:07:47] Hungertime2: 59
+[18:07:48] PlayCheck running
+[18:07:48] Hungertime2: 60
+[18:07:49] PlayCheck running
+[18:07:49] Hungertime2: 61
+[18:07:50] PlayCheck running
+[18:07:50] Hungertime2: 62
+[18:07:51] PlayCheck running
+[18:07:51] Hungertime2: 63
+[18:07:52] PlayCheck running
+[18:07:52] Hungertime2: 64
+[18:07:53] PlayCheck running
+[18:07:53] Hungertime2: 65
+[18:07:54] PlayCheck running
+[18:07:54] Hungertime2: 66
+[18:07:55] PlayCheck running
+[18:07:55] Hungertime2: 67
+[18:07:56] PlayCheck running
+[18:07:56] Hungertime2: 68
+[18:07:58] PlayCheck running
+[18:07:58] Hungertime2: 69
+[18:07:59] PlayCheck running
+[18:07:59] Hungertime2: 70
+[18:08:00] PlayCheck running
+[18:08:00] Hungertime2: 71
+[18:08:01] PlayCheck running
+[18:08:01] Hungertime2: 72
+[18:08:02] PlayCheck running
+[18:08:02] Hungertime2: 73
+[18:08:03] PlayCheck running
+[18:08:03] Hungertime2: 74
+[18:08:04] PlayCheck running
+[18:08:04] Hungertime2: 75
+[18:08:05] PlayCheck running
+[18:08:05] Hungertime2: 76
+[18:08:06] PlayCheck running
+[18:08:06] Hungertime2: 77
+[18:08:07] PlayCheck running
+[18:08:07] Hungertime2: 78
+[18:08:09] PlayCheck running
+[18:08:09] Hungertime2: 79
+[18:08:10] PlayCheck running
+[18:08:10] Hungertime2: 80
+[18:08:11] PlayCheck running
+[18:08:11] Hungertime2: 81
+[18:08:12] PlayCheck running
+[18:08:12] Hungertime2: 82
+[18:08:13] PlayCheck running
+[18:08:13] Hungertime2: 83
+[18:08:14] PlayCheck running
+[18:08:14] Hungertime2: 84
+[18:08:15] PlayCheck running
+[18:08:15] Hungertime2: 85
+[18:08:16] PlayCheck running
+[18:08:16] Hungertime2: 86
+[18:08:17] PlayCheck running
+[18:08:17] Hungertime2: 87
+[18:08:18] PlayCheck running
+[18:08:18] Hungertime2: 88
+[18:08:20] PlayCheck running
+[18:08:20] Hungertime2: 89
+[18:08:21] PlayCheck running
+[18:08:21] Hungertime2: 90
+[18:08:22] PlayCheck running
+[18:08:22] Hungertime2: 91
+[18:08:23] PlayCheck running
+[18:08:23] Hungertime2: 92
+[18:08:24] PlayCheck running
+[18:08:24] Hungertime2: 93
+[18:08:25] PlayCheck running
+[18:08:25] Hungertime2: 94
+[18:08:26] PlayCheck running
+[18:08:26] Hungertime2: 95
+[18:08:27] PlayCheck running
+[18:08:27] Hungertime2: 96
+[18:08:28] PlayCheck running
+[18:08:28] Hungertime2: 97
+[18:08:29] PlayCheck running
+[18:08:29] Hungertime2: 98
+[18:08:31] PlayCheck running
+[18:08:31] Hungertime2: 99
+[18:08:32] PlayCheck running
+[18:08:32] Hungertime2: 100
+[18:08:33] PlayCheck running
+[18:08:33] Hungertime2: 101
+[18:08:34] PlayCheck running
+[18:08:34] Hungertime2: 102
+[18:08:35] PlayCheck running
+[18:08:35] Hungertime2: 103
+[18:08:36] PlayCheck running
+[18:08:36] Hungertime2: 104
+[18:08:37] PlayCheck running
+[18:08:37] Hungertime2: 105
+[18:08:38] PlayCheck running
+[18:08:38] Hungertime2: 106
+[18:08:39] PlayCheck running
+[18:08:39] Hungertime2: 107
+[18:08:40] PlayCheck running
+[18:08:40] Hungertime2: 108
+[18:08:42] PlayCheck running
+[18:08:42] Hungertime2: 109
+[18:08:43] PlayCheck running
+[18:08:43] Hungertime2: 110
+[18:08:44] PlayCheck running
+[18:08:44] Hungertime2: 111
+[18:08:45] PlayCheck running
+[18:08:45] Hungertime2: 112
+[18:08:46] PlayCheck running
+[18:08:46] Hungertime2: 113
+[18:08:47] PlayCheck running
+[18:08:47] Hungertime2: 114
+[18:08:48] PlayCheck running
+[18:08:48] Hungertime2: 115
+[18:08:49] PlayCheck running
+[18:08:49] Hungertime2: 116
+[18:08:50] PlayCheck running
+[18:08:50] Hungertime2: 117
+[18:08:51] PlayCheck running
+[18:08:51] Hungertime2: 118
+[18:08:53] PlayCheck running
+[18:08:53] Hungertime2: 119
+[18:08:54] PlayCheck running
+[18:08:54] Hungertime2: 120
+[18:08:55] PlayCheck running
+[18:08:55] Hungertime2: 121
+[18:08:56] PlayCheck running
+[18:08:56] Hungertime2: 122
+[18:08:57] PlayCheck running
+[18:08:57] Hungertime2: 123
+[18:08:58] PlayCheck running
+[18:08:58] Hungertime2: 124
+[18:08:59] PlayCheck running
+[18:08:59] Hungertime2: 125
+[18:09:00] PlayCheck running
+[18:09:00] Hungertime2: 126
+[18:09:01] PlayCheck running
+[18:09:01] Hungertime2: 127
+[18:09:02] PlayCheck running
+[18:09:02] Hungertime2: 128
+[18:09:04] PlayCheck running
+[18:09:04] Hungertime2: 129
+[18:09:05] PlayCheck running
+[18:09:05] Hungertime2: 130
+[18:09:06] PlayCheck running
+[18:09:06] Hungertime2: 131
+[18:09:07] PlayCheck running
+[18:09:07] Hungertime2: 132
+[18:09:08] PlayCheck running
+[18:09:08] Hungertime2: 133
+[18:09:09] PlayCheck running
+[18:09:09] Hungertime2: 134
+[18:09:10] PlayCheck running
+[18:09:10] Hungertime2: 135
+[18:09:11] PlayCheck running
+[18:09:11] Hungertime2: 136
+[18:09:12] PlayCheck running
+[18:09:12] Hungertime2: 137
+[18:09:13] PlayCheck running
+[18:09:13] Hungertime2: 138
+[18:09:14] PlayCheck running
+[18:09:14] Hungertime2: 139
+[18:09:16] PlayCheck running
+[18:09:16] Hungertime2: 140
+[18:09:17] PlayCheck running
+[18:09:17] Hungertime2: 141
+[18:09:18] PlayCheck running
+[18:09:18] Hungertime2: 142
+[18:09:19] PlayCheck running
+[18:09:19] Hungertime2: 143
+[18:09:20] PlayCheck running
+[18:09:20] Hungertime2: 144
+[18:09:21] PlayCheck running
+[18:09:21] Hungertime2: 145
+[18:09:22] PlayCheck running
+[18:09:22] Hungertime2: 146
+[18:09:23] PlayCheck running
+[18:09:23] Hungertime2: 147
+[18:09:24] PlayCheck running
+[18:09:24] Hungertime2: 148
+[18:09:25] PlayCheck running
+[18:09:25] Hungertime2: 149
+[18:09:27] PlayCheck running
+[18:09:27] Hungertime2: 150
+[18:09:28] PlayCheck running
+[18:09:28] Hungertime2: 151
+[18:09:29] PlayCheck running
+[18:09:29] Hungertime2: 152
+[18:09:30] PlayCheck running
+[18:09:30] Hungertime2: 153
+[18:09:31] PlayCheck running
+[18:09:31] Hungertime2: 154
+[18:09:32] PlayCheck running
+[18:09:32] Hungertime2: 155
+[18:09:33] PlayCheck running
+[18:09:33] Hungertime2: 156
+[18:09:34] PlayCheck running
+[18:09:34] Hungertime2: 157
+[18:09:35] PlayCheck running
+[18:09:35] Hungertime2: 158
+[18:09:37] PlayCheck running
+[18:09:37] Hungertime2: 159
+[18:09:38] PlayCheck running
+[18:09:38] Hungertime2: 160
+[18:09:39] PlayCheck running
+[18:09:39] Hungertime2: 161
+[18:09:40] PlayCheck running
+[18:09:40] Hungertime2: 162
+[18:09:41] PlayCheck running
+[18:09:41] Hungertime2: 163
+[18:09:42] PlayCheck running
+[18:09:42] Hungertime2: 164
+[18:09:43] PlayCheck running
+[18:09:43] Hungertime2: 165
+[18:09:44] PlayCheck running
+[18:09:44] Hungertime2: 166
+[18:09:45] PlayCheck running
+[18:09:45] Hungertime2: 167
+[18:09:46] PlayCheck running
+[18:09:46] Hungertime2: 168
+[18:09:47] PlayCheck running
+[18:09:47] Hungertime2: 169
+[18:09:49] PlayCheck running
+[18:09:49] Hungertime2: 170
+[18:09:50] PlayCheck running
+[18:09:50] Hungertime2: 171
+[18:09:51] PlayCheck running
+[18:09:51] Hungertime2: 172
+[18:09:52] PlayCheck running
+[18:09:52] Hungertime2: 173
+[18:09:53] PlayCheck running
+[18:09:53] Hungertime2: 174
+[18:09:54] PlayCheck running
+[18:09:54] Hungertime2: 175
+[18:09:55] PlayCheck running
+[18:09:55] Hungertime2: 176
+[18:09:56] PlayCheck running
+[18:09:56] Hungertime2: 177
+[18:09:57] PlayCheck running
+[18:09:57] Hungertime2: 178
+[18:09:58] PlayCheck running
+[18:09:58] Hungertime2: 179
+[18:10:00] PlayCheck running
+[18:10:00] Hungertime2: 180
+[18:10:01] PlayCheck running
+[18:10:01] Hungertime2: 181
+[18:10:02] PlayCheck running
+[18:10:02] Hungertime2: 182
+[18:10:03] PlayCheck running
+[18:10:03] Hungertime2: 183
+[18:10:04] PlayCheck running
+[18:10:04] Hungertime2: 184
+[18:10:05] PlayCheck running
+[18:10:05] Hungertime2: 185
+[18:10:06] PlayCheck running
+[18:10:06] Hungertime2: 186
+[18:10:07] PlayCheck running
+[18:10:07] Hungertime2: 187
+[18:10:08] PlayCheck running
+[18:10:08] Hungertime2: 188
+[18:10:09] PlayCheck running
+[18:10:09] Hungertime2: 189
+[18:10:11] PlayCheck running
+[18:10:11] Hungertime2: 190
+[18:10:12] PlayCheck running
+[18:10:12] Hungertime2: 191
+[18:10:13] PlayCheck running
+[18:10:13] Hungertime2: 192
+[18:10:14] PlayCheck running
+[18:10:14] Hungertime2: 193
+[18:10:15] PlayCheck running
+[18:10:15] Hungertime2: 194
+[18:10:16] PlayCheck running
+[18:10:16] Hungertime2: 195
+[18:10:17] PlayCheck running
+[18:10:17] Hungertime2: 196
+[18:10:18] PlayCheck running
+[18:10:18] Hungertime2: 197
+[18:10:19] PlayCheck running
+[18:10:19] Hungertime2: 198
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:10:32] 
+[18:10:32] Server Plugins
+[18:10:32] --------------
+[18:10:32]  Loading plugin: crashdetect
+[18:10:32]   CrashDetect v4.18.1 is OK.
+[18:10:32]   Loaded.
+[18:10:32]  Loading plugin: mysql
+[18:10:32]  >> plugin.mysql: R39-4 successfully loaded.
+[18:10:32]   Loaded.
+[18:10:32]  Loading plugin: sscanf
+[18:10:32] 
+
+[18:10:32]  ===============================
+
+[18:10:32]       sscanf plugin loaded.     
+
+[18:10:32]          Version:  2.8.2        
+
+[18:10:32]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:10:32]  ===============================
+
+[18:10:32]   Loaded.
+[18:10:32]  Loading plugin: streamer
+[18:10:32] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:10:32]   Loaded.
+[18:10:32]  Loading plugin: Whirlpool
+[18:10:32]  
+[18:10:32]  ==================
+[18:10:32]  
+[18:10:32]   Whirlpool loaded
+[18:10:32]  
+[18:10:32]  ==================
+[18:10:32]  
+[18:10:32]   Loaded.
+[18:10:32]  Loading plugin: sampp_server
+[18:10:32]   Failed.
+[18:10:32]  Loading plugin: pawncmd
+[18:10:32] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:10:32]   Loaded.
+[18:10:32]  Loaded 6 plugins.
+
+[18:10:32] 
+[18:10:32] Filterscripts
+[18:10:32] ---------------
+[18:10:32]   Loaded 0 filterscripts.
+
+[18:10:32]  
+[18:10:32]  
+[18:10:32]  
+[18:10:32]  ======================================= 
+[18:10:32]  |                                     | 
+[18:10:32]  |        YSI version 3.09.0684        | 
+[18:10:32]  |        By Alex "Y_Less" Cole        | 
+[18:10:32]  |                                     | 
+[18:10:32]  ======================================= 
+[18:10:32]  
+[18:10:32] Successfully connected to MySQL database.
+[18:10:32] 
+|----------------------------------|
+[18:10:32] |  Samp Dayz by ZiiM               |
+[18:10:32] |----------------------------------|
+
+[18:10:32] Number of vehicle models: 0
+[18:10:32] [connection] 127.0.0.1:49166 requests connection cookie.
+[18:10:33] [connection] incoming connection: 127.0.0.1:49166 id: 0
+[18:10:33] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:10:33] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:10:34] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: F05CAEFCDE493D748E32784B418DCB0399F8B48F0D932501857C2EFE9C46FBA8E4AE6D70D9EB0481BCE21CB32314EA4AE00C3F3E44D1C9422A620DC31A996F2F
+[18:10:35] PlayCheck running
+[18:10:35] Hungertime2: 0
+[18:10:36] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[18:10:36] Login1
+[18:10:36] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[18:10:36] PlayCheck running
+[18:10:36] Hungertime2: 1
+[18:10:37] PlayCheck running
+[18:10:37] Hungertime2: 2
+[18:10:38] PlayCheck running
+[18:10:38] Hungertime2: 3
+[18:10:39] PlayCheck running
+[18:10:39] Hungertime2: 4
+[18:10:40] PlayCheck running
+[18:10:40] Hungertime2: 5
+[18:10:41] PlayCheck running
+[18:10:41] Hungertime2: 6
+[18:10:42] Listitem: 3 || Listitem Name: Pizza
+[18:10:42] PlayCheck running
+[18:10:42] Hungertime2: 7
+[18:10:43] PlayCheck running
+[18:10:43] Hungertime2: 8
+[18:10:44] PlayCheck running
+[18:10:44] Hungertime2: 9
+[18:10:46] PlayCheck running
+[18:10:46] Hungertime2: 10
+[18:10:46] Check Blood: 12000
+[18:10:46] [part] ZiiM has left the server (0:1)
+[18:10:46] [connection] incoming connection: 127.0.0.1:50414 id: 0
+[18:10:47] PlayCheck running
+[18:10:48] PlayCheck running
+[18:10:49] PlayCheck running
+[18:10:50] PlayCheck running
+[18:10:51] PlayCheck running
+[18:10:52] PlayCheck running
+[18:10:53] PlayCheck running
+[18:10:54] PlayCheck running
+[18:10:55] [connection] incoming connection: 127.0.0.1:57446 id: 0
+[18:10:55] PlayCheck running
+[18:10:56] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:10:56] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:10:56] PlayCheck running
+[18:10:56] Hungertime2: 0
+[18:10:57] PlayCheck running
+[18:10:57] Hungertime2: 0
+[18:10:57] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[18:10:57] Login1
+[18:10:57] X: 1536.739990 | Y: -1661.979980 | Z: 13.647000
+[18:10:58] PlayCheck running
+[18:10:58] Hungertime2: 1
+[18:10:58] PlayCheck running
+[18:10:58] Hungertime2: 2
+[18:10:59] PlayCheck running
+[18:10:59] Hungertime2: 3
+[18:10:59] PlayCheck running
+[18:10:59] Hungertime2: 4
+[18:11:00] PlayCheck running
+[18:11:00] Hungertime2: 5
+[18:11:00] PlayCheck running
+[18:11:00] Hungertime2: 6
+[18:11:01] PlayCheck running
+[18:11:01] Hungertime2: 7
+[18:11:01] PlayCheck running
+[18:11:01] Hungertime2: 8
+[18:11:02] PlayCheck running
+[18:11:02] Hungertime2: 9
+[18:11:02] PlayCheck running
+[18:11:02] Hungertime2: 10
+[18:11:03] PlayCheck running
+[18:11:03] Hungertime2: 11
+[18:11:03] PlayCheck running
+[18:11:03] Hungertime2: 12
+[18:11:04] PlayCheck running
+[18:11:04] Hungertime2: 13
+[18:11:04] PlayCheck running
+[18:11:04] Hungertime2: 14
+[18:11:05] PlayCheck running
+[18:11:05] Hungertime2: 15
+[18:11:05] PlayCheck running
+[18:11:05] Hungertime2: 16
+[18:11:06] PlayCheck running
+[18:11:06] Hungertime2: 17
+[18:11:07] PlayCheck running
+[18:11:07] Hungertime2: 18
+[18:11:07] PlayCheck running
+[18:11:07] Hungertime2: 19
+[18:11:08] PlayCheck running
+[18:11:08] Hungertime2: 20
+[18:11:09] PlayCheck running
+[18:11:09] Hungertime2: 21
+[18:11:09] PlayCheck running
+[18:11:09] Hungertime2: 22
+[18:11:10] PlayCheck running
+[18:11:10] Hungertime2: 23
+[18:11:10] PlayCheck running
+[18:11:10] Hungertime2: 24
+[18:11:11] PlayCheck running
+[18:11:11] Hungertime2: 25
+[18:11:11] PlayCheck running
+[18:11:11] Hungertime2: 26
+[18:11:12] PlayCheck running
+[18:11:12] Hungertime2: 27
+[18:11:12] PlayCheck running
+[18:11:12] Hungertime2: 28
+[18:11:13] PlayCheck running
+[18:11:13] Hungertime2: 29
+[18:11:13] PlayCheck running
+[18:11:13] Hungertime2: 30
+[18:11:14] PlayCheck running
+[18:11:14] Hungertime2: 31
+[18:11:14] PlayCheck running
+[18:11:14] Hungertime2: 32
+[18:11:15] Item: Water Bottle || Amount: 1
+[18:11:15] PlayCheck running
+[18:11:15] Hungertime2: 33
+[18:11:15] PlayCheck running
+[18:11:15] Hungertime2: 34
+[18:11:16] PlayCheck running
+[18:11:16] Hungertime2: 35
+[18:11:17] PlayCheck running
+[18:11:17] Hungertime2: 36
+[18:11:17] PlayCheck running
+[18:11:17] Hungertime2: 37
+[18:11:18] PlayCheck running
+[18:11:18] Hungertime2: 38
+[18:11:18] PlayCheck running
+[18:11:18] Hungertime2: 39
+[18:11:19] PlayCheck running
+[18:11:19] Hungertime2: 40
+[18:11:20] PlayCheck running
+[18:11:20] Hungertime2: 41
+[18:11:20] PlayCheck running
+[18:11:20] Hungertime2: 42
+[18:11:21] PlayCheck running
+[18:11:21] Hungertime2: 43
+[18:11:21] PlayCheck running
+[18:11:21] Hungertime2: 44
+[18:11:22] PlayCheck running
+[18:11:22] Hungertime2: 45
+[18:11:22] PlayCheck running
+[18:11:22] Hungertime2: 46
+[18:11:23] PlayCheck running
+[18:11:23] Hungertime2: 47
+[18:11:23] PlayCheck running
+[18:11:23] Hungertime2: 48
+[18:11:24] PlayCheck running
+[18:11:24] Hungertime2: 49
+[18:11:24] PlayCheck running
+[18:11:24] Hungertime2: 50
+[18:11:25] PlayCheck running
+[18:11:25] Hungertime2: 51
+[18:11:25] PlayCheck running
+[18:11:25] Hungertime2: 52
+[18:11:26] PlayCheck running
+[18:11:26] Hungertime2: 53
+[18:11:26] PlayCheck running
+[18:11:26] Hungertime2: 54
+[18:11:27] PlayCheck running
+[18:11:27] Hungertime2: 55
+[18:11:28] PlayCheck running
+[18:11:28] Hungertime2: 56
+[18:11:28] PlayCheck running
+[18:11:28] Hungertime2: 57
+[18:11:29] PlayCheck running
+[18:11:29] Hungertime2: 58
+[18:11:29] PlayCheck running
+[18:11:29] Hungertime2: 59
+[18:11:30] PlayCheck running
+[18:11:30] Hungertime2: 60
+[18:11:31] PlayCheck running
+[18:11:31] Hungertime2: 61
+[18:11:31] PlayCheck running
+[18:11:31] Hungertime2: 62
+[18:11:32] PlayCheck running
+[18:11:32] Hungertime2: 63
+[18:11:32] PlayCheck running
+[18:11:32] Hungertime2: 64
+[18:11:33] PlayCheck running
+[18:11:33] Hungertime2: 65
+[18:11:33] PlayCheck running
+[18:11:33] Hungertime2: 66
+[18:11:34] PlayCheck running
+[18:11:34] Hungertime2: 67
+[18:11:34] PlayCheck running
+[18:11:34] Hungertime2: 68
+[18:11:35] PlayCheck running
+[18:11:35] Hungertime2: 69
+[18:11:35] PlayCheck running
+[18:11:35] Hungertime2: 70
+[18:11:36] PlayCheck running
+[18:11:36] Hungertime2: 71
+[18:11:36] PlayCheck running
+[18:11:36] Hungertime2: 72
+[18:11:37] PlayCheck running
+[18:11:37] Hungertime2: 73
+[18:11:38] PlayCheck running
+[18:11:38] Hungertime2: 74
+[18:11:38] PlayCheck running
+[18:11:38] Hungertime2: 75
+[18:11:39] PlayCheck running
+[18:11:39] Hungertime2: 76
+[18:11:39] PlayCheck running
+[18:11:39] Hungertime2: 77
+[18:11:40] PlayCheck running
+[18:11:40] Hungertime2: 78
+[18:11:40] PlayCheck running
+[18:11:40] Hungertime2: 79
+[18:11:41] PlayCheck running
+[18:11:41] Hungertime2: 80
+[18:11:42] PlayCheck running
+[18:11:42] Hungertime2: 81
+[18:11:42] PlayCheck running
+[18:11:42] Hungertime2: 82
+[18:11:43] PlayCheck running
+[18:11:43] Hungertime2: 83
+[18:11:43] PlayCheck running
+[18:11:43] Hungertime2: 84
+[18:11:43] Listitem: 5 || Listitem Name: Water Bottle
+[18:11:44] PlayCheck running
+[18:11:44] Hungertime2: 85
+[18:11:44] PlayCheck running
+[18:11:44] Hungertime2: 86
+[18:11:45] PlayCheck running
+[18:11:45] Hungertime2: 87
+[18:11:45] PlayCheck running
+[18:11:45] Hungertime2: 88
+[18:11:46] PlayCheck running
+[18:11:46] Hungertime2: 89
+[18:11:46] PlayCheck running
+[18:11:46] Hungertime2: 90
+[18:11:47] PlayCheck running
+[18:11:47] Hungertime2: 91
+[18:11:47] PlayCheck running
+[18:11:47] Hungertime2: 92
+[18:11:48] PlayCheck running
+[18:11:48] Hungertime2: 93
+[18:11:49] PlayCheck running
+[18:11:49] Hungertime2: 94
+[18:11:49] PlayCheck running
+[18:11:49] Hungertime2: 95
+[18:11:50] PlayCheck running
+[18:11:50] Hungertime2: 96
+[18:11:50] PlayCheck running
+[18:11:50] Hungertime2: 97
+[18:11:51] PlayCheck running
+[18:11:51] Hungertime2: 98
+[18:11:51] PlayCheck running
+[18:11:51] Hungertime2: 99
+[18:11:52] PlayCheck running
+[18:11:52] Hunger Time: 100
+[18:11:52] Hungertime2: 0
+[18:11:53] PlayCheck running
+[18:11:53] Hungertime2: 1
+[18:11:53] PlayCheck running
+[18:11:53] Hungertime2: 2
+[18:11:54] PlayCheck running
+[18:11:54] Hungertime2: 3
+[18:11:54] PlayCheck running
+[18:11:54] Hungertime2: 4
+[18:11:55] PlayCheck running
+[18:11:55] Hungertime2: 5
+[18:11:55] PlayCheck running
+[18:11:55] Hungertime2: 6
+[18:11:56] PlayCheck running
+[18:11:56] Hungertime2: 7
+[18:11:56] PlayCheck running
+[18:11:56] Hungertime2: 8
+[18:11:57] PlayCheck running
+[18:11:57] Hungertime2: 9
+[18:11:57] PlayCheck running
+[18:11:57] Hungertime2: 10
+[18:11:58] PlayCheck running
+[18:11:58] Hungertime2: 11
+[18:11:59] PlayCheck running
+[18:11:59] Hungertime2: 12
+[18:11:59] PlayCheck running
+[18:11:59] Hungertime2: 13
+[18:12:00] PlayCheck running
+[18:12:00] Hungertime2: 14
+[18:12:00] PlayCheck running
+[18:12:00] Hungertime2: 15
+[18:12:01] PlayCheck running
+[18:12:01] Hungertime2: 16
+[18:12:01] PlayCheck running
+[18:12:01] Hungertime2: 17
+[18:12:02] PlayCheck running
+[18:12:02] Hungertime2: 18
+[18:12:02] PlayCheck running
+[18:12:02] Hungertime2: 19
+[18:12:03] PlayCheck running
+[18:12:03] Hungertime2: 20
+[18:12:04] PlayCheck running
+[18:12:04] Hungertime2: 21
+[18:12:04] PlayCheck running
+[18:12:04] Hungertime2: 22
+[18:12:05] PlayCheck running
+[18:12:05] Hungertime2: 23
+[18:12:05] PlayCheck running
+[18:12:05] Hungertime2: 24
+[18:12:06] PlayCheck running
+[18:12:06] Hungertime2: 25
+[18:12:06] PlayCheck running
+[18:12:06] Hungertime2: 26
+[18:12:07] PlayCheck running
+[18:12:07] Hungertime2: 27
+[18:12:07] PlayCheck running
+[18:12:07] Hungertime2: 28
+[18:12:08] PlayCheck running
+[18:12:08] Hungertime2: 29
+[18:12:08] PlayCheck running
+[18:12:08] Hungertime2: 30
+[18:12:09] PlayCheck running
+[18:12:09] Hungertime2: 31
+[18:12:10] PlayCheck running
+[18:12:10] Hungertime2: 32
+[18:12:10] PlayCheck running
+[18:12:10] Hungertime2: 33
+[18:12:11] PlayCheck running
+[18:12:11] Hungertime2: 34
+[18:12:11] PlayCheck running
+[18:12:11] Hungertime2: 35
+[18:12:12] PlayCheck running
+[18:12:12] Hungertime2: 36
+[18:12:12] PlayCheck running
+[18:12:12] Hungertime2: 37
+[18:12:13] PlayCheck running
+[18:12:13] Hungertime2: 38
+[18:12:13] PlayCheck running
+[18:12:13] Hungertime2: 39
+[18:12:14] PlayCheck running
+[18:12:14] Hungertime2: 40
+[18:12:15] PlayCheck running
+[18:12:15] Hungertime2: 41
+[18:12:15] PlayCheck running
+[18:12:15] Hungertime2: 42
+[18:12:16] PlayCheck running
+[18:12:16] Hungertime2: 43
+[18:12:16] PlayCheck running
+[18:12:16] Hungertime2: 44
+[18:12:17] PlayCheck running
+[18:12:17] Hungertime2: 45
+[18:12:17] PlayCheck running
+[18:12:17] Hungertime2: 46
+[18:12:18] PlayCheck running
+[18:12:18] Hungertime2: 47
+[18:12:18] PlayCheck running
+[18:12:18] Hungertime2: 48
+[18:12:19] PlayCheck running
+[18:12:19] Hungertime2: 49
+[18:12:19] PlayCheck running
+[18:12:19] Hungertime2: 50
+[18:12:20] PlayCheck running
+[18:12:20] Hungertime2: 51
+[18:12:21] PlayCheck running
+[18:12:21] Hungertime2: 52
+[18:12:21] PlayCheck running
+[18:12:21] Hungertime2: 53
+[18:12:22] PlayCheck running
+[18:12:22] Hungertime2: 54
+[18:12:22] PlayCheck running
+[18:12:22] Hungertime2: 55
+[18:12:23] PlayCheck running
+[18:12:23] Hungertime2: 56
+[18:12:23] PlayCheck running
+[18:12:23] Hungertime2: 57
+[18:12:24] PlayCheck running
+[18:12:24] Hungertime2: 58
+[18:12:24] PlayCheck running
+[18:12:24] Hungertime2: 59
+[18:12:25] PlayCheck running
+[18:12:25] Hungertime2: 60
+[18:12:26] PlayCheck running
+[18:12:26] Hungertime2: 61
+[18:12:26] PlayCheck running
+[18:12:26] Hungertime2: 62
+[18:12:27] PlayCheck running
+[18:12:27] Hungertime2: 63
+[18:12:27] PlayCheck running
+[18:12:27] Hungertime2: 64
+[18:12:28] PlayCheck running
+[18:12:28] Hungertime2: 65
+[18:12:28] Listitem: 3 || Listitem Name: Pizza
+[18:12:28] PlayCheck running
+[18:12:28] Hungertime2: 66
+[18:12:29] PlayCheck running
+[18:12:29] Hungertime2: 67
+[18:12:29] PlayCheck running
+[18:12:29] Hungertime2: 68
+[18:12:30] PlayCheck running
+[18:12:30] Hungertime2: 69
+[18:12:31] PlayCheck running
+[18:12:31] Hungertime2: 70
+[18:12:31] PlayCheck running
+[18:12:31] Hungertime2: 71
+[18:12:32] PlayCheck running
+[18:12:32] Hungertime2: 72
+[18:12:32] PlayCheck running
+[18:12:32] Hungertime2: 73
+[18:12:33] PlayCheck running
+[18:12:33] Hungertime2: 74
+[18:12:33] PlayCheck running
+[18:12:33] Hungertime2: 75
+[18:12:34] PlayCheck running
+[18:12:34] Hungertime2: 76
+[18:12:34] PlayCheck running
+[18:12:34] Hungertime2: 77
+[18:12:35] PlayCheck running
+[18:12:35] Hungertime2: 78
+[18:12:35] PlayCheck running
+[18:12:35] Hungertime2: 79
+[18:12:36] PlayCheck running
+[18:12:36] Hungertime2: 80
+[18:12:36] PlayCheck running
+[18:12:36] Hungertime2: 81
+[18:12:37] PlayCheck running
+[18:12:37] Hungertime2: 82
+[18:12:38] PlayCheck running
+[18:12:38] Hungertime2: 83
+[18:12:38] PlayCheck running
+[18:12:38] Hungertime2: 84
+[18:12:39] PlayCheck running
+[18:12:39] Hungertime2: 85
+[18:12:39] PlayCheck running
+[18:12:39] Hungertime2: 86
+[18:12:40] PlayCheck running
+[18:12:40] Hungertime2: 87
+[18:12:40] PlayCheck running
+[18:12:40] Hungertime2: 88
+[18:12:41] PlayCheck running
+[18:12:41] Hungertime2: 89
+[18:12:42] PlayCheck running
+[18:12:42] Hungertime2: 90
+[18:12:42] PlayCheck running
+[18:12:42] Hungertime2: 91
+[18:12:43] PlayCheck running
+[18:12:43] Hungertime2: 92
+[18:12:43] PlayCheck running
+[18:12:43] Hungertime2: 93
+[18:12:44] PlayCheck running
+[18:12:44] Hungertime2: 94
+[18:12:44] PlayCheck running
+[18:12:44] Hungertime2: 95
+[18:12:45] PlayCheck running
+[18:12:45] Hungertime2: 96
+[18:12:45] PlayCheck running
+[18:12:45] Hungertime2: 97
+[18:12:46] PlayCheck running
+[18:12:46] Hungertime2: 98
+[18:12:46] PlayCheck running
+[18:12:46] Hungertime2: 99
+[18:12:47] PlayCheck running
+[18:12:47] Hunger Time: 100
+[18:12:47] Hungertime2: 0
+[18:12:47] PlayCheck running
+[18:12:47] Hungertime2: 1
+[18:12:48] PlayCheck running
+[18:12:48] Hungertime2: 2
+[18:12:48] PlayCheck running
+[18:12:48] Hungertime2: 3
+[18:12:49] PlayCheck running
+[18:12:49] Hungertime2: 4
+[18:12:50] PlayCheck running
+[18:12:50] Hungertime2: 5
+[18:12:50] PlayCheck running
+[18:12:50] Hungertime2: 6
+[18:12:51] PlayCheck running
+[18:12:51] Hungertime2: 7
+[18:12:51] PlayCheck running
+[18:12:51] Hungertime2: 8
+[18:12:52] PlayCheck running
+[18:12:52] Hungertime2: 9
+[18:12:53] PlayCheck running
+[18:12:53] Hungertime2: 10
+[18:12:53] PlayCheck running
+[18:12:53] Hungertime2: 11
+[18:12:54] PlayCheck running
+[18:12:54] Hungertime2: 12
+[18:12:54] PlayCheck running
+[18:12:54] Hungertime2: 13
+[18:12:55] PlayCheck running
+[18:12:55] Hungertime2: 14
+[18:12:55] PlayCheck running
+[18:12:55] Hungertime2: 15
+[18:12:56] PlayCheck running
+[18:12:56] Hungertime2: 16
+[18:12:56] PlayCheck running
+[18:12:56] Hungertime2: 17
+[18:12:57] PlayCheck running
+[18:12:57] Hungertime2: 18
+[18:12:57] PlayCheck running
+[18:12:57] Hungertime2: 19
+[18:12:58] PlayCheck running
+[18:12:58] Hungertime2: 20
+[18:12:58] PlayCheck running
+[18:12:58] Hungertime2: 21
+[18:12:59] PlayCheck running
+[18:12:59] Hungertime2: 22
+[18:12:59] PlayCheck running
+[18:12:59] Hungertime2: 23
+[18:13:00] PlayCheck running
+[18:13:00] Hungertime2: 24
+[18:13:01] PlayCheck running
+[18:13:01] Hungertime2: 25
+[18:13:01] PlayCheck running
+[18:13:01] Hungertime2: 26
+[18:13:02] PlayCheck running
+[18:13:02] Hungertime2: 27
+[18:13:02] PlayCheck running
+[18:13:02] Hungertime2: 28
+[18:13:03] PlayCheck running
+[18:13:03] Hungertime2: 29
+[18:13:04] PlayCheck running
+[18:13:04] Hungertime2: 30
+[18:13:04] PlayCheck running
+[18:13:04] Hungertime2: 31
+[18:13:05] PlayCheck running
+[18:13:05] Hungertime2: 32
+[18:13:05] PlayCheck running
+[18:13:05] Hungertime2: 33
+[18:13:06] PlayCheck running
+[18:13:06] Hungertime2: 34
+[18:13:06] PlayCheck running
+[18:13:06] Hungertime2: 35
+[18:13:07] PlayCheck running
+[18:13:07] Hungertime2: 36
+[18:13:07] PlayCheck running
+[18:13:07] Hungertime2: 37
+[18:13:08] PlayCheck running
+[18:13:08] Hungertime2: 38
+[18:13:08] PlayCheck running
+[18:13:08] Hungertime2: 39
+[18:13:09] PlayCheck running
+[18:13:09] Hungertime2: 40
+[18:13:09] PlayCheck running
+[18:13:09] Hungertime2: 41
+[18:13:10] PlayCheck running
+[18:13:10] Hungertime2: 42
+[18:13:10] PlayCheck running
+[18:13:10] Hungertime2: 43
+[18:13:11] PlayCheck running
+[18:13:11] Hungertime2: 44
+[18:13:12] PlayCheck running
+[18:13:12] Hungertime2: 45
+[18:13:12] PlayCheck running
+[18:13:12] Hungertime2: 46
+[18:13:13] PlayCheck running
+[18:13:13] Hungertime2: 47
+[18:13:13] PlayCheck running
+[18:13:13] Hungertime2: 48
+[18:13:14] PlayCheck running
+[18:13:14] Hungertime2: 49
+[18:13:15] PlayCheck running
+[18:13:15] Hungertime2: 50
+[18:13:15] PlayCheck running
+[18:13:15] Hungertime2: 51
+[18:13:16] PlayCheck running
+[18:13:16] Hungertime2: 52
+[18:13:16] PlayCheck running
+[18:13:16] Hungertime2: 53
+[18:13:17] PlayCheck running
+[18:13:17] Hungertime2: 54
+[18:13:17] PlayCheck running
+[18:13:17] Hungertime2: 55
+[18:13:18] PlayCheck running
+[18:13:18] Hungertime2: 56
+[18:13:18] PlayCheck running
+[18:13:18] Hungertime2: 57
+[18:13:19] PlayCheck running
+[18:13:19] Hungertime2: 58
+[18:13:19] PlayCheck running
+[18:13:19] Hungertime2: 59
+[18:13:20] PlayCheck running
+[18:13:20] Hungertime2: 60
+[18:13:20] PlayCheck running
+[18:13:20] Hungertime2: 61
+[18:13:21] PlayCheck running
+[18:13:21] Hungertime2: 62
+[18:13:21] PlayCheck running
+[18:13:21] Hungertime2: 63
+[18:13:22] PlayCheck running
+[18:13:22] Hungertime2: 64
+[18:13:23] PlayCheck running
+[18:13:23] Hungertime2: 65
+[18:13:23] PlayCheck running
+[18:13:23] Hungertime2: 66
+[18:13:24] PlayCheck running
+[18:13:24] Hungertime2: 67
+[18:13:24] PlayCheck running
+[18:13:25] Hungertime2: 68
+[18:13:25] PlayCheck running
+[18:13:25] Hungertime2: 69
+[18:13:26] PlayCheck running
+[18:13:26] Hungertime2: 70
+[18:13:26] PlayCheck running
+[18:13:26] Hungertime2: 71
+[18:13:27] PlayCheck running
+[18:13:27] Hungertime2: 72
+[18:13:27] PlayCheck running
+[18:13:27] Hungertime2: 73
+[18:13:28] PlayCheck running
+[18:13:28] Hungertime2: 74
+[18:13:28] PlayCheck running
+[18:13:28] Hungertime2: 75
+[18:13:29] PlayCheck running
+[18:13:29] Hungertime2: 76
+[18:13:29] PlayCheck running
+[18:13:29] Hungertime2: 77
+[18:13:30] PlayCheck running
+[18:13:30] Hungertime2: 78
+[18:13:30] PlayCheck running
+[18:13:30] Hungertime2: 79
+[18:13:31] PlayCheck running
+[18:13:31] Hungertime2: 80
+[18:13:31] PlayCheck running
+[18:13:31] Hungertime2: 81
+[18:13:32] PlayCheck running
+[18:13:32] Hungertime2: 82
+[18:13:32] PlayCheck running
+[18:13:32] Hungertime2: 83
+[18:13:33] PlayCheck running
+[18:13:33] Hungertime2: 84
+[18:13:33] PlayCheck running
+[18:13:33] Hungertime2: 85
+[18:13:34] PlayCheck running
+[18:13:34] Hungertime2: 86
+[18:13:35] PlayCheck running
+[18:13:35] Hungertime2: 87
+[18:13:36] PlayCheck running
+[18:13:36] Hungertime2: 88
+[18:13:36] PlayCheck running
+[18:13:36] Hungertime2: 89
+[18:13:37] PlayCheck running
+[18:13:37] Hungertime2: 90
+[18:13:37] PlayCheck running
+[18:13:37] Hungertime2: 91
+[18:13:38] PlayCheck running
+[18:13:38] Hungertime2: 92
+[18:13:38] PlayCheck running
+[18:13:38] Hungertime2: 93
+[18:13:39] PlayCheck running
+[18:13:39] Hungertime2: 94
+[18:13:39] PlayCheck running
+[18:13:39] Hungertime2: 95
+[18:13:40] PlayCheck running
+[18:13:40] Hungertime2: 96
+[18:13:40] PlayCheck running
+[18:13:40] Hungertime2: 97
+[18:13:41] PlayCheck running
+[18:13:41] Hungertime2: 98
+[18:13:41] PlayCheck running
+[18:13:41] Hungertime2: 99
+[18:13:42] PlayCheck running
+[18:13:42] Hunger Time: 100
+[18:13:42] Hungertime2: 0
+[18:13:42] PlayCheck running
+[18:13:42] Hungertime2: 1
+[18:13:43] PlayCheck running
+[18:13:43] Hungertime2: 2
+[18:13:43] PlayCheck running
+[18:13:43] Hungertime2: 3
+[18:13:44] PlayCheck running
+[18:13:44] Hungertime2: 4
+[18:13:44] PlayCheck running
+[18:13:44] Hungertime2: 5
+[18:13:45] PlayCheck running
+[18:13:45] Hungertime2: 6
+[18:13:46] PlayCheck running
+[18:13:46] Hungertime2: 7
+[18:13:47] PlayCheck running
+[18:13:47] Hungertime2: 8
+[18:13:47] PlayCheck running
+[18:13:47] Hungertime2: 9
+[18:13:48] PlayCheck running
+[18:13:48] Hungertime2: 10
+[18:13:48] PlayCheck running
+[18:13:48] Hungertime2: 11
+[18:13:49] PlayCheck running
+[18:13:49] Hungertime2: 12
+[18:13:49] PlayCheck running
+[18:13:49] Hungertime2: 13
+[18:13:50] PlayCheck running
+[18:13:50] Hungertime2: 14
+[18:13:50] PlayCheck running
+[18:13:50] Hungertime2: 15
+[18:13:51] PlayCheck running
+[18:13:51] Hungertime2: 16
+[18:13:51] PlayCheck running
+[18:13:51] Hungertime2: 17
+[18:13:52] PlayCheck running
+[18:13:52] Hungertime2: 18
+[18:13:52] PlayCheck running
+[18:13:52] Hungertime2: 19
+[18:13:53] PlayCheck running
+[18:13:53] Hungertime2: 20
+[18:13:53] PlayCheck running
+[18:13:53] Hungertime2: 21
+[18:13:54] PlayCheck running
+[18:13:54] Hungertime2: 22
+[18:13:54] PlayCheck running
+[18:13:54] Hungertime2: 23
+[18:13:55] PlayCheck running
+[18:13:55] Hungertime2: 24
+[18:13:55] PlayCheck running
+[18:13:55] Hungertime2: 25
+[18:13:56] PlayCheck running
+[18:13:56] Hungertime2: 26
+[18:13:56] PlayCheck running
+[18:13:56] Hungertime2: 27
+[18:13:58] PlayCheck running
+[18:13:58] Hungertime2: 28
+[18:13:58] PlayCheck running
+[18:13:58] Hungertime2: 29
+[18:13:59] PlayCheck running
+[18:13:59] Hungertime2: 30
+[18:13:59] PlayCheck running
+[18:13:59] Hungertime2: 31
+[18:14:00] PlayCheck running
+[18:14:00] Hungertime2: 32
+[18:14:00] PlayCheck running
+[18:14:00] Hungertime2: 33
+[18:14:01] PlayCheck running
+[18:14:01] Hungertime2: 34
+[18:14:01] PlayCheck running
+[18:14:01] Hungertime2: 35
+[18:14:02] PlayCheck running
+[18:14:02] Hungertime2: 36
+[18:14:02] PlayCheck running
+[18:14:02] Hungertime2: 37
+[18:14:03] PlayCheck running
+[18:14:03] Hungertime2: 38
+[18:14:03] PlayCheck running
+[18:14:03] Hungertime2: 39
+[18:14:04] PlayCheck running
+[18:14:04] Hungertime2: 40
+[18:14:04] PlayCheck running
+[18:14:04] Hungertime2: 41
+[18:14:05] PlayCheck running
+[18:14:05] Hungertime2: 42
+[18:14:05] PlayCheck running
+[18:14:05] Hungertime2: 43
+[18:14:06] PlayCheck running
+[18:14:06] Hungertime2: 44
+[18:14:06] PlayCheck running
+[18:14:06] Hungertime2: 45
+[18:14:07] PlayCheck running
+[18:14:07] Hungertime2: 46
+[18:14:08] PlayCheck running
+[18:14:08] Hungertime2: 47
+[18:14:09] PlayCheck running
+[18:14:09] Hungertime2: 48
+[18:14:09] PlayCheck running
+[18:14:09] Hungertime2: 49
+[18:14:10] PlayCheck running
+[18:14:10] Hungertime2: 50
+[18:14:10] PlayCheck running
+[18:14:10] Hungertime2: 51
+[18:14:11] PlayCheck running
+[18:14:11] Hungertime2: 52
+[18:14:11] PlayCheck running
+[18:14:11] Hungertime2: 53
+[18:14:12] PlayCheck running
+[18:14:12] Hungertime2: 54
+[18:14:12] PlayCheck running
+[18:14:12] Hungertime2: 55
+[18:14:13] PlayCheck running
+[18:14:13] Hungertime2: 56
+[18:14:13] PlayCheck running
+[18:14:13] Hungertime2: 57
+[18:14:14] PlayCheck running
+[18:14:14] Hungertime2: 58
+[18:14:14] PlayCheck running
+[18:14:14] Hungertime2: 59
+[18:14:15] PlayCheck running
+[18:14:15] Hungertime2: 60
+[18:14:15] PlayCheck running
+[18:14:15] Hungertime2: 61
+[18:14:16] PlayCheck running
+[18:14:16] Hungertime2: 62
+[18:14:16] PlayCheck running
+[18:14:16] Hungertime2: 63
+[18:14:17] PlayCheck running
+[18:14:17] Hungertime2: 64
+[18:14:17] PlayCheck running
+[18:14:17] Hungertime2: 65
+[18:14:18] PlayCheck running
+[18:14:18] Hungertime2: 66
+[18:14:19] PlayCheck running
+[18:14:19] Hungertime2: 67
+[18:14:20] PlayCheck running
+[18:14:20] Hungertime2: 68
+[18:14:20] PlayCheck running
+[18:14:20] Hungertime2: 69
+[18:14:21] PlayCheck running
+[18:14:21] Hungertime2: 70
+[18:14:21] PlayCheck running
+[18:14:21] Hungertime2: 71
+[18:14:22] PlayCheck running
+[18:14:22] Hungertime2: 72
+[18:14:22] PlayCheck running
+[18:14:22] Hungertime2: 73
+[18:14:23] PlayCheck running
+[18:14:23] Hungertime2: 74
+[18:14:23] PlayCheck running
+[18:14:23] Hungertime2: 75
+[18:14:24] PlayCheck running
+[18:14:24] Hungertime2: 76
+[18:14:24] PlayCheck running
+[18:14:24] Hungertime2: 77
+[18:14:25] PlayCheck running
+[18:14:25] Hungertime2: 78
+[18:14:25] PlayCheck running
+[18:14:25] Hungertime2: 79
+[18:14:26] PlayCheck running
+[18:14:26] Hungertime2: 80
+[18:14:26] PlayCheck running
+[18:14:26] Hungertime2: 81
+[18:14:27] PlayCheck running
+[18:14:27] Hungertime2: 82
+[18:14:27] PlayCheck running
+[18:14:27] Hungertime2: 83
+[18:14:28] PlayCheck running
+[18:14:28] Hungertime2: 84
+[18:14:28] PlayCheck running
+[18:14:28] Hungertime2: 85
+[18:14:29] PlayCheck running
+[18:14:29] Hungertime2: 86
+[18:14:30] PlayCheck running
+[18:14:30] Hungertime2: 87
+[18:14:31] PlayCheck running
+[18:14:31] Hungertime2: 88
+[18:14:31] PlayCheck running
+[18:14:31] Hungertime2: 89
+[18:14:32] PlayCheck running
+[18:14:32] Hungertime2: 90
+[18:14:32] PlayCheck running
+[18:14:32] Hungertime2: 91
+[18:14:33] PlayCheck running
+[18:14:33] Hungertime2: 92
+[18:14:33] PlayCheck running
+[18:14:33] Hungertime2: 93
+[18:14:34] PlayCheck running
+[18:14:34] Hungertime2: 94
+[18:14:34] PlayCheck running
+[18:14:34] Hungertime2: 95
+[18:14:35] PlayCheck running
+[18:14:35] Hungertime2: 96
+[18:14:35] PlayCheck running
+[18:14:35] Hungertime2: 97
+[18:14:36] PlayCheck running
+[18:14:36] Hungertime2: 98
+[18:14:36] PlayCheck running
+[18:14:36] Hungertime2: 99
+[18:14:37] PlayCheck running
+[18:14:37] Hunger Time: 100
+[18:14:37] Hungertime2: 0
+[18:14:37] PlayCheck running
+[18:14:37] Hungertime2: 1
+[18:14:38] PlayCheck running
+[18:14:38] Hungertime2: 2
+[18:14:38] PlayCheck running
+[18:14:38] Hungertime2: 3
+[18:14:39] PlayCheck running
+[18:14:39] Hungertime2: 4
+[18:14:40] PlayCheck running
+[18:14:40] Hungertime2: 5
+[18:14:40] PlayCheck running
+[18:14:40] Hungertime2: 6
+[18:14:41] PlayCheck running
+[18:14:41] Hungertime2: 7
+[18:14:41] PlayCheck running
+[18:14:41] Hungertime2: 8
+[18:14:42] PlayCheck running
+[18:14:42] Hungertime2: 9
+[18:14:43] PlayCheck running
+[18:14:43] Hungertime2: 10
+[18:14:43] PlayCheck running
+[18:14:43] Hungertime2: 11
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:18:50] 
+[18:18:50] Server Plugins
+[18:18:50] --------------
+[18:18:50]  Loading plugin: crashdetect
+[18:18:50]   CrashDetect v4.18.1 is OK.
+[18:18:50]   Loaded.
+[18:18:50]  Loading plugin: mysql
+[18:18:51]  >> plugin.mysql: R39-4 successfully loaded.
+[18:18:51]   Loaded.
+[18:18:51]  Loading plugin: sscanf
+[18:18:51] 
+
+[18:18:51]  ===============================
+
+[18:18:51]       sscanf plugin loaded.     
+
+[18:18:51]          Version:  2.8.2        
+
+[18:18:51]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:18:51]  ===============================
+
+[18:18:51]   Loaded.
+[18:18:51]  Loading plugin: streamer
+[18:18:51] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:18:51]   Loaded.
+[18:18:51]  Loading plugin: Whirlpool
+[18:18:51]  
+[18:18:51]  ==================
+[18:18:51]  
+[18:18:51]   Whirlpool loaded
+[18:18:51]  
+[18:18:51]  ==================
+[18:18:51]  
+[18:18:51]   Loaded.
+[18:18:51]  Loading plugin: sampp_server
+[18:18:51]   Failed.
+[18:18:51]  Loading plugin: pawncmd
+[18:18:51] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:18:51]   Loaded.
+[18:18:51]  Loaded 6 plugins.
+
+[18:18:51] 
+[18:18:51] Filterscripts
+[18:18:51] ---------------
+[18:18:51]   Loaded 0 filterscripts.
+
+[18:18:51]  
+[18:18:51]  
+[18:18:51]  
+[18:18:51]  ======================================= 
+[18:18:51]  |                                     | 
+[18:18:51]  |        YSI version 3.09.0684        | 
+[18:18:51]  |        By Alex "Y_Less" Cole        | 
+[18:18:51]  |                                     | 
+[18:18:51]  ======================================= 
+[18:18:51]  
+[18:18:51] Successfully connected to MySQL database.
+[18:18:51] 
+|----------------------------------|
+[18:18:51] |  Samp Dayz by ZiiM               |
+[18:18:51] |----------------------------------|
+
+[18:18:51] Number of vehicle models: 0
+[18:18:51] [connection] 127.0.0.1:53341 requests connection cookie.
+[18:18:52] [connection] incoming connection: 127.0.0.1:53341 id: 0
+[18:18:52] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:18:52] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:18:53] PlayCheck running
+[18:18:53] Hungertime2: 0
+[18:18:54] PlayCheck running
+[18:18:54] Hungertime2: 0
+[18:18:55] PlayCheck running
+[18:18:55] Hungertime2: 0
+[18:18:56] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[18:18:56] Login1
+[18:18:56] X: 1536.739990 | Y: -1661.979980 | Z: 13.647000
+[18:18:56] PlayCheck running
+[18:18:56] Hungertime2: 1
+[18:18:58] PlayCheck running
+[18:18:58] Hungertime2: 2
+[18:18:59] PlayCheck running
+[18:18:59] Hungertime2: 3
+[18:19:00] PlayCheck running
+[18:19:00] Hungertime2: 4
+[18:19:01] PlayCheck running
+[18:19:01] Hungertime2: 5
+[18:19:02] PlayCheck running
+[18:19:02] Hungertime2: 6
+[18:19:03] PlayCheck running
+[18:19:03] Hungertime2: 7
+[18:19:04] PlayCheck running
+[18:19:04] Hungertime2: 8
+[18:19:05] PlayCheck running
+[18:19:05] Hungertime2: 9
+[18:19:06] PlayCheck running
+[18:19:06] Hungertime2: 10
+[18:19:07] PlayCheck running
+[18:19:07] Hungertime2: 11
+[18:19:09] PlayCheck running
+[18:19:09] Hungertime2: 12
+[18:19:10] PlayCheck running
+[18:19:10] Hungertime2: 13
+[18:19:11] PlayCheck running
+[18:19:11] Hungertime2: 14
+[18:19:12] PlayCheck running
+[18:19:12] Hungertime2: 15
+[18:19:13] PlayCheck running
+[18:19:13] Hungertime2: 16
+[18:19:14] PlayCheck running
+[18:19:14] Hungertime2: 17
+[18:19:15] PlayCheck running
+[18:19:15] Hungertime2: 18
+[18:19:16] PlayCheck running
+[18:19:16] Hungertime2: 19
+[18:19:17] PlayCheck running
+[18:19:17] Hunger Time: 20
+[18:19:17] Hungertime2: 0
+[18:19:18] PlayCheck running
+[18:19:18] Hungertime2: 1
+[18:19:20] PlayCheck running
+[18:19:20] Hungertime2: 2
+[18:19:21] PlayCheck running
+[18:19:21] Hungertime2: 3
+[18:19:22] PlayCheck running
+[18:19:22] Hungertime2: 4
+[18:19:23] PlayCheck running
+[18:19:23] Hungertime2: 5
+[18:19:24] PlayCheck running
+[18:19:24] Hungertime2: 6
+[18:19:25] PlayCheck running
+[18:19:25] Hungertime2: 7
+[18:19:25] Check Blood: 12000
+[18:19:26] PlayCheck running
+[18:19:26] Hungertime2: 8
+[18:19:27] PlayCheck running
+[18:19:27] Hungertime2: 9
+[18:19:28] PlayCheck running
+[18:19:28] Hungertime2: 10
+[18:19:29] PlayCheck running
+[18:19:29] Hungertime2: 11
+[18:19:31] PlayCheck running
+[18:19:31] Hungertime2: 12
+[18:19:32] PlayCheck running
+[18:19:32] Hungertime2: 13
+[18:19:33] PlayCheck running
+[18:19:33] Hungertime2: 14
+[18:19:34] PlayCheck running
+[18:19:34] Hungertime2: 15
+[18:19:35] PlayCheck running
+[18:19:35] Hungertime2: 16
+[18:19:36] PlayCheck running
+[18:19:36] Hungertime2: 17
+[18:19:37] PlayCheck running
+[18:19:37] Hungertime2: 18
+[18:19:38] PlayCheck running
+[18:19:38] Hungertime2: 19
+[18:19:39] PlayCheck running
+[18:19:39] Hunger Time: 20
+[18:19:39] Hungertime2: 0
+[18:19:40] PlayCheck running
+[18:19:40] Hungertime2: 1
+[18:19:41] PlayCheck running
+[18:19:41] Hungertime2: 2
+[18:19:43] PlayCheck running
+[18:19:43] Hungertime2: 3
+[18:19:44] PlayCheck running
+[18:19:44] Hungertime2: 4
+[18:19:45] PlayCheck running
+[18:19:45] Hungertime2: 5
+[18:19:46] PlayCheck running
+[18:19:46] Hungertime2: 6
+[18:19:47] PlayCheck running
+[18:19:47] Hungertime2: 7
+[18:19:48] PlayCheck running
+[18:19:48] Hungertime2: 8
+[18:19:49] PlayCheck running
+[18:19:49] Hungertime2: 9
+[18:19:50] PlayCheck running
+[18:19:50] Hungertime2: 10
+[18:19:51] PlayCheck running
+[18:19:51] Hungertime2: 11
+[18:19:52] PlayCheck running
+[18:19:52] Hungertime2: 12
+[18:19:54] PlayCheck running
+[18:19:54] Hungertime2: 13
+[18:19:55] PlayCheck running
+[18:19:55] Hungertime2: 14
+[18:19:56] PlayCheck running
+[18:19:56] Hungertime2: 15
+[18:19:57] PlayCheck running
+[18:19:57] Hungertime2: 16
+[18:19:58] PlayCheck running
+[18:19:58] Hungertime2: 17
+[18:19:58] Check Blood: 12000
+[18:19:59] PlayCheck running
+[18:19:59] Hungertime2: 18
+[18:20:00] PlayCheck running
+[18:20:00] Hungertime2: 19
+[18:20:01] PlayCheck running
+[18:20:01] Hunger Time: 20
+[18:20:01] Hungertime2: 0
+[18:20:02] PlayCheck running
+[18:20:02] Hungertime2: 1
+[18:20:03] PlayCheck running
+[18:20:03] Hungertime2: 2
+[18:20:05] PlayCheck running
+[18:20:05] Hungertime2: 3
+[18:20:06] PlayCheck running
+[18:20:06] Hungertime2: 4
+[18:20:07] PlayCheck running
+[18:20:07] Hungertime2: 5
+[18:20:08] PlayCheck running
+[18:20:08] Hungertime2: 6
+[18:20:09] PlayCheck running
+[18:20:09] Hungertime2: 7
+[18:20:10] PlayCheck running
+[18:20:10] Hungertime2: 8
+[18:20:11] PlayCheck running
+[18:20:11] Hungertime2: 9
+[18:20:12] PlayCheck running
+[18:20:12] Hungertime2: 10
+[18:20:13] PlayCheck running
+[18:20:13] Hungertime2: 11
+[18:20:14] PlayCheck running
+[18:20:14] Hungertime2: 12
+[18:20:15] PlayCheck running
+[18:20:15] Hungertime2: 13
+[18:20:17] PlayCheck running
+[18:20:17] Hungertime2: 14
+[18:20:18] PlayCheck running
+[18:20:18] Hungertime2: 15
+[18:20:19] PlayCheck running
+[18:20:19] Hungertime2: 16
+[18:20:20] PlayCheck running
+[18:20:20] Hungertime2: 17
+[18:20:21] PlayCheck running
+[18:20:21] Hungertime2: 18
+[18:20:22] PlayCheck running
+[18:20:22] Hungertime2: 19
+[18:20:23] PlayCheck running
+[18:20:23] Hunger Time: 20
+[18:20:23] Hungertime2: 0
+[18:20:24] PlayCheck running
+[18:20:24] Hungertime2: 1
+[18:20:25] PlayCheck running
+[18:20:25] Hungertime2: 2
+[18:20:26] PlayCheck running
+[18:20:26] Hungertime2: 3
+[18:20:28] PlayCheck running
+[18:20:28] Hungertime2: 4
+[18:20:29] PlayCheck running
+[18:20:29] Hungertime2: 5
+[18:20:30] PlayCheck running
+[18:20:30] Hungertime2: 6
+[18:20:31] PlayCheck running
+[18:20:31] Hungertime2: 7
+[18:20:31] Check Blood: 12000
+[18:20:32] PlayCheck running
+[18:20:32] Hungertime2: 8
+[18:20:33] PlayCheck running
+[18:20:33] Hungertime2: 9
+[18:20:34] PlayCheck running
+[18:20:34] Hungertime2: 10
+[18:20:35] PlayCheck running
+[18:20:35] Hungertime2: 11
+[18:20:36] PlayCheck running
+[18:20:36] Hungertime2: 12
+[18:20:37] PlayCheck running
+[18:20:37] Hungertime2: 13
+[18:20:39] PlayCheck running
+[18:20:39] Hungertime2: 14
+[18:20:40] PlayCheck running
+[18:20:40] Hungertime2: 15
+[18:20:41] PlayCheck running
+[18:20:41] Hungertime2: 16
+[18:20:42] PlayCheck running
+[18:20:42] Hungertime2: 17
+[18:20:43] PlayCheck running
+[18:20:43] Hungertime2: 18
+[18:20:44] PlayCheck running
+[18:20:44] Hungertime2: 19
+[18:20:45] PlayCheck running
+[18:20:45] Hunger Time: 20
+[18:20:45] Hungertime2: 0
+[18:20:46] PlayCheck running
+[18:20:46] Hungertime2: 1
+[18:20:47] PlayCheck running
+[18:20:47] Hungertime2: 2
+[18:20:48] PlayCheck running
+[18:20:48] Hungertime2: 3
+[18:20:50] PlayCheck running
+[18:20:50] Hungertime2: 4
+[18:20:51] PlayCheck running
+[18:20:51] Hungertime2: 5
+[18:20:52] PlayCheck running
+[18:20:52] Hungertime2: 6
+[18:20:53] PlayCheck running
+[18:20:53] Hungertime2: 7
+[18:20:54] PlayCheck running
+[18:20:54] Hungertime2: 8
+[18:20:55] PlayCheck running
+[18:20:55] Hungertime2: 9
+[18:20:56] PlayCheck running
+[18:20:56] Hungertime2: 10
+[18:20:57] PlayCheck running
+[18:20:57] Hungertime2: 11
+[18:20:58] PlayCheck running
+[18:20:58] Hungertime2: 12
+[18:20:59] PlayCheck running
+[18:20:59] Hungertime2: 13
+[18:21:01] PlayCheck running
+[18:21:01] Hungertime2: 14
+[18:21:02] PlayCheck running
+[18:21:02] Hungertime2: 15
+[18:21:03] PlayCheck running
+[18:21:03] Hungertime2: 16
+[18:21:04] PlayCheck running
+[18:21:04] Hungertime2: 17
+[18:21:04] Check Blood: 12000
+[18:21:05] PlayCheck running
+[18:21:05] Hungertime2: 18
+[18:21:06] PlayCheck running
+[18:21:06] Hungertime2: 19
+[18:21:07] PlayCheck running
+[18:21:07] Hunger Time: 20
+[18:21:07] Hungertime2: 0
+[18:21:08] PlayCheck running
+[18:21:08] Hungertime2: 1
+[18:21:09] PlayCheck running
+[18:21:09] Hungertime2: 2
+[18:21:10] PlayCheck running
+[18:21:10] Hungertime2: 3
+[18:21:12] PlayCheck running
+[18:21:12] Hungertime2: 4
+[18:21:13] PlayCheck running
+[18:21:13] Hungertime2: 5
+[18:21:14] PlayCheck running
+[18:21:14] Hungertime2: 6
+[18:21:15] PlayCheck running
+[18:21:15] Hungertime2: 7
+[18:21:16] PlayCheck running
+[18:21:16] Hungertime2: 8
+[18:21:17] PlayCheck running
+[18:21:17] Hungertime2: 9
+[18:21:18] PlayCheck running
+[18:21:18] Hungertime2: 10
+[18:21:19] PlayCheck running
+[18:21:19] Hungertime2: 11
+[18:21:20] PlayCheck running
+[18:21:20] Hungertime2: 12
+[18:21:21] PlayCheck running
+[18:21:21] Hungertime2: 13
+[18:21:23] PlayCheck running
+[18:21:23] Hungertime2: 14
+[18:21:24] PlayCheck running
+[18:21:24] Hungertime2: 15
+[18:21:25] PlayCheck running
+[18:21:25] Hungertime2: 16
+[18:21:26] PlayCheck running
+[18:21:26] Hungertime2: 17
+[18:21:27] PlayCheck running
+[18:21:27] Hungertime2: 18
+[18:21:28] PlayCheck running
+[18:21:28] Hungertime2: 19
+[18:21:29] PlayCheck running
+[18:21:29] Hunger Time: 20
+[18:21:29] Hungertime2: 0
+[18:21:30] PlayCheck running
+[18:21:30] Hungertime2: 1
+[18:21:31] PlayCheck running
+[18:21:31] Hungertime2: 2
+[18:21:32] PlayCheck running
+[18:21:32] Hungertime2: 3
+[18:21:34] PlayCheck running
+[18:21:34] Hungertime2: 4
+[18:21:35] PlayCheck running
+[18:21:35] Hungertime2: 5
+[18:21:36] PlayCheck running
+[18:21:36] Hungertime2: 6
+[18:21:37] PlayCheck running
+[18:21:37] Hungertime2: 7
+[18:21:37] Check Blood: 12000
+[18:21:38] PlayCheck running
+[18:21:38] Hungertime2: 8
+[18:21:39] PlayCheck running
+[18:21:39] Hungertime2: 9
+[18:21:40] PlayCheck running
+[18:21:40] Hungertime2: 10
+[18:21:41] PlayCheck running
+[18:21:41] Hungertime2: 11
+[18:21:42] PlayCheck running
+[18:21:42] Hungertime2: 12
+[18:21:43] PlayCheck running
+[18:21:43] Hungertime2: 13
+[18:21:45] PlayCheck running
+[18:21:45] Hungertime2: 14
+[18:21:46] PlayCheck running
+[18:21:46] Hungertime2: 15
+[18:21:47] PlayCheck running
+[18:21:47] Hungertime2: 16
+[18:21:48] PlayCheck running
+[18:21:48] Hungertime2: 17
+[18:21:49] PlayCheck running
+[18:21:49] Hungertime2: 18
+[18:21:50] PlayCheck running
+[18:21:50] Hungertime2: 19
+[18:21:51] PlayCheck running
+[18:21:51] Hunger Time: 20
+[18:21:51] Hungertime2: 0
+[18:21:52] PlayCheck running
+[18:21:52] Hungertime2: 1
+[18:21:53] PlayCheck running
+[18:21:53] Hungertime2: 2
+[18:21:54] PlayCheck running
+[18:21:54] Hungertime2: 3
+[18:21:56] PlayCheck running
+[18:21:56] Hungertime2: 4
+[18:21:57] PlayCheck running
+[18:21:57] Hungertime2: 5
+[18:21:58] PlayCheck running
+[18:21:58] Hungertime2: 6
+[18:21:59] PlayCheck running
+[18:21:59] Hungertime2: 7
+[18:22:00] PlayCheck running
+[18:22:00] Hungertime2: 8
+[18:22:01] PlayCheck running
+[18:22:01] Hungertime2: 9
+[18:22:02] PlayCheck running
+[18:22:02] Hungertime2: 10
+[18:22:03] PlayCheck running
+[18:22:03] Hungertime2: 11
+[18:22:04] PlayCheck running
+[18:22:04] Hungertime2: 12
+[18:22:05] PlayCheck running
+[18:22:05] Hungertime2: 13
+[18:22:06] PlayCheck running
+[18:22:06] Hungertime2: 14
+[18:22:08] PlayCheck running
+[18:22:08] Hungertime2: 15
+[18:22:09] PlayCheck running
+[18:22:09] Hungertime2: 16
+[18:22:10] PlayCheck running
+[18:22:10] Hungertime2: 17
+[18:22:10] Check Blood: 12000
+[18:22:11] PlayCheck running
+[18:22:11] Hungertime2: 18
+[18:22:12] PlayCheck running
+[18:22:12] Hungertime2: 19
+[18:22:13] PlayCheck running
+[18:22:13] Hunger Time: 20
+[18:22:13] Hungertime2: 0
+[18:22:14] PlayCheck running
+[18:22:14] Hungertime2: 1
+[18:22:15] PlayCheck running
+[18:22:15] Hungertime2: 2
+[18:22:16] PlayCheck running
+[18:22:16] Hungertime2: 3
+[18:22:17] PlayCheck running
+[18:22:17] Hungertime2: 4
+[18:22:19] PlayCheck running
+[18:22:19] Hungertime2: 5
+[18:22:20] PlayCheck running
+[18:22:20] Hungertime2: 6
+[18:22:21] PlayCheck running
+[18:22:21] Hungertime2: 7
+[18:22:22] PlayCheck running
+[18:22:22] Hungertime2: 8
+[18:22:23] PlayCheck running
+[18:22:23] Hungertime2: 9
+[18:22:24] PlayCheck running
+[18:22:24] Hungertime2: 10
+[18:22:25] PlayCheck running
+[18:22:25] Hungertime2: 11
+[18:22:26] PlayCheck running
+[18:22:26] Hungertime2: 12
+[18:22:27] PlayCheck running
+[18:22:27] Hungertime2: 13
+[18:22:28] PlayCheck running
+[18:22:28] Hungertime2: 14
+[18:22:30] PlayCheck running
+[18:22:30] Hungertime2: 15
+[18:22:31] PlayCheck running
+[18:22:31] Hungertime2: 16
+[18:22:32] PlayCheck running
+[18:22:32] Hungertime2: 17
+[18:22:33] PlayCheck running
+[18:22:33] Hungertime2: 18
+[18:22:34] PlayCheck running
+[18:22:34] Hungertime2: 19
+[18:22:35] PlayCheck running
+[18:22:35] Hunger Time: 20
+[18:22:35] Hungertime2: 0
+[18:22:36] PlayCheck running
+[18:22:36] Hungertime2: 1
+[18:22:37] PlayCheck running
+[18:22:37] Hungertime2: 2
+[18:22:38] PlayCheck running
+[18:22:38] Hungertime2: 3
+[18:22:39] PlayCheck running
+[18:22:39] Hungertime2: 4
+[18:22:41] PlayCheck running
+[18:22:41] Hungertime2: 5
+[18:22:42] PlayCheck running
+[18:22:42] Hungertime2: 6
+[18:22:43] PlayCheck running
+[18:22:43] Hungertime2: 7
+[18:22:44] Check Blood: 12000
+[18:22:44] PlayCheck running
+[18:22:44] Hungertime2: 8
+[18:22:45] PlayCheck running
+[18:22:45] Hungertime2: 9
+[18:22:46] PlayCheck running
+[18:22:46] Hungertime2: 10
+[18:22:47] PlayCheck running
+[18:22:47] Hungertime2: 11
+[18:22:48] PlayCheck running
+[18:22:48] Hungertime2: 12
+[18:22:49] PlayCheck running
+[18:22:49] Hungertime2: 13
+[18:22:50] PlayCheck running
+[18:22:50] Hungertime2: 14
+[18:22:52] PlayCheck running
+[18:22:52] Hungertime2: 15
+[18:22:53] PlayCheck running
+[18:22:53] Hungertime2: 16
+[18:22:54] PlayCheck running
+[18:22:54] Hungertime2: 17
+[18:22:55] PlayCheck running
+[18:22:55] Hungertime2: 18
+[18:22:56] PlayCheck running
+[18:22:56] Hungertime2: 19
+[18:22:57] PlayCheck running
+[18:22:57] Hunger Time: 20
+[18:22:57] Hungertime2: 0
+[18:22:58] PlayCheck running
+[18:22:58] Hungertime2: 1
+[18:22:59] PlayCheck running
+[18:22:59] Hungertime2: 2
+[18:23:00] PlayCheck running
+[18:23:00] Hungertime2: 3
+[18:23:01] PlayCheck running
+[18:23:01] Hungertime2: 4
+[18:23:03] PlayCheck running
+[18:23:03] Hungertime2: 5
+[18:23:04] PlayCheck running
+[18:23:04] Hungertime2: 6
+[18:23:05] PlayCheck running
+[18:23:05] Hungertime2: 7
+[18:23:06] PlayCheck running
+[18:23:06] Hungertime2: 8
+[18:23:07] PlayCheck running
+[18:23:07] Hungertime2: 9
+[18:23:08] PlayCheck running
+[18:23:08] Hungertime2: 10
+[18:23:09] PlayCheck running
+[18:23:09] Hungertime2: 11
+[18:23:10] PlayCheck running
+[18:23:10] Hungertime2: 12
+[18:23:11] PlayCheck running
+[18:23:11] Hungertime2: 13
+[18:23:12] PlayCheck running
+[18:23:12] Hungertime2: 14
+[18:23:14] PlayCheck running
+[18:23:14] Hungertime2: 15
+[18:23:15] PlayCheck running
+[18:23:15] Hungertime2: 16
+[18:23:16] PlayCheck running
+[18:23:16] Hungertime2: 17
+[18:23:17] Check Blood: 12000
+[18:23:17] PlayCheck running
+[18:23:17] Hungertime2: 18
+[18:23:18] PlayCheck running
+[18:23:18] Hungertime2: 19
+[18:23:19] PlayCheck running
+[18:23:19] Hunger Time: 20
+[18:23:19] Hungertime2: 0
+[18:23:20] PlayCheck running
+[18:23:20] Hungertime2: 1
+[18:23:21] PlayCheck running
+[18:23:21] Hungertime2: 2
+[18:23:22] PlayCheck running
+[18:23:22] Hungertime2: 3
+[18:23:23] PlayCheck running
+[18:23:23] Hungertime2: 4
+[18:23:25] PlayCheck running
+[18:23:25] Hungertime2: 5
+[18:23:26] PlayCheck running
+[18:23:26] Hungertime2: 6
+[18:23:27] PlayCheck running
+[18:23:27] Hungertime2: 7
+[18:23:28] PlayCheck running
+[18:23:28] Hungertime2: 8
+[18:23:29] PlayCheck running
+[18:23:29] Hungertime2: 9
+[18:23:30] PlayCheck running
+[18:23:30] Hungertime2: 10
+[18:23:31] PlayCheck running
+[18:23:31] Hungertime2: 11
+[18:23:32] PlayCheck running
+[18:23:32] Hungertime2: 12
+[18:23:33] PlayCheck running
+[18:23:33] Hungertime2: 13
+[18:23:34] PlayCheck running
+[18:23:34] Hungertime2: 14
+[18:23:36] PlayCheck running
+[18:23:36] Hungertime2: 15
+[18:23:37] PlayCheck running
+[18:23:37] Hungertime2: 16
+[18:23:38] PlayCheck running
+[18:23:38] Hungertime2: 17
+[18:23:39] PlayCheck running
+[18:23:39] Hungertime2: 18
+[18:23:40] PlayCheck running
+[18:23:40] Hungertime2: 19
+[18:23:41] PlayCheck running
+[18:23:41] Hunger Time: 20
+[18:23:41] Hungertime2: 0
+[18:23:42] PlayCheck running
+[18:23:42] Hungertime2: 1
+[18:23:43] PlayCheck running
+[18:23:43] Hungertime2: 2
+[18:23:44] PlayCheck running
+[18:23:44] Hungertime2: 3
+[18:23:45] PlayCheck running
+[18:23:45] Hungertime2: 4
+[18:23:47] PlayCheck running
+[18:23:47] Hungertime2: 5
+[18:23:48] PlayCheck running
+[18:23:48] Hungertime2: 6
+[18:23:49] PlayCheck running
+[18:23:49] Hungertime2: 7
+[18:23:50] Check Blood: 12000
+[18:23:50] PlayCheck running
+[18:23:50] Hungertime2: 8
+[18:23:51] PlayCheck running
+[18:23:51] Hungertime2: 9
+[18:23:52] PlayCheck running
+[18:23:52] Hungertime2: 10
+[18:23:53] PlayCheck running
+[18:23:53] Hungertime2: 11
+[18:23:54] PlayCheck running
+[18:23:54] Hungertime2: 12
+[18:23:55] PlayCheck running
+[18:23:55] Hungertime2: 13
+[18:23:56] PlayCheck running
+[18:23:56] Hungertime2: 14
+[18:23:57] PlayCheck running
+[18:23:57] Hungertime2: 15
+[18:23:59] PlayCheck running
+[18:23:59] Hungertime2: 16
+[18:24:00] PlayCheck running
+[18:24:00] Hungertime2: 17
+[18:24:01] PlayCheck running
+[18:24:01] Hungertime2: 18
+[18:24:02] PlayCheck running
+[18:24:02] Hungertime2: 19
+[18:24:03] PlayCheck running
+[18:24:03] Hunger Time: 20
+[18:24:03] Hungertime2: 0
+[18:24:04] PlayCheck running
+[18:24:04] Hungertime2: 1
+[18:24:05] PlayCheck running
+[18:24:05] Hungertime2: 2
+[18:24:06] PlayCheck running
+[18:24:06] Hungertime2: 3
+[18:24:07] PlayCheck running
+[18:24:07] Hungertime2: 4
+[18:24:08] PlayCheck running
+[18:24:08] Hungertime2: 5
+[18:24:10] PlayCheck running
+[18:24:10] Hungertime2: 6
+[18:24:11] PlayCheck running
+[18:24:11] Hungertime2: 7
+[18:24:12] PlayCheck running
+[18:24:12] Hungertime2: 8
+[18:24:13] PlayCheck running
+[18:24:13] Hungertime2: 9
+[18:24:14] PlayCheck running
+[18:24:14] Hungertime2: 10
+[18:24:15] PlayCheck running
+[18:24:15] Hungertime2: 11
+[18:24:16] PlayCheck running
+[18:24:16] Hungertime2: 12
+[18:24:17] PlayCheck running
+[18:24:17] Hungertime2: 13
+[18:24:18] PlayCheck running
+[18:24:18] Hungertime2: 14
+[18:24:19] PlayCheck running
+[18:24:19] Hungertime2: 15
+[18:24:21] PlayCheck running
+[18:24:21] Hungertime2: 16
+[18:24:22] PlayCheck running
+[18:24:22] Hungertime2: 17
+[18:24:23] Check Blood: 12000
+[18:24:23] PlayCheck running
+[18:24:23] Hungertime2: 18
+[18:24:24] PlayCheck running
+[18:24:24] Hungertime2: 19
+[18:24:25] PlayCheck running
+[18:24:25] Hunger Time: 20
+[18:24:25] Hungertime2: 0
+[18:24:26] PlayCheck running
+[18:24:26] Hungertime2: 1
+[18:24:27] PlayCheck running
+[18:24:27] Hungertime2: 2
+[18:24:28] PlayCheck running
+[18:24:28] Hungertime2: 3
+[18:24:29] PlayCheck running
+[18:24:29] Hungertime2: 4
+[18:24:30] PlayCheck running
+[18:24:30] Hungertime2: 5
+[18:24:32] PlayCheck running
+[18:24:32] Hungertime2: 6
+[18:24:33] PlayCheck running
+[18:24:33] Hungertime2: 7
+[18:24:34] PlayCheck running
+[18:24:34] Hungertime2: 8
+[18:24:35] PlayCheck running
+[18:24:35] Hungertime2: 9
+[18:24:36] PlayCheck running
+[18:24:36] Hungertime2: 10
+[18:24:37] PlayCheck running
+[18:24:37] Hungertime2: 11
+[18:24:38] PlayCheck running
+[18:24:38] Hungertime2: 12
+[18:24:39] PlayCheck running
+[18:24:39] Hungertime2: 13
+[18:24:40] PlayCheck running
+[18:24:40] Hungertime2: 14
+[18:24:41] PlayCheck running
+[18:24:41] Hungertime2: 15
+[18:24:43] PlayCheck running
+[18:24:43] Hungertime2: 16
+[18:24:44] PlayCheck running
+[18:24:44] Hungertime2: 17
+[18:24:45] PlayCheck running
+[18:24:45] Hungertime2: 18
+[18:24:46] PlayCheck running
+[18:24:46] Hungertime2: 19
+[18:24:47] PlayCheck running
+[18:24:47] Hunger Time: 20
+[18:24:47] Hungertime2: 0
+[18:24:48] PlayCheck running
+[18:24:48] Hungertime2: 1
+[18:24:49] PlayCheck running
+[18:24:49] Hungertime2: 2
+[18:24:50] PlayCheck running
+[18:24:50] Hungertime2: 3
+[18:24:51] PlayCheck running
+[18:24:51] Hungertime2: 4
+[18:24:52] PlayCheck running
+[18:24:52] Hungertime2: 5
+[18:24:54] PlayCheck running
+[18:24:54] Hungertime2: 6
+[18:24:55] PlayCheck running
+[18:24:55] Hungertime2: 7
+[18:24:56] PlayCheck running
+[18:24:56] Hungertime2: 8
+[18:24:56] Check Blood: 12000
+[18:24:57] PlayCheck running
+[18:24:57] Hungertime2: 9
+[18:24:58] PlayCheck running
+[18:24:58] Hungertime2: 10
+[18:24:59] PlayCheck running
+[18:24:59] Hungertime2: 11
+[18:25:00] PlayCheck running
+[18:25:00] Hungertime2: 12
+[18:25:01] PlayCheck running
+[18:25:01] Hungertime2: 13
+[18:25:02] PlayCheck running
+[18:25:02] Hungertime2: 14
+[18:25:03] PlayCheck running
+[18:25:03] Hungertime2: 15
+[18:25:05] PlayCheck running
+[18:25:05] Hungertime2: 16
+[18:25:06] PlayCheck running
+[18:25:06] Hungertime2: 17
+[18:25:07] PlayCheck running
+[18:25:07] Hungertime2: 18
+[18:25:08] PlayCheck running
+[18:25:08] Hungertime2: 19
+[18:25:09] PlayCheck running
+[18:25:09] Hunger Time: 20
+[18:25:09] Hungertime2: 0
+[18:25:10] PlayCheck running
+[18:25:10] Hungertime2: 1
+[18:25:11] PlayCheck running
+[18:25:11] Hungertime2: 2
+[18:25:12] PlayCheck running
+[18:25:12] Hungertime2: 3
+[18:25:13] PlayCheck running
+[18:25:13] Hungertime2: 4
+[18:25:14] PlayCheck running
+[18:25:14] Hungertime2: 5
+[18:25:15] PlayCheck running
+[18:25:15] Hungertime2: 6
+[18:25:17] PlayCheck running
+[18:25:17] Hungertime2: 7
+[18:25:18] PlayCheck running
+[18:25:18] Hungertime2: 8
+[18:25:19] PlayCheck running
+[18:25:19] Hungertime2: 9
+[18:25:20] PlayCheck running
+[18:25:20] Hungertime2: 10
+[18:25:21] PlayCheck running
+[18:25:21] Hungertime2: 11
+[18:25:22] PlayCheck running
+[18:25:22] Hungertime2: 12
+[18:25:23] PlayCheck running
+[18:25:23] Hungertime2: 13
+[18:25:24] PlayCheck running
+[18:25:24] Hungertime2: 14
+[18:25:25] PlayCheck running
+[18:25:25] Hungertime2: 15
+[18:25:26] PlayCheck running
+[18:25:26] Hungertime2: 16
+[18:25:28] PlayCheck running
+[18:25:28] Hungertime2: 17
+[18:25:29] PlayCheck running
+[18:25:29] Hungertime2: 18
+[18:25:29] Check Blood: 12000
+[18:25:30] PlayCheck running
+[18:25:30] Hungertime2: 19
+[18:25:31] PlayCheck running
+[18:25:31] Hunger Time: 20
+[18:25:31] Hungertime2: 0
+[18:25:32] PlayCheck running
+[18:25:32] Hungertime2: 1
+[18:25:33] PlayCheck running
+[18:25:33] Hungertime2: 2
+[18:25:34] PlayCheck running
+[18:25:34] Hungertime2: 3
+[18:25:35] PlayCheck running
+[18:25:35] Hungertime2: 4
+[18:25:36] PlayCheck running
+[18:25:36] Hungertime2: 5
+[18:25:37] PlayCheck running
+[18:25:37] Hungertime2: 6
+[18:25:38] PlayCheck running
+[18:25:38] Hungertime2: 7
+[18:25:40] PlayCheck running
+[18:25:40] Hungertime2: 8
+[18:25:41] PlayCheck running
+[18:25:41] Hungertime2: 9
+[18:25:42] PlayCheck running
+[18:25:42] Hungertime2: 10
+[18:25:43] PlayCheck running
+[18:25:43] Hungertime2: 11
+[18:25:44] PlayCheck running
+[18:25:44] Hungertime2: 12
+[18:25:45] PlayCheck running
+[18:25:45] Hungertime2: 13
+[18:25:46] PlayCheck running
+[18:25:46] Hungertime2: 14
+[18:25:47] PlayCheck running
+[18:25:47] Hungertime2: 15
+[18:25:48] PlayCheck running
+[18:25:48] Hungertime2: 16
+[18:25:49] PlayCheck running
+[18:25:49] Hungertime2: 17
+[18:25:51] PlayCheck running
+[18:25:51] Hungertime2: 18
+[18:25:52] PlayCheck running
+[18:25:52] Hungertime2: 19
+[18:25:53] PlayCheck running
+[18:25:53] Hunger Time: 20
+[18:25:53] Hungertime2: 0
+[18:25:54] PlayCheck running
+[18:25:54] Hungertime2: 1
+[18:25:55] PlayCheck running
+[18:25:55] Hungertime2: 2
+[18:25:56] PlayCheck running
+[18:25:56] Hungertime2: 3
+[18:25:57] PlayCheck running
+[18:25:57] Hungertime2: 4
+[18:25:58] PlayCheck running
+[18:25:58] Hungertime2: 5
+[18:25:59] PlayCheck running
+[18:25:59] Hungertime2: 6
+[18:26:00] PlayCheck running
+[18:26:00] Hungertime2: 7
+[18:26:02] PlayCheck running
+[18:26:02] Hungertime2: 8
+[18:26:02] Check Blood: 12000
+[18:26:03] PlayCheck running
+[18:26:03] Hungertime2: 9
+[18:26:04] PlayCheck running
+[18:26:04] Hungertime2: 10
+[18:26:05] PlayCheck running
+[18:26:05] Hungertime2: 11
+[18:26:06] PlayCheck running
+[18:26:06] Hungertime2: 12
+[18:26:07] PlayCheck running
+[18:26:07] Hungertime2: 13
+[18:26:08] PlayCheck running
+[18:26:08] Hungertime2: 14
+[18:26:09] PlayCheck running
+[18:26:09] Hungertime2: 15
+[18:26:10] PlayCheck running
+[18:26:10] Hungertime2: 16
+[18:26:11] PlayCheck running
+[18:26:11] Hungertime2: 17
+[18:26:13] PlayCheck running
+[18:26:13] Hungertime2: 18
+[18:26:14] PlayCheck running
+[18:26:14] Hungertime2: 19
+[18:26:15] PlayCheck running
+[18:26:15] Hunger Time: 20
+[18:26:15] Hungertime2: 0
+[18:26:16] PlayCheck running
+[18:26:16] Hungertime2: 1
+[18:26:17] PlayCheck running
+[18:26:17] Hungertime2: 2
+[18:26:18] PlayCheck running
+[18:26:18] Hungertime2: 3
+[18:26:19] PlayCheck running
+[18:26:19] Hungertime2: 4
+[18:26:20] PlayCheck running
+[18:26:20] Hungertime2: 5
+[18:26:21] PlayCheck running
+[18:26:21] Hungertime2: 6
+[18:26:22] PlayCheck running
+[18:26:22] Hungertime2: 7
+[18:26:24] PlayCheck running
+[18:26:24] Hungertime2: 8
+[18:26:25] PlayCheck running
+[18:26:25] Hungertime2: 9
+[18:26:26] PlayCheck running
+[18:26:26] Hungertime2: 10
+[18:26:27] PlayCheck running
+[18:26:27] Hungertime2: 11
+[18:26:28] PlayCheck running
+[18:26:28] Hungertime2: 12
+[18:26:29] PlayCheck running
+[18:26:29] Hungertime2: 13
+[18:26:30] PlayCheck running
+[18:26:30] Hungertime2: 14
+[18:26:31] PlayCheck running
+[18:26:31] Hungertime2: 15
+[18:26:32] PlayCheck running
+[18:26:32] Hungertime2: 16
+[18:26:33] PlayCheck running
+[18:26:33] Hungertime2: 17
+[18:26:35] PlayCheck running
+[18:26:35] Hungertime2: 18
+[18:26:35] Check Blood: 12000
+[18:26:36] PlayCheck running
+[18:26:36] Hungertime2: 19
+[18:26:37] PlayCheck running
+[18:26:37] Hunger Time: 20
+[18:26:37] Hungertime2: 0
+[18:26:38] PlayCheck running
+[18:26:38] Hungertime2: 1
+[18:26:39] PlayCheck running
+[18:26:39] Hungertime2: 2
+[18:26:40] PlayCheck running
+[18:26:40] Hungertime2: 3
+[18:26:41] PlayCheck running
+[18:26:41] Hungertime2: 4
+[18:26:42] PlayCheck running
+[18:26:42] Hungertime2: 5
+[18:26:43] PlayCheck running
+[18:26:43] Hungertime2: 6
+[18:26:44] PlayCheck running
+[18:26:44] Hungertime2: 7
+[18:26:46] PlayCheck running
+[18:26:46] Hungertime2: 8
+[18:26:47] PlayCheck running
+[18:26:47] Hungertime2: 9
+[18:26:48] PlayCheck running
+[18:26:48] Hungertime2: 10
+[18:26:49] PlayCheck running
+[18:26:49] Hungertime2: 11
+[18:26:50] PlayCheck running
+[18:26:50] Hungertime2: 12
+[18:26:51] PlayCheck running
+[18:26:51] Hungertime2: 13
+[18:26:52] PlayCheck running
+[18:26:52] Hungertime2: 14
+[18:26:53] PlayCheck running
+[18:26:53] Hungertime2: 15
+[18:26:54] PlayCheck running
+[18:26:54] Hungertime2: 16
+[18:26:55] PlayCheck running
+[18:26:55] Hungertime2: 17
+[18:26:57] PlayCheck running
+[18:26:57] Hungertime2: 18
+[18:26:58] PlayCheck running
+[18:26:58] Hungertime2: 19
+[18:26:59] PlayCheck running
+[18:26:59] Hunger Time: 20
+[18:26:59] Hungertime2: 0
+[18:27:00] PlayCheck running
+[18:27:00] Hungertime2: 1
+[18:27:01] PlayCheck running
+[18:27:01] Hungertime2: 2
+[18:27:02] PlayCheck running
+[18:27:02] Hungertime2: 3
+[18:27:03] PlayCheck running
+[18:27:03] Hungertime2: 4
+[18:27:04] PlayCheck running
+[18:27:04] Hungertime2: 5
+[18:27:05] PlayCheck running
+[18:27:05] Hungertime2: 6
+[18:27:06] PlayCheck running
+[18:27:06] Hungertime2: 7
+[18:27:08] PlayCheck running
+[18:27:08] Hungertime2: 8
+[18:27:08] Check Blood: 12000
+[18:27:09] PlayCheck running
+[18:27:09] Hungertime2: 9
+[18:27:10] PlayCheck running
+[18:27:10] Hungertime2: 10
+[18:27:11] PlayCheck running
+[18:27:11] Hungertime2: 11
+[18:27:12] PlayCheck running
+[18:27:12] Hungertime2: 12
+[18:27:13] PlayCheck running
+[18:27:13] Hungertime2: 13
+[18:27:14] PlayCheck running
+[18:27:14] Hungertime2: 14
+[18:27:15] PlayCheck running
+[18:27:15] Hungertime2: 15
+[18:27:16] PlayCheck running
+[18:27:16] Hungertime2: 16
+[18:27:17] PlayCheck running
+[18:27:17] Hungertime2: 17
+[18:27:18] PlayCheck running
+[18:27:18] Hungertime2: 18
+[18:27:20] PlayCheck running
+[18:27:20] Hungertime2: 19
+[18:27:21] PlayCheck running
+[18:27:21] Hunger Time: 20
+[18:27:21] Hungertime2: 0
+[18:27:22] PlayCheck running
+[18:27:22] Hungertime2: 1
+[18:27:23] PlayCheck running
+[18:27:23] Hungertime2: 2
+[18:27:24] PlayCheck running
+[18:27:24] Hungertime2: 3
+[18:27:25] PlayCheck running
+[18:27:25] Hungertime2: 4
+[18:27:26] PlayCheck running
+[18:27:26] Hungertime2: 5
+[18:27:27] PlayCheck running
+[18:27:27] Hungertime2: 6
+[18:27:28] PlayCheck running
+[18:27:28] Hungertime2: 7
+[18:27:29] PlayCheck running
+[18:27:29] Hungertime2: 8
+[18:27:31] PlayCheck running
+[18:27:31] Hungertime2: 9
+[18:27:32] PlayCheck running
+[18:27:32] Hungertime2: 10
+[18:27:33] PlayCheck running
+[18:27:33] Hungertime2: 11
+[18:27:34] PlayCheck running
+[18:27:34] Hungertime2: 12
+[18:27:35] PlayCheck running
+[18:27:35] Hungertime2: 13
+[18:27:36] PlayCheck running
+[18:27:36] Hungertime2: 14
+[18:27:37] PlayCheck running
+[18:27:37] Hungertime2: 15
+[18:27:38] PlayCheck running
+[18:27:38] Hungertime2: 16
+[18:27:39] PlayCheck running
+[18:27:39] Hungertime2: 17
+[18:27:40] PlayCheck running
+[18:27:40] Hungertime2: 18
+[18:27:41] Check Blood: 12000
+[18:27:42] PlayCheck running
+[18:27:42] Hungertime2: 19
+[18:27:43] PlayCheck running
+[18:27:43] Hunger Time: 20
+[18:27:43] Hungertime2: 0
+[18:27:44] PlayCheck running
+[18:27:44] Hungertime2: 1
+[18:27:45] PlayCheck running
+[18:27:45] Hungertime2: 2
+[18:27:46] PlayCheck running
+[18:27:46] Hungertime2: 3
+[18:27:47] PlayCheck running
+[18:27:47] Hungertime2: 4
+[18:27:48] PlayCheck running
+[18:27:48] Hungertime2: 5
+[18:27:49] PlayCheck running
+[18:27:49] Hungertime2: 6
+[18:27:50] PlayCheck running
+[18:27:50] Hungertime2: 7
+[18:27:51] PlayCheck running
+[18:27:51] Hungertime2: 8
+[18:27:53] PlayCheck running
+[18:27:53] Hungertime2: 9
+[18:27:54] PlayCheck running
+[18:27:54] Hungertime2: 10
+[18:27:55] PlayCheck running
+[18:27:55] Hungertime2: 11
+[18:27:56] PlayCheck running
+[18:27:56] Hungertime2: 12
+[18:27:57] PlayCheck running
+[18:27:57] Hungertime2: 13
+[18:27:58] PlayCheck running
+[18:27:58] Hungertime2: 14
+[18:27:59] PlayCheck running
+[18:27:59] Hungertime2: 15
+[18:28:00] PlayCheck running
+[18:28:00] Hungertime2: 16
+[18:28:01] PlayCheck running
+[18:28:01] Hungertime2: 17
+[18:28:02] PlayCheck running
+[18:28:02] Hungertime2: 18
+[18:28:04] PlayCheck running
+[18:28:04] Hungertime2: 19
+[18:28:05] PlayCheck running
+[18:28:05] Hunger Time: 20
+[18:28:05] Hungertime2: 0
+[18:28:06] PlayCheck running
+[18:28:06] Hungertime2: 1
+[18:28:07] PlayCheck running
+[18:28:07] Hungertime2: 2
+[18:28:08] PlayCheck running
+[18:28:08] Hungertime2: 3
+[18:28:09] PlayCheck running
+[18:28:09] Hungertime2: 4
+[18:28:10] PlayCheck running
+[18:28:10] Hungertime2: 5
+[18:28:11] PlayCheck running
+[18:28:11] Hungertime2: 6
+[18:28:12] PlayCheck running
+[18:28:12] Hungertime2: 7
+[18:28:13] PlayCheck running
+[18:28:13] Hungertime2: 8
+[18:28:14] Check Blood: 12000
+[18:28:15] PlayCheck running
+[18:28:15] Hungertime2: 9
+[18:28:16] PlayCheck running
+[18:28:16] Hungertime2: 10
+[18:28:17] PlayCheck running
+[18:28:17] Hungertime2: 11
+[18:28:18] PlayCheck running
+[18:28:18] Hungertime2: 12
+[18:28:19] PlayCheck running
+[18:28:19] Hungertime2: 13
+[18:28:20] PlayCheck running
+[18:28:20] Hungertime2: 14
+[18:28:21] PlayCheck running
+[18:28:21] Hungertime2: 15
+[18:28:22] PlayCheck running
+[18:28:22] Hungertime2: 16
+[18:28:23] PlayCheck running
+[18:28:23] Hungertime2: 17
+[18:28:24] PlayCheck running
+[18:28:24] Hungertime2: 18
+[18:28:26] PlayCheck running
+[18:28:26] Hungertime2: 19
+[18:28:27] PlayCheck running
+[18:28:27] Hunger Time: 20
+[18:28:27] Hungertime2: 0
+[18:28:28] PlayCheck running
+[18:28:28] Hungertime2: 1
+[18:28:29] PlayCheck running
+[18:28:29] Hungertime2: 2
+[18:28:30] PlayCheck running
+[18:28:30] Hungertime2: 3
+[18:28:31] PlayCheck running
+[18:28:31] Hungertime2: 4
+[18:28:32] PlayCheck running
+[18:28:32] Hungertime2: 5
+[18:28:33] PlayCheck running
+[18:28:33] Hungertime2: 6
+[18:28:34] PlayCheck running
+[18:28:34] Hungertime2: 7
+[18:28:35] PlayCheck running
+[18:28:35] Hungertime2: 8
+[18:28:37] PlayCheck running
+[18:28:37] Hungertime2: 9
+[18:28:38] PlayCheck running
+[18:28:38] Hungertime2: 10
+[18:28:39] PlayCheck running
+[18:28:39] Hungertime2: 11
+[18:28:40] PlayCheck running
+[18:28:40] Hungertime2: 12
+[18:28:41] PlayCheck running
+[18:28:41] Hungertime2: 13
+[18:28:42] PlayCheck running
+[18:28:42] Hungertime2: 14
+[18:28:43] PlayCheck running
+[18:28:43] Hungertime2: 15
+[18:28:44] PlayCheck running
+[18:28:44] Hungertime2: 16
+[18:28:45] PlayCheck running
+[18:28:45] Hungertime2: 17
+[18:28:46] PlayCheck running
+[18:28:46] Hungertime2: 18
+[18:28:47] Check Blood: 12000
+[18:28:47] PlayCheck running
+[18:28:47] Hungertime2: 19
+[18:28:49] PlayCheck running
+[18:28:49] Hunger Time: 20
+[18:28:49] Hungertime2: 0
+[18:28:50] PlayCheck running
+[18:28:50] Hungertime2: 1
+[18:28:51] PlayCheck running
+[18:28:51] Hungertime2: 2
+[18:28:52] PlayCheck running
+[18:28:52] Hungertime2: 3
+[18:28:53] PlayCheck running
+[18:28:53] Hungertime2: 4
+[18:28:54] PlayCheck running
+[18:28:54] Hungertime2: 5
+[18:28:55] PlayCheck running
+[18:28:55] Hungertime2: 6
+[18:28:56] PlayCheck running
+[18:28:56] Hungertime2: 7
+[18:28:57] PlayCheck running
+[18:28:57] Hungertime2: 8
+[18:28:58] PlayCheck running
+[18:28:58] Hungertime2: 9
+[18:29:00] PlayCheck running
+[18:29:00] Hungertime2: 10
+[18:29:01] PlayCheck running
+[18:29:01] Hungertime2: 11
+[18:29:02] PlayCheck running
+[18:29:02] Hungertime2: 12
+[18:29:03] PlayCheck running
+[18:29:03] Hungertime2: 13
+[18:29:04] PlayCheck running
+[18:29:04] Hungertime2: 14
+[18:29:05] PlayCheck running
+[18:29:05] Hungertime2: 15
+[18:29:06] PlayCheck running
+[18:29:06] Hungertime2: 16
+[18:29:07] PlayCheck running
+[18:29:07] Hungertime2: 17
+[18:29:08] PlayCheck running
+[18:29:08] Hungertime2: 18
+[18:29:09] PlayCheck running
+[18:29:09] Hungertime2: 19
+[18:29:11] PlayCheck running
+[18:29:11] Hunger Time: 20
+[18:29:11] Hungertime2: 0
+[18:29:12] PlayCheck running
+[18:29:12] Hungertime2: 1
+[18:29:13] PlayCheck running
+[18:29:13] Hungertime2: 2
+[18:29:14] PlayCheck running
+[18:29:14] Hungertime2: 3
+[18:29:15] PlayCheck running
+[18:29:15] Hungertime2: 4
+[18:29:16] PlayCheck running
+[18:29:16] Hungertime2: 5
+[18:29:17] PlayCheck running
+[18:29:17] Hungertime2: 6
+[18:29:18] PlayCheck running
+[18:29:18] Hungertime2: 7
+[18:29:19] PlayCheck running
+[18:29:19] Hungertime2: 8
+[18:29:20] Check Blood: 12000
+[18:29:20] PlayCheck running
+[18:29:20] Hungertime2: 9
+[18:29:22] PlayCheck running
+[18:29:22] Hungertime2: 10
+[18:29:23] PlayCheck running
+[18:29:23] Hungertime2: 11
+[18:29:24] PlayCheck running
+[18:29:24] Hungertime2: 12
+[18:29:25] PlayCheck running
+[18:29:25] Hungertime2: 13
+[18:29:26] PlayCheck running
+[18:29:26] Hungertime2: 14
+[18:29:27] PlayCheck running
+[18:29:27] Hungertime2: 15
+[18:29:28] PlayCheck running
+[18:29:28] Hungertime2: 16
+[18:29:29] PlayCheck running
+[18:29:29] Hungertime2: 17
+[18:29:30] PlayCheck running
+[18:29:30] Hungertime2: 18
+[18:29:31] PlayCheck running
+[18:29:31] Hungertime2: 19
+[18:29:33] PlayCheck running
+[18:29:33] Hunger Time: 20
+[18:29:33] Hungertime2: 0
+[18:29:34] PlayCheck running
+[18:29:34] Hungertime2: 1
+[18:29:35] PlayCheck running
+[18:29:35] Hungertime2: 2
+[18:29:36] PlayCheck running
+[18:29:36] Hungertime2: 3
+[18:29:37] PlayCheck running
+[18:29:37] Hungertime2: 4
+[18:29:38] PlayCheck running
+[18:29:38] Hungertime2: 5
+[18:29:39] PlayCheck running
+[18:29:39] Hungertime2: 6
+[18:29:40] PlayCheck running
+[18:29:40] Hungertime2: 7
+[18:29:41] PlayCheck running
+[18:29:41] Hungertime2: 8
+[18:29:42] PlayCheck running
+[18:29:42] Hungertime2: 9
+[18:29:44] PlayCheck running
+[18:29:44] Hungertime2: 10
+[18:29:45] PlayCheck running
+[18:29:45] Hungertime2: 11
+[18:29:46] PlayCheck running
+[18:29:46] Hungertime2: 12
+[18:29:47] PlayCheck running
+[18:29:47] Hungertime2: 13
+[18:29:48] PlayCheck running
+[18:29:48] Hungertime2: 14
+[18:29:49] PlayCheck running
+[18:29:49] Hungertime2: 15
+[18:29:50] PlayCheck running
+[18:29:50] Hungertime2: 16
+[18:29:51] PlayCheck running
+[18:29:51] Hungertime2: 17
+[18:29:52] PlayCheck running
+[18:29:52] Hungertime2: 18
+[18:29:53] Check Blood: 12000
+[18:29:53] PlayCheck running
+[18:29:53] Hungertime2: 19
+[18:29:55] PlayCheck running
+[18:29:55] Hunger Time: 20
+[18:29:55] Hungertime2: 0
+[18:29:56] PlayCheck running
+[18:29:56] Hungertime2: 1
+[18:29:57] PlayCheck running
+[18:29:57] Hungertime2: 2
+[18:29:58] PlayCheck running
+[18:29:58] Hungertime2: 3
+[18:29:59] PlayCheck running
+[18:29:59] Hungertime2: 4
+[18:30:00] PlayCheck running
+[18:30:00] Hungertime2: 5
+[18:30:01] PlayCheck running
+[18:30:01] Hungertime2: 6
+[18:30:02] PlayCheck running
+[18:30:02] Hungertime2: 7
+[18:30:03] PlayCheck running
+[18:30:03] Hungertime2: 8
+[18:30:04] PlayCheck running
+[18:30:04] Hungertime2: 9
+[18:30:06] PlayCheck running
+[18:30:06] Hungertime2: 10
+[18:30:07] PlayCheck running
+[18:30:07] Hungertime2: 11
+[18:30:08] PlayCheck running
+[18:30:08] Hungertime2: 12
+[18:30:09] PlayCheck running
+[18:30:09] Hungertime2: 13
+[18:30:10] PlayCheck running
+[18:30:10] Hungertime2: 14
+[18:30:11] PlayCheck running
+[18:30:11] Hungertime2: 15
+[18:30:12] PlayCheck running
+[18:30:12] Hungertime2: 16
+[18:30:13] PlayCheck running
+[18:30:13] Hungertime2: 17
+[18:30:14] PlayCheck running
+[18:30:14] Hungertime2: 18
+[18:30:15] PlayCheck running
+[18:30:15] Hungertime2: 19
+[18:30:17] PlayCheck running
+[18:30:17] Hunger Time: 20
+[18:30:17] Hungertime2: 0
+[18:30:18] PlayCheck running
+[18:30:18] Hungertime2: 1
+[18:30:19] PlayCheck running
+[18:30:19] Hungertime2: 2
+[18:30:20] PlayCheck running
+[18:30:20] Hungertime2: 3
+[18:30:21] PlayCheck running
+[18:30:21] Hungertime2: 4
+[18:30:22] PlayCheck running
+[18:30:22] Hungertime2: 5
+[18:30:23] PlayCheck running
+[18:30:23] Hungertime2: 6
+[18:30:24] PlayCheck running
+[18:30:24] Hungertime2: 7
+[18:30:25] PlayCheck running
+[18:30:25] Hungertime2: 8
+[18:30:26] PlayCheck running
+[18:30:26] Hungertime2: 9
+[18:30:26] Check Blood: 12000
+[18:30:27] PlayCheck running
+[18:30:28] Hungertime2: 10
+[18:30:29] PlayCheck running
+[18:30:29] Hungertime2: 11
+[18:30:30] PlayCheck running
+[18:30:30] Hungertime2: 12
+[18:30:31] PlayCheck running
+[18:30:31] Hungertime2: 13
+[18:30:32] PlayCheck running
+[18:30:32] Hungertime2: 14
+[18:30:33] PlayCheck running
+[18:30:33] Hungertime2: 15
+[18:30:34] PlayCheck running
+[18:30:34] Hungertime2: 16
+[18:30:35] PlayCheck running
+[18:30:35] Hungertime2: 17
+[18:30:36] PlayCheck running
+[18:30:36] Hungertime2: 18
+[18:30:37] PlayCheck running
+[18:30:37] Hungertime2: 19
+[18:30:38] PlayCheck running
+[18:30:38] Hunger Time: 20
+[18:30:38] Hungertime2: 0
+[18:30:40] PlayCheck running
+[18:30:40] Hungertime2: 1
+[18:30:41] PlayCheck running
+[18:30:41] Hungertime2: 2
+[18:30:42] PlayCheck running
+[18:30:42] Hungertime2: 3
+[18:30:43] PlayCheck running
+[18:30:43] Hungertime2: 4
+[18:30:44] PlayCheck running
+[18:30:44] Hungertime2: 5
+[18:30:45] PlayCheck running
+[18:30:45] Hungertime2: 6
+[18:30:46] PlayCheck running
+[18:30:46] Hungertime2: 7
+[18:30:47] PlayCheck running
+[18:30:47] Hungertime2: 8
+[18:30:48] PlayCheck running
+[18:30:48] Hungertime2: 9
+[18:30:49] PlayCheck running
+[18:30:49] Hungertime2: 10
+[18:30:51] PlayCheck running
+[18:30:51] Hungertime2: 11
+[18:30:52] PlayCheck running
+[18:30:52] Hungertime2: 12
+[18:30:53] PlayCheck running
+[18:30:53] Hungertime2: 13
+[18:30:54] PlayCheck running
+[18:30:54] Hungertime2: 14
+[18:30:55] PlayCheck running
+[18:30:55] Hungertime2: 15
+[18:30:56] PlayCheck running
+[18:30:56] Hungertime2: 16
+[18:30:57] PlayCheck running
+[18:30:57] Hungertime2: 17
+[18:30:58] PlayCheck running
+[18:30:58] Hungertime2: 18
+[18:30:59] PlayCheck running
+[18:30:59] Hungertime2: 19
+[18:30:59] Check Blood: 12000
+[18:31:00] PlayCheck running
+[18:31:00] Hunger Time: 20
+[18:31:00] Hungertime2: 0
+[18:31:02] PlayCheck running
+[18:31:02] Hungertime2: 1
+[18:31:03] PlayCheck running
+[18:31:03] Hungertime2: 2
+[18:31:04] PlayCheck running
+[18:31:04] Hungertime2: 3
+[18:31:05] PlayCheck running
+[18:31:05] Hungertime2: 4
+[18:31:06] PlayCheck running
+[18:31:06] Hungertime2: 5
+[18:31:07] PlayCheck running
+[18:31:07] Hungertime2: 6
+[18:31:08] PlayCheck running
+[18:31:08] Hungertime2: 7
+[18:31:09] PlayCheck running
+[18:31:09] Hungertime2: 8
+[18:31:10] PlayCheck running
+[18:31:10] Hungertime2: 9
+[18:31:11] PlayCheck running
+[18:31:11] Hungertime2: 10
+[18:31:13] PlayCheck running
+[18:31:13] Hungertime2: 11
+[18:31:14] PlayCheck running
+[18:31:14] Hungertime2: 12
+[18:31:15] PlayCheck running
+[18:31:15] Hungertime2: 13
+[18:31:16] PlayCheck running
+[18:31:16] Hungertime2: 14
+[18:31:17] PlayCheck running
+[18:31:17] Hungertime2: 15
+[18:31:18] PlayCheck running
+[18:31:18] Hungertime2: 16
+[18:31:19] PlayCheck running
+[18:31:19] Hungertime2: 17
+[18:31:20] PlayCheck running
+[18:31:20] Hungertime2: 18
+[18:31:21] PlayCheck running
+[18:31:21] Hungertime2: 19
+[18:31:22] PlayCheck running
+[18:31:22] Hunger Time: 20
+[18:31:22] Hungertime2: 0
+[18:31:24] PlayCheck running
+[18:31:24] Hungertime2: 1
+[18:31:25] PlayCheck running
+[18:31:25] Hungertime2: 2
+[18:31:26] PlayCheck running
+[18:31:26] Hungertime2: 3
+[18:31:27] PlayCheck running
+[18:31:27] Hungertime2: 4
+[18:31:28] PlayCheck running
+[18:31:28] Hungertime2: 5
+[18:31:29] PlayCheck running
+[18:31:29] Hungertime2: 6
+[18:31:30] PlayCheck running
+[18:31:30] Hungertime2: 7
+[18:31:31] PlayCheck running
+[18:31:31] Hungertime2: 8
+[18:31:32] PlayCheck running
+[18:31:32] Hungertime2: 9
+[18:31:33] Check Blood: 12000
+[18:31:33] PlayCheck running
+[18:31:33] Hungertime2: 10
+[18:31:35] PlayCheck running
+[18:31:35] Hungertime2: 11
+[18:31:36] PlayCheck running
+[18:31:36] Hungertime2: 12
+[18:31:37] PlayCheck running
+[18:31:37] Hungertime2: 13
+[18:31:38] PlayCheck running
+[18:31:38] Hungertime2: 14
+[18:31:39] PlayCheck running
+[18:31:39] Hungertime2: 15
+[18:31:40] PlayCheck running
+[18:31:40] Hungertime2: 16
+[18:31:41] PlayCheck running
+[18:31:41] Hungertime2: 17
+[18:31:42] PlayCheck running
+[18:31:42] Hungertime2: 18
+[18:31:43] PlayCheck running
+[18:31:43] Hungertime2: 19
+[18:31:44] PlayCheck running
+[18:31:44] Hunger Time: 20
+[18:31:44] Hungertime2: 0
+[18:31:46] PlayCheck running
+[18:31:46] Hungertime2: 1
+[18:31:47] PlayCheck running
+[18:31:47] Hungertime2: 2
+[18:31:48] PlayCheck running
+[18:31:48] Hungertime2: 3
+[18:31:49] PlayCheck running
+[18:31:49] Hungertime2: 4
+[18:31:50] PlayCheck running
+[18:31:50] Hungertime2: 5
+[18:31:51] PlayCheck running
+[18:31:51] Hungertime2: 6
+[18:31:52] PlayCheck running
+[18:31:52] Hungertime2: 7
+[18:31:53] PlayCheck running
+[18:31:53] Hungertime2: 8
+[18:31:54] PlayCheck running
+[18:31:54] Hungertime2: 9
+[18:31:55] PlayCheck running
+[18:31:55] Hungertime2: 10
+[18:31:56] PlayCheck running
+[18:31:56] Hungertime2: 11
+[18:31:58] PlayCheck running
+[18:31:58] Hungertime2: 12
+[18:31:59] PlayCheck running
+[18:31:59] Hungertime2: 13
+[18:32:00] PlayCheck running
+[18:32:00] Hungertime2: 14
+[18:32:01] PlayCheck running
+[18:32:01] Hungertime2: 15
+[18:32:02] PlayCheck running
+[18:32:02] Hungertime2: 16
+[18:32:03] PlayCheck running
+[18:32:03] Hungertime2: 17
+[18:32:04] PlayCheck running
+[18:32:04] Hungertime2: 18
+[18:32:05] PlayCheck running
+[18:32:05] Hungertime2: 19
+[18:32:06] Check Blood: 12000
+[18:32:06] PlayCheck running
+[18:32:06] Hunger Time: 20
+[18:32:06] Hungertime2: 0
+[18:32:07] PlayCheck running
+[18:32:07] Hungertime2: 1
+[18:32:09] PlayCheck running
+[18:32:09] Hungertime2: 2
+[18:32:10] PlayCheck running
+[18:32:10] Hungertime2: 3
+[18:32:11] PlayCheck running
+[18:32:11] Hungertime2: 4
+[18:32:12] PlayCheck running
+[18:32:12] Hungertime2: 5
+[18:32:13] PlayCheck running
+[18:32:13] Hungertime2: 6
+[18:32:14] PlayCheck running
+[18:32:14] Hungertime2: 7
+[18:32:15] PlayCheck running
+[18:32:15] Hungertime2: 8
+[18:32:16] PlayCheck running
+[18:32:16] Hungertime2: 9
+[18:32:17] PlayCheck running
+[18:32:17] Hungertime2: 10
+[18:32:18] PlayCheck running
+[18:32:18] Hungertime2: 11
+[18:32:20] PlayCheck running
+[18:32:20] Hungertime2: 12
+[18:32:21] PlayCheck running
+[18:32:21] Hungertime2: 13
+[18:32:22] PlayCheck running
+[18:32:22] Hungertime2: 14
+[18:32:23] PlayCheck running
+[18:32:23] Hungertime2: 15
+[18:32:24] PlayCheck running
+[18:32:24] Hungertime2: 16
+[18:32:25] PlayCheck running
+[18:32:25] Hungertime2: 17
+[18:32:26] PlayCheck running
+[18:32:26] Hungertime2: 18
+[18:32:27] PlayCheck running
+[18:32:27] Hungertime2: 19
+[18:32:28] PlayCheck running
+[18:32:28] Hunger Time: 20
+[18:32:28] Hungertime2: 0
+[18:32:29] PlayCheck running
+[18:32:29] Hungertime2: 1
+[18:32:31] PlayCheck running
+[18:32:31] Hungertime2: 2
+[18:32:32] PlayCheck running
+[18:32:32] Hungertime2: 3
+[18:32:33] PlayCheck running
+[18:32:33] Hungertime2: 4
+[18:32:34] PlayCheck running
+[18:32:34] Hungertime2: 5
+[18:32:35] PlayCheck running
+[18:32:35] Hungertime2: 6
+[18:32:36] PlayCheck running
+[18:32:36] Hungertime2: 7
+[18:32:37] PlayCheck running
+[18:32:37] Hungertime2: 8
+[18:32:38] PlayCheck running
+[18:32:38] Hungertime2: 9
+[18:32:39] Check Blood: 12000
+[18:32:39] PlayCheck running
+[18:32:39] Hungertime2: 10
+[18:32:40] PlayCheck running
+[18:32:40] Hungertime2: 11
+[18:32:42] PlayCheck running
+[18:32:42] Hungertime2: 12
+[18:32:43] PlayCheck running
+[18:32:43] Hungertime2: 13
+[18:32:44] PlayCheck running
+[18:32:44] Hungertime2: 14
+[18:32:45] PlayCheck running
+[18:32:45] Hungertime2: 15
+[18:32:46] PlayCheck running
+[18:32:46] Hungertime2: 16
+[18:32:47] PlayCheck running
+[18:32:47] Hungertime2: 17
+[18:32:48] PlayCheck running
+[18:32:48] Hungertime2: 18
+[18:32:49] PlayCheck running
+[18:32:49] Hungertime2: 19
+[18:32:50] PlayCheck running
+[18:32:50] Hunger Time: 20
+[18:32:50] Hungertime2: 0
+[18:32:51] PlayCheck running
+[18:32:51] Hungertime2: 1
+[18:32:52] PlayCheck running
+[18:32:52] Hungertime2: 2
+[18:32:54] PlayCheck running
+[18:32:54] Hungertime2: 3
+[18:32:55] PlayCheck running
+[18:32:55] Hungertime2: 4
+[18:32:56] PlayCheck running
+[18:32:56] Hungertime2: 5
+[18:32:57] PlayCheck running
+[18:32:57] Hungertime2: 6
+[18:32:58] PlayCheck running
+[18:32:58] Hungertime2: 7
+[18:32:59] PlayCheck running
+[18:32:59] Hungertime2: 8
+[18:33:00] PlayCheck running
+[18:33:00] Hungertime2: 9
+[18:33:01] PlayCheck running
+[18:33:01] Hungertime2: 10
+[18:33:02] PlayCheck running
+[18:33:02] Hungertime2: 11
+[18:33:03] PlayCheck running
+[18:33:03] Hungertime2: 12
+[18:33:05] PlayCheck running
+[18:33:05] Hungertime2: 13
+[18:33:06] PlayCheck running
+[18:33:06] Hungertime2: 14
+[18:33:07] PlayCheck running
+[18:33:07] Hungertime2: 15
+[18:33:08] PlayCheck running
+[18:33:08] Hungertime2: 16
+[18:33:09] PlayCheck running
+[18:33:09] Hungertime2: 17
+[18:33:10] PlayCheck running
+[18:33:10] Hungertime2: 18
+[18:33:11] PlayCheck running
+[18:33:11] Hungertime2: 19
+[18:33:12] Check Blood: 12000
+[18:33:12] PlayCheck running
+[18:33:12] Hunger Time: 20
+[18:33:12] Hungertime2: 0
+[18:33:13] PlayCheck running
+[18:33:13] Hungertime2: 1
+[18:33:14] PlayCheck running
+[18:33:14] Hungertime2: 2
+[18:33:16] PlayCheck running
+[18:33:16] Hungertime2: 3
+[18:33:17] PlayCheck running
+[18:33:17] Hungertime2: 4
+[18:33:18] PlayCheck running
+[18:33:18] Hungertime2: 5
+[18:33:19] PlayCheck running
+[18:33:19] Hungertime2: 6
+[18:33:20] PlayCheck running
+[18:33:20] Hungertime2: 7
+[18:33:21] PlayCheck running
+[18:33:21] Hungertime2: 8
+[18:33:22] PlayCheck running
+[18:33:22] Hungertime2: 9
+[18:33:23] PlayCheck running
+[18:33:23] Hungertime2: 10
+[18:33:24] PlayCheck running
+[18:33:24] Hungertime2: 11
+[18:33:25] PlayCheck running
+[18:33:25] Hungertime2: 12
+[18:33:27] PlayCheck running
+[18:33:27] Hungertime2: 13
+[18:33:28] PlayCheck running
+[18:33:28] Hungertime2: 14
+[18:33:29] PlayCheck running
+[18:33:29] Hungertime2: 15
+[18:33:30] PlayCheck running
+[18:33:30] Hungertime2: 16
+[18:33:31] PlayCheck running
+[18:33:31] Hungertime2: 17
+[18:33:32] PlayCheck running
+[18:33:32] Hungertime2: 18
+[18:33:33] PlayCheck running
+[18:33:33] Hungertime2: 19
+[18:33:34] PlayCheck running
+[18:33:34] Hunger Time: 20
+[18:33:34] Hungertime2: 0
+[18:33:35] PlayCheck running
+[18:33:35] Hungertime2: 1
+[18:33:36] PlayCheck running
+[18:33:36] Hungertime2: 2
+[18:33:38] PlayCheck running
+[18:33:38] Hungertime2: 3
+[18:33:39] PlayCheck running
+[18:33:39] Hungertime2: 4
+[18:33:40] PlayCheck running
+[18:33:40] Hungertime2: 5
+[18:33:41] PlayCheck running
+[18:33:41] Hungertime2: 6
+[18:33:42] PlayCheck running
+[18:33:42] Hungertime2: 7
+[18:33:43] PlayCheck running
+[18:33:43] Hungertime2: 8
+[18:33:44] PlayCheck running
+[18:33:44] Hungertime2: 9
+[18:33:45] Check Blood: 12000
+[18:33:45] PlayCheck running
+[18:33:45] Hungertime2: 10
+[18:33:46] PlayCheck running
+[18:33:46] Hungertime2: 11
+[18:33:47] PlayCheck running
+[18:33:47] Hungertime2: 12
+[18:33:49] PlayCheck running
+[18:33:49] Hungertime2: 13
+[18:33:50] PlayCheck running
+[18:33:50] Hungertime2: 14
+[18:33:51] PlayCheck running
+[18:33:51] Hungertime2: 15
+[18:33:52] PlayCheck running
+[18:33:52] Hungertime2: 16
+[18:33:53] PlayCheck running
+[18:33:53] Hungertime2: 17
+[18:33:54] PlayCheck running
+[18:33:54] Hungertime2: 18
+[18:33:55] PlayCheck running
+[18:33:55] Hungertime2: 19
+[18:33:56] PlayCheck running
+[18:33:56] Hunger Time: 20
+[18:33:56] Hungertime2: 0
+[18:33:57] PlayCheck running
+[18:33:57] Hungertime2: 1
+[18:33:58] PlayCheck running
+[18:33:58] Hungertime2: 2
+[18:34:00] PlayCheck running
+[18:34:00] Hungertime2: 3
+[18:34:01] PlayCheck running
+[18:34:01] Hungertime2: 4
+[18:34:02] PlayCheck running
+[18:34:02] Hungertime2: 5
+[18:34:03] PlayCheck running
+[18:34:03] Hungertime2: 6
+[18:34:04] PlayCheck running
+[18:34:04] Hungertime2: 7
+[18:34:05] PlayCheck running
+[18:34:05] Hungertime2: 8
+[18:34:06] PlayCheck running
+[18:34:06] Hungertime2: 9
+[18:34:07] PlayCheck running
+[18:34:07] Hungertime2: 10
+[18:34:08] PlayCheck running
+[18:34:08] Hungertime2: 11
+[18:34:09] PlayCheck running
+[18:34:09] Hungertime2: 12
+[18:34:11] PlayCheck running
+[18:34:11] Hungertime2: 13
+[18:34:12] PlayCheck running
+[18:34:12] Hungertime2: 14
+[18:34:13] PlayCheck running
+[18:34:13] Hungertime2: 15
+[18:34:14] PlayCheck running
+[18:34:14] Hungertime2: 16
+[18:34:15] PlayCheck running
+[18:34:15] Hungertime2: 17
+[18:34:16] PlayCheck running
+[18:34:16] Hungertime2: 18
+[18:34:17] PlayCheck running
+[18:34:17] Hungertime2: 19
+[18:34:18] Check Blood: 12000
+[18:34:18] PlayCheck running
+[18:34:18] Hunger Time: 20
+[18:34:18] Hungertime2: 0
+[18:34:19] PlayCheck running
+[18:34:19] Hungertime2: 1
+[18:34:20] PlayCheck running
+[18:34:20] Hungertime2: 2
+[18:34:22] PlayCheck running
+[18:34:22] Hungertime2: 3
+[18:34:23] PlayCheck running
+[18:34:23] Hungertime2: 4
+[18:34:24] PlayCheck running
+[18:34:24] Hungertime2: 5
+[18:34:25] PlayCheck running
+[18:34:25] Hungertime2: 6
+[18:34:26] PlayCheck running
+[18:34:26] Hungertime2: 7
+[18:34:27] PlayCheck running
+[18:34:27] Hungertime2: 8
+[18:34:28] PlayCheck running
+[18:34:28] Hungertime2: 9
+[18:34:29] PlayCheck running
+[18:34:29] Hungertime2: 10
+[18:34:30] PlayCheck running
+[18:34:30] Hungertime2: 11
+[18:34:31] PlayCheck running
+[18:34:31] Hungertime2: 12
+[18:34:33] PlayCheck running
+[18:34:33] Hungertime2: 13
+[18:34:34] PlayCheck running
+[18:34:34] Hungertime2: 14
+[18:34:35] PlayCheck running
+[18:34:35] Hungertime2: 15
+[18:34:36] PlayCheck running
+[18:34:36] Hungertime2: 16
+[18:34:37] PlayCheck running
+[18:34:37] Hungertime2: 17
+[18:34:38] PlayCheck running
+[18:34:38] Hungertime2: 18
+[18:34:39] PlayCheck running
+[18:34:39] Hungertime2: 19
+[18:34:40] PlayCheck running
+[18:34:40] Hunger Time: 20
+[18:34:40] Hungertime2: 0
+[18:34:41] PlayCheck running
+[18:34:41] Hungertime2: 1
+[18:34:42] PlayCheck running
+[18:34:42] Hungertime2: 2
+[18:34:44] PlayCheck running
+[18:34:44] Hungertime2: 3
+[18:34:45] PlayCheck running
+[18:34:45] Hungertime2: 4
+[18:34:46] PlayCheck running
+[18:34:46] Hungertime2: 5
+[18:34:47] PlayCheck running
+[18:34:47] Hungertime2: 6
+[18:34:48] PlayCheck running
+[18:34:48] Hungertime2: 7
+[18:34:49] PlayCheck running
+[18:34:49] Hungertime2: 8
+[18:34:50] PlayCheck running
+[18:34:50] Hungertime2: 9
+[18:34:51] Check Blood: 12000
+[18:34:51] PlayCheck running
+[18:34:51] Hungertime2: 10
+[18:34:52] PlayCheck running
+[18:34:52] Hungertime2: 11
+[18:34:53] PlayCheck running
+[18:34:53] Hungertime2: 12
+[18:34:54] PlayCheck running
+[18:34:54] Hungertime2: 13
+[18:34:56] PlayCheck running
+[18:34:56] Hungertime2: 14
+[18:34:57] PlayCheck running
+[18:34:57] Hungertime2: 15
+[18:34:58] PlayCheck running
+[18:34:58] Hungertime2: 16
+[18:34:59] PlayCheck running
+[18:34:59] Hungertime2: 17
+[18:35:00] PlayCheck running
+[18:35:00] Hungertime2: 18
+[18:35:01] PlayCheck running
+[18:35:01] Hungertime2: 19
+[18:35:02] PlayCheck running
+[18:35:02] Hunger Time: 20
+[18:35:02] Hungertime2: 0
+[18:35:03] PlayCheck running
+[18:35:03] Hungertime2: 1
+[18:35:04] PlayCheck running
+[18:35:04] Hungertime2: 2
+[18:35:05] PlayCheck running
+[18:35:05] Hungertime2: 3
+[18:35:07] PlayCheck running
+[18:35:07] Hungertime2: 4
+[18:35:08] PlayCheck running
+[18:35:08] Hungertime2: 5
+[18:35:09] PlayCheck running
+[18:35:09] Hungertime2: 6
+[18:35:10] PlayCheck running
+[18:35:10] Hungertime2: 7
+[18:35:11] PlayCheck running
+[18:35:11] Hungertime2: 8
+[18:35:12] PlayCheck running
+[18:35:12] Hungertime2: 9
+[18:35:13] PlayCheck running
+[18:35:13] Hungertime2: 10
+[18:35:14] PlayCheck running
+[18:35:14] Hungertime2: 11
+[18:35:15] PlayCheck running
+[18:35:15] Hungertime2: 12
+[18:35:16] PlayCheck running
+[18:35:16] Hungertime2: 13
+[18:35:18] PlayCheck running
+[18:35:18] Hungertime2: 14
+[18:35:19] PlayCheck running
+[18:35:19] Hungertime2: 15
+[18:35:20] PlayCheck running
+[18:35:20] Hungertime2: 16
+[18:35:21] PlayCheck running
+[18:35:21] Hungertime2: 17
+[18:35:22] PlayCheck running
+[18:35:22] Hungertime2: 18
+[18:35:23] PlayCheck running
+[18:35:23] Hungertime2: 19
+[18:35:24] Check Blood: 12000
+[18:35:24] PlayCheck running
+[18:35:24] Hunger Time: 20
+[18:35:24] Hungertime2: 0
+[18:35:25] PlayCheck running
+[18:35:25] Hungertime2: 1
+[18:35:26] PlayCheck running
+[18:35:26] Hungertime2: 2
+[18:35:27] PlayCheck running
+[18:35:27] Hungertime2: 3
+[18:35:29] PlayCheck running
+[18:35:29] Hungertime2: 4
+[18:35:30] PlayCheck running
+[18:35:30] Hungertime2: 5
+[18:35:31] PlayCheck running
+[18:35:31] Hungertime2: 6
+[18:35:32] PlayCheck running
+[18:35:32] Hungertime2: 7
+[18:35:33] PlayCheck running
+[18:35:33] Hungertime2: 8
+[18:35:34] PlayCheck running
+[18:35:34] Hungertime2: 9
+[18:35:35] PlayCheck running
+[18:35:35] Hungertime2: 10
+[18:35:36] PlayCheck running
+[18:35:36] Hungertime2: 11
+[18:35:37] PlayCheck running
+[18:35:37] Hungertime2: 12
+[18:35:38] PlayCheck running
+[18:35:38] Hungertime2: 13
+[18:35:40] PlayCheck running
+[18:35:40] Hungertime2: 14
+[18:35:41] PlayCheck running
+[18:35:41] Hungertime2: 15
+[18:35:42] PlayCheck running
+[18:35:42] Hungertime2: 16
+[18:35:43] PlayCheck running
+[18:35:43] Hungertime2: 17
+[18:35:44] PlayCheck running
+[18:35:44] Hungertime2: 18
+[18:35:45] PlayCheck running
+[18:35:45] Hungertime2: 19
+[18:35:46] PlayCheck running
+[18:35:46] Hunger Time: 20
+[18:35:46] Hungertime2: 0
+[18:35:47] PlayCheck running
+[18:35:47] Hungertime2: 1
+[18:35:48] PlayCheck running
+[18:35:48] Hungertime2: 2
+[18:35:49] PlayCheck running
+[18:35:49] Hungertime2: 3
+[18:35:51] PlayCheck running
+[18:35:51] Hungertime2: 4
+[18:35:52] PlayCheck running
+[18:35:52] Hungertime2: 5
+[18:35:53] PlayCheck running
+[18:35:53] Hungertime2: 6
+[18:35:54] PlayCheck running
+[18:35:54] Hungertime2: 7
+[18:35:55] PlayCheck running
+[18:35:55] Hungertime2: 8
+[18:35:56] PlayCheck running
+[18:35:56] Hungertime2: 9
+[18:35:57] Check Blood: 12000
+[18:35:57] PlayCheck running
+[18:35:57] Hungertime2: 10
+[18:35:58] PlayCheck running
+[18:35:58] Hungertime2: 11
+[18:35:59] PlayCheck running
+[18:35:59] Hungertime2: 12
+[18:36:00] PlayCheck running
+[18:36:00] Hungertime2: 13
+[18:36:02] PlayCheck running
+[18:36:02] Hungertime2: 14
+[18:36:03] PlayCheck running
+[18:36:03] Hungertime2: 15
+[18:36:04] PlayCheck running
+[18:36:04] Hungertime2: 16
+[18:36:05] PlayCheck running
+[18:36:05] Hungertime2: 17
+[18:36:06] PlayCheck running
+[18:36:06] Hungertime2: 18
+[18:36:07] PlayCheck running
+[18:36:07] Hungertime2: 19
+[18:36:08] PlayCheck running
+[18:36:08] Hunger Time: 20
+[18:36:08] Hungertime2: 0
+[18:36:09] PlayCheck running
+[18:36:09] Hungertime2: 1
+[18:36:10] PlayCheck running
+[18:36:10] Hungertime2: 2
+[18:36:11] PlayCheck running
+[18:36:11] Hungertime2: 3
+[18:36:13] PlayCheck running
+[18:36:13] Hungertime2: 4
+[18:36:14] PlayCheck running
+[18:36:14] Hungertime2: 5
+[18:36:15] PlayCheck running
+[18:36:15] Hungertime2: 6
+[18:36:16] PlayCheck running
+[18:36:16] Hungertime2: 7
+[18:36:17] PlayCheck running
+[18:36:17] Hungertime2: 8
+[18:36:18] PlayCheck running
+[18:36:18] Hungertime2: 9
+[18:36:19] PlayCheck running
+[18:36:19] Hungertime2: 10
+[18:36:20] PlayCheck running
+[18:36:20] Hungertime2: 11
+[18:36:21] PlayCheck running
+[18:36:21] Hungertime2: 12
+[18:36:22] PlayCheck running
+[18:36:22] Hungertime2: 13
+[18:36:24] PlayCheck running
+[18:36:24] Hungertime2: 14
+[18:36:25] PlayCheck running
+[18:36:25] Hungertime2: 15
+[18:36:26] PlayCheck running
+[18:36:26] Hungertime2: 16
+[18:36:27] PlayCheck running
+[18:36:27] Hungertime2: 17
+[18:36:28] PlayCheck running
+[18:36:28] Hungertime2: 18
+[18:36:29] PlayCheck running
+[18:36:29] Hungertime2: 19
+[18:36:30] PlayCheck running
+[18:36:30] Hunger Time: 20
+[18:36:30] Hungertime2: 0
+[18:36:30] Check Blood: 12000
+[18:36:31] PlayCheck running
+[18:36:31] Hungertime2: 1
+[18:36:32] PlayCheck running
+[18:36:32] Hungertime2: 2
+[18:36:33] PlayCheck running
+[18:36:33] Hungertime2: 3
+[18:36:35] PlayCheck running
+[18:36:35] Hungertime2: 4
+[18:36:36] PlayCheck running
+[18:36:36] Hungertime2: 5
+[18:36:37] PlayCheck running
+[18:36:37] Hungertime2: 6
+[18:36:38] PlayCheck running
+[18:36:38] Hungertime2: 7
+[18:36:39] PlayCheck running
+[18:36:39] Hungertime2: 8
+[18:36:40] PlayCheck running
+[18:36:40] Hungertime2: 9
+[18:36:41] PlayCheck running
+[18:36:41] Hungertime2: 10
+[18:36:42] PlayCheck running
+[18:36:42] Hungertime2: 11
+[18:36:43] PlayCheck running
+[18:36:43] Hungertime2: 12
+[18:36:44] PlayCheck running
+[18:36:44] Hungertime2: 13
+[18:36:46] PlayCheck running
+[18:36:46] Hungertime2: 14
+[18:36:47] PlayCheck running
+[18:36:47] Hungertime2: 15
+[18:36:48] PlayCheck running
+[18:36:48] Hungertime2: 16
+[18:36:49] PlayCheck running
+[18:36:49] Hungertime2: 17
+[18:36:50] PlayCheck running
+[18:36:50] Hungertime2: 18
+[18:36:51] PlayCheck running
+[18:36:51] Hungertime2: 19
+[18:36:52] PlayCheck running
+[18:36:52] Hunger Time: 20
+[18:36:52] Hungertime2: 0
+[18:36:53] PlayCheck running
+[18:36:53] Hungertime2: 1
+[18:36:54] PlayCheck running
+[18:36:54] Hungertime2: 2
+[18:36:55] PlayCheck running
+[18:36:55] Hungertime2: 3
+[18:36:57] PlayCheck running
+[18:36:57] Hungertime2: 4
+[18:36:58] PlayCheck running
+[18:36:58] Hungertime2: 5
+[18:36:59] PlayCheck running
+[18:36:59] Hungertime2: 6
+[18:37:00] PlayCheck running
+[18:37:00] Hungertime2: 7
+[18:37:01] PlayCheck running
+[18:37:01] Hungertime2: 8
+[18:37:02] PlayCheck running
+[18:37:02] Hungertime2: 9
+[18:37:03] PlayCheck running
+[18:37:03] Hungertime2: 10
+[18:37:03] Check Blood: 12000
+[18:37:04] PlayCheck running
+[18:37:04] Hungertime2: 11
+[18:37:05] PlayCheck running
+[18:37:05] Hungertime2: 12
+[18:37:06] PlayCheck running
+[18:37:06] Hungertime2: 13
+[18:37:08] PlayCheck running
+[18:37:08] Hungertime2: 14
+[18:37:09] PlayCheck running
+[18:37:09] Hungertime2: 15
+[18:37:10] PlayCheck running
+[18:37:10] Hungertime2: 16
+[18:37:11] PlayCheck running
+[18:37:11] Hungertime2: 17
+[18:37:12] PlayCheck running
+[18:37:12] Hungertime2: 18
+[18:37:13] PlayCheck running
+[18:37:13] Hungertime2: 19
+[18:37:14] PlayCheck running
+[18:37:14] Hunger Time: 20
+[18:37:14] Hungertime2: 0
+[18:37:15] PlayCheck running
+[18:37:15] Hungertime2: 1
+[18:37:16] PlayCheck running
+[18:37:16] Hungertime2: 2
+[18:37:17] PlayCheck running
+[18:37:17] Hungertime2: 3
+[18:37:19] PlayCheck running
+[18:37:19] Hungertime2: 4
+[18:37:20] PlayCheck running
+[18:37:20] Hungertime2: 5
+[18:37:21] PlayCheck running
+[18:37:21] Hungertime2: 6
+[18:37:22] PlayCheck running
+[18:37:22] Hungertime2: 7
+[18:37:23] PlayCheck running
+[18:37:23] Hungertime2: 8
+[18:37:24] PlayCheck running
+[18:37:24] Hungertime2: 9
+[18:37:25] PlayCheck running
+[18:37:25] Hungertime2: 10
+[18:37:26] PlayCheck running
+[18:37:26] Hungertime2: 11
+[18:37:27] PlayCheck running
+[18:37:27] Hungertime2: 12
+[18:37:28] PlayCheck running
+[18:37:28] Hungertime2: 13
+[18:37:30] PlayCheck running
+[18:37:30] Hungertime2: 14
+[18:37:31] PlayCheck running
+[18:37:31] Hungertime2: 15
+[18:37:32] PlayCheck running
+[18:37:32] Hungertime2: 16
+[18:37:33] PlayCheck running
+[18:37:33] Hungertime2: 17
+[18:37:34] PlayCheck running
+[18:37:34] Hungertime2: 18
+[18:37:35] PlayCheck running
+[18:37:35] Hungertime2: 19
+[18:37:36] PlayCheck running
+[18:37:36] Hunger Time: 20
+[18:37:36] Hungertime2: 0
+[18:37:36] Check Blood: 12000
+[18:37:37] PlayCheck running
+[18:37:37] Hungertime2: 1
+[18:37:38] PlayCheck running
+[18:37:38] Hungertime2: 2
+[18:37:39] PlayCheck running
+[18:37:39] Hungertime2: 3
+[18:37:40] PlayCheck running
+[18:37:40] Hungertime2: 4
+[18:37:42] PlayCheck running
+[18:37:42] Hungertime2: 5
+[18:37:43] PlayCheck running
+[18:37:43] Hungertime2: 6
+[18:37:44] PlayCheck running
+[18:37:44] Hungertime2: 7
+[18:37:45] PlayCheck running
+[18:37:45] Hungertime2: 8
+[18:37:46] PlayCheck running
+[18:37:46] Hungertime2: 9
+[18:37:47] PlayCheck running
+[18:37:47] Hungertime2: 10
+[18:37:48] PlayCheck running
+[18:37:48] Hungertime2: 11
+[18:37:49] PlayCheck running
+[18:37:49] Hungertime2: 12
+[18:37:50] PlayCheck running
+[18:37:50] Hungertime2: 13
+[18:37:51] PlayCheck running
+[18:37:51] Hungertime2: 14
+[18:37:53] PlayCheck running
+[18:37:53] Hungertime2: 15
+[18:37:54] PlayCheck running
+[18:37:54] Hungertime2: 16
+[18:37:55] PlayCheck running
+[18:37:55] Hungertime2: 17
+[18:37:56] PlayCheck running
+[18:37:56] Hungertime2: 18
+[18:37:57] PlayCheck running
+[18:37:57] Hungertime2: 19
+[18:37:58] PlayCheck running
+[18:37:58] Hunger Time: 20
+[18:37:58] Hungertime2: 0
+[18:37:59] PlayCheck running
+[18:37:59] Hungertime2: 1
+[18:38:00] PlayCheck running
+[18:38:00] Hungertime2: 2
+[18:38:01] PlayCheck running
+[18:38:01] Hungertime2: 3
+[18:38:02] PlayCheck running
+[18:38:02] Hungertime2: 4
+[18:38:04] PlayCheck running
+[18:38:04] Hungertime2: 5
+[18:38:05] PlayCheck running
+[18:38:05] Hungertime2: 6
+[18:38:06] PlayCheck running
+[18:38:06] Hungertime2: 7
+[18:38:07] PlayCheck running
+[18:38:07] Hungertime2: 8
+[18:38:08] PlayCheck running
+[18:38:08] Hungertime2: 9
+[18:38:09] PlayCheck running
+[18:38:09] Hungertime2: 10
+[18:38:09] Check Blood: 12000
+[18:38:10] PlayCheck running
+[18:38:10] Hungertime2: 11
+[18:38:11] PlayCheck running
+[18:38:11] Hungertime2: 12
+[18:38:12] PlayCheck running
+[18:38:12] Hungertime2: 13
+[18:38:13] PlayCheck running
+[18:38:13] Hungertime2: 14
+[18:38:15] PlayCheck running
+[18:38:15] Hungertime2: 15
+[18:38:16] PlayCheck running
+[18:38:16] Hungertime2: 16
+[18:38:17] PlayCheck running
+[18:38:17] Hungertime2: 17
+[18:38:18] PlayCheck running
+[18:38:18] Hungertime2: 18
+[18:38:19] PlayCheck running
+[18:38:19] Hungertime2: 19
+[18:38:20] PlayCheck running
+[18:38:20] Hunger Time: 20
+[18:38:20] Hungertime2: 0
+[18:38:21] PlayCheck running
+[18:38:21] Hungertime2: 1
+[18:38:22] PlayCheck running
+[18:38:22] Hungertime2: 2
+[18:38:23] PlayCheck running
+[18:38:23] Hungertime2: 3
+[18:38:24] PlayCheck running
+[18:38:24] Hungertime2: 4
+[18:38:26] PlayCheck running
+[18:38:26] Hungertime2: 5
+[18:38:27] PlayCheck running
+[18:38:27] Hungertime2: 6
+[18:38:28] PlayCheck running
+[18:38:28] Hungertime2: 7
+[18:38:29] PlayCheck running
+[18:38:29] Hungertime2: 8
+[18:38:30] PlayCheck running
+[18:38:30] Hungertime2: 9
+[18:38:31] PlayCheck running
+[18:38:31] Hungertime2: 10
+[18:38:32] PlayCheck running
+[18:38:32] Hungertime2: 11
+[18:38:33] PlayCheck running
+[18:38:33] Hungertime2: 12
+[18:38:34] PlayCheck running
+[18:38:34] Hungertime2: 13
+[18:38:35] PlayCheck running
+[18:38:35] Hungertime2: 14
+[18:38:37] PlayCheck running
+[18:38:37] Hungertime2: 15
+[18:38:38] PlayCheck running
+[18:38:38] Hungertime2: 16
+[18:38:39] PlayCheck running
+[18:38:39] Hungertime2: 17
+[18:38:40] PlayCheck running
+[18:38:40] Hungertime2: 18
+[18:38:41] PlayCheck running
+[18:38:41] Hungertime2: 19
+[18:38:42] PlayCheck running
+[18:38:42] Hunger Time: 20
+[18:38:42] Hungertime2: 0
+[18:38:43] Check Blood: 12000
+[18:38:43] PlayCheck running
+[18:38:43] Hungertime2: 1
+[18:38:44] PlayCheck running
+[18:38:44] Hungertime2: 2
+[18:38:45] PlayCheck running
+[18:38:45] Hungertime2: 3
+[18:38:46] PlayCheck running
+[18:38:46] Hungertime2: 4
+[18:38:48] PlayCheck running
+[18:38:48] Hungertime2: 5
+[18:38:49] PlayCheck running
+[18:38:49] Hungertime2: 6
+[18:38:50] PlayCheck running
+[18:38:50] Hungertime2: 7
+[18:38:51] PlayCheck running
+[18:38:51] Hungertime2: 8
+[18:38:52] PlayCheck running
+[18:38:52] Hungertime2: 9
+[18:38:53] PlayCheck running
+[18:38:53] Hungertime2: 10
+[18:38:54] PlayCheck running
+[18:38:54] Hungertime2: 11
+[18:38:55] PlayCheck running
+[18:38:55] Hungertime2: 12
+[18:38:56] PlayCheck running
+[18:38:56] Hungertime2: 13
+[18:38:57] PlayCheck running
+[18:38:57] Hungertime2: 14
+[18:38:59] PlayCheck running
+[18:38:59] Hungertime2: 15
+[18:39:00] PlayCheck running
+[18:39:00] Hungertime2: 16
+[18:39:01] PlayCheck running
+[18:39:01] Hungertime2: 17
+[18:39:02] PlayCheck running
+[18:39:02] Hungertime2: 18
+[18:39:03] PlayCheck running
+[18:39:03] Hungertime2: 19
+[18:39:04] PlayCheck running
+[18:39:04] Hunger Time: 20
+[18:39:04] Hungertime2: 0
+[18:39:05] PlayCheck running
+[18:39:05] Hungertime2: 1
+[18:39:06] PlayCheck running
+[18:39:06] Hungertime2: 2
+[18:39:07] PlayCheck running
+[18:39:07] Hungertime2: 3
+[18:39:08] PlayCheck running
+[18:39:08] Hungertime2: 4
+[18:39:10] PlayCheck running
+[18:39:10] Hungertime2: 5
+[18:39:11] PlayCheck running
+[18:39:11] Hungertime2: 6
+[18:39:12] PlayCheck running
+[18:39:12] Hungertime2: 7
+[18:39:13] PlayCheck running
+[18:39:13] Hungertime2: 8
+[18:39:14] PlayCheck running
+[18:39:14] Hungertime2: 9
+[18:39:15] PlayCheck running
+[18:39:15] Hungertime2: 10
+[18:39:16] Check Blood: 12000
+[18:39:16] PlayCheck running
+[18:39:16] Hungertime2: 11
+[18:39:17] PlayCheck running
+[18:39:17] Hungertime2: 12
+[18:39:18] PlayCheck running
+[18:39:18] Hungertime2: 13
+[18:39:19] PlayCheck running
+[18:39:19] Hungertime2: 14
+[18:39:21] PlayCheck running
+[18:39:21] Hungertime2: 15
+[18:39:22] PlayCheck running
+[18:39:22] Hungertime2: 16
+[18:39:23] PlayCheck running
+[18:39:23] Hungertime2: 17
+[18:39:24] PlayCheck running
+[18:39:24] Hungertime2: 18
+[18:39:25] PlayCheck running
+[18:39:25] Hungertime2: 19
+[18:39:26] PlayCheck running
+[18:39:26] Hunger Time: 20
+[18:39:26] Hungertime2: 0
+[18:39:27] PlayCheck running
+[18:39:27] Hungertime2: 1
+[18:39:28] PlayCheck running
+[18:39:28] Hungertime2: 2
+[18:39:29] PlayCheck running
+[18:39:29] Hungertime2: 3
+[18:39:30] PlayCheck running
+[18:39:30] Hungertime2: 4
+[18:39:32] PlayCheck running
+[18:39:32] Hungertime2: 5
+[18:39:33] PlayCheck running
+[18:39:33] Hungertime2: 6
+[18:39:34] PlayCheck running
+[18:39:34] Hungertime2: 7
+[18:39:35] PlayCheck running
+[18:39:35] Hungertime2: 8
+[18:39:36] PlayCheck running
+[18:39:36] Hungertime2: 9
+[18:39:37] PlayCheck running
+[18:39:37] Hungertime2: 10
+[18:39:38] PlayCheck running
+[18:39:38] Hungertime2: 11
+[18:39:39] PlayCheck running
+[18:39:39] Hungertime2: 12
+[18:39:40] PlayCheck running
+[18:39:40] Hungertime2: 13
+[18:39:42] PlayCheck running
+[18:39:42] Hungertime2: 14
+[18:39:43] PlayCheck running
+[18:39:43] Hungertime2: 15
+[18:39:44] PlayCheck running
+[18:39:44] Hungertime2: 16
+[18:39:45] PlayCheck running
+[18:39:45] Hungertime2: 17
+[18:39:46] PlayCheck running
+[18:39:46] Hungertime2: 18
+[18:39:47] PlayCheck running
+[18:39:47] Hungertime2: 19
+[18:39:48] PlayCheck running
+[18:39:48] Hunger Time: 20
+[18:39:48] Hungertime2: 0
+[18:39:49] Check Blood: 12000
+[18:39:49] PlayCheck running
+[18:39:49] Hungertime2: 1
+[18:39:50] PlayCheck running
+[18:39:50] Hungertime2: 2
+[18:39:51] PlayCheck running
+[18:39:51] Hungertime2: 3
+[18:39:52] PlayCheck running
+[18:39:52] Hungertime2: 4
+[18:39:54] PlayCheck running
+[18:39:54] Hungertime2: 5
+[18:39:55] PlayCheck running
+[18:39:55] Hungertime2: 6
+[18:39:56] PlayCheck running
+[18:39:56] Hungertime2: 7
+[18:39:57] PlayCheck running
+[18:39:57] Hungertime2: 8
+[18:39:58] PlayCheck running
+[18:39:58] Hungertime2: 9
+[18:39:59] PlayCheck running
+[18:39:59] Hungertime2: 10
+[18:40:00] PlayCheck running
+[18:40:00] Hungertime2: 11
+[18:40:01] PlayCheck running
+[18:40:01] Hungertime2: 12
+[18:40:02] PlayCheck running
+[18:40:02] Hungertime2: 13
+[18:40:03] PlayCheck running
+[18:40:03] Hungertime2: 14
+[18:40:05] PlayCheck running
+[18:40:05] Hungertime2: 15
+[18:40:06] PlayCheck running
+[18:40:06] Hungertime2: 16
+[18:40:07] PlayCheck running
+[18:40:07] Hungertime2: 17
+[18:40:08] PlayCheck running
+[18:40:08] Hungertime2: 18
+[18:40:09] PlayCheck running
+[18:40:09] Hungertime2: 19
+[18:40:10] PlayCheck running
+[18:40:10] Hunger Time: 20
+[18:40:10] Hungertime2: 0
+[18:40:11] PlayCheck running
+[18:40:11] Hungertime2: 1
+[18:40:12] PlayCheck running
+[18:40:12] Hungertime2: 2
+[18:40:13] PlayCheck running
+[18:40:13] Hungertime2: 3
+[18:40:14] Listitem: 5 || Listitem Name: Water Bottle
+[18:40:14] PlayCheck running
+[18:40:14] Hungertime2: 4
+[18:40:16] PlayCheck running
+[18:40:16] Hungertime2: 5
+[18:40:17] PlayCheck running
+[18:40:17] Hungertime2: 6
+[18:40:18] PlayCheck running
+[18:40:18] Hungertime2: 7
+[18:40:19] PlayCheck running
+[18:40:19] Hungertime2: 8
+[18:40:20] PlayCheck running
+[18:40:20] Hungertime2: 9
+[18:40:21] PlayCheck running
+[18:40:21] Hungertime2: 10
+[18:40:22] Check Blood: 12000
+[18:40:22] PlayCheck running
+[18:40:22] Hungertime2: 11
+[18:40:23] PlayCheck running
+[18:40:23] Hungertime2: 12
+[18:40:24] PlayCheck running
+[18:40:24] Hungertime2: 13
+[18:40:25] PlayCheck running
+[18:40:25] Hungertime2: 14
+[18:40:27] PlayCheck running
+[18:40:27] Hungertime2: 15
+[18:40:28] PlayCheck running
+[18:40:28] Hungertime2: 16
+[18:40:29] PlayCheck running
+[18:40:29] Hungertime2: 17
+[18:40:30] PlayCheck running
+[18:40:30] Hungertime2: 18
+[18:40:31] PlayCheck running
+[18:40:31] Hungertime2: 19
+[18:40:32] PlayCheck running
+[18:40:32] Hunger Time: 20
+[18:40:32] Hungertime2: 0
+[18:40:33] PlayCheck running
+[18:40:33] Hungertime2: 1
+[18:40:34] PlayCheck running
+[18:40:34] Hungertime2: 2
+[18:40:35] PlayCheck running
+[18:40:35] Hungertime2: 3
+[18:40:36] PlayCheck running
+[18:40:36] Hungertime2: 4
+[18:40:38] PlayCheck running
+[18:40:38] Hungertime2: 5
+[18:40:39] PlayCheck running
+[18:40:39] Hungertime2: 6
+[18:40:40] PlayCheck running
+[18:40:40] Hungertime2: 7
+[18:40:41] PlayCheck running
+[18:40:41] Hungertime2: 8
+[18:40:42] PlayCheck running
+[18:40:42] Hungertime2: 9
+[18:40:43] PlayCheck running
+[18:40:43] Hungertime2: 10
+[18:40:44] PlayCheck running
+[18:40:44] Hungertime2: 11
+[18:40:45] PlayCheck running
+[18:40:45] Hungertime2: 12
+[18:40:46] PlayCheck running
+[18:40:46] Hungertime2: 13
+[18:40:47] PlayCheck running
+[18:40:47] Hungertime2: 14
+[18:40:49] PlayCheck running
+[18:40:49] Hungertime2: 15
+[18:40:50] PlayCheck running
+[18:40:50] Hungertime2: 16
+[18:40:51] PlayCheck running
+[18:40:51] Hungertime2: 17
+[18:40:52] PlayCheck running
+[18:40:52] Hungertime2: 18
+[18:40:53] PlayCheck running
+[18:40:53] Hungertime2: 19
+[18:40:54] PlayCheck running
+[18:40:54] Hunger Time: 20
+[18:40:54] Hungertime2: 0
+[18:40:55] Check Blood: 12000
+[18:40:55] PlayCheck running
+[18:40:55] Hungertime2: 1
+[18:40:56] PlayCheck running
+[18:40:56] Hungertime2: 2
+[18:40:57] PlayCheck running
+[18:40:57] Hungertime2: 3
+[18:40:58] PlayCheck running
+[18:40:58] Hungertime2: 4
+[18:40:59] PlayCheck running
+[18:40:59] Hungertime2: 5
+[18:41:01] PlayCheck running
+[18:41:01] Hungertime2: 6
+[18:41:02] PlayCheck running
+[18:41:02] Hungertime2: 7
+[18:41:03] PlayCheck running
+[18:41:03] Hungertime2: 8
+[18:41:04] PlayCheck running
+[18:41:04] Hungertime2: 9
+[18:41:05] PlayCheck running
+[18:41:05] Hungertime2: 10
+[18:41:06] PlayCheck running
+[18:41:06] Hungertime2: 11
+[18:41:07] PlayCheck running
+[18:41:07] Hungertime2: 12
+[18:41:08] PlayCheck running
+[18:41:08] Hungertime2: 13
+[18:41:09] PlayCheck running
+[18:41:09] Hungertime2: 14
+[18:41:10] PlayCheck running
+[18:41:10] Hungertime2: 15
+[18:41:12] PlayCheck running
+[18:41:12] Hungertime2: 16
+[18:41:13] PlayCheck running
+[18:41:13] Hungertime2: 17
+[18:41:14] PlayCheck running
+[18:41:14] Hungertime2: 18
+[18:41:15] PlayCheck running
+[18:41:15] Hungertime2: 19
+[18:41:16] PlayCheck running
+[18:41:16] Hunger Time: 20
+[18:41:16] Hungertime2: 0
+[18:41:17] PlayCheck running
+[18:41:17] Hungertime2: 1
+[18:41:18] PlayCheck running
+[18:41:18] Hungertime2: 2
+[18:41:19] PlayCheck running
+[18:41:19] Hungertime2: 3
+[18:41:20] PlayCheck running
+[18:41:20] Hungertime2: 4
+[18:41:22] PlayCheck running
+[18:41:22] Hungertime2: 5
+[18:41:23] PlayCheck running
+[18:41:23] Hungertime2: 6
+[18:41:24] PlayCheck running
+[18:41:24] Hungertime2: 7
+[18:41:25] PlayCheck running
+[18:41:25] Hungertime2: 8
+[18:41:26] PlayCheck running
+[18:41:26] Hungertime2: 9
+[18:41:27] PlayCheck running
+[18:41:27] Hungertime2: 10
+[18:41:28] Check Blood: 12000
+[18:41:28] PlayCheck running
+[18:41:28] Hungertime2: 11
+[18:41:29] PlayCheck running
+[18:41:29] Hungertime2: 12
+[18:41:30] PlayCheck running
+[18:41:30] Hungertime2: 13
+[18:41:31] PlayCheck running
+[18:41:31] Hungertime2: 14
+[18:41:33] PlayCheck running
+[18:41:33] Hungertime2: 15
+[18:41:34] PlayCheck running
+[18:41:34] Hungertime2: 16
+[18:41:35] PlayCheck running
+[18:41:35] Hungertime2: 17
+[18:41:36] PlayCheck running
+[18:41:36] Hungertime2: 18
+[18:41:37] PlayCheck running
+[18:41:37] Hungertime2: 19
+[18:41:38] PlayCheck running
+[18:41:38] Hunger Time: 20
+[18:41:38] Hungertime2: 0
+[18:41:39] PlayCheck running
+[18:41:39] Hungertime2: 1
+[18:41:40] PlayCheck running
+[18:41:40] Hungertime2: 2
+[18:41:41] PlayCheck running
+[18:41:41] Hungertime2: 3
+[18:41:42] PlayCheck running
+[18:41:42] Hungertime2: 4
+[18:41:44] PlayCheck running
+[18:41:44] Hungertime2: 5
+[18:41:45] PlayCheck running
+[18:41:45] Hungertime2: 6
+[18:41:46] PlayCheck running
+[18:41:46] Hungertime2: 7
+[18:41:47] PlayCheck running
+[18:41:47] Hungertime2: 8
+[18:41:48] PlayCheck running
+[18:41:48] Hungertime2: 9
+[18:41:49] PlayCheck running
+[18:41:49] Hungertime2: 10
+[18:41:50] PlayCheck running
+[18:41:50] Hungertime2: 11
+[18:41:51] PlayCheck running
+[18:41:51] Hungertime2: 12
+[18:41:52] PlayCheck running
+[18:41:52] Hungertime2: 13
+[18:41:53] PlayCheck running
+[18:41:53] Hungertime2: 14
+[18:41:55] PlayCheck running
+[18:41:55] Hungertime2: 15
+[18:41:56] PlayCheck running
+[18:41:56] Hungertime2: 16
+[18:41:57] PlayCheck running
+[18:41:57] Hungertime2: 17
+[18:41:58] PlayCheck running
+[18:41:58] Hungertime2: 18
+[18:41:59] PlayCheck running
+[18:41:59] Hungertime2: 19
+[18:42:00] PlayCheck running
+[18:42:00] Hunger Time: 20
+[18:42:00] Hungertime2: 0
+[18:42:01] Check Blood: 12000
+[18:42:01] PlayCheck running
+[18:42:01] Hungertime2: 1
+[18:42:02] PlayCheck running
+[18:42:02] Hungertime2: 2
+[18:42:03] PlayCheck running
+[18:42:03] Hungertime2: 3
+[18:42:04] PlayCheck running
+[18:42:04] Hungertime2: 4
+[18:42:06] PlayCheck running
+[18:42:06] Hungertime2: 5
+[18:42:07] PlayCheck running
+[18:42:07] Hungertime2: 6
+[18:42:08] PlayCheck running
+[18:42:08] Hungertime2: 7
+[18:42:09] PlayCheck running
+[18:42:09] Hungertime2: 8
+[18:42:10] PlayCheck running
+[18:42:10] Hungertime2: 9
+[18:42:11] PlayCheck running
+[18:42:11] Hungertime2: 10
+[18:42:12] PlayCheck running
+[18:42:12] Hungertime2: 11
+[18:42:13] PlayCheck running
+[18:42:13] Hungertime2: 12
+[18:42:14] PlayCheck running
+[18:42:14] Hungertime2: 13
+[18:42:15] PlayCheck running
+[18:42:15] Hungertime2: 14
+[18:42:17] PlayCheck running
+[18:42:17] Hungertime2: 15
+[18:42:18] PlayCheck running
+[18:42:18] Hungertime2: 16
+[18:42:19] PlayCheck running
+[18:42:19] Hungertime2: 17
+[18:42:20] PlayCheck running
+[18:42:20] Hungertime2: 18
+[18:42:21] PlayCheck running
+[18:42:21] Hungertime2: 19
+[18:42:22] PlayCheck running
+[18:42:22] Hunger Time: 20
+[18:42:22] Hungertime2: 0
+[18:42:23] PlayCheck running
+[18:42:23] Hungertime2: 1
+[18:42:24] PlayCheck running
+[18:42:24] Hungertime2: 2
+[18:42:25] PlayCheck running
+[18:42:25] Hungertime2: 3
+[18:42:26] PlayCheck running
+[18:42:26] Hungertime2: 4
+[18:42:28] PlayCheck running
+[18:42:28] Hungertime2: 5
+[18:42:29] PlayCheck running
+[18:42:29] Hungertime2: 6
+[18:42:30] PlayCheck running
+[18:42:30] Hungertime2: 7
+[18:42:31] PlayCheck running
+[18:42:31] Hungertime2: 8
+[18:42:32] PlayCheck running
+[18:42:32] Hungertime2: 9
+[18:42:33] PlayCheck running
+[18:42:33] Hungertime2: 10
+[18:42:34] PlayCheck running
+[18:42:34] Hungertime2: 11
+[18:42:34] Check Blood: 12000
+[18:42:35] PlayCheck running
+[18:42:35] Hungertime2: 12
+[18:42:36] PlayCheck running
+[18:42:36] Hungertime2: 13
+[18:42:37] PlayCheck running
+[18:42:37] Hungertime2: 14
+[18:42:39] PlayCheck running
+[18:42:39] Hungertime2: 15
+[18:42:40] PlayCheck running
+[18:42:40] Hungertime2: 16
+[18:42:41] PlayCheck running
+[18:42:41] Hungertime2: 17
+[18:42:42] PlayCheck running
+[18:42:42] Hungertime2: 18
+[18:42:43] PlayCheck running
+[18:42:43] Hungertime2: 19
+[18:42:44] PlayCheck running
+[18:42:44] Hunger Time: 20
+[18:42:44] Hungertime2: 0
+[18:42:45] PlayCheck running
+[18:42:45] Hungertime2: 1
+[18:42:46] PlayCheck running
+[18:42:46] Hungertime2: 2
+[18:42:47] PlayCheck running
+[18:42:47] Hungertime2: 3
+[18:42:48] PlayCheck running
+[18:42:48] Hungertime2: 4
+[18:42:50] PlayCheck running
+[18:42:50] Hungertime2: 5
+[18:42:51] PlayCheck running
+[18:42:51] Hungertime2: 6
+[18:42:52] PlayCheck running
+[18:42:52] Hungertime2: 7
+[18:42:53] PlayCheck running
+[18:42:53] Hungertime2: 8
+[18:42:54] PlayCheck running
+[18:42:54] Hungertime2: 9
+[18:42:55] PlayCheck running
+[18:42:55] Hungertime2: 10
+[18:42:56] PlayCheck running
+[18:42:56] Hungertime2: 11
+[18:42:57] PlayCheck running
+[18:42:57] Hungertime2: 12
+[18:42:58] PlayCheck running
+[18:42:58] Hungertime2: 13
+[18:42:59] PlayCheck running
+[18:42:59] Hungertime2: 14
+[18:43:01] PlayCheck running
+[18:43:01] Hungertime2: 15
+[18:43:02] PlayCheck running
+[18:43:02] Hungertime2: 16
+[18:43:03] PlayCheck running
+[18:43:03] Hungertime2: 17
+[18:43:04] PlayCheck running
+[18:43:04] Hungertime2: 18
+[18:43:05] PlayCheck running
+[18:43:05] Hungertime2: 19
+[18:43:06] PlayCheck running
+[18:43:06] Hunger Time: 20
+[18:43:06] Hungertime2: 0
+[18:43:07] PlayCheck running
+[18:43:07] Hungertime2: 1
+[18:43:07] Check Blood: 12000
+[18:43:08] PlayCheck running
+[18:43:08] Hungertime2: 2
+[18:43:09] PlayCheck running
+[18:43:09] Hungertime2: 3
+[18:43:10] PlayCheck running
+[18:43:10] Hungertime2: 4
+[18:43:12] PlayCheck running
+[18:43:12] Hungertime2: 5
+[18:43:13] PlayCheck running
+[18:43:13] Hungertime2: 6
+[18:43:14] PlayCheck running
+[18:43:14] Hungertime2: 7
+[18:43:15] PlayCheck running
+[18:43:15] Hungertime2: 8
+[18:43:16] PlayCheck running
+[18:43:16] Hungertime2: 9
+[18:43:17] PlayCheck running
+[18:43:17] Hungertime2: 10
+[18:43:18] PlayCheck running
+[18:43:18] Hungertime2: 11
+[18:43:19] PlayCheck running
+[18:43:19] Hungertime2: 12
+[18:43:20] PlayCheck running
+[18:43:20] Hungertime2: 13
+[18:43:22] PlayCheck running
+[18:43:22] Hungertime2: 14
+[18:43:23] PlayCheck running
+[18:43:23] Hungertime2: 15
+[18:43:24] PlayCheck running
+[18:43:24] Hungertime2: 16
+[18:43:25] PlayCheck running
+[18:43:25] Hungertime2: 17
+[18:43:26] PlayCheck running
+[18:43:26] Hungertime2: 18
+[18:43:27] PlayCheck running
+[18:43:27] Hungertime2: 19
+[18:43:28] PlayCheck running
+[18:43:28] Hunger Time: 20
+[18:43:28] Hungertime2: 0
+[18:43:29] PlayCheck running
+[18:43:29] Hungertime2: 1
+[18:43:30] PlayCheck running
+[18:43:30] Hungertime2: 2
+[18:43:31] PlayCheck running
+[18:43:31] Hungertime2: 3
+[18:43:33] PlayCheck running
+[18:43:33] Hungertime2: 4
+[18:43:34] PlayCheck running
+[18:43:34] Hungertime2: 5
+[18:43:35] PlayCheck running
+[18:43:35] Hungertime2: 6
+[18:43:36] PlayCheck running
+[18:43:36] Hungertime2: 7
+[18:43:37] PlayCheck running
+[18:43:37] Hungertime2: 8
+[18:43:38] PlayCheck running
+[18:43:38] Hungertime2: 9
+[18:43:39] PlayCheck running
+[18:43:39] Hungertime2: 10
+[18:43:40] PlayCheck running
+[18:43:40] Hungertime2: 11
+[18:43:40] Check Blood: 12000
+[18:43:41] PlayCheck running
+[18:43:41] Hungertime2: 12
+[18:43:42] PlayCheck running
+[18:43:42] Hungertime2: 13
+[18:43:44] PlayCheck running
+[18:43:44] Hungertime2: 14
+[18:43:45] PlayCheck running
+[18:43:45] Hungertime2: 15
+[18:43:46] PlayCheck running
+[18:43:46] Hungertime2: 16
+[18:43:47] PlayCheck running
+[18:43:47] Hungertime2: 17
+[18:43:48] PlayCheck running
+[18:43:48] Hungertime2: 18
+[18:43:49] PlayCheck running
+[18:43:49] Hungertime2: 19
+[18:43:50] PlayCheck running
+[18:43:50] Hunger Time: 20
+[18:43:50] Hungertime2: 0
+[18:43:51] PlayCheck running
+[18:43:51] Hungertime2: 1
+[18:43:52] PlayCheck running
+[18:43:52] Hungertime2: 2
+[18:43:53] PlayCheck running
+[18:43:53] Hungertime2: 3
+[18:43:55] PlayCheck running
+[18:43:55] Hungertime2: 4
+[18:43:56] PlayCheck running
+[18:43:56] Hungertime2: 5
+[18:43:57] PlayCheck running
+[18:43:57] Hungertime2: 6
+[18:43:58] PlayCheck running
+[18:43:58] Hungertime2: 7
+[18:43:59] PlayCheck running
+[18:43:59] Hungertime2: 8
+[18:44:00] PlayCheck running
+[18:44:00] Hungertime2: 9
+[18:44:01] PlayCheck running
+[18:44:01] Hungertime2: 10
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:44:06] 
+[18:44:06] Server Plugins
+[18:44:06] --------------
+[18:44:06]  Loading plugin: crashdetect
+[18:44:06]   CrashDetect v4.18.1 is OK.
+[18:44:06]   Loaded.
+[18:44:06]  Loading plugin: mysql
+[18:44:06]  >> plugin.mysql: R39-4 successfully loaded.
+[18:44:06]   Loaded.
+[18:44:06]  Loading plugin: sscanf
+[18:44:06] 
+
+[18:44:06]  ===============================
+
+[18:44:06]       sscanf plugin loaded.     
+
+[18:44:06]          Version:  2.8.2        
+
+[18:44:06]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:44:06]  ===============================
+
+[18:44:06]   Loaded.
+[18:44:06]  Loading plugin: streamer
+[18:44:06] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:44:06]   Loaded.
+[18:44:06]  Loading plugin: Whirlpool
+[18:44:06]  
+[18:44:06]  ==================
+[18:44:06]  
+[18:44:06]   Whirlpool loaded
+[18:44:06]  
+[18:44:06]  ==================
+[18:44:06]  
+[18:44:06]   Loaded.
+[18:44:06]  Loading plugin: sampp_server
+[18:44:06]   Failed.
+[18:44:06]  Loading plugin: pawncmd
+[18:44:06] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:44:06]   Loaded.
+[18:44:06]  Loaded 6 plugins.
+
+[18:44:06] 
+[18:44:06] Filterscripts
+[18:44:06] ---------------
+[18:44:06]   Loaded 0 filterscripts.
+
+[18:44:07]  
+[18:44:07]  
+[18:44:07]  
+[18:44:07]  ======================================= 
+[18:44:07]  |                                     | 
+[18:44:07]  |        YSI version 3.09.0684        | 
+[18:44:07]  |        By Alex "Y_Less" Cole        | 
+[18:44:07]  |                                     | 
+[18:44:07]  ======================================= 
+[18:44:07]  
+[18:44:07] Successfully connected to MySQL database.
+[18:44:07] 
+|----------------------------------|
+[18:44:07] |  Samp Dayz by ZiiM               |
+[18:44:07] |----------------------------------|
+
+[18:44:07] Number of vehicle models: 0
+[18:44:09] [connection] 127.0.0.1:54448 requests connection cookie.
+[18:44:10] [connection] incoming connection: 127.0.0.1:54448 id: 0
+[18:44:10] [join] ZiiM has joined the server (0:127.0.0.1)
+[18:44:10] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[18:44:11] PlayCheck running
+[18:44:11] Hungertime2: 0
+[18:44:12] PlayCheck running
+[18:44:12] Hungertime2: 0
+[18:44:14] PlayCheck running
+[18:44:14] Hungertime2: 0
+[18:44:14] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[18:44:14] Login1
+[18:44:14] X: 1532.099975 | Y: -1597.310058 | Z: 14.309000
+[18:44:15] PlayCheck running
+[18:44:15] Hungertime2: 1
+[18:44:16] PlayCheck running
+[18:44:16] Hungertime2: 2
+[18:44:17] PlayCheck running
+[18:44:17] Hungertime2: 3
+[18:44:18] PlayCheck running
+[18:44:18] Hungertime2: 4
+[18:44:19] PlayCheck running
+[18:44:19] Hungertime2: 5
+[18:44:20] PlayCheck running
+[18:44:20] Hungertime2: 6
+[18:44:21] PlayCheck running
+[18:44:21] Hungertime2: 7
+[18:44:22] PlayCheck running
+[18:44:22] Hungertime2: 8
+[18:44:23] PlayCheck running
+[18:44:23] Hungertime2: 9
+[18:44:25] PlayCheck running
+[18:44:25] Hungertime2: 10
+[18:44:26] PlayCheck running
+[18:44:26] Hungertime2: 11
+[18:44:27] PlayCheck running
+[18:44:27] Hungertime2: 12
+[18:44:28] PlayCheck running
+[18:44:28] Hungertime2: 13
+[18:44:29] PlayCheck running
+[18:44:29] Hungertime2: 14
+[18:44:30] PlayCheck running
+[18:44:30] Hungertime2: 15
+[18:44:31] PlayCheck running
+[18:44:31] Hungertime2: 16
+[18:44:32] PlayCheck running
+[18:44:32] Hungertime2: 17
+[18:44:33] PlayCheck running
+[18:44:33] Hungertime2: 18
+[18:44:34] PlayCheck running
+[18:44:34] Hungertime2: 19
+[18:44:36] PlayCheck running
+[18:44:36] Hunger Time: 20
+[18:44:36] Hungertime2: 0
+[18:44:37] PlayCheck running
+[18:44:37] Hungertime2: 1
+[18:44:38] PlayCheck running
+[18:44:38] Hungertime2: 2
+[18:44:39] PlayCheck running
+[18:44:39] Hungertime2: 3
+[18:44:40] PlayCheck running
+[18:44:40] Hungertime2: 4
+[18:44:41] PlayCheck running
+[18:44:41] Hungertime2: 5
+[18:44:42] PlayCheck running
+[18:44:42] Hungertime2: 6
+[18:44:43] PlayCheck running
+[18:44:43] Hungertime2: 7
+[18:44:44] PlayCheck running
+[18:44:44] Hungertime2: 8
+[18:44:45] PlayCheck running
+[18:44:45] Hungertime2: 9
+[18:44:47] PlayCheck running
+[18:44:47] Hungertime2: 10
+[18:44:48] PlayCheck running
+[18:44:48] Hungertime2: 11
+[18:44:49] PlayCheck running
+[18:44:49] Hungertime2: 12
+[18:44:50] PlayCheck running
+[18:44:50] Hungertime2: 13
+[18:44:51] PlayCheck running
+[18:44:51] Hungertime2: 14
+[18:44:52] PlayCheck running
+[18:44:52] Hungertime2: 15
+[18:44:53] PlayCheck running
+[18:44:53] Hungertime2: 16
+[18:44:54] PlayCheck running
+[18:44:54] Hungertime2: 17
+[18:44:55] PlayCheck running
+[18:44:55] Hungertime2: 18
+[18:44:56] PlayCheck running
+[18:44:56] Hungertime2: 19
+[18:44:58] PlayCheck running
+[18:44:58] Hunger Time: 20
+[18:44:58] Hungertime2: 0
+[18:44:59] PlayCheck running
+[18:44:59] Hungertime2: 1
+[18:45:00] PlayCheck running
+[18:45:00] Hungertime2: 2
+[18:45:01] PlayCheck running
+[18:45:01] Hungertime2: 3
+[18:45:02] PlayCheck running
+[18:45:02] Hungertime2: 4
+[18:45:03] PlayCheck running
+[18:45:03] Hungertime2: 5
+[18:45:04] PlayCheck running
+[18:45:04] Hungertime2: 6
+[18:45:05] PlayCheck running
+[18:45:05] Hungertime2: 7
+[18:45:06] PlayCheck running
+[18:45:06] Hungertime2: 8
+[18:45:07] PlayCheck running
+[18:45:07] Hungertime2: 9
+[18:45:09] PlayCheck running
+[18:45:09] Hungertime2: 10
+[18:45:10] PlayCheck running
+[18:45:10] Hungertime2: 11
+[18:45:11] PlayCheck running
+[18:45:11] Hungertime2: 12
+[18:45:12] PlayCheck running
+[18:45:12] Hungertime2: 13
+[18:45:13] PlayCheck running
+[18:45:13] Hungertime2: 14
+[18:45:14] PlayCheck running
+[18:45:14] Hungertime2: 15
+[18:45:15] PlayCheck running
+[18:45:15] Hungertime2: 16
+[18:45:16] PlayCheck running
+[18:45:16] Hungertime2: 17
+[18:45:17] PlayCheck running
+[18:45:17] Hungertime2: 18
+[18:45:19] PlayCheck running
+[18:45:19] Hungertime2: 19
+[18:45:20] PlayCheck running
+[18:45:20] Hunger Time: 20
+[18:45:20] Hungertime2: 0
+[18:45:21] PlayCheck running
+[18:45:21] Hungertime2: 1
+[18:45:22] PlayCheck running
+[18:45:22] Hungertime2: 2
+[18:45:23] PlayCheck running
+[18:45:23] Hungertime2: 3
+[18:45:24] PlayCheck running
+[18:45:24] Hungertime2: 4
+[18:45:25] PlayCheck running
+[18:45:25] Hungertime2: 5
+[18:45:26] PlayCheck running
+[18:45:26] Hungertime2: 6
+[18:45:27] PlayCheck running
+[18:45:27] Hungertime2: 7
+[18:45:28] PlayCheck running
+[18:45:28] Hungertime2: 8
+[18:45:30] PlayCheck running
+[18:45:30] Hungertime2: 9
+[18:45:31] PlayCheck running
+[18:45:31] Hungertime2: 10
+[18:45:32] PlayCheck running
+[18:45:32] Hungertime2: 11
+[18:45:33] PlayCheck running
+[18:45:33] Hungertime2: 12
+[18:45:34] PlayCheck running
+[18:45:34] Hungertime2: 13
+[18:45:35] PlayCheck running
+[18:45:35] Hungertime2: 14
+[18:45:36] PlayCheck running
+[18:45:36] Hungertime2: 15
+[18:45:37] PlayCheck running
+[18:45:37] Hungertime2: 16
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[18:45:39] 
+[18:45:39] Server Plugins
+[18:45:39] --------------
+[18:45:39]  Loading plugin: crashdetect
+[18:45:39]   CrashDetect v4.18.1 is OK.
+[18:45:39]   Loaded.
+[18:45:39]  Loading plugin: mysql
+[18:45:39]  >> plugin.mysql: R39-4 successfully loaded.
+[18:45:39]   Loaded.
+[18:45:39]  Loading plugin: sscanf
+[18:45:39] 
+
+[18:45:39]  ===============================
+
+[18:45:39]       sscanf plugin loaded.     
+
+[18:45:39]          Version:  2.8.2        
+
+[18:45:39]    (c) 2012 Alex "Y_Less" Cole  
+
+[18:45:39]  ===============================
+
+[18:45:39]   Loaded.
+[18:45:39]  Loading plugin: streamer
+[18:45:39] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[18:45:39]   Loaded.
+[18:45:39]  Loading plugin: Whirlpool
+[18:45:39]  
+[18:45:39]  ==================
+[18:45:39]  
+[18:45:39]   Whirlpool loaded
+[18:45:39]  
+[18:45:39]  ==================
+[18:45:39]  
+[18:45:39]   Loaded.
+[18:45:39]  Loading plugin: sampp_server
+[18:45:39]   Failed.
+[18:45:39]  Loading plugin: pawncmd
+[18:45:39] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[18:45:39]   Loaded.
+[18:45:39]  Loaded 6 plugins.
+
+[18:45:39] 
+[18:45:39] Filterscripts
+[18:45:39] ---------------
+[18:45:39]   Loaded 0 filterscripts.
+
+[18:45:39]  
+[18:45:39]  
+[18:45:39]  
+[18:45:39]  ======================================= 
+[18:45:39]  |                                     | 
+[18:45:39]  |        YSI version 3.09.0684        | 
+[18:45:39]  |        By Alex "Y_Less" Cole        | 
+[18:45:39]  |                                     | 
+[18:45:39]  ======================================= 
+[18:45:39]  
+[18:45:39] Successfully connected to MySQL database.
+[18:45:39] 
+|----------------------------------|
+[18:45:39] |  Samp Dayz by ZiiM               |
+[18:45:39] |----------------------------------|
+
+[18:45:39] Number of vehicle models: 0

@@ -159,6 +159,11 @@ enum inventoryData {
 };
 new InventoryData[MAX_PLAYERS][MAX_INVENTORY][inventoryData];
 
+enum playerTextdraw {
+	PlayerText:pTextdraws[83]
+};
+new TextDrawData[MAX_PLAYERS][playerTextdraw];
+
 /*enum inventoryData {
 	invExists,
 	invID,
@@ -196,6 +201,7 @@ public OnGameModeInit()
 	ManualVehicleEngineAndLights();
 	EnableStuntBonusForAll(0);
     DisableInteriorEnterExits();
+    ShowNameTags(false);
     ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
     SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sa-dayz.com]");
 	return 1;
@@ -437,7 +443,7 @@ DIALOG:DIALOG_INVENTORY(playerid, response, listitem, inputtext[])
 {
 	if(response)
 	{
-		new string[48];
+		new string[48], diastring[512];
 		printf("Listitem: %d || Listitem Name: %s", listitem, InventoryData[playerid][listitem][invItem]);
 		if(listitem == -1)
 		{
@@ -448,7 +454,8 @@ DIALOG:DIALOG_INVENTORY(playerid, response, listitem, inputtext[])
 		{
 			SetPVarInt(playerid, "ListItem", listitem);
 			format(string, sizeof(string), "%s (Quantity: %d)", InventoryData[playerid][listitem][invItem], InventoryData[playerid][listitem][invQuantity]);
-			Dialog_Show(playerid, DIALOG_INVENTORY_OPTIONS, DIALOG_STYLE_LIST, string, "Use Item\nDrop Item\n", "Select", "Close");
+			format(diastring, sizeof(diastring), "Item Selected: %s || Quantity: %d", InventoryData[playerid][listitem][invItem], InventoryData[playerid][listitem][invQuantity]);
+			Dialog_Show(playerid, DIALOG_INVENTORY_OPTIONS, DIALOG_STYLE_MSGBOX, string, diastring, "Use Item", "Drop Item");
 		}
 	}
 }
@@ -457,16 +464,8 @@ DIALOG:DIALOG_INVENTORY_OPTIONS(playerid, response, listitem, inputtext[])
 {
 	if(response)
 	{
-		//new string[48];
-
-		switch(listitem)
-		{
-			case 0:
-			{
-				new id = GetPVarInt(playerid, "ListItem");
-				OnPlayerUseItem(playerid, id, InventoryData[playerid][id][invItem]);
-			}
-		}
+		new id = GetPVarInt(playerid, "ListItem");
+		OnPlayerUseItem(playerid, id, InventoryData[playerid][id][invItem]);
 	}
 }
 
@@ -475,13 +474,27 @@ public OnPlayerUseItem(playerid, itemid, name[])
 {
 	if(!strcmp(name, "Pizza", true))
 	{
-		Inventory_Remove(playerid, itemid, name);
-		GivePlayerHunger(playerid, 750);
-		SendClientMessage(playerid, X11_GREY85, "You just ate a pizza. Nom nom motha fucka.");
-		return 1;
+		if(GetPVarInt(playerid, "Hunger") < 100)
+		{
+			Inventory_Remove(playerid, itemid);
+			GivePlayerHunger(playerid, 50);
+			SendClientMessage(playerid, X11_GREY85, "You just ate a pizza. Nom nom motha fucka.");
+			return 1;
+		}
+		else return SendClientMessage(playerid, X11_GREY85, "You are already full on hunger.");
 	}
-
-	return 1;
+	else if(!strcmp(name, "Water Bottle", true))
+	{
+		if(GetPVarInt(playerid, "Thirst") < 100)
+		{
+			Inventory_Remove(playerid, itemid);
+			GivePlayerThirst(playerid, 75);
+			SendClientMessage(playerid, X11_GREY85, "You just drank some water. Nom nom motha fucka.");
+			return 1;
+		}
+		else return SendClientMessage(playerid, X11_GREY85, "You are already full on thirst.");
+	}
+	return 0;
 }
 
 GivePlayerHunger(playerid, amount)
@@ -491,7 +504,14 @@ GivePlayerHunger(playerid, amount)
 	return 1;
 }
 
-stock Inventory_Remove(playerid, itemid, item[], quantity = 1)
+GivePlayerThirst(playerid, amount)
+{
+	new thirst = GetPVarInt(playerid, "Thirst");
+	SetPVarInt(playerid, "Thirst", thirst + amount);
+	return 1;
+}
+
+stock Inventory_Remove(playerid, itemid, quantity = 1)
 {
 	new string[128];
 
@@ -703,6 +723,11 @@ public OnPlayerRegister(playerid)
     SetPVarInt(playerid, "Blood", 12000);
     SetPVarInt(playerid, "MaxSlots", 12);
     SetPVarInt(playerid, "AdminLevel", 0);
+    SetPVarInt(playerid, "Hunger", 100);
+    SetPVarInt(playerid, "Thirst", 100);
+    SetPVarInt(playerid, "Humanity", 1600);
+    SetPVarInt(playerid, "Kills", 0);
+    SetPVarInt(playerid, "Deaths", 0);
     SetPVarInt(playerid, "Skin", 12);
     SetPlayerColor(playerid, X11_WHITE);
 
@@ -740,34 +765,37 @@ CMD:spectate(playerid, params[]){
 				return 1;
 			}
 			if(!sscanf(params, "u", giveplayerid)){
-				if(IsLoggedIn(giveplayerid)){
-				    if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING){
-				        new Float:x, Float:y, Float:z, Float:angle;
-				        GetPlayerPos(playerid, x, y, z);
-				        GetPlayerFacingAngle(playerid, angle);
-                        SetPVarFloat(playerid, "X", x);
-                        SetPVarFloat(playerid, "Y", y);
-                        SetPVarFloat(playerid, "Z", z);
-                        SetPVarFloat(playerid, "FacingAngle", angle);
-						SetPVarInt(playerid, "Interior", GetPlayerInterior(playerid));
-                        SetPVarInt(playerid, "VirtualWorld", GetPlayerVirtualWorld(playerid));
-                    } 
+				if(giveplayerid != INVALID_PLAYER_ID){
+					if(IsLoggedIn(giveplayerid)){
+					    if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING){
+					        new Float:x, Float:y, Float:z, Float:angle;
+					        GetPlayerPos(playerid, x, y, z);
+					        GetPlayerFacingAngle(playerid, angle);
+	                        SetPVarFloat(playerid, "X", x);
+	                        SetPVarFloat(playerid, "Y", y);
+	                        SetPVarFloat(playerid, "Z", z);
+	                        SetPVarFloat(playerid, "FacingAngle", angle);
+							SetPVarInt(playerid, "Interior", GetPlayerInterior(playerid));
+	                        SetPVarInt(playerid, "VirtualWorld", GetPlayerVirtualWorld(playerid));
+	                    } 
 
-                    if(IsPlayerInAnyVehicle(giveplayerid))
-                    {
-                    	PlayerSpectateVehicle(playerid, GetPlayerVehicleID(giveplayerid));
-                    }
-                    else
-                    {
-                    	PlayerSpectatePlayer(playerid, giveplayerid);
-                    }
+	                    if(IsPlayerInAnyVehicle(giveplayerid))
+	                    {
+	                    	PlayerSpectateVehicle(playerid, GetPlayerVehicleID(giveplayerid));
+	                    }
+	                    else
+	                    {
+	                    	PlayerSpectatePlayer(playerid, giveplayerid);
+	                    }
 
-					format(string, sizeof(string), "You've started spectating %s, to stop spectating use the command /spectate off.", PlayerName(giveplayerid));
-					SendClientMessage(playerid, X11_WHITE, string);
-					TogglePlayerSpectating(playerid, 1);
-					return 1;
+						format(string, sizeof(string), "You've started spectating %s, to stop spectating use the command /spectate off.", PlayerName(giveplayerid));
+						SendClientMessage(playerid, X11_WHITE, string);
+						TogglePlayerSpectating(playerid, 1);
+						return 1;
+					}
+					else return SendClientMessage(playerid, X11_RED3, "You've specified an invalid target.");
 				}
-				else return SendClientMessage(playerid, X11_RED3, "You've requested an invalid target.");
+				else return SendClientMessage(playerid, X11_RED3, "You've specified an invalid target.");
 			}
 			else return SendClientMessage(playerid, X11_GREY85, "/spectate [id/off]");
 		}
@@ -1219,6 +1247,71 @@ CMD:makeadmin(playerid, params[])
     return -1;
 }
 
+ShowHungerTextdraw(playerid, enable)
+{
+	if (!enable) {
+	    PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][2]);
+		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][3]);
+
+		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][0]);
+		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][1]);
+	}
+	else {
+	    PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][2]);
+		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][3]);
+
+		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][0]);
+		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][1]);
+	}
+	return 1;
+}
+
+CreateTextDraws(playerid) {
+	TextDrawData[playerid][pTextdraws][0] = CreatePlayerTextDraw(playerid, 579.000000, 122.000000, "100%");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][0], 255);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][0], 1);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][0], 0.290000, 0.899999);
+	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][0], -1);
+	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][0], 1);
+	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][0], 1);
+	PlayerTextDrawSetSelectable(playerid, TextDrawData[playerid][pTextdraws][0], 0);
+
+	TextDrawData[playerid][pTextdraws][1] = CreatePlayerTextDraw(playerid, 579.000000, 155.000000, "100%");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][1], 255);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][1], 1);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][1], 0.290000, 0.899999);
+	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][1], -1);
+	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][1], 1);
+	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][1], 1);
+	PlayerTextDrawSetSelectable(playerid, TextDrawData[playerid][pTextdraws][1], 0);
+
+	TextDrawData[playerid][pTextdraws][2] = CreatePlayerTextDraw(playerid, 536.000000, 108.000000, "hunger");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][2], 0);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][2], 5);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][2], 0.539999, 1.400000);
+	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][2], -1);
+	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][2], 1);
+	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][2], 1);
+	PlayerTextDrawUseBox(playerid, TextDrawData[playerid][pTextdraws][2], 1);
+	PlayerTextDrawBoxColor(playerid, TextDrawData[playerid][pTextdraws][2], 0);
+	PlayerTextDrawTextSize(playerid, TextDrawData[playerid][pTextdraws][2], 51.000000, 37.000000);
+	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][2], 2702);
+	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][2], 0.0000, 90.0000, 90.0000);
+
+	TextDrawData[playerid][pTextdraws][3] = CreatePlayerTextDraw(playerid, 537.000000, 140.000000, "thirst");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][3], 0);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][3], 5);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][3], 0.539999, 1.400000);
+	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][3], -1);
+	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][3], 1);
+	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][3], 1);
+	PlayerTextDrawUseBox(playerid, TextDrawData[playerid][pTextdraws][3], 1);
+	PlayerTextDrawBoxColor(playerid, TextDrawData[playerid][pTextdraws][3], 0);
+	PlayerTextDrawTextSize(playerid, TextDrawData[playerid][pTextdraws][3], 51.000000, 37.000000);
+	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][3], 1543);
+	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][3], 0.0000, 0.0000, 0.0000);
+}
+
 CMD:adminoverride(playerid, params[]) {
 //	new msg[128];
 	new pass[64];
@@ -1375,6 +1468,21 @@ public OnPlayerLogin(playerid)
 
 	cache_get_row(0,11,id_string);
 	SetPVarInt(playerid, "Backpack", strval(id_string));
+
+	cache_get_row(0,12,id_string);
+	SetPVarInt(playerid, "Hunger", strval(id_string));
+
+	cache_get_row(0,13,id_string);
+	SetPVarInt(playerid, "Thirst", strval(id_string));
+
+	cache_get_row(0,14,id_string);
+	SetPVarInt(playerid, "Humanity", strval(id_string));
+
+	cache_get_row(0,15,id_string);
+	SetPVarInt(playerid, "Kills", strval(id_string));
+
+	cache_get_row(0,16,id_string);
+	SetPVarInt(playerid, "Deaths", strval(id_string));
 	
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
@@ -1388,6 +1496,7 @@ public OnPlayerLogin(playerid)
 
 	bloodtext[playerid] = CreateDynamic3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, playerid, INVALID_VEHICLE_ID, 1);
 
+	ShowHungerTextdraw(playerid, 1);
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return 1;
@@ -1515,6 +1624,76 @@ stock PasswordHash(value[])
 
 public OnPlayerConnect(playerid)
 {
+	CreateTextDraws(playerid);
+	SetTimer("PlayerCheck", 1000, true);
+	SetTimer("OnPlayerAccountSaveTimer", 600000, true);
+	return 1;
+}
+
+forward PlayerCheck();
+public PlayerCheck()
+{
+	new str[128];
+	print("PlayCheck running");
+	foreach (new i : Player)
+	{
+		new hungertime = GetPVarInt(i, "HungerTime"), thirsttime = GetPVarInt(i, "ThirstTime"), hunger = GetPVarInt(i, "Hunger"), thirst = GetPVarInt(i, "Thirst"), blood = GetPVarInt(i, "Blood");
+		if(IsLoggedIn(i))
+		if(++ hungertime >= 20)
+		{
+			printf("Hunger Time: %d", hungertime);
+			if(hunger > 0)
+			{
+				hunger--;
+			}
+			else if(hunger <= 0)
+			{
+				SetPVarInt(i, "Blood", blood - 1000);
+				FlashTextDraw(i, TextDrawData[i][pTextdraws][3]);
+			}
+			hungertime = 0;
+		}
+		SetPVarInt(i, "HungerTime", hungertime);
+		SetPVarInt(i, "Hunger", hunger);
+		printf("Hungertime2: %d", hungertime);
+		if(++ thirsttime >= 15)
+		{
+			if(thirst > 0)
+			{
+				thirst--;
+			}
+			else if(thirst <= 0)
+			{
+				SetPVarInt(i, "Blood", blood - 2000);
+				FlashTextDraw(i, TextDrawData[i][pTextdraws][4]);
+			}
+			thirsttime = 0;
+		}
+		SetPVarInt(i, "ThirstTime", thirsttime);
+		SetPVarInt(i, "Thirst", thirst);
+		format(str, sizeof(str), "Hunger - %d%c", GetPVarInt(i, "Hunger"), '%');
+		PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][0], str);
+		format(str, sizeof(str), "Thirst - %d%c", GetPVarInt(i, "Thirst"), '%');
+		PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][1], str);
+	}
+	return 1;
+}
+
+stock FlashTextDraw(playerid, PlayerText:textid, delay = 500)
+{
+	PlayerTextDrawHide(playerid, textid);
+
+	SetTimerEx("FlashShowTextDraw", delay, false, "dd", playerid, _:textid);
+
+	return 1;
+}
+
+forward FlashShowTextDraw(playerid, PlayerText:textid);
+public FlashShowTextDraw(playerid, PlayerText:textid)
+{
+	if (IsLoggedIn(playerid)) {
+	    PlayerTextDrawShow(playerid, textid);
+	}
 	return 1;
 }
 
@@ -1555,7 +1734,7 @@ public OnPlayerAccountSave(playerid)
 	GetPlayerPos(playerid, X, Y, Z);
 	GetPlayerFacingAngle(playerid, FacingAngle);
 	printf("Check Blood: %d", GetPVarInt(playerid, "Blood"));
-	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d', MaxSlots = '%d', Backpack = '%d' WHERE `id` = '%d'",
+	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d', MaxSlots = '%d', Backpack = '%d', Hunger = '%d', Thirst = '%d', Humanity = '%d', Kills = '%d', Deaths = '%d'  WHERE `id` = '%d'",
 		GetPVarInt(playerid, "AdminLevel"), 
 		GetPVarInt(playerid, "Skin"),
 		X,
@@ -1565,8 +1744,24 @@ public OnPlayerAccountSave(playerid)
 		GetPVarInt(playerid, "Blood"),
 		GetPVarInt(playerid, "MaxSlots"),
 		GetPVarInt(playerid, "Backpack"),
+		GetPVarInt(playerid, "Hunger"),
+		GetPVarInt(playerid, "Thirst"),
+		GetPVarInt(playerid, "Humanity"),
+		GetPVarInt(playerid, "Kills"),
+		GetPVarInt(playerid, "Deaths"),
 		GetPVarInt(playerid, "AccountID"));
 	mysql_tquery(MySQLCon, query, "", "");
+	return 1;
+}
+
+forward OnPlayerAccountSaveTimer();
+public OnPlayerAccountSaveTimer()
+{
+	foreach(new playerid : Player)
+	{
+		OnPlayerAccountSave(playerid);
+	}
+	SendClientMessageToAll(X11_YELLOW, "Saving all players accounts");
 	return 1;
 }
 
@@ -1580,6 +1775,11 @@ public OnPlayerDeath(playerid, killerid, reason)
 	Inventory_Clear(playerid);
 	SetPVarInt(playerid, "Backpack", 0);
 	SetPVarInt(playerid, "MaxSlots", 12);
+	new deaths = GetPVarInt(playerid, "Deaths");
+	SetPVarInt(playerid, "Deaths", deaths++);
+	new kills = GetPVarInt(killerid, "kills");
+	SetPVarInt(killerid, "kills", kills++);
+	OnPlayerAccountSave(playerid);
 	return 1;
 }
 
