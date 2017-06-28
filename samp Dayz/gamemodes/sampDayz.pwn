@@ -159,6 +159,17 @@ enum inventoryData {
 };
 new InventoryData[MAX_PLAYERS][MAX_INVENTORY][inventoryData];
 
+/*enum inventoryData {
+	invExists,
+	invID,
+	invItem[32],
+	invItemID,
+	invModel,
+	invSlots,
+	invQuantity
+};
+new InventoryData[MAX_PLAYERS][MAX_DROPITEMS][inventoryData];*/
+
 native WP_Hash(buffer[], len, const str[]);
 
 main()
@@ -422,34 +433,93 @@ public OpenInventory(playerid)
 	return Dialog_Show(playerid, DIALOG_INVENTORY ,DIALOG_STYLE_TABLIST_HEADERS, diatitle, string, "Select", "Close");
 }
 
-
-stock Inventory_Remove(playerid, item[], quantity = 1)
+DIALOG:DIALOG_INVENTORY(playerid, response, listitem, inputtext[])
 {
-	new
-		itemid = Inventory_GetItemID(playerid, item),
-		string[128];
+	if(response)
+	{
+		new string[48];
+		printf("Listitem: %d || Listitem Name: %s", listitem, InventoryData[playerid][listitem][invItem]);
+		if(listitem == -1)
+		{
+			OpenInventory(playerid);
+			//if(Inventory_Items(playerid) )
+		}
+		else if(InventoryData[playerid][listitem][invExists])
+		{
+			SetPVarInt(playerid, "ListItem", listitem);
+			format(string, sizeof(string), "%s (Quantity: %d)", InventoryData[playerid][listitem][invItem], InventoryData[playerid][listitem][invQuantity]);
+			Dialog_Show(playerid, DIALOG_INVENTORY_OPTIONS, DIALOG_STYLE_LIST, string, "Use Item\nDrop Item\n", "Select", "Close");
+		}
+	}
+}
+
+DIALOG:DIALOG_INVENTORY_OPTIONS(playerid, response, listitem, inputtext[])
+{
+	if(response)
+	{
+		//new string[48];
+
+		switch(listitem)
+		{
+			case 0:
+			{
+				new id = GetPVarInt(playerid, "ListItem");
+				OnPlayerUseItem(playerid, id, InventoryData[playerid][id][invItem]);
+			}
+		}
+	}
+}
+
+forward OnPlayerUseItem(playerid, itemid, name[]);
+public OnPlayerUseItem(playerid, itemid, name[])
+{
+	if(!strcmp(name, "Pizza", true))
+	{
+		Inventory_Remove(playerid, itemid, name);
+		GivePlayerHunger(playerid, 750);
+		SendClientMessage(playerid, X11_GREY85, "You just ate a pizza. Nom nom motha fucka.");
+		return 1;
+	}
+
+	return 1;
+}
+
+GivePlayerHunger(playerid, amount)
+{
+	new hunger = GetPVarInt(playerid, "Hunger");
+	SetPVarInt(playerid, "Hunger", hunger + amount);
+	return 1;
+}
+
+stock Inventory_Remove(playerid, itemid, item[], quantity = 1)
+{
+	new string[128];
+
 
 	if (itemid != -1)
 	{
-	    if (InventoryData[playerid][itemid][invQuantity] > 0)
-	    {
-	        InventoryData[playerid][itemid][invQuantity] -= quantity;
-		}
-		if (quantity == -1 || InventoryData[playerid][itemid][invQuantity] < 1)
+		if(InventoryData[playerid][itemid][invExists])
 		{
-		    InventoryData[playerid][itemid][invExists] = false;
-		    InventoryData[playerid][itemid][invModel] = 0;
-		    InventoryData[playerid][itemid][invQuantity] = 0;
+		    if (InventoryData[playerid][itemid][invQuantity] > 0)
+		    {
+		        InventoryData[playerid][itemid][invQuantity] -= quantity;
+			}
+			if (quantity == -1 || InventoryData[playerid][itemid][invQuantity] < 1)
+			{
+			    InventoryData[playerid][itemid][invExists] = false;
+			    InventoryData[playerid][itemid][invModel] = 0;
+			    InventoryData[playerid][itemid][invQuantity] = 0;
 
-		    format(string, sizeof(string), "DELETE FROM `inventory` WHERE `ID` = '%d' AND `invID` = '%d'", PlayerData[playerid][pID], InventoryData[playerid][itemid][invID]);
-	        mysql_function_query(g_iHandle, string, false, "", "");
+			    format(string, sizeof(string), "DELETE FROM `inventory` WHERE `ID` = '%d' AND `invID` = '%d'", GetPVarInt(playerid, "AccountID"), InventoryData[playerid][itemid][invID]);
+		        mysql_function_query(MySQLCon, string, false, "", "");
+			}
+			else if (quantity != -1 && InventoryData[playerid][itemid][invQuantity] > 0)
+			{
+				format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = `invQuantity` - %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, GetPVarInt(playerid, "AccountID"), InventoryData[playerid][itemid][invID]);
+	            mysql_function_query(MySQLCon, string, false, "", "");
+			}
 		}
-		else if (quantity != -1 && InventoryData[playerid][itemid][invQuantity] > 0)
-		{
-			format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = `invQuantity` - %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, PlayerData[playerid][pID], InventoryData[playerid][itemid][invID]);
-            mysql_function_query(g_iHandle, string, false, "", "");
-		}
-		return 1;
+		return 0;
 	}
 	return 0;
 }

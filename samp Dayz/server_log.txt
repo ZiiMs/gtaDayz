@@ -15252,3 +15252,1890 @@ v0.3.7-R2, (C)2005-2015 SA-MP Team
 [03:32:30] Password 78CD2D3ECAB665FD25487574A0DBF8493236C1C86ED68BD2D53ED75E98E780BF1BFCA1D05E3821FFC86B9C757816AF98BCA762F4577C93790DCA12C75613B408 | InputedPassword: 78CD2D3ECAB665FD25487574A0DBF8493236C1C86ED68BD2D53ED75E98E780BF1BFCA1D05E3821FFC86B9C757816AF98BCA762F4577C93790DCA12C75613B408
 [03:32:30] Login1
 [03:32:30] X: 1536.030029 | Y: -1676.900024 | Z: 13.482999
+[03:52:04] Item: Country Rifle || Amount: 1
+[04:06:52] TotalBlood: 11500 || WeaponID: 24
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:09:22] 
+[04:09:22] Server Plugins
+[04:09:22] --------------
+[04:09:22]  Loading plugin: crashdetect
+[04:09:22]   CrashDetect v4.18.1 is OK.
+[04:09:22]   Loaded.
+[04:09:22]  Loading plugin: mysql
+[04:09:22]  >> plugin.mysql: R39-4 successfully loaded.
+[04:09:22]   Loaded.
+[04:09:22]  Loading plugin: sscanf
+[04:09:22] 
+
+[04:09:22]  ===============================
+
+[04:09:22]       sscanf plugin loaded.     
+
+[04:09:22]          Version:  2.8.2        
+
+[04:09:22]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:09:22]  ===============================
+
+[04:09:22]   Loaded.
+[04:09:22]  Loading plugin: streamer
+[04:09:22] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:09:22]   Loaded.
+[04:09:22]  Loading plugin: Whirlpool
+[04:09:22]  
+[04:09:22]  ==================
+[04:09:22]  
+[04:09:22]   Whirlpool loaded
+[04:09:22]  
+[04:09:22]  ==================
+[04:09:22]  
+[04:09:22]   Loaded.
+[04:09:22]  Loading plugin: pawncmd
+[04:09:22] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:09:22]   Loaded.
+[04:09:22]  Loaded 6 plugins.
+
+[04:09:22] 
+[04:09:22] Filterscripts
+[04:09:22] ---------------
+[04:09:22]   Loaded 0 filterscripts.
+
+[04:09:22]  
+[04:09:22]  
+[04:09:22]  
+[04:09:22]  ======================================= 
+[04:09:22]  |                                     | 
+[04:09:22]  |        YSI version 3.09.0684        | 
+[04:09:22]  |        By Alex "Y_Less" Cole        | 
+[04:09:22]  |                                     | 
+[04:09:22]  ======================================= 
+[04:09:22]  
+[04:09:22] Successfully connected to MySQL database.
+[04:09:22] 
+|----------------------------------|
+[04:09:22] |  Samp Dayz by ZiiM               |
+[04:09:22] |----------------------------------|
+
+[04:09:22] Number of vehicle models: 0
+[04:09:25] [connection] 127.0.0.1:64148 requests connection cookie.
+[04:09:26] [connection] incoming connection: 127.0.0.1:64148 id: 0
+[04:09:27] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:09:27] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[04:09:28] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[04:09:28] Login1
+[04:09:28] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[04:09:38] [connection] 101.185.20.244:62207 requests connection cookie.
+[04:09:39] [connection] incoming connection: 101.185.20.244:62207 id: 1
+[04:09:40] [join] ryz0o has joined the server (1:101.185.20.244)
+[04:09:41] PassReg: 78CD2D3ECAB665FD25487574A0DBF8493236C1C86ED68BD2D53ED75E98E780BF1BFCA1D05E3821FFC86B9C757816AF98BCA762F4577C93790DCA12C75613B408 | Passstrvaled:  
+[04:09:43] Password 78CD2D3ECAB665FD25487574A0DBF8493236C1C86ED68BD2D53ED75E98E780BF1BFCA1D05E3821FFC86B9C757816AF98BCA762F4577C93790DCA12C75613B408 | InputedPassword: 78CD2D3ECAB665FD25487574A0DBF8493236C1C86ED68BD2D53ED75E98E780BF1BFCA1D05E3821FFC86B9C757816AF98BCA762F4577C93790DCA12C75613B408
+[04:09:43] Login1
+[04:09:43] X: 1536.030029 | Y: -1676.900024 | Z: 13.482999
+[04:09:48] TotalBlood: 11500 || WeaponID: 24
+[04:09:49] TotalBlood: 11000 || WeaponID: 24
+[04:09:52] TotalBlood: 11000 || WeaponID: 0
+[04:09:55] TotalBlood: 10500 || WeaponID: 24
+[04:09:57] TotalBlood: 10000 || WeaponID: 24
+[04:10:03] TotalBlood: 9500 || WeaponID: 24
+[04:10:04] TotalBlood: 9000 || WeaponID: 24
+[04:10:05] TotalBlood: 8500 || WeaponID: 24
+[04:10:06] TotalBlood: 11500 || WeaponID: 24
+[04:10:07] TotalBlood: 11000 || WeaponID: 24
+[04:10:10] TotalBlood: 8500 || WeaponID: 0
+[04:10:12] TotalBlood: 8500 || WeaponID: 0
+[04:10:25] TotalBlood: 8000 || WeaponID: 24
+[04:10:27] TotalBlood: 7500 || WeaponID: 24
+[04:10:28] TotalBlood: 7000 || WeaponID: 24
+[04:10:29] TotalBlood: 6500 || WeaponID: 24
+[04:10:35] TotalBlood: 6000 || WeaponID: 24
+[04:10:35] TotalBlood: 5500 || WeaponID: 24
+[04:10:36] TotalBlood: 5000 || WeaponID: 24
+[04:10:37] TotalBlood: 4500 || WeaponID: 24
+[04:10:38] TotalBlood: 4000 || WeaponID: 24
+[04:10:38] TotalBlood: 3500 || WeaponID: 24
+[04:10:39] TotalBlood: 3000 || WeaponID: 24
+[04:10:42] TotalBlood: 2500 || WeaponID: 24
+[04:10:44] TotalBlood: 2000 || WeaponID: 24
+[04:10:44] TotalBlood: 1500 || WeaponID: 24
+[04:10:45] TotalBlood: 1000 || WeaponID: 24
+[04:10:47] TotalBlood: 500 || WeaponID: 24
+[04:10:49] TotalBlood: 500 || WeaponID: 0
+[04:11:09] TotalBlood: 0 || WeaponID: 22
+[04:11:22] TotalBlood: 11000 || WeaponID: 0
+[04:11:26] TotalBlood: 11500 || WeaponID: 22
+[04:11:27] TotalBlood: 11000 || WeaponID: 22
+[04:11:28] TotalBlood: 10500 || WeaponID: 22
+[04:11:28] TotalBlood: 10000 || WeaponID: 22
+[04:11:49] TotalBlood: 9500 || WeaponID: 23
+[04:11:49] TotalBlood: 9000 || WeaponID: 23
+[04:11:50] TotalBlood: 8500 || WeaponID: 23
+[04:11:50] TotalBlood: 8000 || WeaponID: 23
+[04:11:51] TotalBlood: 7500 || WeaponID: 23
+[04:11:51] TotalBlood: 7000 || WeaponID: 23
+[04:11:52] TotalBlood: 6500 || WeaponID: 23
+[04:11:52] TotalBlood: 6000 || WeaponID: 23
+[04:12:07] TotalBlood: 4800 || WeaponID: 31
+[04:12:07] TotalBlood: 3600 || WeaponID: 31
+[04:12:07] TotalBlood: 2400 || WeaponID: 31
+[04:12:07] TotalBlood: 1200 || WeaponID: 31
+[04:12:07] TotalBlood: 0 || WeaponID: 31
+[04:12:19] TotalBlood: 11500 || WeaponID: 23
+[04:12:19] TotalBlood: 11000 || WeaponID: 23
+[04:12:20] TotalBlood: 10500 || WeaponID: 23
+[04:12:20] TotalBlood: 10000 || WeaponID: 23
+[04:12:21] TotalBlood: 9500 || WeaponID: 23
+[04:12:21] TotalBlood: 9000 || WeaponID: 23
+[04:12:22] TotalBlood: 8500 || WeaponID: 23
+[04:12:23] TotalBlood: 8000 || WeaponID: 23
+[04:12:23] TotalBlood: 7500 || WeaponID: 23
+[04:12:24] TotalBlood: 7000 || WeaponID: 23
+[04:12:26] TotalBlood: 5800 || WeaponID: 31
+[04:12:26] TotalBlood: 4600 || WeaponID: 31
+[04:12:26] TotalBlood: 3400 || WeaponID: 31
+[04:12:27] TotalBlood: 2200 || WeaponID: 31
+[04:12:27] TotalBlood: 1000 || WeaponID: 31
+[04:12:27] TotalBlood: -200 || WeaponID: 31
+[04:13:00] TotalBlood: 11500 || WeaponID: 23
+[04:13:00] TotalBlood: 11000 || WeaponID: 23
+[04:13:20] TotalBlood: 10500 || WeaponID: 22
+[04:13:32] Item: Coka-cola || Amount: 1
+[04:13:48] TotalBlood: 10300 || WeaponID: 28
+[04:13:48] TotalBlood: 9600 || WeaponID: 28
+[04:13:48] TotalBlood: 8900 || WeaponID: 28
+[04:13:48] TotalBlood: 8200 || WeaponID: 28
+[04:13:48] TotalBlood: 7500 || WeaponID: 28
+[04:13:48] TotalBlood: 6800 || WeaponID: 28
+[04:13:53] TotalBlood: 6100 || WeaponID: 28
+[04:13:54] TotalBlood: 5400 || WeaponID: 28
+[04:13:54] TotalBlood: 4700 || WeaponID: 28
+[04:13:54] TotalBlood: 4000 || WeaponID: 28
+[04:13:54] TotalBlood: 3300 || WeaponID: 28
+[04:13:54] TotalBlood: 2600 || WeaponID: 28
+[04:13:54] TotalBlood: 1900 || WeaponID: 28
+[04:13:54] TotalBlood: 1200 || WeaponID: 28
+[04:14:03] TotalBlood: 10500 || WeaponID: 38
+[04:14:04] TotalBlood: 10500 || WeaponID: 38
+[04:14:04] TotalBlood: 10500 || WeaponID: 38
+[04:14:04] TotalBlood: 10500 || WeaponID: 38
+[04:14:04] TotalBlood: 10500 || WeaponID: 38
+[04:14:06] TotalBlood: 10500 || WeaponID: 38
+[04:14:06] TotalBlood: 10500 || WeaponID: 38
+[04:14:06] TotalBlood: 10500 || WeaponID: 38
+[04:14:06] TotalBlood: 500 || WeaponID: 28
+[04:14:07] TotalBlood: -200 || WeaponID: 28
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:25] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:26] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:33] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:34] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:35] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:36] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:37] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:38] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:39] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:40] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:41] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:42] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:43] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:44] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:45] TotalBlood: 10500 || WeaponID: 38
+[04:14:46] TotalBlood: 10500 || WeaponID: 38
+[04:14:48] TotalBlood: 12000 || WeaponID: 0
+[04:14:56] TotalBlood: 12000 || WeaponID: 0
+[04:15:05] TotalBlood: 10450 || WeaponID: 4
+[04:15:12] TotalBlood: 10400 || WeaponID: 4
+[04:15:15] TotalBlood: 10350 || WeaponID: 4
+[04:15:19] TotalBlood: 10350 || WeaponID: 38
+[04:15:19] TotalBlood: 10350 || WeaponID: 38
+[04:15:19] TotalBlood: 10350 || WeaponID: 38
+[04:15:19] TotalBlood: 10350 || WeaponID: 38
+[04:15:33] Item: Alice Pack || Amount: 1
+[04:15:35] Item: MP5 || Amount: 1
+[04:15:43] Item: Canned Tuna || Amount: 1
+[04:15:47] TotalBlood: 10350 || WeaponID: 38
+[04:15:47] TotalBlood: 10350 || WeaponID: 38
+[04:15:47] TotalBlood: 10350 || WeaponID: 38
+[04:15:47] TotalBlood: 10350 || WeaponID: 38
+[04:15:47] TotalBlood: 10350 || WeaponID: 38
+[04:15:47] TotalBlood: 10350 || WeaponID: 38
+[04:15:52] TotalBlood: 12000 || WeaponID: 0
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:00] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:01] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:02] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:03] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:04] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:05] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:06] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:07] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:08] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:09] TotalBlood: 10350 || WeaponID: 37
+[04:16:34] TotalBlood: 10350 || WeaponID: 51
+[04:16:42] Item: Grenade || Amount: 1
+[04:16:43] TotalBlood: 12000 || WeaponID: 0
+[04:17:09] TotalBlood: 10350 || WeaponID: 51
+[04:17:37] TotalBlood: 10300 || WeaponID: 4
+[04:17:38] TotalBlood: 10250 || WeaponID: 4
+[04:18:01] TotalBlood: 9050 || WeaponID: 31
+[04:18:02] TotalBlood: 7850 || WeaponID: 31
+[04:18:05] TotalBlood: 6650 || WeaponID: 31
+[04:18:05] TotalBlood: 5450 || WeaponID: 31
+[04:18:06] TotalBlood: 4250 || WeaponID: 31
+[04:18:06] TotalBlood: 3050 || WeaponID: 31
+[04:18:06] TotalBlood: 1850 || WeaponID: 31
+[04:18:07] TotalBlood: 650 || WeaponID: 31
+[04:18:07] TotalBlood: -550 || WeaponID: 31
+[04:18:16] Item: Sniper Ammo || Amount: 1
+[04:18:18] Item: Sniper Rifle || Amount: 1
+[04:18:21] Item: Water Bottle || Amount: 1
+[04:18:23] TotalBlood: 12000 || WeaponID: 0
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:29] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:36] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:37] TotalBlood: 12000 || WeaponID: 41
+[04:18:53] TotalBlood: 6000 || WeaponID: 34
+[04:18:54] TotalBlood: 0 || WeaponID: 34
+[04:33:20] Check Blood: 12000
+[04:33:20] [part] ryz0o has left the server (1:1)
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:36:43] 
+[04:36:43] Server Plugins
+[04:36:43] --------------
+[04:36:43]  Loading plugin: crashdetect
+[04:36:43]   CrashDetect v4.18.1 is OK.
+[04:36:43]   Loaded.
+[04:36:43]  Loading plugin: mysql
+[04:36:43]  >> plugin.mysql: R39-4 successfully loaded.
+[04:36:43]   Loaded.
+[04:36:43]  Loading plugin: sscanf
+[04:36:43] 
+
+[04:36:43]  ===============================
+
+[04:36:43]       sscanf plugin loaded.     
+
+[04:36:43]          Version:  2.8.2        
+
+[04:36:43]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:36:43]  ===============================
+
+[04:36:43]   Loaded.
+[04:36:43]  Loading plugin: streamer
+[04:36:43] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:36:43]   Loaded.
+[04:36:43]  Loading plugin: Whirlpool
+[04:36:43]  
+[04:36:43]  ==================
+[04:36:43]  
+[04:36:43]   Whirlpool loaded
+[04:36:43]  
+[04:36:43]  ==================
+[04:36:43]  
+[04:36:43]   Loaded.
+[04:36:43]  Loading plugin: pawncmd
+[04:36:43] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:36:43]   Loaded.
+[04:36:43]  Loaded 6 plugins.
+
+[04:36:43] 
+[04:36:43] Filterscripts
+[04:36:43] ---------------
+[04:36:43]   Loaded 0 filterscripts.
+
+[04:36:43]  
+[04:36:43]  
+[04:36:43]  
+[04:36:43]  ======================================= 
+[04:36:43]  |                                     | 
+[04:36:43]  |        YSI version 3.09.0684        | 
+[04:36:43]  |        By Alex "Y_Less" Cole        | 
+[04:36:43]  |                                     | 
+[04:36:43]  ======================================= 
+[04:36:43]  
+[04:36:43] Successfully connected to MySQL database.
+[04:36:43] 
+|----------------------------------|
+[04:36:43] |  Samp Dayz by ZiiM               |
+[04:36:43] |----------------------------------|
+
+[04:36:43] Number of vehicle models: 0
+[04:36:46] [connection] 127.0.0.1:55511 requests connection cookie.
+[04:36:47] [connection] incoming connection: 127.0.0.1:55511 id: 0
+[04:36:47] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:36:47] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[04:36:49] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[04:36:49] Login1
+[04:36:49] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:38:13] 
+[04:38:13] Server Plugins
+[04:38:13] --------------
+[04:38:13]  Loading plugin: crashdetect
+[04:38:13]   CrashDetect v4.18.1 is OK.
+[04:38:13]   Loaded.
+[04:38:13]  Loading plugin: mysql
+[04:38:13]  >> plugin.mysql: R39-4 successfully loaded.
+[04:38:13]   Loaded.
+[04:38:13]  Loading plugin: sscanf
+[04:38:13] 
+
+[04:38:13]  ===============================
+
+[04:38:13]       sscanf plugin loaded.     
+
+[04:38:13]          Version:  2.8.2        
+
+[04:38:13]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:38:13]  ===============================
+
+[04:38:13]   Loaded.
+[04:38:13]  Loading plugin: streamer
+[04:38:13] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:38:13]   Loaded.
+[04:38:13]  Loading plugin: Whirlpool
+[04:38:13]  
+[04:38:13]  ==================
+[04:38:13]  
+[04:38:13]   Whirlpool loaded
+[04:38:13]  
+[04:38:13]  ==================
+[04:38:13]  
+[04:38:13]   Loaded.
+[04:38:13]  Loading plugin: pawncmd
+[04:38:13] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:38:13]   Loaded.
+[04:38:13]  Loaded 6 plugins.
+
+[04:38:13] 
+[04:38:13] Filterscripts
+[04:38:13] ---------------
+[04:38:13]   Loaded 0 filterscripts.
+
+[04:38:13]  
+[04:38:13]  
+[04:38:13]  
+[04:38:13]  ======================================= 
+[04:38:13]  |                                     | 
+[04:38:13]  |        YSI version 3.09.0684        | 
+[04:38:13]  |        By Alex "Y_Less" Cole        | 
+[04:38:13]  |                                     | 
+[04:38:13]  ======================================= 
+[04:38:13]  
+[04:38:13] Successfully connected to MySQL database.
+[04:38:13] 
+|----------------------------------|
+[04:38:13] |  Samp Dayz by ZiiM               |
+[04:38:13] |----------------------------------|
+
+[04:38:13] Number of vehicle models: 0
+[04:38:13] [connection] 127.0.0.1:52030 requests connection cookie.
+[04:38:14] [connection] incoming connection: 127.0.0.1:52030 id: 0
+[04:38:15] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:38:15] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[04:38:17] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[04:38:17] Login1
+[04:38:17] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[04:38:38] Item: Pizza || Amount: 1
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:40:04] 
+[04:40:04] Server Plugins
+[04:40:04] --------------
+[04:40:04]  Loading plugin: crashdetect
+[04:40:04]   CrashDetect v4.18.1 is OK.
+[04:40:04]   Loaded.
+[04:40:04]  Loading plugin: mysql
+[04:40:04]  >> plugin.mysql: R39-4 successfully loaded.
+[04:40:04]   Loaded.
+[04:40:04]  Loading plugin: sscanf
+[04:40:04] 
+
+[04:40:04]  ===============================
+
+[04:40:04]       sscanf plugin loaded.     
+
+[04:40:04]          Version:  2.8.2        
+
+[04:40:04]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:40:04]  ===============================
+
+[04:40:04]   Loaded.
+[04:40:04]  Loading plugin: streamer
+[04:40:04] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:40:04]   Loaded.
+[04:40:04]  Loading plugin: Whirlpool
+[04:40:04]  
+[04:40:04]  ==================
+[04:40:04]  
+[04:40:04]   Whirlpool loaded
+[04:40:04]  
+[04:40:04]  ==================
+[04:40:04]  
+[04:40:04]   Loaded.
+[04:40:04]  Loading plugin: pawncmd
+[04:40:04] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:40:04]   Loaded.
+[04:40:04]  Loaded 6 plugins.
+
+[04:40:04] 
+[04:40:04] Filterscripts
+[04:40:04] ---------------
+[04:40:04]   Loaded 0 filterscripts.
+
+[04:40:04]  
+[04:40:04]  
+[04:40:04]  
+[04:40:04]  ======================================= 
+[04:40:04]  |                                     | 
+[04:40:04]  |        YSI version 3.09.0684        | 
+[04:40:04]  |        By Alex "Y_Less" Cole        | 
+[04:40:04]  |                                     | 
+[04:40:04]  ======================================= 
+[04:40:04]  
+[04:40:04] Successfully connected to MySQL database.
+[04:40:04] 
+|----------------------------------|
+[04:40:04] |  Samp Dayz by ZiiM               |
+[04:40:04] |----------------------------------|
+
+[04:40:04] Number of vehicle models: 0
+[04:40:08] [connection] 127.0.0.1:53403 requests connection cookie.
+[04:40:09] [connection] incoming connection: 127.0.0.1:53403 id: 0
+[04:40:09] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:40:09] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[04:40:12] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[04:40:12] Login1
+[04:40:12] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[04:40:13] Listitem: 0 || Listitem Name: Pizza
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:40:43] 
+[04:40:43] Server Plugins
+[04:40:43] --------------
+[04:40:43]  Loading plugin: crashdetect
+[04:40:43]   CrashDetect v4.18.1 is OK.
+[04:40:43]   Loaded.
+[04:40:43]  Loading plugin: mysql
+[04:40:43]  >> plugin.mysql: R39-4 successfully loaded.
+[04:40:43]   Loaded.
+[04:40:43]  Loading plugin: sscanf
+[04:40:43] 
+
+[04:40:43]  ===============================
+
+[04:40:43]       sscanf plugin loaded.     
+
+[04:40:43]          Version:  2.8.2        
+
+[04:40:43]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:40:43]  ===============================
+
+[04:40:43]   Loaded.
+[04:40:43]  Loading plugin: streamer
+[04:40:43] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:40:43]   Loaded.
+[04:40:43]  Loading plugin: Whirlpool
+[04:40:43]  
+[04:40:43]  ==================
+[04:40:43]  
+[04:40:43]   Whirlpool loaded
+[04:40:43]  
+[04:40:43]  ==================
+[04:40:43]  
+[04:40:43]   Loaded.
+[04:40:43]  Loading plugin: pawncmd
+[04:40:43] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:40:43]   Loaded.
+[04:40:43]  Loaded 6 plugins.
+
+[04:40:43] 
+[04:40:43] Filterscripts
+[04:40:43] ---------------
+[04:40:43]   Loaded 0 filterscripts.
+
+[04:40:43]  
+[04:40:43]  
+[04:40:43]  
+[04:40:43]  ======================================= 
+[04:40:43]  |                                     | 
+[04:40:43]  |        YSI version 3.09.0684        | 
+[04:40:43]  |        By Alex "Y_Less" Cole        | 
+[04:40:43]  |                                     | 
+[04:40:43]  ======================================= 
+[04:40:43]  
+[04:40:43] Successfully connected to MySQL database.
+[04:40:43] 
+|----------------------------------|
+[04:40:43] |  Samp Dayz by ZiiM               |
+[04:40:43] |----------------------------------|
+
+[04:40:43] Number of vehicle models: 0
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:40:56] 
+[04:40:56] Server Plugins
+[04:40:56] --------------
+[04:40:56]  Loading plugin: crashdetect
+[04:40:56]   CrashDetect v4.18.1 is OK.
+[04:40:56]   Loaded.
+[04:40:56]  Loading plugin: mysql
+[04:40:56]  >> plugin.mysql: R39-4 successfully loaded.
+[04:40:56]   Loaded.
+[04:40:56]  Loading plugin: sscanf
+[04:40:56] 
+
+[04:40:56]  ===============================
+
+[04:40:56]       sscanf plugin loaded.     
+
+[04:40:56]          Version:  2.8.2        
+
+[04:40:56]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:40:56]  ===============================
+
+[04:40:56]   Loaded.
+[04:40:56]  Loading plugin: streamer
+[04:40:56] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:40:56]   Loaded.
+[04:40:56]  Loading plugin: Whirlpool
+[04:40:56]  
+[04:40:56]  ==================
+[04:40:56]  
+[04:40:56]   Whirlpool loaded
+[04:40:56]  
+[04:40:56]  ==================
+[04:40:56]  
+[04:40:56]   Loaded.
+[04:40:56]  Loading plugin: pawncmd
+[04:40:56] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:40:56]   Loaded.
+[04:40:56]  Loaded 6 plugins.
+
+[04:40:56] 
+[04:40:56] Filterscripts
+[04:40:56] ---------------
+[04:40:56]   Loaded 0 filterscripts.
+
+[04:40:56]  
+[04:40:56]  
+[04:40:56]  
+[04:40:56]  ======================================= 
+[04:40:56]  |                                     | 
+[04:40:56]  |        YSI version 3.09.0684        | 
+[04:40:56]  |        By Alex "Y_Less" Cole        | 
+[04:40:56]  |                                     | 
+[04:40:56]  ======================================= 
+[04:40:56]  
+[04:40:56] Successfully connected to MySQL database.
+[04:40:56] 
+|----------------------------------|
+[04:40:56] |  Samp Dayz by ZiiM               |
+[04:40:56] |----------------------------------|
+
+[04:40:56] Number of vehicle models: 0
+[04:40:58] [connection] 127.0.0.1:57272 requests connection cookie.
+[04:40:59] [connection] incoming connection: 127.0.0.1:57273 id: 0
+[04:41:00] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:41:00] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[04:41:01] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[04:41:01] Login1
+[04:41:01] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[04:41:03] Listitem: 0 || Listitem Name: Pizza
+[04:41:04] Listitem: 0 || Listitem Name: Pizza
+[04:41:04] Listitem: 0 || Listitem Name: Pizza
+[04:41:04] Listitem: 0 || Listitem Name: Pizza
+[04:41:05] Listitem: 9 || Listitem Name: 
+[04:41:29] Listitem: 10 || Listitem Name: 
+[04:41:31] Listitem: 0 || Listitem Name: Pizza
+[04:41:32] Listitem: 0 || Listitem Name: Pizza
+[04:41:32] Listitem: 0 || Listitem Name: Pizza
+[04:41:44] Listitem: 8 || Listitem Name: 
+[04:41:52] Item1: Pizza || Item2: Pizza
+[04:41:54] Listitem: 12 || Listitem Name: 
+[04:41:57] Item: Civilian Skin || Amount: 1
+[04:41:58] Listitem: 1 || Listitem Name: Civilian Skin
+[04:42:01] Item: Sniper Rifle || Amount: 1
+[04:42:03] Listitem: 2 || Listitem Name: Sniper Rifle
+[04:42:05] Listitem: 0 || Listitem Name: Pizza
+
+----------
+Loaded log file: "server_log.txt".
+----------
+
+SA-MP Dedicated Server
+----------------------
+v0.3.7-R2, (C)2005-2015 SA-MP Team
+
+[04:42:23] 
+[04:42:23] Server Plugins
+[04:42:23] --------------
+[04:42:23]  Loading plugin: crashdetect
+[04:42:23]   CrashDetect v4.18.1 is OK.
+[04:42:23]   Loaded.
+[04:42:23]  Loading plugin: mysql
+[04:42:23]  >> plugin.mysql: R39-4 successfully loaded.
+[04:42:23]   Loaded.
+[04:42:23]  Loading plugin: sscanf
+[04:42:23] 
+
+[04:42:23]  ===============================
+
+[04:42:23]       sscanf plugin loaded.     
+
+[04:42:23]          Version:  2.8.2        
+
+[04:42:23]    (c) 2012 Alex "Y_Less" Cole  
+
+[04:42:23]  ===============================
+
+[04:42:23]   Loaded.
+[04:42:23]  Loading plugin: streamer
+[04:42:23] 
+
+*** Streamer Plugin v2.9.1 by Incognito loaded ***
+
+[04:42:23]   Loaded.
+[04:42:23]  Loading plugin: Whirlpool
+[04:42:23]  
+[04:42:23]  ==================
+[04:42:23]  
+[04:42:23]   Whirlpool loaded
+[04:42:23]  
+[04:42:23]  ==================
+[04:42:23]  
+[04:42:23]   Loaded.
+[04:42:23]  Loading plugin: pawncmd
+[04:42:23] Pawn.CMD plugin v3.1.2 by urShadow loaded
+[04:42:23]   Loaded.
+[04:42:23]  Loaded 6 plugins.
+
+[04:42:23] 
+[04:42:23] Filterscripts
+[04:42:23] ---------------
+[04:42:23]   Loaded 0 filterscripts.
+
+[04:42:23]  
+[04:42:23]  
+[04:42:23]  
+[04:42:23]  ======================================= 
+[04:42:23]  |                                     | 
+[04:42:23]  |        YSI version 3.09.0684        | 
+[04:42:23]  |        By Alex "Y_Less" Cole        | 
+[04:42:23]  |                                     | 
+[04:42:23]  ======================================= 
+[04:42:23]  
+[04:42:23] Successfully connected to MySQL database.
+[04:42:23] 
+|----------------------------------|
+[04:42:23] |  Samp Dayz by ZiiM               |
+[04:42:23] |----------------------------------|
+
+[04:42:23] Number of vehicle models: 0
+[04:42:26] [connection] 127.0.0.1:65152 requests connection cookie.
+[04:42:27] [connection] incoming connection: 127.0.0.1:65152 id: 0
+[04:42:28] [join] ZiiM has joined the server (0:127.0.0.1)
+[04:42:28] PassReg: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | Passstrvaled:  
+[04:42:30] Password 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A | InputedPassword: 1560FB5FDFD2614A5B255AA5557168D7D4A7E51BB19FBF4B10BC84BB506E8975446CECE52BA8262279546AAB3348065121C99DEDD25258AE602C11FF8E25836A
+[04:42:30] Login1
+[04:42:30] X: 1535.040039 | Y: -1662.290039 | Z: 13.647000
+[04:42:34] Listitem: 0 || Listitem Name: Pizza
+[04:42:36] Listitem: 10 || Listitem Name: 
+[04:42:38] Listitem: 0 || Listitem Name: Pizza
+[04:42:41] Listitem: 0 || Listitem Name: Pizza
+[04:42:48] Listitem: 1 || Listitem Name: Civilian Skin
+[04:43:04] Item: Ak47 || Amount: 1
+[04:43:06] Item: Pizza || Amount: 1
+[04:43:07] Listitem: 3 || Listitem Name: Pizza
+[04:43:17] --- Server Shutting Down.
