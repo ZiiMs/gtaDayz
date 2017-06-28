@@ -726,6 +726,56 @@ CMD:blood(playerid, params[])
 	return 1;
 }
 
+CMD:spectate(playerid, params[]){
+	new giveplayerid, string[128];
+	if (GetPVarInt(playerid, "AdminLevel") >=1){
+		if(IsLoggedIn(playerid)){
+			if(!isnull(params) && !strcmp(params, "off", true)){
+				if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING)
+					return SendClientMessage(playerid, X11_RED3, "You're not spectating any players.");
+				PlayerSpectatePlayer(playerid, INVALID_PLAYER_ID);
+				PlayerSpectateVehicle(playerid, INVALID_VEHICLE_ID);
+				SetSpawnInfo(playerid, 0, GetPVarInt(playerid, "Skin"), GetPVarFloat(playerid, "X"), GetPVarFloat(playerid, "Y"), GetPVarFloat(playerid, "Z"), GetPVarFloat(playerid, "FacingAngle"),0,0,0,0,0,0);
+				TogglePlayerSpectating(playerid, false);
+				return 1;
+			}
+			if(!sscanf(params, "u", giveplayerid)){
+				if(IsLoggedIn(giveplayerid)){
+				    if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING){
+				        new Float:x, Float:y, Float:z, Float:angle;
+				        GetPlayerPos(playerid, x, y, z);
+				        GetPlayerFacingAngle(playerid, angle);
+                        SetPVarFloat(playerid, "X", x);
+                        SetPVarFloat(playerid, "Y", y);
+                        SetPVarFloat(playerid, "Z", z);
+                        SetPVarFloat(playerid, "FacingAngle", angle);
+						SetPVarInt(playerid, "Interior", GetPlayerInterior(playerid));
+                        SetPVarInt(playerid, "VirtualWorld", GetPlayerVirtualWorld(playerid));
+                    } 
+
+                    if(IsPlayerInAnyVehicle(giveplayerid))
+                    {
+                    	PlayerSpectateVehicle(playerid, GetPlayerVehicleID(giveplayerid));
+                    }
+                    else
+                    {
+                    	PlayerSpectatePlayer(playerid, giveplayerid);
+                    }
+
+					format(string, sizeof(string), "You've started spectating %s, to stop spectating use the command /spectate off.", PlayerName(giveplayerid));
+					SendClientMessage(playerid, X11_WHITE, string);
+					TogglePlayerSpectating(playerid, 1);
+					return 1;
+				}
+				else return SendClientMessage(playerid, X11_RED3, "You've requested an invalid target.");
+			}
+			else return SendClientMessage(playerid, X11_GREY85, "/spectate [id/off]");
+		}
+		else return SendClientMessage(playerid, X11_GREY, "You are not logged in yet.");
+	}
+	return -1;
+}
+
 CMD:inventory(playerid, params[])
 {
 	OpenInventory(playerid);
