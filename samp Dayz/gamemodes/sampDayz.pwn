@@ -7,6 +7,7 @@
 #include <easyDialog>
 #include <foreach>
 #include <sscanf2>
+#include <DialogCenter>
 #include <YSI\y_colours>
 #include <GarageBlock>
 
@@ -330,47 +331,6 @@ stock Inventory_Clear(playerid)
 	return mysql_function_query(MySQLCon, string, false, "", "");
 }
 
-stock Inventory_Set(playerid, item[], model, amount)
-{
-	new itemid = Inventory_GetItemID(playerid, item);
-
-	if (itemid == -1 && amount > 0)
-		Inventory_Add(playerid, item, model, amount);
-
-	else if (amount > 0 && itemid != -1)
-	    Inventory_SetQuantity(playerid, item, amount);
-
-	else if (amount < 1 && itemid != -1)
-	    Inventory_Remove(playerid, item, -1);
-
-	return 1;
-}
-
-stock Inventory_GetItemID(playerid, item[])
-{
-	for (new i = 0; i < MAX_INVENTORY; i ++)
-	{
-	    if (!InventoryData[playerid][i][invExists])
-	        continue;
-
-		if (!strcmp(InventoryData[playerid][i][invItem], item)) return i;
-	}
-	return -1;
-}
-
-stock Inventory_GetFreeID(playerid)
-{
-	if (Inventory_Items(playerid) >= GetPVarInt(playerid, "MaxSlots"))
-		return -1;
-
-	for (new i = 0; i < MAX_INVENTORY; i ++)
-	{
-	    if (!InventoryData[playerid][i][invExists])
-	        return i;
-	}
-	return -1;
-}
-
 stock Inventory_Items(playerid)
 {
     new count;
@@ -389,27 +349,6 @@ stock Inventory_Count(playerid, item[])
 	    return InventoryData[playerid][itemid][invQuantity];
 
 	return 0;
-}
-
-stock Inventory_HasItem(playerid, item[])
-{
-	return (Inventory_GetItemID(playerid, item) != -1);
-}
-
-stock Inventory_SetQuantity(playerid, item[], quantity)
-{
-	new
-	    itemid = Inventory_GetItemID(playerid, item),
-	    string[128];
-
-	if (itemid != -1)
-	{
-	    format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, PlayerData[playerid][pID], InventoryData[playerid][itemid][invID]);
-	    mysql_function_query(g_iHandle, string, false, "", "");
-
-	    InventoryData[playerid][itemid][invQuantity] = quantity;
-	}
-	return 1;
 }
 
 stock Inventory_Add(playerid, item[], itemids, model, quantity)
@@ -477,7 +416,7 @@ public OpenInventory(playerid)
 			strcat(string, "Empty Slot\n");
 		}
 	}
-	format(diatitle, sizeof(diatitle), "%s's inventory | Total slots: %d | Slots used: %d", PlayerName(playerid), GetPVarInt(playerid, "MaxSlots"), Inventory_Items(playerid));
+	format(diatitle, sizeof(diatitle), "%s's Inventory | Total slots: %d | Slots used: %d", PlayerName(playerid), GetPVarInt(playerid, "MaxSlots"), Inventory_Items(playerid));
 	// 
 	// strcat("Item\tAmount\n", string);
 	return Dialog_Show(playerid, DIALOG_INVENTORY ,DIALOG_STYLE_TABLIST_HEADERS, diatitle, string, "Select", "Close");
