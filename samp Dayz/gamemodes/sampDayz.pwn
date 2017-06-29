@@ -10,6 +10,8 @@
 #include <DialogCenter>
 #include <YSI\y_colours>
 #include <GarageBlock>
+#include <weapon-config>
+#include <SKY>
 
 #define mysql_host "127.0.0.1"
 #define mysql_user "AlexT"
@@ -30,7 +32,6 @@ new
     GunSync[MAX_PLAYERS],
     LastAmmo[MAX_PLAYERS],
     HackWarns[MAX_PLAYERS],
-    Text3D:bloodtext[MAX_PLAYERS],
     GunScan[MAX_PLAYERS][13][2],
     LoginAttempt[MAX_PLAYERS];
 
@@ -201,7 +202,13 @@ public OnGameModeInit()
 	ManualVehicleEngineAndLights();
 	EnableStuntBonusForAll(0);
     DisableInteriorEnterExits();
-    ShowNameTags(false);
+    ShowNameTags(true);
+    SetDamageFeed(false);
+    SetVehiclePassengerDamage(true);
+    SetDisableSyncBugs(true);
+    for(new i = 0; i < 46; i++) {
+		SetWeaponDamage(i, DAMAGE_TYPE_STATIC, 0.0);
+	}
     ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
     SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sa-dayz.com]");
 	return 1;
@@ -682,6 +689,14 @@ LootItemModelID(lootnumber)
 
 public OnGameModeExit()
 {
+	foreach(new i : Player)
+	{
+		if(IsLoggedIn(i))
+		{
+			OnPlayerDisconnect(i, 1);
+		}
+	}
+	mysql_close(MySQLCon);
 	return 1;
 }
 
@@ -698,6 +713,7 @@ public OnPlayerRequestClass(playerid, classid)
 {
     SetPlayerColor(playerid, X11_BLACK);
     TogglePlayerSpectating(playerid, true);
+    // SetHealthBarVisible(playerid, false);
     if(IsPlayerNPC(playerid))
 	{
 	    new pIP[16];
@@ -759,7 +775,6 @@ Dialog:DIALOG_REGISTER(playerid, response, listitem, inputtext[])
 forward OnPlayerRegister(playerid);
 public OnPlayerRegister(playerid)
 {
-	new msg[64];
     SetPVarInt(playerid, "AccountID", cache_insert_id());
     SetSpawnInfo(playerid, 0, 12, 1536.61, -1691.2, 13.3, 78.0541, 0, 0, 0, 0, 0, 0);
 
@@ -774,13 +789,6 @@ public OnPlayerRegister(playerid)
     SetPVarInt(playerid, "Deaths", 0);
     SetPVarInt(playerid, "Skin", 12);
     SetPlayerColor(playerid, X11_WHITE);
-
-	format(msg, sizeof(msg), "Blood: %d", GetPVarInt(playerid, "Blood"));
-
-	if(IsValidDynamic3DTextLabel(bloodtext[playerid]))
-		DestroyDynamic3DTextLabel(bloodtext[playerid]);
-
-	bloodtext[playerid] = CreateDynamic3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, playerid, INVALID_VEHICLE_ID, 1);
 
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
@@ -1500,7 +1508,7 @@ Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
 forward OnPlayerLogin(playerid);
 public OnPlayerLogin(playerid)
 {
-	new rows,fields, msg[64];
+	new rows,fields;
 	cache_get_data(rows,fields);
 	new id_string[32], skin;
 	cache_get_row(0, 3, id_string);
@@ -1559,13 +1567,6 @@ public OnPlayerLogin(playerid)
     SetPVarInt(playerid, "IsLoggedIn", 1);
     printf("X: %f | Y: %f | Z: %f", X,Y,Z);
     SetPlayerColor(playerid, X11_WHITE);
-
-	format(msg, sizeof(msg), "Blood: %d", GetPVarInt(playerid, "Blood"));
-
-	if(IsValidDynamic3DTextLabel(bloodtext[playerid]))
-		DestroyDynamic3DTextLabel(bloodtext[playerid]);
-
-	bloodtext[playerid] = CreateDynamic3DTextLabel(msg, X11_WHITE, 0, 0, 0, 70, playerid, INVALID_VEHICLE_ID, 1);
 
 	ShowHungerTextdraw(playerid, 1);
     TogglePlayerSpectating(playerid, false);
@@ -1652,7 +1653,7 @@ public GetWeaponBloodDamage(weaponid)
     return 0;
 }
 
-public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
+/*public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
 {
 	if(IsLoggedIn(playerid))
 	{
@@ -1667,20 +1668,35 @@ public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
 			format(bloodexts, sizeof(bloodexts), "Blood: %d", newblood);
 			Update3DTextLabelText(bloodtext[playerid], X11_WHITE, bloodexts);
 			SetPVarInt(playerid, "Blood", newblood);
-			SetPlayerHealth(playerid, 100);
-			if(newblood <= 0)
-			{
-				SetPlayerHealth(playerid, -100);
-				SetPVarInt(playerid, "Blood", 12000);
-			}
 			new string[128];
 			format(string, sizeof(string), "You are at %d blood.", newblood);
 			SendClientMessage(playerid, X11_GREY85, string);
-			return 1;
+			return 0;
 		}
 		else return 0;
 	}
 	else return 0;
+}*/
+
+public OnPlayerDamage(&playerid, &Float:amount, &issuerid, &weapon, &bodypart)
+{
+	if(IsLoggedIn(playerid))
+	{
+		new bloodamount, oldblood, newblood;
+		PlayerPlaySound(issuerid, 17802, 0, 0, 0);
+		PlayerPlaySound(playerid, 17802, 0, 0, 0);
+		bloodamount = GetWeaponBloodDamage(weapon);
+		oldblood = GetPVarInt(playerid, "Blood");
+		newblood = oldblood - bloodamount;
+		SetPVarInt(playerid, "Blood", newblood);
+		if(newblood <= 0)
+		{
+			SetDamageSounds(0, 0);
+			SetWeaponDamage(weapon, DAMAGE_TYPE_STATIC, 200);
+			return 1;
+		}
+	}
+	return 0;
 }
 
 stock PlayerName(playerid)
@@ -1715,6 +1731,7 @@ public OnPlayerConnect(playerid)
 	CreateTextDraws(playerid);
 	SetTimer("PlayerCheck", 1000, true);
 	SetTimer("OnPlayerAccountSaveTimer", 600000, true);
+	// SetHealthBarVisible(playerid, false);
 	return 1;
 }
 
@@ -1799,7 +1816,6 @@ public OnPlayerCommandPerformed(playerid, cmd[], params[], result, flags)
 public OnPlayerDisconnect(playerid, reason)
 {
 	SetPVarInt(playerid, "IsLoggedIn", 0);
-	DestroyDynamic3DTextLabel(bloodtext[playerid]);
 	new reasonstr[32], msg[256];
 	switch(reason) {
 		case 0: {
