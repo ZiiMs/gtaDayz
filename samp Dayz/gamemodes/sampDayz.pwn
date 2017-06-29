@@ -787,6 +787,7 @@ public OnPlayerRegister(playerid)
     SetPlayerColor(playerid, X11_WHITE);
 
     TogglePlayerSpectating(playerid, false);
+    ShowHungerTextdraw(playerid, 1);
     SpawnPlayer(playerid);
     return;
 }
@@ -1300,7 +1301,7 @@ ShowHungerTextdraw(playerid, enable)
 	if (!enable) {
 	    PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][3]);
 		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][4]);
-		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][5]);
+		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][5]);
 
 		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][0]);
 		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][1]);
@@ -1410,6 +1411,15 @@ CMD:adminoverride(playerid, params[]) {
 			SetPVarInt(playerid, "FailedAdminOverrides", ++numoverrides);
 			return 0;
 		}
+	}
+	return 1;
+}
+
+CMD:togglehunger(playerid, params[]) {
+//	new msg[128];
+	new pass;
+	if(!sscanf(params,"d", pass)) {
+		ShowHungerTextdraw(playerid, pass);
 	}
 	return 1;
 }
