@@ -31,8 +31,14 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `FacingAngle` float NOT NULL DEFAULT '78.0541',
   `Blood` int(11) NOT NULL DEFAULT '12000',
   `MaxSlots` int(11) NOT NULL DEFAULT '12',
+  `Backpack` int(11) NOT NULL DEFAULT '0',
+  `Hunger` int(11) NOT NULL DEFAULT '100',
+  `Thirst` int(11) NOT NULL DEFAULT '100',
+  `Humanity` int(11) NOT NULL DEFAULT '1600',
+  `Kills` int(11) NOT NULL DEFAULT '0',
+  `Deaths` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.inventory
@@ -45,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `invModel` int(12) NOT NULL DEFAULT '0',
   `invQuantity` int(12) NOT NULL DEFAULT '0',
   PRIMARY KEY (`invID`)
-) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=286 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.lootspawns
