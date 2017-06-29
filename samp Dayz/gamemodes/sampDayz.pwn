@@ -387,7 +387,6 @@ stock Inventory_Add(playerid, item[], itemids, model, quantity)
 		{
 			if (!strcmp(item, InventoryData[playerid][itemid][invItem]))
 			{
-				printf("Item1: %s || Item2: %s", item, InventoryData[playerid][itemid][invItem]);
 			    format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = `invQuantity` + %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, GetPVarInt(playerid, "AccountID"), InventoryData[playerid][itemid][invID]);
 			    mysql_function_query(MySQLCon, string, false, "", "");
 
@@ -407,7 +406,6 @@ stock Inventory_Add(playerid, item[], itemids, model, quantity)
 	        InventoryData[playerid][itemid][invItemID] = itemids;
 	        InventoryData[playerid][itemid][invModel] = model;
 	        InventoryData[playerid][itemid][invQuantity] = quantity;
-	        printf("Item: %s || Amount: %d", item, quantity);
 	        //InventoryData[playerid][itemid][invItem] = item;
 	        format(InventoryData[playerid][itemid][invItem], 32, item);
 			format(string, sizeof(string), "INSERT INTO `inventory` (`ID`, `invItem`, `invItemID`, `invModel`, `invQuantity`) VALUES('%d', '%s', '%d', '%d', '%d')", GetPVarInt(playerid, "AccountID"), item, itemids, model, quantity);
@@ -451,7 +449,6 @@ DIALOG:DIALOG_INVENTORY(playerid, response, listitem, inputtext[])
 	if(response)
 	{
 		new string[48], diastring[512];
-		printf("Listitem: %d || Listitem Name: %s", listitem, InventoryData[playerid][listitem][invItem]);
 		if(listitem == -1)
 		{
 			OpenInventory(playerid);
@@ -739,7 +736,6 @@ public OnAccountCheck(playerid)
         SetPVarInt(playerid, "AccountID", strval(field_int));
         cache_get_row(0,1, field_int);
         SetPVarString(playerid, "Pass", field_int);
-        printf("PassReg: %s | Passstrvaled: %s ", field_int, strval(field_int));
         GetPlayerName(playerid, pName, sizeof(pName));
         format(string, sizeof(string), "{D1D1D1}Welcome back to San Andreas DayZ\n           'A place for everyone.'\n\n        Survivor: {FFFFFF}%s\n        {D1D1D1}Enter your password below",pName);
         Dialog_Show(playerid, DIALOG_LOGIN,DIALOG_STYLE_PASSWORD,"{21f3de}>  {ffffff}Login",string,"Login","Exit");
@@ -1474,8 +1470,6 @@ Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
 	GetPVarString(playerid, "Pass", pass, sizeof(pass));
 	if(!strcmp(PasswordHash(inputtext), pass, false))
 	{
-		printf("Password %s | InputedPassword: %s", pass, PasswordHash(inputtext));
-	    print("Login1");
 		mysql_format(MySQLCon, query, sizeof(query), "SELECT * FROM `accounts` WHERE `username` = '%e' LIMIT 1", PlayerName(playerid));
 		mysql_tquery(MySQLCon, query, "OnPlayerLogin", "i", playerid);
 		mysql_format(MySQLCon, query, sizeof(query), "SELECT * FROM `inventory` WHERE `ID` = '%d'", GetPVarInt(playerid, "AccountID"));
@@ -1483,7 +1477,6 @@ Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
 		return 1;
 	} else {
 		LoginAttempt[playerid]++; new string[256];
-		printf("Password %s | InputedPassword: %s", pass, PasswordHash(inputtext));
 		if(LoginAttempt[playerid] == 1)
 		{
 			format(string, sizeof(string), "{21f3de}_______________________________\n\n{ffffff}Welcome to Los Santos Realism\n        'A place for everyone.'\n\n\tAccount: %s\n\tEnter Password:\n{21f3de}_______________________________",PlayerName(playerid));
@@ -1565,7 +1558,6 @@ public OnPlayerLogin(playerid)
 	
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
-    printf("X: %f | Y: %f | Z: %f", X,Y,Z);
     SetPlayerColor(playerid, X11_WHITE);
 
 	ShowHungerTextdraw(playerid, 1);
@@ -1653,31 +1645,6 @@ public GetWeaponBloodDamage(weaponid)
     return 0;
 }
 
-/*public OnPlayerTakeDamage(playerid, issuerid, Float:amount, weaponid, bodypart)
-{
-	if(IsLoggedIn(playerid))
-	{
-		if(IsLoggedIn(issuerid))
-		{
-			new bloodamount, oldblood, newblood, bloodexts[32];
-			bloodamount = GetWeaponBloodDamage(weaponid);
-			PlayerPlaySound(issuerid, 17802, 0, 0, 0);
-			oldblood = GetPVarInt(playerid, "Blood");
-			newblood = oldblood - bloodamount;
-			printf("TotalBlood: %d || WeaponID: %d", newblood, weaponid);
-			format(bloodexts, sizeof(bloodexts), "Blood: %d", newblood);
-			Update3DTextLabelText(bloodtext[playerid], X11_WHITE, bloodexts);
-			SetPVarInt(playerid, "Blood", newblood);
-			new string[128];
-			format(string, sizeof(string), "You are at %d blood.", newblood);
-			SendClientMessage(playerid, X11_GREY85, string);
-			return 0;
-		}
-		else return 0;
-	}
-	else return 0;
-}*/
-
 public OnPlayerDamage(&playerid, &Float:amount, &issuerid, &weapon, &bodypart)
 {
 	if(IsLoggedIn(playerid))
@@ -1740,14 +1707,12 @@ forward PlayerCheck();
 public PlayerCheck()
 {
 	new str[128];
-	print("PlayCheck running");
 	foreach (new i : Player)
 	{
 		new hungertime = GetPVarInt(i, "HungerTime"), thirsttime = GetPVarInt(i, "ThirstTime"), hunger = GetPVarInt(i, "Hunger"), thirst = GetPVarInt(i, "Thirst"), blood = GetPVarInt(i, "Blood");
 		if(IsLoggedIn(i)) {
 			if(++ hungertime >= 20)
 			{
-				printf("Hunger Time: %d", hungertime);
 				if(hunger > 0)
 				{
 					hunger--;
@@ -1761,7 +1726,6 @@ public PlayerCheck()
 			}
 			SetPVarInt(i, "HungerTime", hungertime);
 			SetPVarInt(i, "Hunger", hunger);
-			printf("Hungertime2: %d", hungertime);
 			if(++ thirsttime >= 15)
 			{
 				if(thirst > 0)
@@ -1841,7 +1805,6 @@ public OnPlayerAccountSave(playerid)
 	new query[500], Float: FacingAngle, Float: Z, Float: X, Float: Y;
 	GetPlayerPos(playerid, X, Y, Z);
 	GetPlayerFacingAngle(playerid, FacingAngle);
-	printf("Check Blood: %d", GetPVarInt(playerid, "Blood"));
 	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d', MaxSlots = '%d', Backpack = '%d', Hunger = '%d', Thirst = '%d', Humanity = '%d', Kills = '%d', Deaths = '%d'  WHERE `id` = '%d'",
 		GetPVarInt(playerid, "AdminLevel"), 
 		GetPVarInt(playerid, "Skin"),
