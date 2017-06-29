@@ -188,7 +188,7 @@ main()
 public OnGameModeInit()
 {
 	// Don't use these lines if it's a filterscript
-	SetGameModeText("SA-DayZ 0.0.1");
+	SetGameModeText("SA-DayZ 0.0.2");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
 	MySQLCon = mysql_connect(mysql_host, mysql_user, mysql_database, mysql_password);
 	if(mysql_errno(MySQLCon) != 0) print("Could not connect to database!");

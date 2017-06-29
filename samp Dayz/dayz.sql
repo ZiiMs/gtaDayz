@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `Kills` int(11) NOT NULL DEFAULT '0',
   `Deaths` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.inventory
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `invModel` int(12) NOT NULL DEFAULT '0',
   `invQuantity` int(12) NOT NULL DEFAULT '0',
   PRIMARY KEY (`invID`)
-) ENGINE=InnoDB AUTO_INCREMENT=286 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=290 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.lootspawns
