@@ -1682,6 +1682,7 @@ public OnPlayerDamage(&playerid, &Float:amount, &issuerid, &weapon, &bodypart)
 {
 	if(IsLoggedIn(playerid))
 	{
+		if(weapon == 0) return 0;
 		new bloodamount, oldblood, newblood;
 		PlayerPlaySound(issuerid, 17802, 0, 0, 0);
 		PlayerPlaySound(playerid, 17802, 0, 0, 0);
