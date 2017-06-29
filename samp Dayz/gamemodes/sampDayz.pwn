@@ -478,7 +478,16 @@ public OnPlayerUseItem(playerid, itemid, name[])
 		{
 			Inventory_Remove(playerid, itemid);
 			GivePlayerHunger(playerid, 50);
-			SendClientMessage(playerid, X11_GREY85, "You just ate a pizza. Nom nom motha fucka.");
+			return 1;
+		}
+		else return SendClientMessage(playerid, X11_GREY85, "You are already full on hunger.");
+	}
+	else if(!strcmp(name, "Canned Tuna", true))
+	{
+		if(GetPVarInt(playerid, "Hunger") < 100)
+		{
+			Inventory_Remove(playerid, itemid);
+			GivePlayerHunger(playerid, 25);
 			return 1;
 		}
 		else return SendClientMessage(playerid, X11_GREY85, "You are already full on hunger.");
@@ -489,10 +498,45 @@ public OnPlayerUseItem(playerid, itemid, name[])
 		{
 			Inventory_Remove(playerid, itemid);
 			GivePlayerThirst(playerid, 75);
-			SendClientMessage(playerid, X11_GREY85, "You just drank some water. Nom nom motha fucka.");
 			return 1;
 		}
 		else return SendClientMessage(playerid, X11_GREY85, "You are already full on thirst.");
+	}
+	else if(!strcmp(name, "Coka-cola", true))
+	{
+		if(GetPVarInt(playerid, "Thirst") < 100)
+		{
+			Inventory_Remove(playerid, itemid);
+			GivePlayerThirst(playerid, 25);
+			return 1;
+		}
+		else return SendClientMessage(playerid, X11_GREY85, "You are already full on thirst.");
+	}
+	else if(!strcmp(name, "Civilian Skin", true))
+	{
+		Inventory_Remove(playerid, itemid);
+		SetPVarInt(playerid, "Skin", 250);
+		SetPlayerSkin(playerid, 250);
+		OnPlayerAccountSave(playerid);
+		return 1;
+	}
+	else if(!strcmp(name, "Army Clothes", true))
+	{
+		Inventory_Remove(playerid, itemid);
+		SetPVarInt(playerid, "Skin", 287);
+		SetPlayerSkin(playerid, 287);
+		OnPlayerAccountSave(playerid);
+		return 1;
+	}
+	else if(!strcmp(name, "Medkit", true))
+	{
+		Inventory_Remove(playerid, itemid);
+		new blood = GetPVarInt(playerid, "Blood");
+		SetPVarInt(playerid, "Blood", blood + 7500);
+		if(GetPVarInt(playerid, "Blood") > 12000) {
+			SetPVarInt(playerid, "Blood", 12000);
+		}
+		return 1;
 	}
 	return 0;
 }
@@ -1250,18 +1294,22 @@ CMD:makeadmin(playerid, params[])
 ShowHungerTextdraw(playerid, enable)
 {
 	if (!enable) {
-	    PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][2]);
-		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][3]);
+	    PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][3]);
+		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][4]);
+		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][5]);
 
 		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][0]);
 		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][1]);
+		PlayerTextDrawHide(playerid, TextDrawData[playerid][pTextdraws][2]);
 	}
 	else {
-	    PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][2]);
-		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][3]);
+	    PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][3]);
+	    PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][4]);
+	    PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][5]);
 
 		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][0]);
 		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][1]);
+		PlayerTextDrawShow(playerid, TextDrawData[playerid][pTextdraws][2]);
 	}
 	return 1;
 }
@@ -1285,20 +1333,16 @@ CreateTextDraws(playerid) {
 	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][1], 1);
 	PlayerTextDrawSetSelectable(playerid, TextDrawData[playerid][pTextdraws][1], 0);
 
-	TextDrawData[playerid][pTextdraws][2] = CreatePlayerTextDraw(playerid, 536.000000, 108.000000, "hunger");
-	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][2], 0);
-	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][2], 5);
-	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][2], 0.539999, 1.400000);
+	TextDrawData[playerid][pTextdraws][2] = CreatePlayerTextDraw(playerid, 579.000000, 188.000000, "12000");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][2], 255);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][2], 1);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][2], 0.290000, 0.899999);
 	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][2], -1);
 	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][2], 1);
 	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][2], 1);
-	PlayerTextDrawUseBox(playerid, TextDrawData[playerid][pTextdraws][2], 1);
-	PlayerTextDrawBoxColor(playerid, TextDrawData[playerid][pTextdraws][2], 0);
-	PlayerTextDrawTextSize(playerid, TextDrawData[playerid][pTextdraws][2], 51.000000, 37.000000);
-	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][2], 2702);
-	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][2], 0.0000, 90.0000, 90.0000);
+	PlayerTextDrawSetSelectable(playerid, TextDrawData[playerid][pTextdraws][2], 0);
 
-	TextDrawData[playerid][pTextdraws][3] = CreatePlayerTextDraw(playerid, 537.000000, 140.000000, "thirst");
+	TextDrawData[playerid][pTextdraws][3] = CreatePlayerTextDraw(playerid, 536.000000, 108.000000, "hunger");
 	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][3], 0);
 	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][3], 5);
 	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][3], 0.539999, 1.400000);
@@ -1308,8 +1352,35 @@ CreateTextDraws(playerid) {
 	PlayerTextDrawUseBox(playerid, TextDrawData[playerid][pTextdraws][3], 1);
 	PlayerTextDrawBoxColor(playerid, TextDrawData[playerid][pTextdraws][3], 0);
 	PlayerTextDrawTextSize(playerid, TextDrawData[playerid][pTextdraws][3], 51.000000, 37.000000);
-	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][3], 1543);
-	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][3], 0.0000, 0.0000, 0.0000);
+	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][3], 2702);
+	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][3], 0.0000, 90.0000, 90.0000);
+
+	TextDrawData[playerid][pTextdraws][4] = CreatePlayerTextDraw(playerid, 537.000000, 140.000000, "thirst");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][4], 0);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][4], 5);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][4], 0.539999, 1.400000);
+	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][4], -1);
+	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][4], 1);
+	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][4], 1);
+	PlayerTextDrawUseBox(playerid, TextDrawData[playerid][pTextdraws][4], 1);
+	PlayerTextDrawBoxColor(playerid, TextDrawData[playerid][pTextdraws][4], 0);
+	PlayerTextDrawTextSize(playerid, TextDrawData[playerid][pTextdraws][4], 51.000000, 37.000000);
+	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][4], 1543);
+	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][4], 0.0000, 0.0000, 0.0000);
+
+	TextDrawData[playerid][pTextdraws][5] = CreatePlayerTextDraw(playerid, 537.000000, 172.000000, "blood");
+	PlayerTextDrawBackgroundColor(playerid, TextDrawData[playerid][pTextdraws][5], 0);
+	PlayerTextDrawFont(playerid, TextDrawData[playerid][pTextdraws][5], 5);
+	PlayerTextDrawLetterSize(playerid, TextDrawData[playerid][pTextdraws][5], 0.539999, 1.400000);
+	PlayerTextDrawColor(playerid, TextDrawData[playerid][pTextdraws][5], -1);
+	PlayerTextDrawSetOutline(playerid, TextDrawData[playerid][pTextdraws][5], 1);
+	PlayerTextDrawSetProportional(playerid, TextDrawData[playerid][pTextdraws][5], 1);
+	PlayerTextDrawUseBox(playerid, TextDrawData[playerid][pTextdraws][5], 1);
+	PlayerTextDrawBoxColor(playerid, TextDrawData[playerid][pTextdraws][5], 0);
+	PlayerTextDrawTextSize(playerid, TextDrawData[playerid][pTextdraws][5], 51.000000, 37.000000);
+	PlayerTextDrawSetPreviewModel(playerid, TextDrawData[playerid][pTextdraws][5], 1240);
+	PlayerTextDrawSetPreviewRot(playerid, TextDrawData[playerid][pTextdraws][5], 0.0000, 0.0000, 0.0000);
+
 }
 
 CMD:adminoverride(playerid, params[]) {
@@ -1502,6 +1573,23 @@ public OnPlayerLogin(playerid)
     return 1;
 }
 
+public OnPlayerWeaponShot(playerid, weaponid, hittype, hitid, Float:fX, Float:fY, Float:fZ)
+{
+	if(!IsLoggedIn(playerid)) return true;
+	if(hittype == BULLET_HIT_TYPE_PLAYER)
+	{
+		if(weaponid >= 35) {
+			return 0;
+		}
+	}
+	if(GetPlayerWeapon(playerid) == 0 && weaponid != 0) 
+    { 
+        return 0;
+    } 
+	return 1;
+}
+
+
 forward OnLoadInventory(playerid);
 public OnLoadInventory(playerid)
 {
@@ -1638,43 +1726,46 @@ public PlayerCheck()
 	foreach (new i : Player)
 	{
 		new hungertime = GetPVarInt(i, "HungerTime"), thirsttime = GetPVarInt(i, "ThirstTime"), hunger = GetPVarInt(i, "Hunger"), thirst = GetPVarInt(i, "Thirst"), blood = GetPVarInt(i, "Blood");
-		if(IsLoggedIn(i))
-		if(++ hungertime >= 20)
-		{
-			printf("Hunger Time: %d", hungertime);
-			if(hunger > 0)
+		if(IsLoggedIn(i)) {
+			if(++ hungertime >= 20)
 			{
-				hunger--;
+				printf("Hunger Time: %d", hungertime);
+				if(hunger > 0)
+				{
+					hunger--;
+				}
+				else if(hunger <= 0)
+				{
+					SetPVarInt(i, "Blood", blood - 1000);
+					FlashTextDraw(i, TextDrawData[i][pTextdraws][3]);
+				}
+				hungertime = 0;
 			}
-			else if(hunger <= 0)
+			SetPVarInt(i, "HungerTime", hungertime);
+			SetPVarInt(i, "Hunger", hunger);
+			printf("Hungertime2: %d", hungertime);
+			if(++ thirsttime >= 15)
 			{
-				SetPVarInt(i, "Blood", blood - 1000);
-				FlashTextDraw(i, TextDrawData[i][pTextdraws][3]);
+				if(thirst > 0)
+				{
+					thirst--;
+				}
+				else if(thirst <= 0)
+				{
+					SetPVarInt(i, "Blood", blood - 2000);
+					FlashTextDraw(i, TextDrawData[i][pTextdraws][4]);
+				}
+				thirsttime = 0;
 			}
-			hungertime = 0;
+			SetPVarInt(i, "ThirstTime", thirsttime);
+			SetPVarInt(i, "Thirst", thirst);
+			format(str, sizeof(str), "Hunger - %d%c", GetPVarInt(i, "Hunger"), '%');
+			PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][0], str);
+			format(str, sizeof(str), "Thirst - %d%c", GetPVarInt(i, "Thirst"), '%');
+			PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][1], str);
+			format(str, sizeof(str), "Blood - %d", GetPVarInt(i, "Blood"));
+			PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][2], str);
 		}
-		SetPVarInt(i, "HungerTime", hungertime);
-		SetPVarInt(i, "Hunger", hunger);
-		printf("Hungertime2: %d", hungertime);
-		if(++ thirsttime >= 15)
-		{
-			if(thirst > 0)
-			{
-				thirst--;
-			}
-			else if(thirst <= 0)
-			{
-				SetPVarInt(i, "Blood", blood - 2000);
-				FlashTextDraw(i, TextDrawData[i][pTextdraws][4]);
-			}
-			thirsttime = 0;
-		}
-		SetPVarInt(i, "ThirstTime", thirsttime);
-		SetPVarInt(i, "Thirst", thirst);
-		format(str, sizeof(str), "Hunger - %d%c", GetPVarInt(i, "Hunger"), '%');
-		PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][0], str);
-		format(str, sizeof(str), "Thirst - %d%c", GetPVarInt(i, "Thirst"), '%');
-		PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][1], str);
 	}
 	return 1;
 }
@@ -1773,12 +1864,19 @@ public OnPlayerSpawn(playerid)
 public OnPlayerDeath(playerid, killerid, reason)
 {
 	Inventory_Clear(playerid);
+	// SpawnPlayer(playerid);
 	SetPVarInt(playerid, "Backpack", 0);
 	SetPVarInt(playerid, "MaxSlots", 12);
 	new deaths = GetPVarInt(playerid, "Deaths");
 	SetPVarInt(playerid, "Deaths", deaths++);
 	new kills = GetPVarInt(killerid, "kills");
 	SetPVarInt(killerid, "kills", kills++);
+	SetPVarInt(playerid, "Hunger", 100);
+	SetPVarInt(playerid, "Thirst", 100);
+	SetPVarInt(playerid, "Skin", 12);
+	// SetPlayerSkin(playerid, 12);
+
+	SetPVarInt(playerid, "Humanity", 1600);
 	OnPlayerAccountSave(playerid);
 	return 1;
 }
