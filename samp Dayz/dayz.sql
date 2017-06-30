@@ -31,14 +31,27 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `FacingAngle` float NOT NULL DEFAULT '78.0541',
   `Blood` int(11) NOT NULL DEFAULT '12000',
   `MaxSlots` int(11) NOT NULL DEFAULT '12',
-  `Backpack` int(11) NOT NULL DEFAULT '0',
+  `Backpack` int(11) NOT NULL DEFAULT '1',
   `Hunger` int(11) NOT NULL DEFAULT '100',
   `Thirst` int(11) NOT NULL DEFAULT '100',
   `Humanity` int(11) NOT NULL DEFAULT '1600',
   `Kills` int(11) NOT NULL DEFAULT '0',
   `Deaths` int(11) NOT NULL DEFAULT '0',
+  `gun0` int(11) NOT NULL DEFAULT '0',
+  `gun1` int(11) NOT NULL DEFAULT '0',
+  `gun2` int(11) NOT NULL DEFAULT '0',
+  `gun3` int(11) NOT NULL DEFAULT '0',
+  `gun4` int(11) NOT NULL DEFAULT '0',
+  `gun5` int(11) NOT NULL DEFAULT '0',
+  `gun6` int(11) NOT NULL DEFAULT '0',
+  `gun7` int(11) NOT NULL DEFAULT '0',
+  `gun8` int(11) NOT NULL DEFAULT '0',
+  `gun9` int(11) NOT NULL DEFAULT '0',
+  `gun10` int(11) NOT NULL DEFAULT '0',
+  `gun11` int(11) NOT NULL DEFAULT '0',
+  `gun12` int(11) NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.inventory
@@ -51,7 +64,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `invModel` int(12) NOT NULL DEFAULT '0',
   `invQuantity` int(12) NOT NULL DEFAULT '0',
   PRIMARY KEY (`invID`)
-) ENGINE=InnoDB AUTO_INCREMENT=290 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=312 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.lootspawns
@@ -62,7 +75,7 @@ CREATE TABLE IF NOT EXISTS `lootspawns` (
   `Y` float DEFAULT NULL,
   `Z` float DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
