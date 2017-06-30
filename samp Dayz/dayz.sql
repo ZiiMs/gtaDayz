@@ -11,12 +11,6 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
-
--- Dumping database structure for GTADayz
-DROP DATABASE IF EXISTS `GTADayz`;
-CREATE DATABASE IF NOT EXISTS `GTADayz` /*!40100 DEFAULT CHARACTER SET utf8 */;
-USE `GTADayz`;
-
 -- Dumping structure for table GTADayz.accounts
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
@@ -64,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `invModel` int(12) NOT NULL DEFAULT '0',
   `invQuantity` int(12) NOT NULL DEFAULT '0',
   PRIMARY KEY (`invID`)
-) ENGINE=InnoDB AUTO_INCREMENT=312 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
 -- Dumping structure for table GTADayz.lootspawns

@@ -13,10 +13,16 @@
 #include <weapon-config>
 #include <SKY>
 
-#define mysql_host "127.0.0.1"
-#define mysql_user "AlexT"
+#define localhost 1
+
+#if localhost == 0
+	#define mysql_host "87.98.243.201"
+#elseif localhost == 1
+	#define mysql_host "localhost"
+#endif
+#define mysql_user "samp6355"
 #define mysql_password "AlexT"
-#define mysql_database "GTADayz"
+#define mysql_database "samp6355_DayZ"
 
 #define MAX_ADMIN_LEVEL 9
 #define ADMINOVERRIDE_PASS "eec8eb13fb975d56389a08be866cb37bd2445b46"
@@ -192,7 +198,7 @@ public OnGameModeInit()
 	SetGameModeText("SA-DayZ 0.0.2");
 	AddPlayerClass(0, 1958.3783, 1343.1572, 15.3746, 269.1425, 0, 0, 0, 0, 0, 0);
 	MySQLCon = mysql_connect(mysql_host, mysql_user, mysql_database, mysql_password);
-	if(mysql_errno(MySQLCon) != 0) print("Could not connect to database!");
+	if(mysql_errno(MySQLCon) != 0) printf("Could not connect to database %s with Username: %s Pass: %s at %s!", mysql_database, mysql_user, mysql_password, mysql_host);
 	if(mysql_errno(MySQLCon) == 0) print("Successfully connected to MySQL database.");
 	mysql_log(LOG_ERROR | LOG_WARNING, LOG_TYPE_HTML);
 	BlockGarages(true, GARAGE_TYPE_ALL, "DISABLED");
@@ -211,7 +217,7 @@ public OnGameModeInit()
 		SetWeaponDamage(i, DAMAGE_TYPE_STATIC, 0.0);
 	}
     ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
-    SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sa-dayz.com]");
+    SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sadayz.com]");
 	return 1;
 }
 forward Loot_Load();
@@ -221,7 +227,7 @@ public Loot_Load()
 	cache_get_data(rows,fields);
 	for (new i = 0; i < rows; i ++) if (i < MAX_LOOTSPAWN)
 	{
-		lootid = random(1200);
+		lootid = random(1350);
 		LootData[i][lootExists] = true;
 		LootData[i][lootItemID] = lootid;
 		format(LootData[i][lootItem], 32, LootItemName(lootid));
@@ -332,7 +338,13 @@ LootItemName(lootnumber)
 			format(lootname, sizeof(lootname), "RPG-45");
 		}
 		case 1001..1200: {
+			format(lootname, sizeof(lootname), "Czech Backpack");
+		}
+		case 1201..1300: {
 			format(lootname, sizeof(lootname), "Alice Pack");
+		}
+		case 1301..1350: {
+			format(lootname, sizeof(lootname), "Coyote Backpack");
 		}
 	}
 	return (lootname);
@@ -401,8 +413,17 @@ stock Inventory_Add(playerid, item[], itemids, model, quantity)
 		{
 			if(itemids >= 1001 && itemids <= 1200 && GetPVarInt(playerid, "Backpack") < 1)
 			{
-				SetPVarInt(playerid, "Backpack", 1);
-				SetPVarInt(playerid, "MaxSlots", 24);
+				SetPlayerBackpack(playerid, 1);
+				return 1;
+			}
+			else if(itemids >= 1201 && itemids <= 1300 && GetPVarInt(playerid, "Backpack") < 2)
+			{
+				SetPlayerBackpack(playerid, 2);
+				return 1;
+			}
+			else if(itemids >= 1301 && itemids <= 1350 && GetPVarInt(playerid, "Backpack") < 3)
+			{
+				SetPlayerBackpack(playerid, 3);
 				return 1;
 			}
 	        InventoryData[playerid][itemid][invExists] = true;
@@ -891,7 +912,13 @@ LootItemModelID(lootnumber)
 			return 359;///25
 		}
 		case 1001..1200: {
-			return 19559;
+			return 371;
+		}
+		case 1201..1300: {
+			return 1310;
+		}
+		case 1301..1350: {
+			return 1550;
 		}
 	}
 	return 0;
@@ -1001,6 +1028,7 @@ public OnPlayerRegister(playerid)
 
     TogglePlayerSpectating(playerid, false);
     ShowHungerTextdraw(playerid, 1);
+    SetPlayerBackpack(playerid, 0);
     SpawnPlayer(playerid);
     return;
 }
@@ -1803,11 +1831,11 @@ public OnPlayerLogin(playerid)
 	cache_get_row(0,9,id_string);
 	SetPVarInt(playerid, "Blood", strval(id_string));
 
+	cache_get_row(0,11,id_string);
+	SetPlayerBackpack(playerid, strval(id_string));
+
 	cache_get_row(0,10,id_string);
 	SetPVarInt(playerid, "MaxSlots", strval(id_string));
-
-	cache_get_row(0,11,id_string);
-	SetPVarInt(playerid, "Backpack", strval(id_string));
 
 	cache_get_row(0,12,id_string);
 	SetPVarInt(playerid, "Hunger", strval(id_string));
@@ -1834,6 +1862,34 @@ public OnPlayerLogin(playerid)
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return 1;
+}
+
+SetPlayerBackpack(playerid, backpack)
+{
+	switch(backpack)
+	{
+		case 0: {
+			SetPVarInt(playerid, "Backpack", 0);
+			SetPVarInt(playerid, "MaxSlots", 12);
+			SetPlayerAttachedObject(playerid, 0, 3026, 1, -0.03);
+		}
+		case 1: {
+			SetPVarInt(playerid, "Backpack", 1);
+			SetPVarInt(playerid, "MaxSlots", 24);
+			SetPlayerAttachedObject(playerid, 0, 371, 1, 0, 0, 0, 0, 90);
+		}
+		case 2: {
+			SetPVarInt(playerid, "Backpack", 2);
+			SetPVarInt(playerid, "MaxSlots", 36);
+			SetPlayerAttachedObject(playerid, 0, 1310, 1, 0, 0, 0, 0, 90);	
+		}
+		case 3: {
+			SetPVarInt(playerid, "Backpack", 3);
+			SetPVarInt(playerid, "MaxSlots", 48);
+			SetPlayerAttachedObject(playerid, 0, 1550, 1, 0.04, 0, 0, 0, 90);	
+		}
+	}
+	return 1;
 }
 
 public OnPlayerWeaponShot(playerid, weaponid, hittype, hitid, Float:fX, Float:fY, Float:fZ)
@@ -2177,6 +2233,7 @@ public OnPlayerAccountSaveTimer()
 
 public OnPlayerSpawn(playerid)
 {
+	SetPlayerBackpack(playerid, GetPVarInt(playerid, "Backpack"));
 	return 1;
 }
 
@@ -2184,8 +2241,7 @@ public OnPlayerDeath(playerid, killerid, reason)
 {
 	Inventory_Clear(playerid);
 	// SpawnPlayer(playerid);
-	SetPVarInt(playerid, "Backpack", 0);
-	SetPVarInt(playerid, "MaxSlots", 12);
+	SetPlayerBackpack(playerid, 0);
 	new deaths = GetPVarInt(playerid, "Deaths");
 	SetPVarInt(playerid, "Deaths", deaths++);
 	new kills = GetPVarInt(killerid, "kills");
