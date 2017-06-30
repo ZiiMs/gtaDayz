@@ -33,6 +33,7 @@ new
     LastAmmo[MAX_PLAYERS],
     HackWarns[MAX_PLAYERS],
     GunScan[MAX_PLAYERS][13][2],
+    tempstr[128],
     LoginAttempt[MAX_PLAYERS];
 
 
@@ -367,12 +368,14 @@ stock Inventory_Items(playerid)
 
 stock Inventory_Count(playerid, item[])
 {
-	new itemid = Inventory_GetItemID(playerid, item);
-
-	if (itemid != -1)
-	    return InventoryData[playerid][itemid][invQuantity];
-
-	return 0;
+	new count = 0;
+	for(new itemid = 0; itemid < GetPVarInt(playerid, "MaxSlots"); itemid++) {
+		if(!strcmp(item, InventoryData[playerid][itemid][invItem]))
+		{
+			count++;
+		}
+	}
+	return count;
 }
 
 stock Inventory_Add(playerid, item[], itemids, model, quantity)
@@ -480,8 +483,9 @@ public OnPlayerUseItem(playerid, itemid, name[])
 	{
 		if(GetPVarInt(playerid, "Hunger") < 100)
 		{
-			Inventory_Remove(playerid, itemid);
+			Inventory_Remove(playerid, "", itemid);
 			GivePlayerHunger(playerid, 50);
+			OnPlayerAccountSave(playerid);
 			return 1;
 		}
 		else return SendClientMessage(playerid, X11_GREY85, "You are already full on hunger.");
@@ -490,8 +494,9 @@ public OnPlayerUseItem(playerid, itemid, name[])
 	{
 		if(GetPVarInt(playerid, "Hunger") < 100)
 		{
-			Inventory_Remove(playerid, itemid);
+			Inventory_Remove(playerid, "", itemid);
 			GivePlayerHunger(playerid, 25);
+			OnPlayerAccountSave(playerid);
 			return 1;
 		}
 		else return SendClientMessage(playerid, X11_GREY85, "You are already full on hunger.");
@@ -500,8 +505,9 @@ public OnPlayerUseItem(playerid, itemid, name[])
 	{
 		if(GetPVarInt(playerid, "Thirst") < 100)
 		{
-			Inventory_Remove(playerid, itemid);
+			Inventory_Remove(playerid, "", itemid);
 			GivePlayerThirst(playerid, 75);
+			OnPlayerAccountSave(playerid);
 			return 1;
 		}
 		else return SendClientMessage(playerid, X11_GREY85, "You are already full on thirst.");
@@ -510,15 +516,18 @@ public OnPlayerUseItem(playerid, itemid, name[])
 	{
 		if(GetPVarInt(playerid, "Thirst") < 100)
 		{
-			Inventory_Remove(playerid, itemid);
+			Inventory_Remove(playerid, "", itemid);
 			GivePlayerThirst(playerid, 25);
+			OnPlayerAccountSave(playerid);
 			return 1;
 		}
 		else return SendClientMessage(playerid, X11_GREY85, "You are already full on thirst.");
 	}
+	// Clothes
 	else if(!strcmp(name, "Civilian Skin", true))
 	{
-		Inventory_Remove(playerid, itemid);
+		if(GetPVarInt(playerid, "Skin") == 250) return 1;
+		Inventory_Remove(playerid, "", itemid);
 		SetPVarInt(playerid, "Skin", 250);
 		SetPlayerSkin(playerid, 250);
 		OnPlayerAccountSave(playerid);
@@ -526,24 +535,200 @@ public OnPlayerUseItem(playerid, itemid, name[])
 	}
 	else if(!strcmp(name, "Army Clothes", true))
 	{
-		Inventory_Remove(playerid, itemid);
+		if(GetPVarInt(playerid, "Skin") == 287) return 1;
+		Inventory_Remove(playerid, "", itemid);
 		SetPVarInt(playerid, "Skin", 287);
 		SetPlayerSkin(playerid, 287);
 		OnPlayerAccountSave(playerid);
 		return 1;
 	}
+	// Medical
 	else if(!strcmp(name, "Medkit", true))
 	{
-		Inventory_Remove(playerid, itemid);
+		Inventory_Remove(playerid, "", itemid);
 		new blood = GetPVarInt(playerid, "Blood");
 		SetPVarInt(playerid, "Blood", blood + 7500);
 		if(GetPVarInt(playerid, "Blood") > 12000) {
 			SetPVarInt(playerid, "Blood", 12000);
 		}
+		OnPlayerAccountSave(playerid);
+		return 1;
+	}
+	// Weapons
+	else if(!strcmp(name, "M4", true))
+	{
+		new slot = GetWeaponSlot(31), weapon, ammo;
+		GetPlayerWeaponData(playerid, slot, weapon, ammo);
+		if(weapon != 31)
+		{
+			if(weapon == 30) {
+
+				Inventory_Remove(playerid, "", itemid);
+				Inventory_Add(playerid, "Ak47", 225, 355, 1);
+				GivePlayerWeaponEx(playerid, 31, ammo);
+			}
+			else if(Inventory_Count(playerid, "Assault Ammo") > 0)
+			{
+				Inventory_Remove(playerid, "Assault Ammo");
+				Inventory_Remove(playerid, "", itemid);
+				GivePlayerWeaponEx(playerid, 31, 100);
+			}
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "Ak47", true))
+	{
+		new slot = GetWeaponSlot(31), weapon, ammo;
+		GetPlayerWeaponData(playerid, slot, weapon, ammo);
+		if(weapon != 30)
+		{
+			if(weapon == 31) {
+
+				Inventory_Remove(playerid, "", itemid);
+				Inventory_Add(playerid, "M4", 180, 356, 1);
+				GivePlayerWeaponEx(playerid, 30, ammo);
+			}
+			else if(Inventory_Count(playerid, "Assault Ammo") > 0)
+			{
+				Inventory_Remove(playerid, "Assault Ammo");
+				Inventory_Remove(playerid, "", itemid);
+				GivePlayerWeaponEx(playerid, 30, 100);
+			}
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "Pistol", true))
+	{
+		new slot = GetWeaponSlot(22), weapon, ammo;
+		GetPlayerWeaponData(playerid, slot, weapon, ammo);
+		if(weapon != 22)
+		{
+			if(Inventory_Count(playerid, "Pistol Ammo") > 0)
+			{
+				Inventory_Remove(playerid, "Pistol Ammo");
+				Inventory_Remove(playerid, "", itemid);
+				GivePlayerWeaponEx(playerid, 22, 45);
+			}
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "MP5", true))
+	{
+		new slot = GetWeaponSlot(29), weapon, ammo;
+		GetPlayerWeaponData(playerid, slot, weapon, ammo);
+		if(weapon != 29)
+		{
+			if(Inventory_Count(playerid, "Submachine Gun Ammo") > 0)
+			{
+				Inventory_Remove(playerid, "Submachine Gun Ammo");
+				Inventory_Remove(playerid, "", itemid);
+				GivePlayerWeaponEx(playerid, 29, 60);
+			}
+			OnPlayerAccountSave(playerid);
+		}
+		OnPlayerAccountSave(playerid);
+		return 1;
+	}
+	else if(!strcmp(name, "Sniper Rifle", true))
+	{
+		new slot = GetWeaponSlot(34), weapon, ammo;
+		GetPlayerWeaponData(playerid, slot, weapon, ammo);
+		if(weapon != 34)
+		{
+			if(weapon == 33) {
+
+				Inventory_Remove(playerid, "", itemid);
+				Inventory_Add(playerid, "Country Rifle", 575, 357, 1);
+				GivePlayerWeaponEx(playerid, 34, ammo);
+			}
+			else if(Inventory_Count(playerid, "Assault Ammo") > 0)
+			{
+				Inventory_Remove(playerid, "Sniper Ammo");
+				Inventory_Remove(playerid, "", itemid);
+				GivePlayerWeaponEx(playerid, 34, 25);
+			}
+			
+		}
+		OnPlayerAccountSave(playerid);
+		return 1;
+	}
+	else if(!strcmp(name, "Country Rifle", true))
+	{
+		new slot = GetWeaponSlot(33), weapon, ammo;
+		GetPlayerWeaponData(playerid, slot, weapon, ammo);
+		if(weapon != 33)
+		{
+			if(weapon == 34) {
+
+				Inventory_Remove(playerid, "", itemid);
+				Inventory_Add(playerid, "Sniper Rifle", 475, 358, 1);
+				GivePlayerWeaponEx(playerid, 33, ammo);
+			}
+			else if(Inventory_Count(playerid, "Sniper Ammo") > 0)
+			{
+				Inventory_Remove(playerid, "Sniper Ammo");
+				Inventory_Remove(playerid, "", itemid);
+				GivePlayerWeaponEx(playerid, 33, 25);
+			}
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "Assault ammo", true))
+	{
+		new weapon, ammo;
+		GetPlayerWeaponData(playerid, 5, weapon, ammo);
+		if(weapon == 30 || weapon == 31)
+		{
+			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 100);
+			Inventory_Remove(playerid, "Assault ammo");
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "Pistol Ammo", true))
+	{
+		new weapon, ammo;
+		GetPlayerWeaponData(playerid, 2, weapon, ammo);
+		if(weapon == 22)
+		{
+			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 45);
+			Inventory_Remove(playerid, "Pistol Ammo");
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "Submachine Gun Ammo", true))
+	{
+		new weapon, ammo;
+		GetPlayerWeaponData(playerid, 4, weapon, ammo);
+		if(weapon == 29)
+		{
+			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 60);
+			Inventory_Remove(playerid, "Submachine Gun Ammo");
+			OnPlayerAccountSave(playerid);
+		}
+		return 1;
+	}
+	else if(!strcmp(name, "Sniper Ammo", true))
+	{
+		new weapon, ammo;
+		GetPlayerWeaponData(playerid, 6, weapon, ammo);
+		if(weapon == 33 || weapon == 34)
+		{
+			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 100);
+			Inventory_Remove(playerid, "Sniper Ammo");
+			OnPlayerAccountSave(playerid);
+		}
 		return 1;
 	}
 	return 0;
 }
+
+
 
 GivePlayerHunger(playerid, amount)
 {
@@ -559,7 +744,7 @@ GivePlayerThirst(playerid, amount)
 	return 1;
 }
 
-stock Inventory_Remove(playerid, itemid, quantity = 1)
+stock Inventory_Remove(playerid, item[], itemid = -1, quantity = 1)
 {
 	new string[128];
 
@@ -588,6 +773,34 @@ stock Inventory_Remove(playerid, itemid, quantity = 1)
 			}
 		}
 		return 0;
+	}
+	else if(!isnull(item))
+	{
+		for(new i = 0; i < GetPVarInt(playerid, "MaxSlots"); i++)
+		{
+			if(InventoryData[playerid][i][invExists]) {
+				if(!strcmp(item, InventoryData[playerid][i][invItem])) {
+					if (InventoryData[playerid][i][invQuantity] > 0)
+				    {
+				        InventoryData[playerid][i][invQuantity] -= quantity;
+					}
+					if (quantity == -1 || InventoryData[playerid][i][invQuantity] < 1)
+					{
+					    InventoryData[playerid][i][invExists] = false;
+					    InventoryData[playerid][i][invModel] = 0;
+					    InventoryData[playerid][i][invQuantity] = 0;
+
+					    format(string, sizeof(string), "DELETE FROM `inventory` WHERE `ID` = '%d' AND `invID` = '%d'", GetPVarInt(playerid, "AccountID"), InventoryData[playerid][i][invID]);
+				        mysql_function_query(MySQLCon, string, false, "", "");
+					}
+					else if (quantity != -1 && InventoryData[playerid][i][invQuantity] > 0)
+					{
+						format(string, sizeof(string), "UPDATE `inventory` SET `invQuantity` = `invQuantity` - %d WHERE `ID` = '%d' AND `invID` = '%d'", quantity, GetPVarInt(playerid, "AccountID"), InventoryData[playerid][i][invID]);
+			            mysql_function_query(MySQLCon, string, false, "", "");
+					}
+				}
+			}
+		}
 	}
 	return 0;
 }
@@ -915,6 +1128,24 @@ CMD:freeze(playerid, params[])
 	else return SendClientMessage(playerid, X11_WHITE, "You aren't an admin, or aren't on-duty.");
 }
 
+CMD:removegun(playerid, params[])
+{
+	if(GetPVarInt(playerid, "AdminLevel") >= 1)
+	{
+	    new giveplayerid, string[129];
+	    if(sscanf(params, "u", giveplayerid)) return SendClientMessage(playerid, X11_GREY85,"/removegun [playerid]");
+	    
+	    if(IsLoggedIn(giveplayerid)) {
+            ResetPlayerWeaponsEx(giveplayerid);
+            format(string, sizeof(string), "You have removed %s(%d) weapons.", PlayerName(giveplayerid), giveplayerid);
+            SendClientMessage(playerid, X11_RED, string);
+            return 1;
+		}
+		else return SendClientMessage(playerid, X11_WHITE, "Invalid player ID!");
+	}
+	else return SendClientMessage(playerid, X11_WHITE, "You aren't an admin, or aren't on-duty.");
+}
+
 forward GetWeaponSlot(weapon);
 public GetWeaponSlot(weapon) {
 	if(weapon >= 0 && weapon <= 1) {
@@ -1199,12 +1430,12 @@ CMD:deletelootspawn(playerid, params[])
     		if(sscanf(params, "d", spawnid)) return SendClientMessage(playerid, X11_GREY_85, "/deletelootspawn [lootspawnid]");
     		if(spawnid <= MAX_LOOTSPAWN && LootData[spawnid][lootExists])
     		{
-    			Loot_Delete(spawnid);
     			mysql_format(MySQLCon, query, sizeof(query), "DELETE FROM `lootspawns` WHERE `id` = '%d'", LootData[spawnid][lootID]);
 				mysql_tquery(MySQLCon, query, "", "");
 
     			format(msg, sizeof(msg), "You have delete loot spawn ID: %d(SQLID: %d).", spawnid, LootData[spawnid][lootID]);
 				SendClientMessage(playerid, X11_YELLOW, msg);
+				Loot_Delete(spawnid);
 				return 1;
     		}
     		else return SendClientMessage(playerid, X11_RED_4, "Invalid loot spawn ID.");
@@ -1424,53 +1655,80 @@ CMD:togglehunger(playerid, params[]) {
 	return 1;
 }
 
+GetAdminLevel(playerid) {
+	new adminlevel = GetPVarInt(playerid, "AdminLevel");
+	return adminlevel;
+}
+
 CMD:givegun(playerid, params[]) {
 	new playa, gunid, ammo;
 	new ignoreslot;
 	new msg[128];
-	if(!sscanf(params, "udI(-1)I(0)", playa, gunid, ammo,ignoreslot)) 
-	{
-		if(!IsPlayerConnected(playa)) 
+	if(GetAdminLevel(playerid) >= 1) {
+		if(!sscanf(params, "udI(-1)I(0)", playa, gunid, ammo,ignoreslot)) 
 		{
-			SendClientMessage(playerid, X11_RED, "User not found");
-			return 1;
-		}
-		new slot = GetWeaponSlot(gunid);
-		if(slot == -1) 
+			if(!IsPlayerConnected(playa)) 
+			{
+				SendClientMessage(playerid, X11_RED, "User not found");
+				return 1;
+			}
+			new slot = GetWeaponSlot(gunid);
+			if(slot == -1) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Weapon ID");
+				return 1;
+			}
+			new curgun,curammo;
+			GetPlayerWeaponDataEx(playa, slot, curgun, curammo);
+			if(curgun != 0 && ignoreslot != 1) 
+			{
+				SendClientMessage(playerid, X11_RED, "This player is holding a weapon in this slot.");
+				format(msg, sizeof(msg), "To ignore this warning, do /givegun %d %d %d 1",playa,gunid,ammo);
+				SendClientMessage(playerid, X11_WHITE, msg);
+				return 1;
+			}
+			if(GetPVarInt(playerid, "AdminHidden") != 2) 
+			{
+				new weapon[32];
+				GetWeaponNameEx(gunid, weapon, sizeof(weapon));
+				format(msg, sizeof(msg), "%s gave %s a %s with %d bullets", PlayerName(playerid),PlayerName(playa),weapon, ammo);
+				SendClientMessageToAll(X11_RED, msg);
+			}
+			GivePlayerWeaponEx(playa, gunid, ammo);
+		} 
+		else 
 		{
-			SendClientMessage(playerid, X11_RED, "Invalid Weapon ID");
-			return 1;
-		}
-		new curgun,curammo;
-		GetPlayerWeaponDataEx(playa, slot, curgun, curammo);
-		if(curgun != 0 && ignoreslot != 1) 
-		{
-			SendClientMessage(playerid, X11_RED, "This player is holding a weapon in this slot.");
-			format(msg, sizeof(msg), "To ignore this warning, do /givegun %d %d %d 1",playa,gunid,ammo);
-			SendClientMessage(playerid, X11_WHITE, msg);
-			return 1;
-		}
-		if(GetPVarInt(playerid, "AdminHidden") != 2) 
-		{
-			new weapon[32];
-			GetWeaponNameEx(gunid, weapon, sizeof(weapon));
-			format(msg, sizeof(msg), "%s gave %s a %s with %d bullets", PlayerName(playerid),PlayerName(playa),weapon, ammo);
-			SendClientMessageToAll(X11_RED, msg);
-		}
-		GivePlayerWeaponEx(playa, gunid, ammo);
-	} 
-	else 
-	{
-		SendClientMessage(playerid, X11_GREY85,"/givegun [playerid/name] [gunid] [ammo]");
-		SendClientMessage(playerid, X11_RED, "1: Brass Knuckles 2: Golf Club 3: Nite Stick 4: Knife 5: Baseball Bat 6: Shovel 7: Pool Cue 8: Katana 9: Chainsaw");
-		SendClientMessage(playerid, X11_RED, "10: Purple Dildo 11: Small White Vibrator 12: Large White Vibrator 13: Silver Vibrator 14: Flowers 15: Cane 16: Frag Grenade");
-		SendClientMessage(playerid, X11_RED, "17: Tear Gas 18: Molotov Cocktail 19: Vehicle Missile 20: Hydra Flare 21: Jetpack 22: 9mm 23: Silenced 9mm 24: Desert Eagle 25: Shotgun");
-		SendClientMessage(playerid, X11_RED, "26: Sawnoff Shotgun 27: SPAS-12 28: Micro SMG (Mac 10) 29: SMG (MP5) 30: AK-47 31: M4 32: Tec9 33: Rifle");
-		SendClientMessage(playerid, X11_RED, "25: Shotgun 34: Sniper Rifle 35: Rocket Launcher 36: HS Rocket Launcher 37: Flamethrower 38: Minigun 39: Satchel Charge");
-		SendClientMessage(playerid, X11_RED, "40: Detonator 41: Spraycan 42: Fire Extinguisher 43: Camera 44: Nightvision Goggles 45: Infared Goggles 46: Parachute");
+			SendClientMessage(playerid, X11_GREY85,"/givegun [playerid/name] [gunid] [ammo]");
+			SendClientMessage(playerid, X11_RED, "1: Brass Knuckles 2: Golf Club 3: Nite Stick 4: Knife 5: Baseball Bat 6: Shovel 7: Pool Cue 8: Katana 9: Chainsaw");
+			SendClientMessage(playerid, X11_RED, "10: Purple Dildo 11: Small White Vibrator 12: Large White Vibrator 13: Silver Vibrator 14: Flowers 15: Cane 16: Frag Grenade");
+			SendClientMessage(playerid, X11_RED, "17: Tear Gas 18: Molotov Cocktail 19: Vehicle Missile 20: Hydra Flare 21: Jetpack 22: 9mm 23: Silenced 9mm 24: Desert Eagle 25: Shotgun");
+			SendClientMessage(playerid, X11_RED, "26: Sawnoff Shotgun 27: SPAS-12 28: Micro SMG (Mac 10) 29: SMG (MP5) 30: AK-47 31: M4 32: Tec9 33: Rifle");
+			SendClientMessage(playerid, X11_RED, "25: Shotgun 34: Sniper Rifle 35: Rocket Launcher 36: HS Rocket Launcher 37: Flamethrower 38: Minigun 39: Satchel Charge");
+			SendClientMessage(playerid, X11_RED, "40: Detonator 41: Spraycan 42: Fire Extinguisher 43: Camera 44: Nightvision Goggles 45: Infared Goggles 46: Parachute");
 
+		}
+		return 1;
 	}
-	return 1;
+	return -1;
+}
+
+CMD:gotols(playerid, params[]) {
+	if(GetAdminLevel(playerid) >= 1)
+	{
+		if(!IsPlayerInAnyVehicle(playerid)) {
+			SetPlayerPos(playerid, 1529.6,-1691.2,13.3);
+			SetPlayerVirtualWorld(playerid, 0);
+			SetPlayerInterior(playerid, 0);
+		} else {
+				new carid = GetPlayerVehicleID(playerid);
+				LinkVehicleToInterior(carid, 0);
+				SetVehicleVirtualWorld(carid, 0);
+				SetVehiclePos(carid, 1529.6,-1691.2,13.3);
+		}
+		SendClientMessage(playerid, X11_ORANGE3, "You have been teleported.");
+		return 1;
+	}
+	return -1;
 }
 
 Dialog:DIALOG_LOGIN(playerid, response, listitem, inputtext[])
@@ -1569,6 +1827,8 @@ public OnPlayerLogin(playerid)
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
     SetPlayerColor(playerid, X11_WHITE);
+
+    loadSQLGuns(playerid);
 
 	ShowHungerTextdraw(playerid, 1);
     TogglePlayerSpectating(playerid, false);
@@ -1832,7 +2092,76 @@ public OnPlayerAccountSave(playerid)
 		GetPVarInt(playerid, "Deaths"),
 		GetPVarInt(playerid, "AccountID"));
 	mysql_tquery(MySQLCon, query, "", "");
+	saveSQLGuns(playerid);
 	return 1;
+}
+
+encodeWeapon(weapon, ammo) {
+	new ret = 0;
+	ret = (ammo<<16|weapon);
+	return ret;
+}
+decodeWeapon(weapondata, &weapon, &ammo) {
+	weapon = (weapondata&0x000000FF);
+	ammo = (weapondata& 0xFFFF0000)>>16;
+}
+
+saveSQLGuns(playerid) {
+	new query[256];
+	new guns[12];
+	for(new i=0;i<sizeof(guns);i++) {
+		new gun, ammo;
+		GetPlayerWeaponDataEx(playerid, i, gun, ammo);
+		guns[i] = encodeWeapon(gun, ammo);
+	}
+	format(query, sizeof(query), "UPDATE `accounts` SET ");
+	tempstr[0] = 0;
+	for(new i=0;i<sizeof(guns);i++) {
+		format(tempstr, sizeof(tempstr), "`gun%d` = %d,",i,guns[i]);
+		strcat(query, tempstr, sizeof(query));
+	}
+	query[strlen(query)-1] = 0;
+	
+	format(tempstr, sizeof(tempstr), " WHERE `id` = %d", GetPVarInt(playerid, "AccountID"));
+	strcat(query, tempstr, sizeof(query));
+	mysql_function_query(MySQLCon, query, true, "EmptyCallback", "");
+}
+
+loadSQLGuns(playerid) {
+	new query[256];
+	new guns[12];
+	for(new i=0;i<sizeof(guns);i++) {
+		new gun, ammo;
+		GetPlayerWeaponDataEx(playerid, i, gun, ammo);
+		guns[i] = encodeWeapon(gun, ammo);
+	}
+	format(query, sizeof(query), "SELECT");
+	tempstr[0] = 0;
+	for(new i=0;i<sizeof(guns);i++) {
+		format(tempstr, sizeof(tempstr), "`gun%d`,",i,guns[i]);
+		strcat(query, tempstr, sizeof(query));
+	}
+	query[strlen(query)-1] = 0;
+	
+	format(tempstr, sizeof(tempstr), " FROM `accounts` WHERE `id` = %d", GetPVarInt(playerid, "AccountID"));
+	strcat(query, tempstr, sizeof(query));
+	mysql_function_query(MySQLCon, query, true, "OnLoadGuns", "d", playerid);
+}
+
+forward OnLoadGuns(playerid);
+public OnLoadGuns(playerid) {
+	new rows, fields;
+	cache_get_data(rows, fields);
+	if(rows > 0) {
+		new id_string[64];
+		new gun, ammo;
+		for(new i=0;i<fields;i++) {
+			cache_get_row(0, i, id_string);
+			decodeWeapon(strval(id_string), gun, ammo);
+			if(gun != 0) 
+				GivePlayerWeaponEx(playerid, gun, ammo);
+		}
+	}	
 }
 
 forward OnPlayerAccountSaveTimer();
