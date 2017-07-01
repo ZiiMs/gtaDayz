@@ -11,7 +11,7 @@
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
--- Dumping structure for table GTADayz.accounts
+-- Dumping structure for table samp6355_DayZ.accounts
 DROP TABLE IF EXISTS `accounts`;
 CREATE TABLE IF NOT EXISTS `accounts` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -31,6 +31,10 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `Humanity` int(11) NOT NULL DEFAULT '1600',
   `Kills` int(11) NOT NULL DEFAULT '0',
   `Deaths` int(11) NOT NULL DEFAULT '0',
+  `IsAlive` int(11) NOT NULL DEFAULT '0',
+  `AdminTitle` varchar(32) NOT NULL DEFAULT 'Unset',
+  `Score` int(11) NOT NULL DEFAULT '0',
+  `ConnectTime` int(11) NOT NULL DEFAULT '0',
   `gun0` int(11) NOT NULL DEFAULT '0',
   `gun1` int(11) NOT NULL DEFAULT '0',
   `gun2` int(11) NOT NULL DEFAULT '0',
@@ -48,7 +52,7 @@ CREATE TABLE IF NOT EXISTS `accounts` (
 ) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
--- Dumping structure for table GTADayz.inventory
+-- Dumping structure for table samp6355_DayZ.inventory
 DROP TABLE IF EXISTS `inventory`;
 CREATE TABLE IF NOT EXISTS `inventory` (
   `ID` int(12) DEFAULT '0',
@@ -58,10 +62,10 @@ CREATE TABLE IF NOT EXISTS `inventory` (
   `invModel` int(12) NOT NULL DEFAULT '0',
   `invQuantity` int(12) NOT NULL DEFAULT '0',
   PRIMARY KEY (`invID`)
-) ENGINE=InnoDB AUTO_INCREMENT=310 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=324 DEFAULT CHARSET=latin1;
 
 -- Data exporting was unselected.
--- Dumping structure for table GTADayz.lootspawns
+-- Dumping structure for table samp6355_DayZ.lootspawns
 DROP TABLE IF EXISTS `lootspawns`;
 CREATE TABLE IF NOT EXISTS `lootspawns` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -70,6 +74,19 @@ CREATE TABLE IF NOT EXISTS `lootspawns` (
   `Z` float DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8;
+
+-- Data exporting was unselected.
+-- Dumping structure for table samp6355_DayZ.spawns
+DROP TABLE IF EXISTS `spawns`;
+CREATE TABLE IF NOT EXISTS `spawns` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `Name` varchar(64) NOT NULL,
+  `X` float NOT NULL DEFAULT '0',
+  `Y` float NOT NULL DEFAULT '0',
+  `Z` float NOT NULL DEFAULT '0',
+  `Angle` float NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;

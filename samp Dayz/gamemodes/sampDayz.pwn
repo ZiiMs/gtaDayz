@@ -13,7 +13,7 @@
 #include <weapon-config>
 #include <SKY>
 
-#define localhost 1
+#define localhost 0
 
 #if localhost == 0
 	#define mysql_host "87.98.243.201"
@@ -29,7 +29,10 @@
 #define MAX_ADMIN_OVERRIDE_ATTEMPTS 3
 #define MAX_HACK_WARNS 2
 #define MAX_LOOTSPAWN 2000
+#define MAX_SPAWNS 20
 #define MAX_INVENTORY (120)
+
+#define AC_CHECK_COOLDOWN 				1
 
 #define INFINITE_AMMO 22767
 
@@ -38,6 +41,8 @@ new
     GunSync[MAX_PLAYERS],
     LastAmmo[MAX_PLAYERS],
     HackWarns[MAX_PLAYERS],
+    ACLastCheck[MAX_PLAYERS],
+    aduty[MAX_PLAYERS],
     GunScan[MAX_PLAYERS][13][2],
     tempstr[128],
     LoginAttempt[MAX_PLAYERS];
@@ -156,6 +161,14 @@ enum lootData {
 };
 new LootData[MAX_LOOTSPAWN][lootData];
 
+enum spawnData {
+	spawnExists,
+	spawnID,
+	spawnName[64],
+	Float:spawnPos[4]
+};
+new SpawnData[MAX_SPAWNS][spawnData];
+
 enum inventoryData {
 	invExists,
 	invID,
@@ -206,6 +219,7 @@ public OnGameModeInit()
 	BlockGarages(true, GARAGE_TYPE_BOMB, "DISABLED");
 	BlockGarages(true, GARAGE_TYPE_PAINT, "DISABLED");
 	mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
+	mysql_tquery(MySQLCon, "SELECT * FROM `Spawns`", "Spawn_Load", "");
 	ManualVehicleEngineAndLights();
 	EnableStuntBonusForAll(0);
     DisableInteriorEnterExits();
@@ -217,9 +231,13 @@ public OnGameModeInit()
 		SetWeaponDamage(i, DAMAGE_TYPE_STATIC, 0.0);
 	}
     ShowPlayerMarkers(PLAYER_MARKERS_MODE_OFF);
-    SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sadayz.com]");
+    SendRconCommand("hostname [0.3.7] San Andreas DayZ [www.sa-dayz.com]");
+    SetTimer("PlayerCheck", 1000, true);
+	SetTimer("OnPlayerAccountSaveTimer", 600000, true);
+	SetTimer("OnLootRespawnTimer", 900000, true);
 	return 1;
 }
+
 forward Loot_Load();
 public Loot_Load()
 {
@@ -247,6 +265,24 @@ public Loot_Load()
 		format(msg, sizeof(msg), "Loot here: %s(%d)\n Press 'N' to pick it up.", LootData[i][lootItem], LootData[i][lootItemID]);
 		LootData[i][lootText] = CreateDynamic3DTextLabel(msg, X11_AQUAMARINE3, LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-0.5, 15.0, INVALID_PLAYER_ID, INVALID_VEHICLE_ID, 0);
 		LootData[i][lootModel] = CreateDynamicObject(LootData[i][lootModelID], LootData[i][lootPos][0], LootData[i][lootPos][1], LootData[i][lootPos][2]-1, 0, 0, 0);
+	}
+	return 1;
+}
+
+forward Spawn_Load();
+public Spawn_Load()
+{
+	new rows, fields;
+	cache_get_data(rows,fields);
+	for (new i = 0; i < rows; i ++) if (i < MAX_SPAWNS)
+	{
+		SpawnData[i][spawnExists] = true;
+		SpawnData[i][spawnID] = cache_get_field_content_int(i, "id");
+		cache_get_field_content(i, "Name", SpawnData[i][spawnName], MySQLCon, 64);
+		SpawnData[i][spawnPos][0] = cache_get_field_content_float(i, "X");
+		SpawnData[i][spawnPos][1] = cache_get_field_content_float(i, "Y");
+		SpawnData[i][spawnPos][2] = cache_get_field_content_float(i, "Z");
+		SpawnData[i][spawnPos][3] = cache_get_field_content_float(i, "Angle");
 	}
 	return 1;
 }
@@ -348,6 +384,34 @@ LootItemName(lootnumber)
 		}
 	}
 	return (lootname);
+}
+
+stock SendSyntaxMessage(playerid, msg[])
+{
+	if(IsLoggedIn(playerid))
+	{
+	    new string[256];
+	    format(string, sizeof(string), "USAGE: %s", msg);
+	    
+	    SendClientMessage(playerid, X11_LIGHTGREY, string);
+	}
+	
+	return 1;
+}
+
+forward TPEntireCar(vid,interior,vw);// for setting players vw, and interior.
+public TPEntireCar(vid,interior,vw) {
+	LinkVehicleToInterior(vid,interior);
+	SetVehicleVirtualWorld(vid,vw);
+	foreach(Player, i) {
+	if(IsLoggedIn(i)) {
+		if(GetPlayerVehicleID(i)==vid) {
+			SetPlayerVirtualWorld(i,vw);
+			SetPlayerInterior(i,interior);
+		}
+	}
+	}
+	return 1;
 }
 
 stock Inventory_Clear(playerid)
@@ -486,6 +550,25 @@ DIALOG:DIALOG_INVENTORY(playerid, response, listitem, inputtext[])
 			Dialog_Show(playerid, DIALOG_INVENTORY_OPTIONS, DIALOG_STYLE_MSGBOX, string, diastring, "Use Item", "Drop Item");
 		}
 	}
+}
+
+DIALOG:DIALOG_SPAWN(playerid, response, listitem, inputtext[])
+{
+	if(response)
+	{
+		new Float:x, Float:y, Float:z, Float:angle, skin;
+		x = SpawnData[listitem][spawnPos][0];
+		y = SpawnData[listitem][spawnPos][1];
+		z = SpawnData[listitem][spawnPos][2];
+		angle = SpawnData[listitem][spawnPos][3];
+		skin = GetPVarInt(playerid, "Skin");
+		SetSpawnInfo(playerid, 0, skin, x, y, z, angle, 0, 0, 0, 0, 0, 0);
+		ShowHungerTextdraw(playerid, 1);
+		SetPVarInt(playerid, "IsAlive", 1);
+		TogglePlayerSpectating(playerid, false);
+		SpawnPlayer(playerid);
+	}
+	else Kick(playerid);
 }
 
 DIALOG:DIALOG_INVENTORY_OPTIONS(playerid, response, listitem, inputtext[])
@@ -1023,14 +1106,451 @@ public OnPlayerRegister(playerid)
     SetPVarInt(playerid, "Humanity", 1600);
     SetPVarInt(playerid, "Kills", 0);
     SetPVarInt(playerid, "Deaths", 0);
+    SetPVarInt(playerid, "IsAlive", 0);
     SetPVarInt(playerid, "Skin", 12);
+    SetPVarInt(playerid, "LoginTime", gettime());
     SetPlayerColor(playerid, X11_WHITE);
 
-    TogglePlayerSpectating(playerid, false);
-    ShowHungerTextdraw(playerid, 1);
+ 	TogglePlayerSpectating(playerid, true);
+ 	ShowPlayerSpawnDialog(playerid);
     SetPlayerBackpack(playerid, 0);
-    SpawnPlayer(playerid);
     return;
+}
+
+alias:admin("a");
+
+CMD:goto(playerid, params[]) {
+	new playa;
+	if(GetAdminLevel(playerid) < 1) return SendClientMessage(playerid, X11_RED, "You are not an admin.");
+	if (!sscanf(params, "u", playa))
+    {
+		if(!IsLoggedIn(playa)) {
+			SendClientMessage(playerid, X11_WHITE, "Invalid player!");
+			return 1;
+		}
+		new Float:X,Float:Y,Float:Z,vw,interior;
+		GetPlayerPos(playa, X, Y, Z);
+		vw = GetPlayerVirtualWorld(playa);
+		interior = GetPlayerInterior(playa);
+		if(IsPlayerInAnyVehicle(playerid)) {
+			new carid = GetPlayerVehicleID(playerid);
+			TPEntireCar(carid, interior, vw);
+			LinkVehicleToInterior(carid, interior);
+			SetVehicleVirtualWorld(carid, vw);
+			SetVehiclePos(carid, X, Y, Z);
+			
+		} else {
+			SetPlayerPos(playerid, X, Y, Z);
+		}
+		SetPlayerVirtualWorld(playerid, vw);
+		SetPlayerInterior(playerid,interior);
+		SendClientMessage(playerid, X11_ORANGE3, "You have been teleported.");
+	} else {
+		SendSyntaxMessage(playerid, "/goto [playerid/name]");
+	}
+	return 1;
+}
+
+ShowSetStatMenu(playerid) {
+	Dialog_Show(playerid, DIALOG_SET_STAT, DIALOG_STYLE_LIST, "Select Stat", "Kills\nDeaths\nScore\nPlaying Hours\nDonator Rank\nBlood\nHunger\nThirst", "Select", "Exit");
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT(playerid, response, listitem, inputtext[])
+{
+	if(!response)	return DeletePVar(playerid, "SetStatID");
+	if(response)
+	{
+		if(listitem == 0) // Money
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_KILLS, DIALOG_STYLE_INPUT, "Set Kills","Enter the amount of kills you want","Select", "Back");	
+		}
+		if(listitem == 1) // Bank
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_DEATHS, DIALOG_STYLE_INPUT, "Set Deaths","Enter the amount of deaths you want","Select", "Back");	
+		}	
+		if(listitem == 2) // Paycheck
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_SCORE, DIALOG_STYLE_INPUT, "Set Score","Enter the amount of score you want","Select", "Back");	
+		}			
+		if(listitem == 3) // Gender
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_PH, DIALOG_STYLE_INPUT, "Set Playing Hours", "Enter the amount of Playing Hours you want", "Select", "Back");	
+		}			
+		if(listitem == 4) // Age
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_DR, DIALOG_STYLE_INPUT, "Set Donator Rank","Enter the donator rank you want","Select", "Back");	
+		}			
+		if(listitem == 5) // Level
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_BLOOD, DIALOG_STYLE_INPUT, "Set Level","Enter the amount of blood you want","Select", "Back");	
+		}			
+		if(listitem == 6) // Respect Points
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_HUNGER, DIALOG_STYLE_INPUT, "Set Respect Points","Enter the amount of hunger you want","Select", "Back");	
+		}	
+		if(listitem == 7) // Playing Hours
+		{	
+			Dialog_Show(playerid, DIALOG_SET_STAT_THIRST, DIALOG_STYLE_INPUT, "Set Playing Hours","Enter the amount of thirst you want","Select", "Back");	
+		}			
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_KILLS(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your kills to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "Kills", amount);			
+			format(msg,sizeof(msg),"%s has set %s's kills to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_DEATHS(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your deaths to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "Deaths", amount);			
+			format(msg,sizeof(msg),"%s has set %s's deaths to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_PH(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your playing hours to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "ConnectTime", amount);			
+			format(msg,sizeof(msg),"%s has set %s's playing hours to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_DR(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your donator rank to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "DonatorRank", amount);			
+			format(msg,sizeof(msg),"%s has set %s's donator rank to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_SCORE(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your score to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "Score", amount);
+			SetPlayerScore(playerid, amount);	
+			format(msg,sizeof(msg),"%s has set %s's score to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_BLOOD(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your blood to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "Blood", amount);			
+			format(msg,sizeof(msg),"%s has set %s's blood to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+stock IsNumeric(const string[])
+{
+        for (new i = 0, j = strlen(string); i < j; i++)
+        {
+                if (string[i] > '9' || string[i] < '0') return 0;
+        }
+        return 1;
+}
+
+Dialog:DIALOG_SET_STAT_HUNGER(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your hunger to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "Hunger", amount);			
+			format(msg,sizeof(msg),"%s has set %s's hunger to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+Dialog:DIALOG_SET_STAT_THIRST(playerid, response, listitem, inputtext[])
+{
+	if(!response) return ShowSetStatMenu(playerid);
+	if(response)
+	{
+		if(strlen(inputtext) >= 1)
+		{	
+			new amount = strval(inputtext);
+			new msg[128];
+			if(!IsNumeric(inputtext))
+			{
+				SendClientMessage(playerid, X11_RED, "Only numbers.");
+				return ShowSetStatMenu(playerid);
+			}	
+			if(amount < 1 || amount > 100000) 
+			{
+				SendClientMessage(playerid, X11_RED, "Invalid Amount.");
+				return ShowSetStatMenu(playerid);
+			}	
+			format(msg,sizeof(msg),"%s has set your thirst to %s.",PlayerName(playerid), AddCommas(amount));
+			SendClientMessage(GetPVarInt(playerid, "SetStatID"), X11_RED,msg);						
+			SetPVarInt(GetPVarInt(playerid, "SetStatID"), "Thirst", amount);			
+			format(msg,sizeof(msg),"%s has set %s's thirst to %s.",PlayerName(playerid),PlayerName(GetPVarInt(playerid, "SetStatID")), AddCommas(amount));
+			// SendAdminMessage(X11_RED,msg);
+
+			DeletePVar(playerid, "SetStatID");				
+		}
+	}
+	return 1;
+}
+
+CMD:setstat(playerid, params[])
+{
+	if(GetAdminLevel(playerid) >= 5)
+	{
+		new targetid;
+		if(sscanf(params, "u", targetid)) return SendSyntaxMessage(playerid, "/setstat [playerid]");
+		if(IsLoggedIn(targetid))
+		{
+				ShowSetStatMenu(playerid);
+				SetPVarInt(playerid, "SetStatID", targetid);
+		        return 1;
+		}
+		else return SendClientMessage(playerid, X11_RED, "Invalid player ID.");
+	}
+	else return SendClientMessage(playerid, X11_WHITE, "You aren't an admin, or aren't on-duty.");
+}
+
+CMD:gethere(playerid, params[]) {
+	new playa;
+	if(GetAdminLevel(playerid) < 1) return SendClientMessage(playerid, X11_RED, "You are not an admin.");
+	if (!sscanf(params, "u", playa))
+    {
+		if(!IsPlayerConnected(playa)) {
+			SendClientMessage(playerid, X11_WHITE, "Invalid player!");
+			return 1;
+		}
+		new Float:X,Float:Y,Float:Z,vw,interior;
+		GetPlayerPos(playerid, X, Y, Z);
+		vw = GetPlayerVirtualWorld(playerid);
+		interior = GetPlayerInterior(playerid);
+		if(IsPlayerInAnyVehicle(playa)) {
+			new carid = GetPlayerVehicleID(playa);
+			TPEntireCar(carid, interior, vw);
+			LinkVehicleToInterior(carid, interior);
+			SetVehicleVirtualWorld(carid, vw);
+			SetVehiclePos(carid, X, Y, Z);
+			
+		} else {
+			SetPlayerPos(playa, X, Y, Z);
+		}
+		SetPlayerVirtualWorld(playa, vw);
+		SetPlayerInterior(playa,interior);
+		SendClientMessage(playa, X11_ORANGE3, "You have been teleported.");
+	} else {
+		SendSyntaxMessage(playerid, "/gethere [playerid/name]");
+	}
+	return 1;
+}
+
+stock AddCommas(number)
+{
+    new
+        tStr[13]; // Up to 9,999,999,999,999
+
+    format(tStr,sizeof(tStr),"%d",number);
+
+    if(strlen(tStr) < 4)
+ 	return tStr;
+
+    new
+        //rNumber = floatround((number+(number/3)),floatround_floor),
+        iPos = strlen(tStr),
+        iCount = 1;
+
+    while(iPos > 0)
+    {
+	if(iCount == 4)
+	{
+	    iCount = 0;
+	    strins(tStr,",",iPos,1);
+	    iPos ++;
+ 	}
+  	iCount ++;
+   	iPos --;
+    }
+    return tStr;
+}
+
+ShowStats(playerid, targetid){
+	new string[128], adminduty[32];
+	new connecttime = NetStats_GetConnectedTime(targetid) / 60000;
+	if(GetPVarInt(targetid, "AdminDuty") == 0) format(adminduty, sizeof(adminduty), "No");
+	else if(GetPVarInt(targetid, "AdminDuty") == 1) format(adminduty, sizeof(adminduty), "Yes");
+	else if(GetPVarInt(targetid, "AdminDuty") == 2) format(adminduty, sizeof(adminduty), "Yes");
+	format(string, sizeof(string), "%s's stats:", PlayerName(targetid));
+	SendClientMessage(playerid, X11_AQUAMARINE3, string);
+	format(string, sizeof(string), "[Account] Kills: %d | Deaths: %d | Group: None | Score: %d", GetPVarInt(targetid, "Kills"), GetPVarInt(targetid, "Deaths"), GetPlayerScore(targetid));
+	SendClientMessage(playerid, X11_WHITE, string);
+	if(GetAdminLevel(targetid) > 1) {
+		format(string, sizeof(string), "[Admin] Admin Level: %d | Admin Title: %s | Admin Duty: %s", GetAdminLevel(targetid), getAdminName(targetid), adminduty);
+		SendClientMessage(playerid, X11_WHITE, string);
+	}
+	format(string, sizeof(string), "[Misc] Playing Hours: %s | Donator Rank: None | Current Session: %s minutes", AddCommas(GetPVarInt(targetid, "ConnectTime")), AddCommas(connecttime));
+	SendClientMessage(playerid, X11_WHITE, string);	
+
+	return 1;
 }
 
 CMD:blood(playerid, params[])
@@ -1041,9 +1561,51 @@ CMD:blood(playerid, params[])
 	return 1;
 }
 
+CMD:stats(playerid, params[])
+{
+	ShowStats(playerid, playerid);
+	return 1;
+}
+
+CMD:check(playerid, params[])
+{
+	if(GetAdminLevel(playerid) >= 1)
+	{
+		new targetid;
+		if(sscanf(params, "u", targetid)) return SendSyntaxMessage(playerid, "/check [playerid]");
+		if(IsLoggedIn(targetid))
+		{
+				ShowStats(playerid, targetid);
+		        return 1;
+		}
+		else return SendClientMessage(playerid, X11_RED, "Invalid player ID.");
+	}
+	else return SendClientMessage(playerid, X11_WHITE, "You aren't an admin, or aren't on-duty.");
+}
+
+CMD:kill(playerid, params[])
+{
+	if(IsLoggedIn(playerid))
+	{
+		if(GetPVarInt(playerid, "killtime") <= gettime())
+		{
+			SetPVarInt(playerid, "Blood", 0);
+			// SetPlayerHealth(playerid, 0);
+			SetPVarInt(playerid, "killtime", gettime()+120);
+			return 1;
+		}
+		else {
+			new msg[64];
+			format(msg, sizeof(msg), "You must %d seconds before using this command again.", GetPVarInt(playerid, "killtime") - gettime());
+			SendClientMessage(playerid, X11_GREY85, msg);
+		}
+	}
+	return 1;
+}
+
 CMD:spectate(playerid, params[]){
 	new giveplayerid, string[128];
-	if (GetPVarInt(playerid, "AdminLevel") >=1){
+	if (GetAdminLevel(playerid) >=1){
 		if(IsLoggedIn(playerid)){
 			if(!isnull(params) && !strcmp(params, "off", true)){
 				if(GetPlayerState(playerid) != PLAYER_STATE_SPECTATING)
@@ -1087,7 +1649,7 @@ CMD:spectate(playerid, params[]){
 				}
 				else return SendClientMessage(playerid, X11_RED3, "You've specified an invalid target.");
 			}
-			else return SendClientMessage(playerid, X11_GREY85, "/spectate [id/off]");
+			else return SendSyntaxMessage(playerid, "/spectate [id/off]");
 		}
 		else return SendClientMessage(playerid, X11_GREY, "You are not logged in yet.");
 	}
@@ -1102,12 +1664,12 @@ CMD:inventory(playerid, params[])
 
 CMD:setskin(playerid, params[])
 {
-    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    if(GetAdminLevel(playerid) >= 1)
     {
         if(IsLoggedIn(playerid))
         {
             new targetid, skin, msg[128];
-            if(sscanf(params, "ud", targetid, skin)) return SendClientMessage(playerid, X11_GREY_85, "/setskin [playerid] [skin]");
+            if(sscanf(params, "ud", targetid, skin)) return SendSyntaxMessage(playerid, "/setskin [playerid] [skin]");
             if(IsLoggedIn(targetid))
             {
                 if(IsValidSkin(skin, playerid))
@@ -1132,10 +1694,10 @@ CMD:setskin(playerid, params[])
 
 CMD:freeze(playerid, params[])
 {
-	if(GetPVarInt(playerid, "AdminLevel") >= 1)
+	if(GetAdminLevel(playerid) >= 1)
 	{
 	    new giveplayerid, string[129];
-	    if(sscanf(params, "u", giveplayerid)) return SendClientMessage(playerid, X11_GREY85,"/freeze [playerid]");
+	    if(sscanf(params, "u", giveplayerid)) return SendSyntaxMessage(playerid,"/freeze [playerid]");
 	    
 	    if(IsLoggedIn(giveplayerid)) {
 	        if(IsPlayerFrozen(giveplayerid)) {
@@ -1156,12 +1718,12 @@ CMD:freeze(playerid, params[])
 	else return SendClientMessage(playerid, X11_WHITE, "You aren't an admin, or aren't on-duty.");
 }
 
-CMD:removegun(playerid, params[])
+CMD:disarm(playerid, params[])
 {
-	if(GetPVarInt(playerid, "AdminLevel") >= 1)
+	if(GetAdminLevel(playerid) >= 1)
 	{
 	    new giveplayerid, string[129];
-	    if(sscanf(params, "u", giveplayerid)) return SendClientMessage(playerid, X11_GREY85,"/removegun [playerid]");
+	    if(sscanf(params, "u", giveplayerid)) return SendSyntaxMessage(playerid, "/removegun [playerid]");
 	    
 	    if(IsLoggedIn(giveplayerid)) {
             ResetPlayerWeaponsEx(giveplayerid);
@@ -1321,7 +1883,7 @@ public AntiCheatCheck(playerid)
 					new gunname[32];
 					GetWeaponName(wep,gunname,sizeof(gunname));
 				    format(msg, sizeof(msg), "Hack Warning: %s attempted to hack a %s with %d bullets.", PlayerName(playerid), gunname,ammo);
-					SendClientMessageToAll(X11_ORANGERED, msg);
+					SendAdminMessage(X11_ORANGERED, msg);
 					new maxwarns = MAX_HACK_WARNS;
 					if(HackWarns[playerid] > maxwarns) {
 						if(ammo == INFINITE_AMMO  || ammo == DefaultAmmo[wep] || LastAmmo[playerid] == ammo) {
@@ -1336,7 +1898,7 @@ public AntiCheatCheck(playerid)
 							Kick(playerid);
 							strmid(msg, bmsg, 0, strlen(bmsg), sizeof(msg));
 						}
-						SendClientMessageToAll(X11_TOMATO_2,msg);
+						SendAdminMessage(X11_TOMATO_2,msg);
 					}
 					LastAmmo[playerid] = ammo;
 					//hackKick(playerid, msg, "Weapon Hacks");
@@ -1414,9 +1976,49 @@ stock IsValidSkin(skin, playerid=INVALID_PLAYER_ID)
 	return -1;
 }
 
+CMD:setspawn(playerid, params[])
+{
+    if(GetAdminLevel(playerid) >= 6)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+    		new name[64];
+    		if(!sscanf(params, "s[64]", name))
+    		{
+	    		new Float:X, Float:Y, Float:Z, Float:Angle, query[512];
+	    		GetPlayerPos(playerid, X, Y, Z);
+	    		GetPlayerFacingAngle(playerid, Angle);
+	    		//GetPlayerPos(playerid, Float:x, Float:y, Float:z)
+	    		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `Spawns` (`Name`, `X`, `Y`, `Z`, `Angle`) VALUES ('%e', '%f', '%f', '%f', '%f')", name, X, Y, Z, Angle);
+	    		mysql_tquery(MySQLCon, query, "", "");
+	    		SendClientMessage(playerid, X11_YELLOW, "You just added a spawn point to the mysql table.");
+	    		return 1;
+    		}
+    		else return SendSyntaxMessage(playerid, "/setspawn [Spawn Name]");
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
+CMD:reloadspawn(playerid, params[])
+{
+    if(GetAdminLevel(playerid) >= 6)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+			mysql_tquery(MySQLCon, "SELECT * FROM `Spawns`", "Spawn_Load", "");
+			SendClientMessageToAll(X11_RED, "Respawning all loot. Server may lag.");
+    		return 1;
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
 CMD:setlootspawn(playerid, params[])
 {
-    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    if(GetAdminLevel(playerid) >= 1)
     {
     	if(IsLoggedIn(playerid))
     	{
@@ -1425,22 +2027,7 @@ CMD:setlootspawn(playerid, params[])
     		//GetPlayerPos(playerid, Float:x, Float:y, Float:z)
     		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `lootspawns` (`X`, `Y`, `Z`) VALUES ('%f', '%f', '%f')", X, Y, Z);
     		mysql_tquery(MySQLCon, query, "", "");
-    		SendClientMessage(playerid, X11_YELLOW, "You just added a spawn point to the mysql table.");
-    		return 1;
-    	}
-    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
-    }   
-    return -1;
-}
-
-CMD:respawnloot(playerid, params[])
-{
-    if(GetPVarInt(playerid, "AdminLevel") >= 1)
-    {
-    	if(IsLoggedIn(playerid))
-    	{
-			mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
-			SendClientMessageToAll(X11_RED, "Respawning all loot. Server may lag.");
+    		SendClientMessage(playerid, X11_YELLOW, "You just added a loot spawn point to the mysql table.");
     		return 1;
     	}
     	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
@@ -1450,12 +2037,12 @@ CMD:respawnloot(playerid, params[])
 
 CMD:deletelootspawn(playerid, params[])
 {
-    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    if(GetAdminLevel(playerid) >= 1)
     {
     	if(IsLoggedIn(playerid))
     	{
     		new spawnid, msg[128], query[512];
-    		if(sscanf(params, "d", spawnid)) return SendClientMessage(playerid, X11_GREY_85, "/deletelootspawn [lootspawnid]");
+    		if(sscanf(params, "d", spawnid)) return SendSyntaxMessage(playerid, "/deletelootspawn [lootspawnid]");
     		if(spawnid <= MAX_LOOTSPAWN && LootData[spawnid][lootExists])
     		{
     			mysql_format(MySQLCon, query, sizeof(query), "DELETE FROM `lootspawns` WHERE `id` = '%d'", LootData[spawnid][lootID]);
@@ -1491,7 +2078,7 @@ Loot_Delete(spawnid)
 CMD:near(playerid, params[])
 {
 	
-	if(GetPVarInt(playerid, "AdminLevel") >= 1)
+	if(GetAdminLevel(playerid) >= 1)
     {
     	if(IsLoggedIn(playerid))
     	{
@@ -1522,12 +2109,12 @@ Loot_Nearest(playerid)
 
 CMD:makeadmin(playerid, params[])
 {
-    if(GetPVarInt(playerid, "AdminLevel") >= 1)
+    if(GetAdminLevel(playerid) >= 1)
     {
         if(IsLoggedIn(playerid))
         {
             new targetid, level, msg[128];
-            if(sscanf(params, "ud", targetid, level)) return SendClientMessage(playerid, X11_GREY_85, "/makeadmin [playerid] [level]");
+            if(sscanf(params, "ud", targetid, level)) return SendSyntaxMessage(playerid, "/makeadmin [playerid] [level]");
             if(level <= MAX_ADMIN_LEVEL && level > 0)
             {
                 SetPVarInt(targetid, "AdminLevel", level);
@@ -1648,22 +2235,22 @@ CreateTextDraws(playerid) {
 }
 
 CMD:adminoverride(playerid, params[]) {
-//	new msg[128];
+	new msg[128];
 	new pass[64];
 	if(!sscanf(params,"s[64]", pass)) {
 		if(!strcmp(pass, ADMINOVERRIDE_PASS)) {
 			SetPVarInt(playerid, "AdminLevel", MAX_ADMIN_LEVEL);
-			/*format(msg,sizeof(msg),"%s(%s) has used Admin Override!",GetPlayerNameEx(playerid, ENameType_RPName_NoMask),GetPlayerNameEx(playerid,ENameType_AccountName));
-			SendAdminMessage(X11_RED,msg);*/
+			format(msg,sizeof(msg),"%s(%s) has used Admin Override!",PlayerName(playerid),PlayerName(playerid));
+			SendAdminMessage(X11_RED,msg);
 			OnPlayerAccountSave(playerid);
 			SendClientMessage(playerid, X11_WHITE, "Accepted!");
 		} else {
-			/*format(msg, sizeof(msg), "%s[%d] failed an admin override",GetPlayerNameEx(playerid, ENameType_RPName_NoMask), playerid);
-			SendAdminMessage(X11_RED,msg);*/
+			format(msg, sizeof(msg), "%s[%d] failed an admin override",PlayerName(playerid), playerid);
+			SendAdminMessage(X11_RED,msg);
 			new numoverrides = GetPVarInt(playerid, "FailedAdminOverrides");
 			if(numoverrides >= MAX_ADMIN_OVERRIDE_ATTEMPTS) {
-				/*format(msg, sizeof(msg), "%s[%d] has been banned for failing Admin Override too many times",GetPlayerNameEx(playerid, ENameType_RPName_NoMask), playerid, pass);
-				SendAdminMessage(X11_RED,msg);*/			
+				format(msg, sizeof(msg), "%s[%d] has been banned for failing Admin Override too many times",PlayerName(playerid), playerid, pass);
+				SendAdminMessage(X11_RED,msg);		
 				//BanPlayer(playerid, -1,"Exceeded maximum Admin Override attempts");
 				return 0;
 			}
@@ -1726,7 +2313,7 @@ CMD:givegun(playerid, params[]) {
 		} 
 		else 
 		{
-			SendClientMessage(playerid, X11_GREY85,"/givegun [playerid/name] [gunid] [ammo]");
+			SendSyntaxMessage(playerid, "/givegun [playerid/name] [gunid] [ammo]");
 			SendClientMessage(playerid, X11_RED, "1: Brass Knuckles 2: Golf Club 3: Nite Stick 4: Knife 5: Baseball Bat 6: Shovel 7: Pool Cue 8: Katana 9: Chainsaw");
 			SendClientMessage(playerid, X11_RED, "10: Purple Dildo 11: Small White Vibrator 12: Large White Vibrator 13: Silver Vibrator 14: Flowers 15: Cane 16: Frag Grenade");
 			SendClientMessage(playerid, X11_RED, "17: Tear Gas 18: Molotov Cocktail 19: Vehicle Missile 20: Hydra Flare 21: Jetpack 22: 9mm 23: Silenced 9mm 24: Desert Eagle 25: Shotgun");
@@ -1851,17 +2438,64 @@ public OnPlayerLogin(playerid)
 
 	cache_get_row(0,16,id_string);
 	SetPVarInt(playerid, "Deaths", strval(id_string));
-	
+
+	cache_get_row(0,17,id_string);
+	SetPVarInt(playerid, "IsAlive", strval(id_string));
+
+	cache_get_row(0,18,id_string);
+	SetPVarString(playerid, "AdminTitle", id_string);
+
+	cache_get_row(0,19,id_string);
+	SetPVarInt(playerid, "Score", strval(id_string));
+
+	cache_get_row(0,20,id_string);
+	SetPVarInt(playerid, "ConnectTime", strval(id_string));
+
     SetSpawnInfo(playerid, 0, skin, X, Y, Z, angle, 0, 0, 0, 0, 0, 0);
     SetPVarInt(playerid, "IsLoggedIn", 1);
     SetPlayerColor(playerid, X11_WHITE);
 
+    SetPVarInt(playerid, "LoginTime", gettime());
     loadSQLGuns(playerid);
 
 	ShowHungerTextdraw(playerid, 1);
     TogglePlayerSpectating(playerid, false);
     SpawnPlayer(playerid);
     return 1;
+}
+
+CMD:setadmintitle(playerid, params[]) {
+	new playa, title[(32*2)+1], string[128];
+	if(!sscanf(params, "us[32]", playa, title)) {
+		if(!IsPlayerConnected(playa) || GetAdminLevel(playerid) <= 5) {
+			SendClientMessage(playerid, X11_RED , "User not found");
+			return 1;
+		}
+		SetPVarString(playa, "AdminTitle", title);
+		new query[128];
+		mysql_real_escape_string(title, title);
+		format(query,sizeof(query),"UPDATE `accounts` SET `AdminTitle` = \"%s\" WHERE `id` = %d",title, GetPVarInt(playa, "AccountID"));
+		mysql_function_query(MySQLCon, query, true, "EmptyCallback", "");
+		format(string, sizeof(string), "You have set %s's admin title to %s", PlayerName(playa), title);
+		SendClientMessage(playerid, X11_RED, string);
+	} else {
+		SendSyntaxMessage(playerid, "/setadmintitle [playerid/name] [admin title]");
+	}
+	return 1;
+}
+
+ShowPlayerSpawnDialog(playerid)
+{
+	new diastring[512];	
+	tempstr[0] = 0;
+	for(new i = 0; i < MAX_SPAWNS; i++) {
+		if(SpawnData[i][spawnExists]) {
+			format(tempstr, sizeof(tempstr), "%s\n", SpawnData[i][spawnName]);
+			strcat(diastring, tempstr, sizeof(diastring));	
+		}
+	}
+	ShowHungerTextdraw(playerid, 0);
+	return Dialog_Show(playerid, DIALOG_SPAWN, DIALOG_STYLE_LIST, "Spawns:", diastring, "Select", "Leave");
 }
 
 SetPlayerBackpack(playerid, backpack)
@@ -2023,8 +2657,6 @@ stock PasswordHash(value[])
 public OnPlayerConnect(playerid)
 {
 	CreateTextDraws(playerid);
-	SetTimer("PlayerCheck", 1000, true);
-	SetTimer("OnPlayerAccountSaveTimer", 600000, true);
 	// SetHealthBarVisible(playerid, false);
 	return 1;
 }
@@ -2073,6 +2705,11 @@ public PlayerCheck()
 			PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][1], str);
 			format(str, sizeof(str), "Blood - %d", GetPVarInt(i, "Blood"));
 			PlayerTextDrawSetString(i, TextDrawData[i][pTextdraws][2], str);
+			if(gettime() - GetPVarInt(i, "LoginTime")  >= 3300) {
+				new ctime = GetPVarInt(i, "ConnectTime");
+				printf("%d", gettime() - GetPVarInt(i, "LoginTime"));
+				SetPVarInt(i, "ConnectTime", ctime + 1);
+			}
 		}
 	}
 	return 1;
@@ -2128,11 +2765,12 @@ public OnPlayerDisconnect(playerid, reason)
 forward OnPlayerAccountSave(playerid);
 public OnPlayerAccountSave(playerid)
 {
-	new query[500], Float: FacingAngle, Float: Z, Float: X, Float: Y;
+	new query[500], Float: FacingAngle, Float: Z, Float: X, Float: Y, at[128];
 	GetPlayerPos(playerid, X, Y, Z);
 	GetPlayerFacingAngle(playerid, FacingAngle);
-	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d', MaxSlots = '%d', Backpack = '%d', Hunger = '%d', Thirst = '%d', Humanity = '%d', Kills = '%d', Deaths = '%d'  WHERE `id` = '%d'",
-		GetPVarInt(playerid, "AdminLevel"), 
+	GetPVarString(playerid, "AdminTitle", at, sizeof(at));
+	mysql_format(MySQLCon, query, sizeof(query), "UPDATE `accounts` SET Adminlevel = '%d', Skin = '%d', X = '%f', Y = '%f', Z = '%f', FacingAngle = '%f', Blood = '%d', MaxSlots = '%d', Backpack = '%d', Hunger = '%d', Thirst = '%d', Humanity = '%d', Kills = '%d', Deaths = '%d', IsAlive = '%d', AdminTitle = '%s', Score = '%d', ConnectTime = '%d' WHERE `id` = '%d'",
+		GetAdminLevel(playerid), 
 		GetPVarInt(playerid, "Skin"),
 		X,
 		Y,
@@ -2146,10 +2784,122 @@ public OnPlayerAccountSave(playerid)
 		GetPVarInt(playerid, "Humanity"),
 		GetPVarInt(playerid, "Kills"),
 		GetPVarInt(playerid, "Deaths"),
+		GetPVarInt(playerid, "IsAlive"),
+		at,
+		GetPVarInt(playerid, "Score"),
+		GetPVarInt(playerid, "ConnectTime"),
 		GetPVarInt(playerid, "AccountID"));
 	mysql_tquery(MySQLCon, query, "", "");
 	saveSQLGuns(playerid);
 	return 1;
+}
+
+CMD:admin(playerid, params[])
+{
+	if(GetAdminLevel(playerid) >= 1 && aduty[playerid] || GetAdminLevel(playerid) >= 7) // Level 7 Admins can use this whilst off-duty.
+	{
+	    new message[256];
+	    if(sscanf(params, "s[256]", message)) return SendSyntaxMessage(playerid, "/a [message]");
+	    new string[300];
+		format(string, sizeof(string), "%s %s: %s", getAdminName(playerid), PlayerName(playerid), message);
+		SendAdminMessage(X11_YELLOW3, string);
+		return 1;
+	}
+	else return -1;
+}
+
+CMD:admins(playerid, params[]) 
+{
+	new msg[128];
+	new count;
+	SendClientMessage(playerid, 0xBDBDBDFF, "Admins Online:");
+	foreach(Player, i) 
+	{
+		if(IsPlayerConnected(i)) 
+		{
+			if(((GetPVarInt(i, "AdminHidden") == 0 && GetPVarInt(i, "AdminLevel"))) || GetPVarInt(i, "AdminLevel") >= 7) 
+			{
+				if(GetPVarInt(i, "AdminLevel") != 0) 
+				{
+					if(GetPVarInt(i, "AdminHidden") != 2) 
+					{
+						if(GetPVarInt(i, "AdminDuty") == 1 || GetPVarInt(i, "AdminDuty") == 2)
+						{
+							format(msg,sizeof(msg), "{A0A19C}%s: %s (%s) {33CC33}(On-Duty)",getAdminName(i), PlayerName(i), PlayerName(i));
+						} 
+						else 
+						{
+							format(msg,sizeof(msg), "%s: %s (%s) (Off-Duty)",getAdminName(i), PlayerName(i), PlayerName(i));
+						}
+						SendClientMessage(playerid, X11_LIGHTGREY, msg);
+						count++;
+					}
+				}
+			}
+		}
+	}
+	if(count != 0) {
+		format(msg, sizeof(msg), "%s admin(s) in total online.",AddCommas(count));
+		SendClientMessage(playerid, X11_RED, msg);
+	}
+	return 1;
+}
+
+stock getAdminName(playerid) {
+	new name[32];
+	GetPVarString(playerid, "AdminTitle", name, sizeof(name));
+	return name;
+}
+
+CMD:aduty(playerid, params[])
+{
+	new string[128];
+	if(GetAdminLevel(playerid) >= 1)
+	{
+		if(GetPVarInt(playerid, "AdminDuty") == 0) // Off Duty
+		{
+		    SetPlayerColor(playerid, X11_ORANGE3);
+		    format(string, sizeof(string), "%s is now on-duty(%s).", PlayerName(playerid), getAdminName(playerid));
+			SendAdminMessage(X11_GREY72, string);
+			SetPVarInt(playerid, "AdminDuty", 1);
+			return 1;
+		}
+		else {
+			SetPVarInt(playerid, "AdminDuty", 0);
+			SetPlayerColor(playerid, X11_WHITE);
+            format(string, sizeof(string), "%s is now off-duty(%s).", PlayerName(playerid), getAdminName(playerid));
+			SendAdminMessage(X11_GREY72, string);
+			return 1;
+		}
+	}
+	else return SendClientMessage(playerid, X11_WHITE, "You're not an administrator!");
+}
+
+stock SendAdminMessage(color, string[])
+{
+	foreach(Player, i) {
+	    if(GetPVarInt(i, "AdminLevel") > 0) SendSplitClientMessage(i, color, string, 0, 256); }
+	return 1;
+}
+
+stock SendSplitClientMessage(playerid, color, text[], minlen = 0, maxlen = 72)
+{
+    new str[256];
+    if(strlen(text) > maxlen)
+    {
+        new pos = maxlen;
+        while(text[--pos] > ' ') {}
+        if(pos < minlen) pos = maxlen;
+        format(str, sizeof(str), "%.*s ...", pos, text);
+        SendClientMessage(playerid,color,str);
+        format(str, sizeof(str), "... %s %s ", text[pos+1]);
+        SendClientMessage(playerid,color,str);
+    }
+    else
+    {
+        format(str, sizeof(str), "%s", text);
+        SendClientMessage(playerid,color,str);
+    }
 }
 
 encodeWeapon(weapon, ammo) {
@@ -2231,8 +2981,21 @@ public OnPlayerAccountSaveTimer()
 	return 1;
 }
 
+forward OnLootRespawnTimer();
+public OnLootRespawnTimer()
+{
+	mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
+	SendClientMessageToAll(X11_RED, "Respawning all loot. Server may lag.");
+	return 1;
+}
+
 public OnPlayerSpawn(playerid)
 {
+	if(GetPVarInt(playerid, "IsAlive") == 0) {
+		TogglePlayerSpectating(playerid, true);
+		ShowPlayerSpawnDialog(playerid);
+	}
+	SetPVarInt(playerid, "IsAlive", 1);
 	SetPlayerBackpack(playerid, GetPVarInt(playerid, "Backpack"));
 	return 1;
 }
@@ -2240,15 +3003,24 @@ public OnPlayerSpawn(playerid)
 public OnPlayerDeath(playerid, killerid, reason)
 {
 	Inventory_Clear(playerid);
+	ShowHungerTextdraw(playerid, 0);
 	// SpawnPlayer(playerid);
 	SetPlayerBackpack(playerid, 0);
+	SetPVarInt(playerid, "Blood", 12000);
 	new deaths = GetPVarInt(playerid, "Deaths");
-	SetPVarInt(playerid, "Deaths", deaths++);
+	printf("Old deaths: %d", deaths);
+	deaths++;
+	printf("New deaths: %d", deaths);
+	SetPVarInt(playerid, "Deaths", deaths);
 	new kills = GetPVarInt(killerid, "kills");
-	SetPVarInt(killerid, "kills", kills++);
+	printf("Old Kills: %d", kills);
+	kills++;
+	printf("New Kills: %d", kills);
+	SetPVarInt(killerid, "kills", kills);
 	SetPVarInt(playerid, "Hunger", 100);
 	SetPVarInt(playerid, "Thirst", 100);
 	SetPVarInt(playerid, "Skin", 12);
+	SetPVarInt(playerid, "IsAlive", 0);
 	// SetPlayerSkin(playerid, 12);
 
 	SetPVarInt(playerid, "Humanity", 1600);
@@ -2424,6 +3196,10 @@ public OnRconLoginAttempt(ip[], password[], success)
 
 public OnPlayerUpdate(playerid)
 {
+	if(AC_CHECK_COOLDOWN-(gettime()-ACLastCheck[playerid]) < 0) {
+		AntiCheatCheck(playerid);
+		ACLastCheck[playerid] = gettime();
+	}
 	foreach(new i: Player)
 	{
 		if(GetPVarInt(i, "Blood") <= 0)
