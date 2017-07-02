@@ -29,7 +29,7 @@
 #define MAX_ADMIN_OVERRIDE_ATTEMPTS 3
 #define MAX_HACK_WARNS 2
 #define MAX_LOOTSPAWN 2000
-#define MAX_SPAWNS 20
+#define MAX_SPAWNS 50
 #define MAX_INVENTORY (120)
 
 #define AC_CHECK_COOLDOWN 				1
@@ -1161,6 +1161,29 @@ CMD:goto(playerid, params[]) {
 	return 1;
 }
 
+CMD:createvehicle(playerid, params[]) {
+	new model, c1, c2;
+	if (GetPVarInt(playerid, "AdminLevel") <= 4)
+			return SendClientMessage(playerid, X11_GREY72,"You don't have permission to use this command.");
+	if(!sscanf(params, "ddd", model, c1, c2)) {
+		if(model < 400 || model > 611) {
+			SendClientMessage(playerid, X11_TOMATO_2, "Invalid Model!");
+			return 1;
+		}
+		new Float:X, Float:Y, Float:Z, Float:A;
+		GetPlayerPos(playerid, X, Y, Z);
+		GetPlayerFacingAngle(playerid, A);
+		new carid = CreateVehicle(model, X, Y, Z, A, c1, c2, -1);
+		new engine,lights,alarm,doors,bonnet,boot,objective;
+		GetVehicleParamsEx(carid,engine,lights,alarm,doors,bonnet,boot,objective);
+		SetVehicleParamsEx(carid,1, 1,alarm,doors,bonnet,boot,objective);
+		
+	} else {
+		SendSyntaxMessage(playerid, "/createvehicle [model] [c1] [c2]");
+	}
+	return 1;
+}
+
 ShowSetStatMenu(playerid) {
 	Dialog_Show(playerid, DIALOG_SET_STAT, DIALOG_STYLE_LIST, "Select Stat", "Kills\nDeaths\nScore\nPlaying Hours\nDonator Rank\nBlood\nHunger\nThirst", "Select", "Exit");
 	return 1;
@@ -1641,7 +1664,11 @@ CMD:spectate(playerid, params[]){
 	                        SetPVarInt(playerid, "VirtualWorld", GetPlayerVirtualWorld(playerid));
 	                    } 
 
-	                    if(IsPlayerInAnyVehicle(giveplayerid))
+						format(string, sizeof(string), "You've started spectating %s, to stop spectating use the command /spectate off.", PlayerName(giveplayerid));
+						SendClientMessage(playerid, X11_WHITE, string);
+						TogglePlayerSpectating(playerid, 1);
+
+						if(IsPlayerInAnyVehicle(giveplayerid))
 	                    {
 	                    	PlayerSpectateVehicle(playerid, GetPlayerVehicleID(giveplayerid));
 	                    }
@@ -1649,10 +1676,6 @@ CMD:spectate(playerid, params[]){
 	                    {
 	                    	PlayerSpectatePlayer(playerid, giveplayerid);
 	                    }
-
-						format(string, sizeof(string), "You've started spectating %s, to stop spectating use the command /spectate off.", PlayerName(giveplayerid));
-						SendClientMessage(playerid, X11_WHITE, string);
-						TogglePlayerSpectating(playerid, 1);
 						return 1;
 					}
 					else return SendClientMessage(playerid, X11_RED3, "You've specified an invalid target.");
@@ -2010,7 +2033,7 @@ CMD:setspawn(playerid, params[])
 	    		GetPlayerPos(playerid, X, Y, Z);
 	    		GetPlayerFacingAngle(playerid, Angle);
 	    		//GetPlayerPos(playerid, Float:x, Float:y, Float:z)
-	    		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `Spawns` (`Name`, `X`, `Y`, `Z`, `Angle`) VALUES ('%e', '%f', '%f', '%f', '%f')", name, X, Y, Z, Angle);
+	    		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `spawns` (`Name`, `X`, `Y`, `Z`, `Angle`) VALUES ('%e', '%f', '%f', '%f', '%f')", name, X, Y, Z, Angle);
 	    		mysql_tquery(MySQLCon, query, "", "");
 	    		SendClientMessage(playerid, X11_YELLOW, "You just added a spawn point to the mysql table.");
 	    		return 1;
@@ -2361,6 +2384,16 @@ CMD:givegun(playerid, params[]) {
 		return 1;
 	}
 	return -1;
+}
+
+CMD:jetpack(playerid, params[]) {
+	SetPlayerSpecialAction(playerid, SPECIAL_ACTION_USEJETPACK);
+	return 1;
+}
+
+CMD:rjetpack(playerid, params[]) {
+	SetPlayerSpecialAction(playerid, SPECIAL_ACTION_NONE);
+	return 1;
 }
 
 CMD:gotols(playerid, params[]) {
