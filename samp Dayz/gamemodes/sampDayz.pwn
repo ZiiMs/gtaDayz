@@ -90,7 +90,7 @@ new DefaultAmmo[] = {
 	1200, //minigun
 	7, //satchel charge
 	1, //detonator
-	800, //spray can
+	800, //spray canSet
 	800, //fire extinguisher
 	15, //camera
 	1, //night vision
@@ -219,7 +219,7 @@ public OnGameModeInit()
 	BlockGarages(true, GARAGE_TYPE_BOMB, "DISABLED");
 	BlockGarages(true, GARAGE_TYPE_PAINT, "DISABLED");
 	mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
-	mysql_tquery(MySQLCon, "SELECT * FROM `Spawns`", "Spawn_Load", "");
+	mysql_tquery(MySQLCon, "SELECT * FROM `spawns`", "Spawn_Load", "");
 	ManualVehicleEngineAndLights();
 	EnableStuntBonusForAll(0);
     DisableInteriorEnterExits();
@@ -787,7 +787,7 @@ public OnPlayerUseItem(playerid, itemid, name[])
 		GetPlayerWeaponData(playerid, 5, weapon, ammo);
 		if(weapon == 30 || weapon == 31)
 		{
-			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 100);
+			SetPlayerAmmoEx(playerid, weapon, GetPlayerAmmo(playerid) + 100);
 			Inventory_Remove(playerid, "Assault ammo");
 			OnPlayerAccountSave(playerid);
 		}
@@ -799,7 +799,7 @@ public OnPlayerUseItem(playerid, itemid, name[])
 		GetPlayerWeaponData(playerid, 2, weapon, ammo);
 		if(weapon == 22)
 		{
-			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 45);
+			SetPlayerAmmoEx(playerid, weapon, GetPlayerAmmo(playerid) + 45);
 			Inventory_Remove(playerid, "Pistol Ammo");
 			OnPlayerAccountSave(playerid);
 		}
@@ -811,7 +811,7 @@ public OnPlayerUseItem(playerid, itemid, name[])
 		GetPlayerWeaponData(playerid, 4, weapon, ammo);
 		if(weapon == 29)
 		{
-			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 60);
+			SetPlayerAmmoEx(playerid, weapon, GetPlayerAmmo(playerid) + 60);
 			Inventory_Remove(playerid, "Submachine Gun Ammo");
 			OnPlayerAccountSave(playerid);
 		}
@@ -823,13 +823,23 @@ public OnPlayerUseItem(playerid, itemid, name[])
 		GetPlayerWeaponData(playerid, 6, weapon, ammo);
 		if(weapon == 33 || weapon == 34)
 		{
-			SetPlayerAmmo(playerid, weapon, GetPlayerAmmo(playerid) + 100);
+			SetPlayerAmmoEx(playerid, weapon, GetPlayerAmmo(playerid) + 100);
 			Inventory_Remove(playerid, "Sniper Ammo");
 			OnPlayerAccountSave(playerid);
 		}
 		return 1;
 	}
 	return 0;
+}
+
+SetPlayerAmmoEx(playerid, weapon, ammo)
+{
+	new slot, pvarname[32];
+	slot = GetWeaponSlot(weapon);
+	format(pvarname, sizeof(pvarname), "Ammo%d", slot);
+	SetPVarInt(playerid, pvarname, ammo);
+	SetPlayerAmmo(playerid, weapon, ammo);
+	return 1;
 }
 
 
@@ -1850,6 +1860,9 @@ public GivePlayerWeaponEx(playerid, gun, ammo)
     GunSync[playerid] = 5;
     GunScan[playerid][slot][0] = gun;
 	GunScan[playerid][slot][1] += ammo;
+
+	SetWeaponIDs(playerid, slot, gun, ammo);
+
 	
     GivePlayerWeapon(playerid, gun, ammo);
 	return 1;
@@ -1862,12 +1875,20 @@ public AntiCheatCheck(playerid)
 	new gunsync = GetPVarInt(playerid, "GunSync");
 	if(gunsync <= 0)
 	{
-	    new wep,ammo;
+	    new wep,ammo, pvarammo, pvarname[32];
 		for (new w = 0; w < 12; w++)//For each weapon slot
 		{
 		    wep = 0;
 		    ammo = 0;
+		    format(pvarname, sizeof(pvarname), "Ammo%d", w);
+		    pvarammo = GetPVarInt(playerid, pvarname);
 			GetPlayerWeaponData(playerid, w, wep, ammo);//Get all his Weapon Data
+			if(ammo != pvarammo && ammo > pvarammo) {
+				SetPlayerAmmo(playerid, wep, pvarammo);
+				format(msg, sizeof(msg), "Hack Warning: %s has possibly hacked in bullets. He is supposed to have %d bullets but has %d.", PlayerName(playerid), pvarammo,ammo);
+				SendAdminMessage(X11_ORANGERED, msg);
+
+			}
 			if(wep > 0 /*&& ammo != 0*/)//If he has a gun and the ammo also is not 0
 			{
 				if(ammo <= 0 && (GetPlayerWeapon(playerid) != wep || IsPlayerInAnyVehicle(playerid))) {
@@ -2007,8 +2028,8 @@ CMD:reloadspawn(playerid, params[])
     {
     	if(IsLoggedIn(playerid))
     	{
-			mysql_tquery(MySQLCon, "SELECT * FROM `Spawns`", "Spawn_Load", "");
-			SendClientMessageToAll(X11_RED, "Respawning all loot. Server may lag.");
+			mysql_tquery(MySQLCon, "SELECT * FROM `spawns`", "Spawn_Load", "");
+			SendClientMessageToAll(X11_RED, "Respawning all spawns. Server may lag.");
     		return 1;
     	}
     	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
@@ -2054,6 +2075,21 @@ CMD:deletelootspawn(playerid, params[])
 				return 1;
     		}
     		else return SendClientMessage(playerid, X11_RED_4, "Invalid loot spawn ID.");
+    	}
+    	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
+    }   
+    return -1;
+}
+
+CMD:respawnloot(playerid, params[])
+{
+    if(GetAdminLevel(playerid) >= 6)
+    {
+    	if(IsLoggedIn(playerid))
+    	{
+			mysql_tquery(MySQLCon, "SELECT * FROM `lootspawns`", "Loot_Load", "");
+			SendClientMessageToAll(X11_RED, "Respawning all loot. Server may lag.");
+    		return 1;
     	}
     	else return SendClientMessage(playerid, X11_RED_4, "You are not logged in yet.");
     }   
@@ -2538,7 +2574,11 @@ public OnPlayerWeaponShot(playerid, weaponid, hittype, hitid, Float:fX, Float:fY
 	if(GetPlayerWeapon(playerid) == 0 && weaponid != 0) 
     { 
         return 0;
-    } 
+    }
+	new weaponslot = GetWeaponSlot(weaponid), pvarname[32];
+	format(pvarname, sizeof(pvarname), "Ammo%d", weaponslot);
+	new currentammo = GetPVarInt(playerid, pvarname);
+	SetPVarInt(playerid, pvarname, currentammo-1);
 	return 1;
 }
 
@@ -2560,6 +2600,19 @@ public OnLoadInventory(playerid)
         cache_get_field_content(i, "invItem", name, MySQLCon);
         format(InventoryData[playerid][i][invItem], 32, name);
 	}
+	return 1;
+}
+
+forward SetWeaponIDs(playerid, slot, wep, ammo);
+public SetWeaponIDs(playerid, slot, wep, ammo)
+{
+	new pvarname[32];
+	format(pvarname, sizeof(pvarname), "WeaponID%d", slot);
+	SetPVarInt(playerid, pvarname, wep);
+	format(pvarname, sizeof(pvarname), "WeaponSlot%d", slot);
+	SetPVarInt(playerid, pvarname, slot);
+	format(pvarname, sizeof(pvarname), "Ammo%d", slot);
+	SetPVarInt(playerid, pvarname, ammo);
 	return 1;
 }
 
