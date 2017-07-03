@@ -1564,6 +1564,56 @@ CMD:gethere(playerid, params[]) {
 	return 1;
 }
 
+CMD:ban(playerid, params[]) {
+	if(GetAdminLevel(playerid) >=1) 
+	{
+			new id, reason[20], string[128], query[512];
+		if (scannf(params, "us[20]", id, reason))
+			return SendClientMessage(playerid), -1, "/ban [playerid [reason]");
+		
+		new ip[32];
+		GetPlayerIp(playerid, ip, sizeof(ip));
+		mysql_format(MySQLCon, query, sizeof(query), "INSERT INTO `bans` (`Name`, `Reason`, `BannedBy`, `Date`, `IpAddress`) VALUES ('%e', '%s', '%e', '%s', '%s')", 
+		PlayerName(id),
+		reason,
+		PlayerName(playerid),
+		getdate(),
+		ip);
+		
+		mysql_tquery(MySQLCon, query, "", "");
+		
+		format(string, sizeof(string), "ADMIN MESSAGE: %s has banned %s. REASON: %s", PlayerName(playerid), PlayerName(id), reason);
+		SendClientMessageToAll(X11_RED, string);
+		SetTimerEx("BanEx", 500, false, "u", playerid);
+	}
+		return 1;
+}
+
+stock BanEx(playerid)
+{
+	Kick(playerid);
+	return 1;
+}
+
+CMD:kick(playerid, params[]) {
+	if(GetAdminLevel(playerid) >= 1)
+	{
+		new id, reason[20], string[126];
+		if(sscanf(params, "us[20]", id, reason))
+			return SendClientMessage(playerid, -1, "/kick [playerid] [reason]");
+		format(string, sizeof(string), "ADMIN MESSAGE: %s has kicked %s. REASON: %s", PlayerName(playerid), PlayerName(id), reason);
+		SendClientMessageToAll(X11_RED, string);
+		SetTimerEx("KickEx", 500, false, "u", playerid);
+	}
+	return 1;
+}
+
+stock KickEx(playerid)
+{
+	Kick(playerid);
+	return 1;
+}
+
 stock AddCommas(number)
 {
     new
