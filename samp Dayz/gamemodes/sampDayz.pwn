@@ -31,6 +31,7 @@
 #define MAX_LOOTSPAWN 2000
 #define MAX_SPAWNS 50
 #define MAX_INVENTORY (120)
+#define MAX_DROPPEDITEMS 200
 
 #define AC_CHECK_COOLDOWN 				1
 
@@ -160,6 +161,17 @@ enum lootData {
 	Text3D:lootText
 };
 new LootData[MAX_LOOTSPAWN][lootData];
+
+enum dropData {
+	dropExists,
+	dropItem[32],
+	dropItemID,
+	dropModelID,
+	dropModel,
+	Float:dropPos[3],
+	Text3D:dropText
+};
+new DropData[MAX_DROPPEDITEMS][lootData];
 
 enum spawnData {
 	spawnExists,
@@ -856,6 +868,21 @@ GivePlayerThirst(playerid, amount)
 	new thirst = GetPVarInt(playerid, "Thirst");
 	SetPVarInt(playerid, "Thirst", thirst + amount);
 	return 1;
+}
+
+dropItem(dropper, itemid, amount, Float:X, Float: Y, Float: Z, interior, vw)
+{
+	new index = findFreeDroppedItem();
+	if(index == -1) return index;
+}
+
+findFreeDroppedItem() {
+	for(new i=0;i<MAX_DROPPEDITEMS;i++) {
+		if(!DropData[i][dropExists]) {
+			return i;
+		}
+	}
+	return -1;
 }
 
 stock Inventory_Remove(playerid, item[], itemid = -1, quantity = 1)
